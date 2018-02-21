@@ -1,0 +1,27 @@
+// Pangea Apollo Framework 2.0 [Reykjavík]
+// 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
+// All rights reserved
+
+$gutter:	10px;
+$font-fallback: "Helvetica", "Arial", sans-serif;
+$color-white: #fff;
+$color-black: #000;
+
+// DELETE !!!
+h1 {
+	color: #fff;
+	font-family: $font-fallback;
+	font-size: 5em;
+	font-weight: 100;
+	padding: 0 $gutter;
+	text-shadow: 1px 1px 1px #121516;
+}
+
+h2 {
+	color: #fff;
+	font-family: $font-fallback;
+	font-size: 1.5em;
+	font-weight: 100;
+	padding: 0 $gutter;
+	text-shadow: 1px 1px 1px #121516;
+}

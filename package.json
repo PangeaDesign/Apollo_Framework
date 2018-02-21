@@ -1,0 +1,19 @@
+{
+  "name": "apollo-framework",
+  "version": "2.0.0",
+  "author": "Pangea Digital",
+  "description": "Source for Pangea Apollo Framework 2.0",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-sass": "~4.1.2",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-uglify": "~3.0.1",
+    "grunt-contrib-watch": "~1.0.0"
+  },
+  "dependencies": {
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "npm-check-updates": "^2.12.1"
+  }
+}
