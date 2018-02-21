@@ -42,8 +42,8 @@ write myMeta() into console
 + `heroStyle` | centered | tabloid | cover-left | cover-right |
 + `heroMedia` | string (gif, jpg, jpeg, png, mp4) |
 + `heroOverlay` | boolean |
-+ `heroByline` "Story by Björk",
-+ `pageTheme` | light | srong |
++ `heroByline` | string |
++ `pageTheme` | light | dark |
 + `footerBlock` | boolean |
 + `footerBlockTitle` | string |
 + `footerBlockContent` | string |
