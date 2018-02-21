@@ -8,6 +8,7 @@
 7. fonts/FONTFILE.woff
 8. content
 
+
 ## How to?
 1. Turn on the setup wizard in config by putting "true" value into setupWizard.
 2. Fill the config
@@ -17,6 +18,7 @@
 6. Create your content inside of <main> tags
 7. After you're finished, put setupWizard config value to "false"
 8. Publish!
+
 
 ## Waterfall for SetupWizard
 1. config
@@ -28,3 +30,20 @@
 
 ## On demand Meta
 write myMeta() into console
+
+
+## Apollo config
+`setupWizard` | boolean |
+`projectSite` | af_da | af_en | af_pa | ar | ar_ru | az | be | cr_ru | cr_tb | cr_uk | en | press | ge | ge_ru | kz | kz_ru | al | kg | kg_ru | mk | mo | nc_ce | nc_ru | pk | fa | fa_en | ru | sib | sh | tj | tj_ru | tb | tb_ru | tu | tu_ru | ua | uz | uz_ru | ct |
+`projectTitle` | string |
+`projectDescription` | string |
+`projectAuthor` | string |
+`projectImage` | string (jpg, jpeg, png) |
+`heroStyle` | centered | tabloid | cover-left | cover-right |
+`heroMedia` | string (gif, jpg, jpeg, png, mp4) |
+`heroOverlay` | boolean |
+`heroByline` "Story by Björk",
+`pageTheme` | light | srong |
+`footerBlock` | boolean |
+`footerBlockTitle` | string |
+`footerBlockContent` | string |
