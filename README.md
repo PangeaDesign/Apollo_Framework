@@ -1,15 +1,7 @@
-## Loading Waterfall
-1. dist/css/launch.min.css
-2. dist/js/apollo-framework-2.0.min.js
-3. dist/css/themes/theme-THEME.min.css
-4. dist/css/apollo-framework-2.0.min.css
-5. dist/css/brands/brand-NAME.min.css
-6. fonts/FONTFILE.woff2
-7. fonts/FONTFILE.woff
-8. content
+## Apollo Framework
+This is repository for a release 2.0 of Apollo Framework.
 
-
-## How to?
+## How to use the framework
 1. Turn on the setup wizard in config by putting "true" value into setupWizard.
 2. Fill the config
 3. Open your console in the browser and follow the instructions
@@ -19,7 +11,6 @@
 7. After you're finished, put setupWizard config value to "false"
 8. Publish!
 
-
 ## Waterfall for SetupWizard
 1. config
 2. => branding
@@ -27,6 +18,15 @@
 4. ===> meta
 5. ====> analytics check
 
+## Loading Waterfall
+1. dist/css/launch.min.css
+2. dist/js/apollo-framework-2.0.min.js
+3. dist/css/themes/theme-THEME.min.css
+4. dist/css/apollo-framework-2.0.min.css
+5. dist/css/brands/brand-NAME.min.css
+6. fonts/FONTFILE.woff2
+7. fonts/FONTFILE.woff
+8. content
 
 ## On demand Meta
 write myMeta() into console
