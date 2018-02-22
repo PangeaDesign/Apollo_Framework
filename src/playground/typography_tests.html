@@ -1,0 +1,925 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+        <title>Typography tests</title>
+        <style>
+        /* Imports */
+        @font-face {
+            font-family: "Skolar PE";
+            src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Light.woff);
+            font-weight: 300
+        }
+
+        @font-face {
+            font-family: "Skolar PE";
+            src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Rg.woff);
+            font-weight: 400
+        }
+
+        @font-face {
+            font-family: "Skolar PE";
+            src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Bd.woff);
+            font-weight: 700
+        }
+
+        @font-face {
+            font-family: "Skolar Sans";
+            src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarSansLatnCyrl-Rg.woff);
+            font-weight: 400
+        }
+
+        @font-face {
+            font-family: "Skolar Sans";
+            src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarSansLatnCyrl-Bd.woff);
+            font-weight: 700
+        }
+
+        /* General/Reset */
+        html,
+        body {
+            margin: 0;
+            counter-reset: h1counter;
+        }
+
+
+        /* Containers */
+        .container {
+            width: 100%;
+            max-width: 750px;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin: 25px auto;
+        }
+
+        .container.container--big {
+            max-width: 1200px;
+        }
+
+        .container.container--jumbo {
+            max-width: 1600px;
+        }
+
+        .container.container--full {
+            max-width: 100%;
+            padding: 0;
+        }
+
+
+        /* Figures */
+        figure {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        figure .gallery-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            width: 38px;
+            height: 38px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity .8s;
+        }
+
+        figure .gallery-icon svg {
+            fill: #fff;
+            width: 16px;
+            height: 16px;
+            transition: transform .8s;
+        }
+
+        figure:hover .gallery-icon svg  {
+            transform: scale(1.5);
+        }
+
+        figure img,
+        figure iframe  {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,.1);
+            filter: gray;
+            transition: filter 1s;
+            -webkit-filter: grayscale(90%);
+            -moz-filter: grayscale(90%);
+            -ms-filter: grayscale(90%);
+            -o-filter: grayscale(90%);
+        }
+
+        .container--full figure img {
+            border-radius: 0;
+            border: none;
+        }
+
+        figure.figure--revealed img,
+        figure.figure--revealed iframe {
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
+        }
+
+        figure:hover .gallery-icon {
+            opacity: 1;
+        }
+
+        figure figcaption,
+        .embed--caption {
+            padding: 7px 0;
+            font-family: "Skolar Sans",sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #607D8B;
+        }
+
+        .container--full figure figcaption,
+        .container--full .embed--caption {
+            padding: 7px 15px;
+        }
+
+        .embed {
+            position: relative;
+            margin: 0 auto;
+            background-size: cover;
+            cursor: pointer;
+            z-index: 0;
+            background-color: #000;
+        }
+
+        .embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .embed.format--panavision {
+            padding-bottom: 42.857142857142857%;
+        }
+
+        /* Helpers */
+        .align--center {
+            text-align: center;
+        }
+
+        .align--justify {
+            text-align: justify;
+        }
+
+        .align--left {
+            text-align: left;
+        }
+
+        .align--right {
+            text-align: right;
+        }
+
+        .float--left,
+        .float--right {
+            max-width: 350px;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .float--left::after,
+        .float--right::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .float--left {
+            float: left;
+            margin-right: -204px;
+            transform: translateX(-224px);
+        }
+
+        .float--right {
+            float: right;
+            margin-left: -170px;
+            transform: translateX(200px);
+        }
+
+        @media(max-width: 1160px) {
+            .float--left,
+            .float--right {
+                max-width: 350px;
+                width: 100%;
+            }
+
+            .float--left {
+                float: left;
+                margin-right: -20px;
+                transform: translateX(-50px);
+            }
+
+            .float--right {
+                float: right;
+                margin-left: 20px;
+                transform: translateX(50px);
+            }
+        }
+
+        @media(max-width: 870px) {
+            .float--left,
+            .float--right {
+                max-width: 250px;
+                width: 100%;
+            }
+
+            .float--left {
+                float: left;
+                margin-right: -20px;
+                transform: translateX(-50px);
+            }
+
+            .float--right {
+                float: right;
+                margin-left: 20px;
+                transform: translateX(50px);
+            }
+        }
+
+        @media(max-width: 869px) {
+            .float--left,
+            .float--right {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .float--left {
+                float: none;
+                margin-right: 0;
+                transform: translateX(0);
+            }
+
+            .float--right {
+                float: none;
+                margin-left: 0;
+                transform: translateX(0);
+            }
+        }
+
+
+        /* Headlines */
+        h2 {
+            box-sizing: border-box;
+            color: #4f6d7a;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            padding: 30px 0 15px 0;
+            font-family: "Skolar Sans",sans-serif;
+        }
+
+
+        h3 {
+            box-sizing: border-box;
+            color: #4f6d7a;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin: 0 auto;
+            padding: 30px 0 15px 0;
+            font-family: "Skolar Sans",sans-serif;
+        }
+
+        h4 {
+            box-sizing: border-box;
+            color: #4f6d7a;
+            font-size: 19px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 auto;
+            padding: 30px 0 15px 0;
+            font-family: "Skolar Sans",sans-serif;
+        }
+
+        h5 {
+            position: relative;
+            margin-top: 30px;
+            font-family: "Skolar Sans",sans-serif;
+            color: #4f6d7a;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        h5:before {
+            content: "";
+            display: block;
+            border-top: solid 1px #ccc;
+            width: 80%;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            z-index: 1;
+        }
+
+        h5 span {
+            background: #fff;
+            padding: 0 5px;
+            display: inline-block;
+            position: relative;
+            z-index: 5;
+        }
+
+        h6 {
+            position: relative;
+            margin-top: 10px;
+            font-family: "Skolar Sans",sans-serif;
+            color: #4f6d7a;
+            font-size: 22px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+
+        /* Paragraphs */
+        p {
+            font-family: "Skolar PE", serif;
+            color: #020202;
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: 300;
+            margin: 0 auto;
+            padding: 15px 0;
+            box-sizing: border-box;
+        }
+
+        p > a,
+        p > a:visited,
+        p > a:hover,
+        p > a:active {
+            transition: background-position 0.15s linear 0.1s, box-shadow 0.15s linear 0s, color .3s .15s;
+            background-image: linear-gradient(to bottom, #0ecae3 0%, #0ecae3 100%);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 0 25px;
+            overflow: hidden;
+            text-decoration:none;
+            color: #0ecae3;
+        }
+
+        p > a:hover {
+            color:#fff;
+            cursor: pointer;
+            background-image: linear-gradient(to bottom, #0ecae3 0%, #0ecae3 100%);
+            background-position: 0 0em;
+            box-shadow: 2px 0 0 #0ecae3, -2px 0 0 #0ecae3;
+            transition: background-position 0.1s linear 0s, box-shadow 0.1s linear 0.1s, color .3s;
+        }
+
+        p.paragraph--lead {
+            font-weight: 700;
+            font-size: 20px;
+            padding-top: 50px;
+            color: #4f6d7a;
+        }
+
+        .backgrounder {
+            background: #ECEFF1;
+            box-sizing: border-box;
+            padding: 20px 20px 10px 20px;
+            line-height: 1.4;
+            font-family: "Skolar Sans",sans-serif;
+        }
+
+        .backgrounder h2 {
+            font-weight: 700;
+            font-size: 18px;
+            margin: 10px 0 0 0;
+            text-align: center;
+            color: #607D8B;
+        }
+
+        .backgrounder p {
+            font-weight: 300;
+            font-size: 16px;
+            color: #212121;
+        }
+
+        p.paragraph--dropcap:first-letter {
+            color: #4f6d7a;
+            float: left;
+            font-family: Georgia;
+            font-size: 85px;
+            line-height: 60px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            padding-right: 10px;
+            padding-left: 3px;
+        }
+
+        p.paragraph--byline {
+            font-style: italic;
+            color: #4f6d7a;
+        }
+
+        .interview p {
+            margin: 0 auto;
+            padding: 5px 0;
+        }
+
+        .interview span {
+            font-weight: 700;
+            color: #4f6d7a;
+        }
+
+
+        /* Lists */
+        ul {
+            margin: 0;
+            padding: 15px 0;
+            list-style: none;
+        }
+
+        ol {
+            margin: 0;
+            padding: 15px 0;
+            list-style-position: inside;
+        }
+
+        ol.list--numbered  {
+            list-style-type: decimal;
+        }
+
+        ol.list--alphabet {
+            list-style-type: lower-alpha;
+        }
+
+        ul li,
+        ol li {
+            font-family: "Skolar PE", serif;
+            color: #020202;
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: 300;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Tables */
+        table {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            border: none;
+            font-family: "Skolar Sans", sans-serif;
+            font-size: 15px;
+            border-spacing: 0;
+            border: 1px solid #CFD8DC;
+        }
+
+        table.table--autowidth {
+            width: auto;
+            margin: 0 auto;
+        }
+
+        thead {
+            background: #CFD8DC;
+            color: #212121;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #ECEFF1;
+        }
+        table th,
+        table td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        tfoot {
+            width: 100%;
+        }
+
+
+        /* Blockquotes */
+        blockquote {
+            padding: 0;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 900px;
+            box-sizing: border-box;
+        }
+
+        blockquote cite {
+            width: inherit;
+            max-width: inherit;
+            display: block;
+            color: #4f6d7a;
+            font-size: 32px;
+            line-height: 1.2;
+            font-weight: 300;
+            padding-left: 20px;
+            font-style: italic;
+            font-family: "Skolar PE", serif;
+            border-left: 5px solid #4f6d7a;
+            box-sizing: border-box;
+        }
+
+        blockquote footer {
+            color: #4f6d7a;
+            font-size: 14px;
+            margin: 10px 0;
+            text-align: right;
+            font-family: "Skolar Sans",sans-serif;
+        }
+
+
+        /* Dividers & Decorations */
+        hr {
+            margin: 50px auto;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        hr.divider--short {
+            width: 40%;
+            height: 1px;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+        }
+
+        hr.divider--solid {
+            border-bottom: 1px solid rgba(0,0,0,.1);
+        }
+
+        hr.divider--dotted {
+            border-bottom: 1px dotted rgba(0,0,0,.1);
+        }
+
+        hr.divider--dashed {
+            border-bottom: 1px dashed rgba(0,0,0,.1);
+        }
+
+
+        /* Hero */
+        div#hero {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .continue {
+            position: absolute;
+            width: 50%;
+            height: 48px;
+            bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .continue svg {
+            width: 42px;
+            height: 42px;
+            fill: #fff;
+            opacity: .5;;
+            cursor: pointer;
+            transition: opacity .5s;
+        }
+
+        .continue svg:hover {
+            opacity: 1;
+        }
+
+        .text {
+            width: 50%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            padding: 50px;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .text h1 {
+            box-sizing: border-box;
+            color: #fafafa;
+            font-size: 64px;
+            font-weight: 400;
+            line-height: 1.1;
+            text-align: center;
+            margin: 0;
+            padding: 30px 0 15px 0;
+            font-family: "Skolar PE",serif;
+        }
+        .text h2 {
+            position: relative;
+            margin-top: 5px;
+            font-family: "Skolar Sans",sans-serif;
+            color: #fafafa;
+            width: 80%;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .text h2:before {
+            content: "";
+            display: block;
+            border-top: solid 1px #4f6d7a;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 55%;
+            z-index: 1;
+        }
+
+        .text h2 span {
+            background: #000;
+            padding: 0 10px;
+            display: inline-block;
+            position: relative;
+            z-index: 5;
+        }
+
+        .photo {
+            width: 50%;
+            height: 100%;
+            background-image: url(http://i.imgur.com/Mwfucup.jpg);
+            background-size: cover;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="hero">
+            <div class="photo"></div>
+            <div class="text">
+                <h1>Within Cells Interlinked</h1>
+                <h2><span>The Story of Blade Runner</span></h2>
+                <div class="continue" id="continue">
+                    <svg viewBox="0 0 453.834 453.834">
+                        <path d="M226.932,0C101.625,0,0.03,101.595,0.03,226.902C0,352.269,101.595,453.834,226.932,453.834 c125.307,0,226.871-101.595,226.871-226.902C453.834,101.595,352.239,0,226.932,0z M226.932,423.465 c-108.344,0-196.502-88.158-196.502-196.502S118.588,30.46,226.932,30.46c108.344-0.03,196.472,88.128,196.472,196.502 C423.434,335.276,335.276,423.465,226.932,423.465z"/>
+                        <path d="M313.723,177.199l-87.885,87.915l-87.885-87.915c-5.928-5.928-15.565-5.928-21.492,0 s-5.928,15.565,0,21.492l98.585,98.585c2.979,3.04,6.901,4.438,10.792,4.438c3.922,0,7.813-1.49,10.792-4.438l98.555-98.585 c5.928-5.928,5.928-15.565,0-21.492S319.65,171.271,313.723,177.199z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <p class="paragraph--lead">Blade Runner is a 1982 American neo-noir science fiction film directed by Ridley Scott, written by Hampton Fancher and David Peoples, and starring Harrison Ford, Rutger Hauer, Sean Young, and Edward James Olmos. It is a loose adaptation of the 1968 novel Do Androids Dream of Electric Sheep? by Philip K. Dick. </p>
+            <hr class="divider--short divider--solid">
+            <p class="paragraph--dropcap">In 2019 Los Angeles, former police officer Rick Deckard is detained by officer Gaff and brought to his former supervisor, Bryant. Deckard, whose job as a "blade runner" was to track down bioengineered beings known as replicants and "retire" (kill) them, is informed that four are on Earth illegally. Deckard starts to leave, but Bryant ambiguously threatens him and he stays. The two watch a video of a blade runner named Holden administering the "Voigt-Kampff" test, which is designed to distinguish replicants from humans based on their emotional response to questions. The test subject, Leon, shoots Holden on the second question. Bryant wants Deckard to retire Leon and the other three Tyrell Corporation Nexus-6 replicants: Roy Batty, Zhora, and Pris.</p>
+        </div>
+
+        <div class="container container--full">
+            <!-- for figure, there will be attributes data-gallery (boolean, true if empty), data-thumb (string, none if empty), data-caption (string), data-thumb-caption (boolean, true if empty) -->
+            <figure>
+                <div class="gallery-icon">
+                    <svg viewBox="0 0 533.333 533.333">
+                    	<path d="M533.333,0v216.667L450,133.333l-100,100l-50-50l100-100L316.667,0H533.333z M233.333,350l-100,100l83.333,83.333H0 V316.667L83.333,400l100-100L233.333,350z"/>
+                    </svg>
+                </div>
+                <img src="http://www.artsbeatla.com/wp-content/uploads/2017/09/blade_runner_hero1.jpg" />
+                <figcaption>Rick Deckard</figcaption>
+            </figure>
+        </div>
+
+        <div class="container">
+            <p>Deckard meets with his former boss Harry Bryant, and is given an ultimatum - track down the rogue Nexus-6, or live the rest of his life as a "little person" and forever be harassed by the LAPD. Deckard questions why fellow Blade Runner Holden had not been given the task only to find out Holden tried and failed already. Concluding that he had no choice, Deckard sat down with Bryant to discuss the six renegade replicants. Gaff creates an origami chicken and places it in Bryant's office prior to the debrief.</p>
+        </div>
+
+        <div class="container">
+            <blockquote class="float--left">
+                <cite>"I was quit when I came in here Bryant. I'm twice as quit now."</cite>
+                <footer>— Rick Deckard</footer>
+            </blockquote>
+            <p>Sitting in a dimly lit projector room, Bryant explains that out of the six replicants, two got fried in electrical traps after trying to infiltrate the Tyrell Corporation while the other 4 escaped. Leon is shown first, and his encounter with Holden documented during his Voight-Kampff test. Roy, the leader of the rogue group, Zhora, and Pris are shown to Deckard as well. Bryant also gives Deckard information on Nexus-6 models; namely, replicants are dangerous because their emotions are child-like given their raw strength and mental intelligence. A fail-safe was given to Nexus-6 that would only allow them to live for 4 years, negating any worry that they would be around to cause damage. Bryant orders Deckard to go to the Tyrell Corporation and test a Nexus-6 model with a Voight-Kampff test that will allow the Blade Runner to understand how to spot them in the field.</p>
+        </div>
+
+        <hr class="divider--dashed">
+
+        <div class="container">
+            <h3>The Voight-Kampff Test vs. The Baseline Recalibration Test</h3>
+            <p>The Baseline Test is an examination designed to measure any emotional deviance by Nexus-9 Replicant models (and perhaps previous models). To be "Off Baseline" would be considered a failure of such test.</p>
+        </div>
+
+        <div class="container container--full">
+            <figure class="embed format--panavision">
+                <iframe src="https://www.youtube.com/embed/Umc9ezAyJv0?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+            </figure>
+            <p class="embed--caption">The Voight-Kampff Test</p>
+        </div>
+
+        <div class="container">
+            <p>The Baseline Test constitutes a part of police protocol in the Blade Runner section of the force. Officer KD6-3.7 or "K" is subjected to the Baseline Test twice, failing the examination the second time.</p>
+            <p>Unlike its predecesor in the Voight-Kampff Test, the Baseline Test is conducted by an unseen questioner (perhaps another police officer) who recites the examination through a machine opposite the subject under questioning. Throughout exam, which is rather short in comparison to the V-K Test, the questions, with the intonation and tempo in which they are asked, are rather impersonal.</p>
+        </div>
+
+        <div class="container container--big">
+            <blockquote>
+                <cite>"And blood-black nothingness began to spin... A system of cells interlinked within cells interlinked within cells interlinked within one stem... And dreadfully distinct against the dark, a tall white fountain played."</cite>
+                <footer>— Vladimir Nabokov</footer>
+            </blockquote>
+        </div>
+
+        <div class="container">
+            <p>The poem that begins the test and is quoted word-by-word throughout is from Vladimir Nabokov's novel Pale Fire. It is implied that the length and content of the test is based on the Replicant's response time, becoming longer if their response is slow in the first few lines and using more of the poem.</p>
+        </div>
+
+        <div class="container container--big">
+            <figure class="embed format--panavision">
+                <iframe src="https://www.youtube.com/embed/ymD-oOuEd8E?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+            </figure>
+            <p class="embed--caption">The Baseline Test</p>
+        </div>
+
+        <div class="container">
+            <p>Officer K is first seen taking the test after he retires Sapper Morton, a particularly grueling retirement that left him severely injured. He passes the test with flying colors and is given his bonus.</p>
+            <p>He later is forced to take the test again when he is caught outside of Stelline Laboratories, apparently having strayed from his initial mission to find and kill Rick Deckard and Rachael's child. Having been emotionally compromised by the assumed revelation that his false memories actually happened, K fails the test and is left to be debriefed by Joshi. After K claims that he completed his mission, Joshi gives K forty-eight hours to return to his baseline and retake the test, although she is privately aware he will use the opportunity to escape.</p>
+        </div>
+
+        <div class="container interview">
+            <h4>Test Log</h4>
+            <p><span>Interrogator:</span> Officer K-D-six-dash-three-dot-seven, let's begin. Ready?</p>
+            <p><span>K:</span> Yes, sir.</p>
+            <p><span>Interrogator:</span> Recite your baseline.</p>
+            <p><span>K:</span> "And blood-black nothingness began to spin... A system of cells interlinked within cells interlinked within cells interlinked within one stem... And dreadfully distinct against the dark, a tall white fountain played."</p>
+            <p><span>Interrogator:</span> Cells.</p>
+            <p><span>K:</span> Cells.</p>
+            <p><span>Interrogator:</span> Have you ever been in an institution? Cells.</p>
+            <p><span>K:</span> Cells.</p>
+            <p><span>Interrogator:</span> Do they keep you in a cell? Cells.</p>
+            <p><span>K:</span> Cells.</p>
+            <p><span>Interrogator:</span> When you're not performing your duties do they keep you in a little box? Cells.</p>
+            <p><span>K:</span> Cells.</p>
+            <p><span>Interrogator:</span> Interlinked.</p>
+            <p><span>K:</span> Interlinked.</p>
+            <p><span>Interrogator:</span> What's it like to hold the hand of someone you love? Interlinked.</p>
+            <p><span>K:</span> Interlinked.</p>
+            <p><span>Interrogator:</span> Did they teach you how to feel finger to finger? Interlinked.</p>
+            <p><span>K:</span> Interlinked.</p>
+            <p><span>Interrogator:</span> Do you long for having your heart interlinked? Interlinked.</p>
+            <p><span>K:</span> Interlinked.</p>
+            <p><span>Interrogator:</span> Do you dream about being interlinked... ?</p>
+            <p><span>K:</span> Interlinked.</p>
+            <p><span>Interrogator:</span> What's it like to hold your child in your arms? Interlinked.</p>
+            <p><span>K:</span> Interlinked.</p>
+            <p><span>Interrogator:</span> Do you feel that there's a part of you that's missing? Interlinked.</p>
+            <p><span>K:</span> Interlinked.</p>
+            <p><span>Interrogator:</span> Within cells interlinked.</p>
+            <p><span>K:</span> Within cells interlinked.</p>
+            <p><span>Interrogator:</span> Why don't you say that three times: Within cells interlinked.</p>
+            <p><span>K:</span> Within cells interlinked. Within cells interlinked. Within cells interlinked.</p>
+            <p><span>Interrogator:</span> We're done. "Constant K"... you can pick up your bonus.</p>
+            <p><span>K:</span> Thank you, sir.</p>
+        </div>
+
+        <hr class="divider--dashed">
+
+        <div class="container">
+            <h6>Replicants</h6>
+            <p>A replicant is a bioengineered or biorobotic android. The 'Nexus' series of replicants are virtually identical to adult humans, but have superior strength, speed, agility, resilience, and intelligence, to varying degrees depending on the model. Thus a replicant can only be detected by means of the fictional Voight-Kampff test, in which emotional responses are provoked; replicants' nonverbal responses differ from humans'. Nexus 6 replicants also have a safety mechanism, namely a four-year lifespan, to prevent them from developing empathic abilities (and, therefore, immunity to the test). Replicants are sometimes referred to by the slur "skin-job".</p>
+        </div>
+
+        <div class="container container--big">
+            <figure>
+                <div class="gallery-icon">
+                    <svg viewBox="0 0 533.333 533.333">
+                    	<path d="M533.333,0v216.667L450,133.333l-100,100l-50-50l100-100L316.667,0H533.333z M233.333,350l-100,100l83.333,83.333H0 V316.667L83.333,400l100-100L233.333,350z"/>
+                    </svg>
+                </div>
+                <img src="http://thepandorasociety.com/wp-content/uploads/2015/07/22-pris_eyes_glow.jpg" />
+                <figcaption>Pris, the Nexus-6 series replicant</figcaption>
+            </figure>
+        </div>
+
+        <div class="container">
+            <table class="float--left">
+                <thead>
+                    <tr>
+                        <th>List of Escaped Replicants</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Physical-A, Mental-A, N6MAA10816</td>
+                    </tr>
+                    <tr>
+                        <td>Physical-A, Mental-B, N6FAB21416</td>
+                    </tr>
+                    <tr>
+                        <td>Physical-A, Mental-B, N6FAB61216</td>
+                    </tr>
+                    <tr>
+                        <td>Physical-A, Mental-C, N6MAC41717</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Nexus 6 replicants had been designed to copy humans in every way except for their emotions. The Tyrell Corporation "began to recognize in them a strange obsession", and in order to be able to control them better, started to implant false memories into the replicants in order to give them the years of experiences that humans take for granted; these memories created "a cushion or pillow for their emotions."</p>
+            <p>Deckard had no experience with Nexus 6 replicants at the beginning of the film; he and Captain Bryant are puzzled as to why they have risked coming back to Earth and Deckard is unsure how effective the Voight-Kampff test would be on them, as they appeared to have developed human emotion.</p>
+            <p>According to Deckard, a normal replicant can usually be discovered using the Voight-Kampff test, after being given 20–30 questions. Rachael answers over 100 questions before Deckard determines she is a replicant. The theatrical cut's voice-over ending said that as an experimental replicant, Rachael didn't have the four-year life but the Director's Cut did not address this. Scott said that he had wanted to cast a young actress in the role to emphasise Rachael's naivety and unworldliness.</p>
+        </div>
+
+        <hr class="divider--dashed">
+
+        <div class="container">
+            <h5><span>Blade Runner Soundtrack</span></h5>
+            <table class="float--left">
+                <thead>
+                    <tr>
+                        <th>Track List</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Love Theme (4:12)</td>
+                    </tr>
+                    <tr>
+                        <td>Main Title (5:01)</td>
+                    </tr>
+                    <tr>
+                        <td>One More Kiss, Dear (4:00)</td>
+                    </tr>
+                    <tr>
+                        <td>Memories Of Green (4:50)</td>
+                    </tr>
+                    <tr>
+                        <td>End Title (4:17)</td>
+                    </tr>
+                    <tr>
+                        <td>Blade Runner Blues (4:38)</td>
+                    </tr>
+                    <tr>
+                        <td>Farewell (3:10)</td>
+                    </tr>
+                    <tr>
+                        <td>End Title Reprise (3:08)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Vangelis, fresh off of his Academy Award winning score from Chariots of Fire, composed and performed the music on his synthesizers. The musicscape of the 2019 was created in Vangelis' "space" mode of new age music, as heard on such albums of his as Heaven and Hell. He also made use of various chimes and the vocals of collaborator Demis Roussos. Ridley Scott also used "Memories of Green" from Vangelis' album See You Later (an orchestral version of which Scott would later use in his film Someone To Watch Over Me).</p>
+            <p>Despite being well received by fans and critically acclaimed – nominated in 1983 for a BAFTA and Golden Globe as best original score – and the promise of a soundtrack album from Polydor Records in the end titles of the film, the release of the original soundtrack recording was delayed for over a decade. There are two official releases of the music from Blade Runner. In light of the lack of a release of an official score, an orchestral adaptation, recorded by The New American Orchestra, was released in 1982. Some of the film tracks would in 1989 surface on the compilation Themes, but it wasn't until the 1992 release of the Director's Cut version of the film that a substantial amount of the score would see the light of day on an official release.</p>
+            <figure class="float--left">
+                <img src="https://vignette.wikia.nocookie.net/bladerunner/images/1/1c/Bladerunnervangeliscover.jpg/revision/latest?cb=20060603193135" />
+            </figure>
+            <p>The first official release (on LP, tape and CD) was a reinterpretation by the New American Orchestra in 1982. Billed as an "orchestral adaptation of music composed for the motion picture by Vangelis" this release consisted of jazz-inspired, orchestrated renditions of the major tracks from the film, but not the original score tracks.</p>
+            <p>In 1989 the Vangelis "Themes" Collection LP was released. This compilation featured compositions from a variety of Vangelis film scores, including three tracks from Blade Runner.</p>
+            <p>The delays and poor reproductions of the Blade Runner score led to the production of many bootleg recordings over the years. A bootleg tape surfaced in 1982 at science fiction conventions and became popular given the delay of an official release of the original recordings, and in 1993 "Off World Music, Ltd." created a bootleg CD that would prove more comprehensive than Vangelis' official CD in 1994. A disc from "Gongo Records" features most of the same material, but with slightly better sound quality. In 2003, two other bootlegs surfaced, the "Esper Edition," closely preceded by " Los Angeles - November 2019 ." The double disc "Esper Edition" combined tracks from the official release, the Gongo boot and the film itself. Finally "2019" provided a single disc compilation almost wholly consisting of ambient sound from the film, padded out with some sounds from the Westwood game "Blade Runner." The Gongo release is considered the best presentation of the music, while Los Angeles - November 2019 and the Esper Edition are excellent mementos of the film.</p>
+        </div>
+
+
+        <script>
+        var backToTop = document.getElementById("continue");
+        backToTop.addEventListener("click",function(){
+            var heroHeight = document.getElementById("hero").clientHeight;
+            window.scroll({
+              top: 0 + heroHeight,
+              left: 0,
+              behavior: 'smooth'
+            });
+        });
+
+        var isInViewport = function (elem) {
+            var viewPortHeight = window.innerHeight;
+            var bounding = elem.getBoundingClientRect();
+            return (
+                bounding.top <= (viewPortHeight/2)
+            );
+        };
+
+        window.addEventListener('scroll', function () {
+            var myImages = document.getElementsByTagName("figure");
+            for (i=0; i<myImages.length; i++) {
+                if (isInViewport(myImages[i])) {
+                    if (myImages[i].className.indexOf(" figure--revealed") === -1) {
+                        myImages[i].classList += " figure--revealed";
+                    }
+            	}
+            }
+        });
+
+        </script>
+    </body>
+</html>
