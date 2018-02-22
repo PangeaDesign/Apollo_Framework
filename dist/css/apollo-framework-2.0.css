@@ -40,22 +40,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-h1 {
-  color: #fff;
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 5em;
-  font-weight: 100;
-  padding: 0 10px;
-  text-shadow: 1px 1px 1px #121516; }
-
-h2 {
-  color: #fff;
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 1.5em;
-  font-weight: 100;
-  padding: 0 10px;
-  text-shadow: 1px 1px 1px #121516; }
-
 html,
 body {
   width: 100%;
@@ -65,17 +49,31 @@ main {
   width: 100%;
   box-sizing: border-box; }
 
+.align--center {
+  text-align: center; }
+
+.align--justify {
+  text-align: justify; }
+
 .align--left {
   text-align: left; }
 
 .align--right {
   text-align: right; }
 
-.align--center {
-  text-align: center; }
-
-.align--justify {
-  text-align: justify; }
+.container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 768px; }
+  .container.container--big {
+    max-width: 1200px; }
+  .container.container--jumbo {
+    max-width: 1600px; }
+  .container.container--full {
+    max-width: 100%;
+    padding: 0; }
 
 footer#page__footer {
   width: 100%;
