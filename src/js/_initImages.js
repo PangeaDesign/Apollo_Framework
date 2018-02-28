@@ -22,7 +22,7 @@ var pswpHTML = "<div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=
 			  //imageLinkElement.setAttribute("href", "");
 		  }else{
 			  imageContainers[i].setAttribute("class", "gallery");
-			  imageContainers[i].innerHTML = "<!--div class=\"gallery-icon\"><svg viewBox=\"0 0 533.333 533.333\"><path d=\"M533.333,0v216.667L450,133.333l-100,100l-50-50l100-100L316.667,0H533.333z M233.333,350l-100,100l83.333,83.333H0 V316.667L83.333,400l100-100L233.333,350z\"/></svg></div-->";
+			  imageContainers[i].innerHTML = "<div class=\"gallery-icon\"><svg viewBox=\"0 0 533.333 533.333\"><path d=\"M533.333,0v216.667L450,133.333l-100,100l-50-50l100-100L316.667,0H533.333z M233.333,350l-100,100l83.333,83.333H0 V316.667L83.333,400l100-100L233.333,350z\"/></svg></div>";
 			  imageLinkElement.setAttribute("href", imageSource);//change
 			  }
 		  imageContainers[i].appendChild(imageLinkElement);//change

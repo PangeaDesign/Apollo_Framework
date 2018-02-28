@@ -1,3 +1,117 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
+
+/* Imports */
+@font-face {
+    font-family: "Skolar PE";
+    src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Light.woff);
+    font-weight: 300
+}
+
+@font-face {
+    font-family: "Skolar PE";
+    src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Rg.woff);
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Skolar PE";
+    src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Bd.woff);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: "Skolar Sans";
+    src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarSansLatnCyrl-Rg.woff);
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Skolar Sans";
+    src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarSansLatnCyrl-Bd.woff);
+    font-weight: 700
+}
+
+/* Headlines */
+h2 {
+    box-sizing: border-box;
+    color: #4f6d7a;// ?podle themes
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0 15px 0;
+    font-family: "Skolar Sans",sans-serif;
+}
+h3 {
+    box-sizing: border-box;
+    color: #4f6d7a;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 0 15px 0;
+    font-family: "Skolar Sans",sans-serif;
+}
+h4 {
+    box-sizing: border-box;
+    color: #4f6d7a;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 0 15px 0;
+    font-family: "Skolar Sans",sans-serif;
+}
+h5 {
+    position: relative;
+    margin-top: 30px;
+    font-family: "Skolar Sans",sans-serif;
+    color: #4f6d7a;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+h5:before {
+    content: "";
+    display: block;
+    border-top: solid 1px #ccc;
+    width: 80%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 1;
+}
+h5 span {
+    background: #fff;
+    padding: 0 5px;
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+}
+h6 {
+    position: relative;
+    margin-top: 10px;
+    font-family: "Skolar Sans",sans-serif;
+    color: #4f6d7a;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+/* Paragraphs */
+p {
+    font-family: "Skolar PE", serif;
+    color: #020202;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
