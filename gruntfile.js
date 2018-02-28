@@ -14,6 +14,7 @@ module.exports = function(grunt) {
                         'src/js/configs/_configParser.js',
                         'src/js/configs/_configAnalytics.js',
                         'src/js/_initHead.js',
+                        'src/js/_initImages.js',
                         'src/js/_initSetupWizard.js'
                     ]
                 }
@@ -37,7 +38,7 @@ module.exports = function(grunt) {
         },
         watch: {
             uglify: {
-                files: 'dist/js/*.*',
+                files: 'src/js/*.*',
                 tasks: ['uglify'],
             },
             sass: {

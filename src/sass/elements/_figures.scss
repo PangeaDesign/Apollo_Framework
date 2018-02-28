@@ -1,6 +1,7 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
+
 .container {
   figure {
     position:relative;
@@ -23,6 +24,7 @@
         justify-content: center;
         opacity: 0;
         transition: opacity .8s;
+        cursor:pointer;
         svg {
             fill: #fff;
             width: 16px;
