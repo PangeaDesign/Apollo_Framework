@@ -271,28 +271,17 @@ header#page__header {
     #hero.hero__container--cover-right .hero__continue {
       margin-left: 25%; }
 
-/* Imports */
-@font-face {
-  font-family: "Skolar PE";
-  src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Light.woff);
-  font-weight: 300; }
-@font-face {
-  font-family: "Skolar PE";
-  src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Rg.woff);
-  font-weight: 400; }
-@font-face {
-  font-family: "Skolar PE";
-  src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Bd.woff);
-  font-weight: 700; }
-@font-face {
-  font-family: "Skolar Sans";
-  src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarSansLatnCyrl-Rg.woff);
-  font-weight: 400; }
-@font-face {
-  font-family: "Skolar Sans";
-  src: url(https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarSansLatnCyrl-Bd.woff);
-  font-weight: 700; }
 /* Headlines */
+h1 {
+  box-sizing: border-box;
+  color: #4f6d7a;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0 15px 0;
+  font-family: "Skolar Sans",sans-serif; }
+
 h2 {
   box-sizing: border-box;
   color: #4f6d7a;

@@ -5,5 +5,12 @@
 @import 'direction-ltr';
 @import 'colors-rfe';
 
-$primary-font:    "";
-$secondary-font:  "";
+/* Imports */
+@include font-face ("Skolar PE","https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Light.woff",300, light, woff);
+@include font-face ("Skolar PE","https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Rg.woff",400, regular, woff);
+@include font-face ("Skolar PE","https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarLatnCyrl-Bd.woff",700, bold, woff);
+@include font-face ("Skolar Sans","https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarSansLatnCyrl-Rg.woff",400, regular, woff);
+@include font-face ("Skolar Sans","https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/SkolarSansLatnCyrl-Bd.woff",700, bold, woff);
+
+$primary-font:    "Skolar PE";
+$secondary-font:  "Skolar Sans";

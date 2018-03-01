@@ -28,10 +28,10 @@ if (setupWizard.haltStatus === false) {
 // Get the culture and add proper CSS to the <head>
 if (setupWizard.haltStatus === false) {
     var apolloCulture = siteConfig[apolloConfig.projectSite].siteCulture;
-    var newDOMNode = document.createElement('link');
+    /*var newDOMNode = document.createElement('link');
     newDOMNode.setAttribute("rel", 'stylesheet');
     newDOMNode.setAttribute("href", configPaths.css.cultures + "culture-" + apolloCulture + ".min.css");
-    pageHeadNode.appendChild(newDOMNode);
+    pageHeadNode.appendChild(newDOMNode);*/
 
     setupWizard.culture.status = "go";
 }

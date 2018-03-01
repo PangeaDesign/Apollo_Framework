@@ -24,7 +24,8 @@ module.exports = function(grunt) {
             apolloFramework: {
                 files: {
                     'dist/css/launch.css': 'src/sass/launch.scss',
-                    'dist/css/apollo-framework-2.0.css': 'src/sass/main.scss'
+                    'dist/css/apollo-framework-2.0.css': 'src/sass/main.scss',
+                    'dist/css/apollo-framework-rfe-latin-light-2.0.css':'src/sass/main-rfe-latin-light.scss'
                 }
             }
         },
@@ -32,7 +33,8 @@ module.exports = function(grunt) {
             apolloFramework: {
                 files: {
                     'dist/css/launch.min.css': 'dist/css/launch.css',
-                    'dist/css/apollo-framework-2.0.min.css': 'dist/css/apollo-framework-2.0.css'
+                    'dist/css/apollo-framework-2.0.min.css': 'dist/css/apollo-framework-2.0.css',
+                    'dist/css/apollo-framework-rfe-latin-light-2.0.min.css':'dist/css/apollo-framework-rfe-latin-light-2.0.css'
                 }
             }
         },
