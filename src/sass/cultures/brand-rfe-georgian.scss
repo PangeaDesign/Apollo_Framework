@@ -2,8 +2,10 @@
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
 
-@import 'direction-ltr';
 @import 'colors-rfe';
+
+$direction-forwards:  'right';
+$direction-backwards:  'left';
 
 $primary-font:    "";
 $secondary-font:  "";

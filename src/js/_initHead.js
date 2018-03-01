@@ -40,10 +40,10 @@ if (setupWizard.haltStatus === false) {
 if (setupWizard.haltStatus === false) {
     var apolloTheme = apolloConfig.pageTheme;
     if (apolloTheme === "light" || apolloTheme === "dark") {
-        var newDOMNode = document.createElement('link');
+        /*var newDOMNode = document.createElement('link');
         newDOMNode.setAttribute("rel", 'stylesheet');
         newDOMNode.setAttribute("href", configPaths.css.themes + "theme-" + apolloTheme + ".min.css");
-        pageHeadNode.appendChild(newDOMNode);
+        pageHeadNode.appendChild(newDOMNode);*/
 
         setupWizard.theme.status = "go";
     } else {
@@ -51,7 +51,6 @@ if (setupWizard.haltStatus === false) {
         setupWizard.theme.status = "no-go";
     }
 }
-
 // Get the main CSS to the <head>
 if (setupWizard.haltStatus === false) {
     var apolloStyles = "apollo-framework-" + configPaths.version;
