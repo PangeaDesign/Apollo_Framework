@@ -15,6 +15,7 @@ module.exports = function(grunt) {
                         'src/js/configs/_configAnalytics.js',
                         'src/js/_initHead.js',
                         'src/js/_initImages.js',
+                        'src/js/_initVideos.js',
                         'src/js/_initSetupWizard.js'
                     ]
                 }
@@ -25,7 +26,8 @@ module.exports = function(grunt) {
                 files: {
                     'dist/css/launch.css': 'src/sass/launch.scss',
                     'dist/css/apollo-framework-2.0.css': 'src/sass/main.scss',
-                    'dist/css/apollo-framework-rfe-latin-light-2.0.css':'src/sass/main-rfe-latin-light.scss'
+                    'dist/css/apollo-framework-rfe-latin-light-2.0.css':'src/sass/main-rfe-latin-light.scss',
+                    'dist/css/apollo-framework-rfe-latin-dark-2.0.css':'src/sass/main-rfe-latin-dark.scss'
                 }
             }
         },
@@ -34,7 +36,8 @@ module.exports = function(grunt) {
                 files: {
                     'dist/css/launch.min.css': 'dist/css/launch.css',
                     'dist/css/apollo-framework-2.0.min.css': 'dist/css/apollo-framework-2.0.css',
-                    'dist/css/apollo-framework-rfe-latin-light-2.0.min.css':'dist/css/apollo-framework-rfe-latin-light-2.0.css'
+                    'dist/css/apollo-framework-rfe-latin-light-2.0.min.css':'dist/css/apollo-framework-rfe-latin-light-2.0.css',
+                    'dist/css/apollo-framework-rfe-latin-dark-2.0.min.css':'dist/css/apollo-framework-rfe-latin-dark-2.0.css'
                 }
             }
         },
