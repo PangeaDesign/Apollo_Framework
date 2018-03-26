@@ -5,7 +5,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // (children of gallerySelector)
     var parseThumbnailElements = function(el) {
         var thumbElements = el.childNodes,
-			thumbElements = document.getElementsByClassName("gallery"),
+			      thumbElements = document.getElementsByClassName("gallery"),
             numNodes = thumbElements.length,
             items = [],
             figureEl,
@@ -13,7 +13,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             size,
             item;
 
-
+        /*console.log(thumbElements);*/
         for(var i = 0; i < numNodes; i++) {
 
             figureEl = thumbElements[i]; // <figure> element
@@ -26,7 +26,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             linkEl = figureEl.children[0]; // <a> element
 
             size = linkEl.parentNode.getAttribute('data-size').split('x');
-
+            console.log(size);
             // create slide object
             item = {
                 src: linkEl.getAttribute('href'),
@@ -77,7 +77,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         // alternatively, you may define index via data- attribute
         var clickedGallery = clickedListItem.parentNode,
             childNodes = clickedListItem.parentNode.childNodes,
-			childNodes = document.getElementsByClassName("gallery"),
+			      childNodes = document.getElementsByClassName("gallery"),
             numChildNodes = childNodes.length,
             nodeIndex = 0,
             index;
@@ -93,7 +93,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             }
             nodeIndex++;
         }
-
 
 
         if(index >= 0) {
@@ -136,12 +135,11 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             gallery,
             options,
             items;
-
         items = parseThumbnailElements(galleryElement);
 
         // define options (if needed)
         options = {
-			       history:false,//disable hashes 
+			       history:false,//disable hashes
 
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),

@@ -3,57 +3,46 @@
 // All rights reserved
 
 /* Headlines */
-h1 {
-    box-sizing: border-box;
-    color: #4f6d7a;// ?podle themes
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
+h1,h2,h3,h4,h5,h6{
     padding: 30px 0 15px 0;
-    font-family: "Skolar Sans",sans-serif;
+}
+h1 {
+    color: $color-text-secondary;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: $secondary-font, $font-fallback-secondary;
+    text-align: center;
 }
 h2 {
-    box-sizing: border-box;
-    color: #4f6d7a;
-    font-size: 28px;
+    color: $color-text-secondary;
+    font-size: 1.6rem;//28.8px
     font-weight: 700;
+    font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
-    margin: 0;
-    padding: 30px 0 15px 0;
-    font-family: "Skolar Sans",sans-serif;
 }
 h3 {
-    box-sizing: border-box;
-    color: #4f6d7a;
-    font-size: 24px;
+    color: $color-text-secondary;
+    font-size: 1.3rem;//23.4px
     font-weight: 700;
+    font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
-    margin: 0 auto;
-    padding: 30px 0 15px 0;
-    font-family: "Skolar Sans",sans-serif;
 }
 h4 {
-    box-sizing: border-box;
-    color: #4f6d7a;
-    font-size: 19px;
+    color: $color-text-secondary;
+    font-size: 1.2rem;//21.6px
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
-    margin: 0 auto;
-    padding: 30px 0 15px 0;
-    font-family: "Skolar Sans",sans-serif;
 }
 h5 {
     position: relative;
-    margin-top: 30px;
-    font-family: "Skolar Sans",sans-serif;
-    color: #4f6d7a;
-    font-size: 28px;
+    color: $color-text-secondary;
+    font-size: 1.6rem;//28.8px
     font-weight: 700;
+    font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
-    margin-bottom: 15px;
 }
 h5:before {
     content: "";
@@ -62,7 +51,7 @@ h5:before {
     width: 80%;
     height: 1px;
     position: absolute;
-    top: 50%;
+    top: 56%;
     left: 10%;
     z-index: 1;
 }
@@ -75,22 +64,85 @@ h5 span {
 }
 h6 {
     position: relative;
-    margin-top: 10px;
-    font-family: "Skolar Sans",sans-serif;
-    color: #4f6d7a;
-    font-size: 22px;
+    color: $color-text-secondary;
+    font-size: 1.2rem;//21.6px
     font-weight: 300;
+    font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
-    margin-bottom: 15px;
 }
 /* Paragraphs */
 p {
-    font-family: "Skolar PE", serif;
-    color: #020202;
-    font-size: 18px;
-    line-height: 1.5;
-    font-weight: 300;
-    margin: 0 auto;
-    padding: 15px 0;
     box-sizing: border-box;
+    padding: 1.5*$gutter 0;
+    color: $color-text;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: $primary-font, $font-fallback;
+    text-align: $direction-forwards;
+}
+.interview p{
+    padding: $gutter 0;
+    span{
+      font-weight:700;
+      color:$color-text-secondary;
+    }
+}
+
+/* Dividers & Decorations */
+hr {
+    margin: 50px auto;
+    border: none;
+    box-sizing: border-box;
+}
+
+hr.divider--short {
+    width: 40%;
+    height: 1px;
+    border-bottom: 1px solid $color-text;
+    opacity:0.1;
+}
+
+hr.divider--solid {
+    border-bottom: 1px solid $color-text;
+    opacity:0.1;
+}
+
+hr.divider--dotted {
+    border-bottom: 1px dotted $color-text;
+    opacity:0.1;
+}
+
+hr.divider--dashed {
+    border-bottom: 1px dashed $color-text;
+    opacity:0.1;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+}
+
+blockquote cite {
+    display: block;
+    box-sizing: border-box;
+    width: inherit;
+    max-width: inherit;
+    padding-left: 20px;
+    color: $color-text-secondary;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 300;
+    font-style: italic;
+    font-family: $primary-font, $font-fallback;
+    border-left: 5px solid $color-text-secondary;
+}
+
+blockquote footer {
+margin: $gutter 0;
+    color: $color-text-secondary;
+    font-size: 0.8rem;
+    font-family: $secondary-font, $font-fallback-secondary;
+    text-align: $direction-backwards;
 }

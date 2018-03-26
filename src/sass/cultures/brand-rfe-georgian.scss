@@ -4,8 +4,14 @@
 
 @import 'colors-rfe';
 
-$direction-forwards:  'right';
-$direction-backwards:  'left';
+$direction-forwards:  'left';
+$direction-backwards:  'right';
 
-$primary-font:    "";
-$secondary-font:  "";
+@font-face {
+  font-family:"DejaVu";
+  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/DejaVuSans.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/DejaVuSans.woff") format("woff");
+  }
+
+$primary-font:    "DejaVu";
+$secondary-font:  "DejaVu";

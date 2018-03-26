@@ -4,8 +4,15 @@
 
 @import 'colors-rfe';
 
-$direction-forwards:  'right';
-$direction-backwards:  'left';
+$direction-forwards:  'left';
+$direction-backwards:  'right';
 
-$primary-font:    "";
-$secondary-font:  "";
+/* Imports */
+@font-face {
+  font-family:"Arian";
+  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/ArianAMU.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/ArianAMU.woff") format("woff");
+  }
+
+$primary-font:    "Arian";
+$secondary-font:  "Arian";

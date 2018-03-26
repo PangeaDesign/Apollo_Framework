@@ -26,5 +26,8 @@ var configPaths = {
         email: "subscribe.html",
         rss: "rssfeeds",
         podcast: "podcasts"
+    },
+    vendor: {
+        photoswipe: "dist/vendor/photoswipe/"
     }
 }

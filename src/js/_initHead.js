@@ -28,11 +28,6 @@ if (setupWizard.haltStatus === false) {
 // Get the culture and add proper CSS to the <head>
 if (setupWizard.haltStatus === false) {
     var apolloCulture = siteConfig[apolloConfig.projectSite].siteCulture;
-    /*var newDOMNode = document.createElement('link');
-    newDOMNode.setAttribute("rel", 'stylesheet');
-    newDOMNode.setAttribute("href", configPaths.css.cultures + "culture-" + apolloCulture + ".min.css");
-    pageHeadNode.appendChild(newDOMNode);*/
-
     setupWizard.culture.status = "go";
 }
 
@@ -40,23 +35,19 @@ if (setupWizard.haltStatus === false) {
 if (setupWizard.haltStatus === false) {
     var apolloTheme = apolloConfig.pageTheme;
     if (apolloTheme === "light" || apolloTheme === "dark") {
-        /*var newDOMNode = document.createElement('link');
-        newDOMNode.setAttribute("rel", 'stylesheet');
-        newDOMNode.setAttribute("href", configPaths.css.themes + "theme-" + apolloTheme + ".min.css");
-        pageHeadNode.appendChild(newDOMNode);*/
-
         setupWizard.theme.status = "go";
     } else {
         setupWizard.haltStatus = true;
         setupWizard.theme.status = "no-go";
     }
 }
+
 // Get the main CSS to the <head>
 if (setupWizard.haltStatus === false) {
-    var apolloStyles = "apollo-framework-" + configPaths.version;
+    var apolloVersion = configPaths.version;
     var newDOMNode = document.createElement('link');
-    newDOMNode.setAttribute("rel", 'stylesheet');
-    newDOMNode.setAttribute("href", configPaths.css.root + apolloStyles + ".min.css");
+    newDOMNode.setAttribute("rel", "stylesheet");
+    newDOMNode.setAttribute("href", configPaths.css.root + "apollo-framework-" + apolloCulture + "-" + apolloTheme + "-" + apolloVersion + ".min.css");
     pageHeadNode.appendChild(newDOMNode);
 }
 
@@ -117,4 +108,29 @@ if (setupWizard.haltStatus === false) {
         setupWizard.haltStatus = true;
         setupWizard.analytics.status = "no-go";
     }
+}
+
+if(setupWizard.haltStatus===false){
+  if(apolloConfig.pageGallery===true){
+    var newDOMNode = document.createElement('link');
+    newDOMNode.setAttribute("rel", "stylesheet");
+    newDOMNode.setAttribute("href", configPaths.vendor.photoswipe + "photoswipe.css");
+    document.head.appendChild(newDOMNode);
+    newDOMNode = document.createElement('link');
+    newDOMNode.setAttribute("rel", "stylesheet");
+    newDOMNode.setAttribute("href", configPaths.vendor.photoswipe + "default-skin/default-skin.css");
+    document.head.appendChild(newDOMNode);
+    newDOMNode = document.createElement('script');
+    newDOMNode.type = 'text/javascript';
+    newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "photoswipe.min.js");
+    document.head.appendChild(newDOMNode);
+    newDOMNode = document.createElement('script');
+    newDOMNode.type = 'text/javascript';
+    newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "photoswipe-ui-default.min.js");
+    document.head.appendChild(newDOMNode);
+    newDOMNode = document.createElement('script');
+    newDOMNode.type = 'text/javascript';
+    newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "_initGallerySwipe.js");
+    document.head.appendChild(newDOMNode);
+  }
 }

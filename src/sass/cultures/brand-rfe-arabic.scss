@@ -4,8 +4,19 @@
 
 @import 'colors-rfe';
 
-$direction-forwards:    'left';
-$direction-backwards:  'right';
+$direction-forwards:  'right';
+$direction-backwards:  'left';
 
-$primary-font:    "";
-$secondary-font:  "";
+/* Imports */
+@font-face {
+  font-family:"Nassim";
+  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/NassimArab-Rg.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/NassimArab-Rg.woff") format("woff");
+  }
+
+$primary-font:    "Nassim";
+$secondary-font:  "Nassim";
+
+html, body{
+  font-size:20px;
+}

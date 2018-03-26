@@ -7,8 +7,24 @@ footer#page__footer {
 	padding: $gutter;
 	box-sizing: border-box;
 	text-align: center;
+	background-color: $color-complimentary;
 
+	.footer__block{
+		margin:auto;
+		max-width: $breakpoint-s;
+		h3 {
+			color: $color-white;
+			}
+		p {
+			color: $color-white;
+			}
+		}
 	.footer__follow-us {
+		margin: auto;
+		max-width: $breakpoint-s;
+		h3 {
+			color: $color-white;
+		}
 		a {
 			width: 42px;
 			height: 42px;
@@ -20,11 +36,19 @@ footer#page__footer {
 				height: 42px;
 				display: block;
 				transition: fill .3s;
-
+				fill: $color-white;
 				.svg__path {
-					fill: $color-white;
+					fill: $color-complimentary;
 				}
 			}
 		}
+	}
+	.footer__copyright{
+		margin: auto;
+    max-width: $breakpoint-s;
+		p {
+			color: $color-white;
+			text-align: center;
+			}
 	}
 }
