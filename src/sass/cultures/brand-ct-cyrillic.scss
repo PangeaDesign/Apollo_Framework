@@ -7,5 +7,14 @@
 $direction-forwards:  'right';
 $direction-backwards:  'left';
 
+@font-face {
+  font-family:"Skolar Sans PE";
+  font-weight: 300;
+  /*src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/.woff") format("woff");*/
+  }
+
 $primary-font:    "";
 $secondary-font:  "";
+
+/*https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/*/

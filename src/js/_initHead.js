@@ -112,14 +112,15 @@ if (setupWizard.haltStatus === false) {
 
 if(setupWizard.haltStatus===false){
   if(apolloConfig.pageGallery===true){
-    var newDOMNode = document.createElement('link');
+    var newDOMNode
+    /*newDOMNode = document.createElement('link');
     newDOMNode.setAttribute("rel", "stylesheet");
     newDOMNode.setAttribute("href", configPaths.vendor.photoswipe + "photoswipe.css");
     document.head.appendChild(newDOMNode);
     newDOMNode = document.createElement('link');
     newDOMNode.setAttribute("rel", "stylesheet");
     newDOMNode.setAttribute("href", configPaths.vendor.photoswipe + "default-skin/default-skin.css");
-    document.head.appendChild(newDOMNode);
+    document.head.appendChild(newDOMNode);*/
     newDOMNode = document.createElement('script');
     newDOMNode.type = 'text/javascript';
     newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "photoswipe.min.js");
