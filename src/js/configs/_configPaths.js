@@ -8,6 +8,7 @@ var configPaths = {
         cultures: "dist/css/cultures/",
         root: "dist/css/"
     },
+    logos: "dist/assets/logos/",
     favicons: "dist/assets/favicons/",
     version: "2.0",
     socialMedia: {
