@@ -182,6 +182,10 @@ footer#page__footer {
       color: #fff;
       text-align: center; }
 
+/*@import 'elements/gallery-before-after';
+@import 'elements/gallery-grid';
+@import 'elements/gallery-slider';
+@import 'elements/gallery';*/
 header#page__header {
   width: 100%;
   height: 65px;
