@@ -23,7 +23,7 @@ noscript {
   box-sizing: border-box; }
   noscript a {
     color: #fff;
-    transition: color .3s;
+    transition: color 0.3s;
     font-weight: bold;
     padding-top: 10px;
     text-decoration: none; }

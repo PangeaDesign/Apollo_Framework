@@ -35,19 +35,16 @@ module.exports = function(grunt) {
             apolloFramework: {
                 files: {
                     'dist/css/launch.min.css': 'dist/css/launch.css',
-                    /*'dist/css/apollo-framework-2.0.min.css': [
-                      'dist/css/apollo-framework-2.0.css,
-                      'src/sass/vendor/photoswipe/default-skin.css',
-                      'src/sass/vendor/photoswipe/photoswipe.css'
-                    ],*/
                     'dist/css/apollo-framework-rfe-latin-light-2.0.min.css':[
-                      'dist/css/apollo-framework-rfe-latin-light-2.0.css',
-                      'src/sass/vendor/photoswipe/default-skin.css',
-                      'src/sass/vendor/photoswipe/photoswipe.css'],
+                        'dist/css/apollo-framework-rfe-latin-light-2.0.css',
+                        'src/sass/vendors/photoswipe/default-skin.css',
+                        'src/sass/vendors/photoswipe/photoswipe.css'
+                    ],
                     'dist/css/apollo-framework-rfe-latin-dark-2.0.min.css':[
-                      'dist/css/apollo-framework-rfe-latin-dark-2.0.css',
-                      'src/sass/vendor/photoswipe/default-skin.css',
-                      'src/sass/vendor/photoswipe/photoswipe.css']
+                        'dist/css/apollo-framework-rfe-latin-dark-2.0.css',
+                        'src/sass/vendors/photoswipe/default-skin.css',
+                        'src/sass/vendors/photoswipe/photoswipe.css'
+                    ]
                 }
             }
         },

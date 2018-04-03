@@ -1,11 +1,16 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
-
 /* Headlines */
-h1,h2,h3,h4,h5,h6{
-    padding: 30px 0 15px 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 30px 0 15px;
 }
+
 h1 {
     color: $color-text-secondary;
     font-size: 2rem;
@@ -13,37 +18,42 @@ h1 {
     font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
 }
+
 h2 {
     color: $color-text-secondary;
-    font-size: 1.6rem;//28.8px
+    font-size: 1.6rem; //28.8px
     font-weight: 700;
     font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
 }
+
 h3 {
     color: $color-text-secondary;
-    font-size: 1.3rem;//23.4px
+    font-size: 1.3rem; //23.4px
     font-weight: 700;
     font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
 }
+
 h4 {
     color: $color-text-secondary;
-    font-size: 1.2rem;//21.6px
+    font-size: 1.2rem; //21.6px
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
 }
+
 h5 {
     position: relative;
     color: $color-text-secondary;
-    font-size: 1.6rem;//28.8px
+    font-size: 1.6rem; //28.8px
     font-weight: 700;
     font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
 }
+
 h5:before {
     content: "";
     display: block;
@@ -55,6 +65,7 @@ h5:before {
     left: 10%;
     z-index: 1;
 }
+
 h5 span {
     background: #fff;
     padding: 0 5px;
@@ -62,10 +73,11 @@ h5 span {
     position: relative;
     z-index: 5;
 }
+
 h6 {
     position: relative;
     color: $color-text-secondary;
-    font-size: 1.2rem;//21.6px
+    font-size: 1.2rem; //21.6px
     font-weight: 300;
     font-family: $secondary-font, $font-fallback-secondary;
     text-align: center;
@@ -80,14 +92,15 @@ p {
     font-family: $primary-font, $font-fallback;
     text-align: $direction-forwards;
 }
-.interview p{
+
+.interview p {
     padding: $gutter 0;
-    span{
-      font-weight:700;
-      color:$color-text-secondary;
+
+    span {
+        font-weight: 700;
+        color: $color-text-secondary;
     }
 }
-
 /* Dividers & Decorations */
 hr {
     margin: 50px auto;
@@ -99,27 +112,26 @@ hr.divider--short {
     width: 40%;
     height: 1px;
     border-bottom: 1px solid $color-text;
-    opacity:0.1;
+    opacity: 0.1;
 }
 
 hr.divider--solid {
     border-bottom: 1px solid $color-text;
-    opacity:0.1;
+    opacity: 0.1;
 }
 
 hr.divider--dotted {
     border-bottom: 1px dotted $color-text;
-    opacity:0.1;
+    opacity: 0.1;
 }
 
 hr.divider--dashed {
     border-bottom: 1px dashed $color-text;
-    opacity:0.1;
+    opacity: 0.1;
 }
-
 /* Blockquotes */
 blockquote {
-  margin: 0 auto;
+    margin: 0 auto;
     width: 100%;
     max-width: 900px;
 }
@@ -140,7 +152,7 @@ blockquote cite {
 }
 
 blockquote footer {
-margin: $gutter 0;
+    margin: $gutter 0;
     color: $color-text-secondary;
     font-size: 0.8rem;
     font-family: $secondary-font, $font-fallback-secondary;
