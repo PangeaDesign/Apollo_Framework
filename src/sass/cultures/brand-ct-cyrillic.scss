@@ -7,14 +7,30 @@
 $direction-forwards:  'right';
 $direction-backwards:  'left';
 
+/* Imports */
 @font-face {
-  font-family:"Skolar Sans PE";
-  font-weight: 300;
-  /*src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/.woff") format("woff");*/
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/RobotoCondensed_Regular.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/RobotoCondensed_Regular.woff") format("woff");
   }
-
-$primary-font:    "";
-$secondary-font:  "";
-
-/*https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/*/
+@font-face {
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/RobotoCondensed_Bold.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/RobotoCondensed_Bold.woff") format("woff");
+  }
+@font-face {
+  font-family: "Skolar PE";
+  font-weight: 300;
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Light.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Light.woff") format("woff");
+  }
+@font-face {
+  font-family: "Skolar PE";
+  font-weight: 700;
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Bold.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Bold.woff") format("woff");
+  }
+$primary-font:    "Roboto Condensed";
+$secondary-font:  "Skolar PE";

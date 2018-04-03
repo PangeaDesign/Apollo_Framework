@@ -5,9 +5,14 @@
 $direction-forwards: 'left';
 $direction-backwards: 'right';
 @font-face {
-    font-family: "DejaVu";
-    src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/DejaVuSans.woff2") format("woff2");
-    src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/DejaVuSans.woff") format("woff");
+    font-family: "DejaVu (Bold)";
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/DejaVuSans_Bold.woff2") format("woff2");
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/DejaVuSans_Bold.woff") format("woff");
 }
-$primary-font: "DejaVu";
-$secondary-font: "DejaVu";
+@font-face {
+    font-family: "DejaVu (Book)";
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/DejaVuSans_Book.woff2") format("woff2");
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/DejaVuSans_Book.woff") format("woff");
+}
+$primary-font: "DejaVu (Bold)";
+$secondary-font: "DejaVu (Book)"

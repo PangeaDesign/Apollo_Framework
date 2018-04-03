@@ -9,13 +9,18 @@ $direction-backwards:  'left';
 
 /* Imports */
 @font-face {
-  font-family:"Nassim";
-  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/NassimArab-Rg.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/NassimArab-Rg.woff") format("woff");
+  font-family:"Nassim Bold";
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Bold.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Bold.woff") format("woff");
+  }
+@font-face {
+  font-family:"Nassim Regular";
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Regular.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Regular.woff") format("woff");
   }
 
-$primary-font:    "Nassim";
-$secondary-font:  "Nassim";
+$primary-font:    "Nassim Bold";
+$secondary-font:  "Nassim Regular";
 
 html, body{
   font-size:20px;

@@ -121,13 +121,13 @@ if(setupWizard.haltStatus===false){
     newDOMNode.setAttribute("rel", "stylesheet");
     newDOMNode.setAttribute("href", configPaths.vendor.photoswipe + "default-skin/default-skin.css");
     document.head.appendChild(newDOMNode);*/
-    newDOMNode = document.createElement('script');
+    /*newDOMNode = document.createElement('script');
     newDOMNode.type = 'text/javascript';
     newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "photoswipe.min.js");
     document.head.appendChild(newDOMNode);
     newDOMNode = document.createElement('script');
     newDOMNode.type = 'text/javascript';
     newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "photoswipe-ui-default.min.js");
-    document.head.appendChild(newDOMNode);
+    document.head.appendChild(newDOMNode);*/
   }
 }

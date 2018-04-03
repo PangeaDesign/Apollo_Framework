@@ -9,10 +9,15 @@ $direction-backwards:  'right';
 
 /* Imports */
 @font-face {
-  font-family:"Arian";
-  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/ArianAMU.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Infographics/sources/fonts/Apollo_Framework/ArianAMU.woff") format("woff");
+  font-family:"Arian AMU (Bold)";
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Bold.woff2") format("woff2");
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Bold.woff") format("woff");
   }
 
-$primary-font:    "Arian";
-$secondary-font:  "Arian";
+  @font-face {
+    font-family:"Arian AMU (Regular)";
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Regular.woff2") format("woff2");
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Regular.woff") format("woff");
+    }
+$primary-font:    "Arian AMU (Bold)";
+$secondary-font:  "Arian AMU (Regular)";

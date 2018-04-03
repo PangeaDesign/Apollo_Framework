@@ -16,7 +16,9 @@ module.exports = function(grunt) {
                         'src/js/_initHead.js',
                         'src/js/_initImages.js',
                         'src/js/_initVideos.js',
-                        'src/js/_initSetupWizard.js'
+                        'src/js/_initSetupWizard.js',
+                        'dist/vendor/photoswipe/photoswipe-ui-default.min.js',
+                        'dist/vendor/photoswipe/photoswipe.min.js'
                     ]
                 }
             }
