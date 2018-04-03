@@ -128,9 +128,5 @@ if(setupWizard.haltStatus===false){
     newDOMNode.type = 'text/javascript';
     newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "photoswipe-ui-default.min.js");
     document.head.appendChild(newDOMNode);
-    newDOMNode = document.createElement('script');
-    newDOMNode.type = 'text/javascript';
-    newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "_initGallerySwipe.js");
-    document.head.appendChild(newDOMNode);
   }
 }
