@@ -1,0 +1,19 @@
+{
+    "name": "\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0412\u0440\u0435\u043c\u044f",
+    "short_name": "\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0412\u0440\u0435\u043c\u044f",
+    "icons": [
+        {
+            "src": "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/assets/favicons/ct/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/assets/favicons/ct/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
