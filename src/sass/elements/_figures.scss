@@ -10,7 +10,6 @@
         img {
             width: 100%;
         }
-
         a {
             .gallery-icon {
                 position: absolute;
@@ -35,7 +34,6 @@
                 }
             }
         }
-
         figcaption {
             padding: $gutter $gutter*2;
             color: $color-text-secondary;
@@ -44,13 +42,11 @@
             text-align: $direction-backwards;
         }
     }
-
     figure:hover a {
         .gallery-icon svg {
             transform: scale(1.5);
         }
     }
-
     figure:hover a {
         .gallery-icon {
             opacity: 1;

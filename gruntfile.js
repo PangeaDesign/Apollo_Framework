@@ -17,8 +17,9 @@ module.exports = function(grunt) {
                         'src/js/_initImages.js',
                         'src/js/_initVideos.js',
                         'src/js/_initSetupWizard.js',
-                        'dist/vendor/photoswipe/photoswipe-ui-default.min.js',
-                        'dist/vendor/photoswipe/photoswipe.min.js'
+                        'src/js/vendors/photoswipe/photoswipe-ui-default.min.js',
+                        'src/js/vendors/photoswipe/photoswipe.min.js',
+                        'src/js/vendors/plyr/plyr.js'
                     ]
                 }
             }
@@ -40,12 +41,14 @@ module.exports = function(grunt) {
                     'dist/css/apollo-framework-rfe-latin-light-2.0.min.css':[
                         'dist/css/apollo-framework-rfe-latin-light-2.0.css',
                         'src/sass/vendors/photoswipe/default-skin.css',
-                        'src/sass/vendors/photoswipe/photoswipe.css'
+                        'src/sass/vendors/photoswipe/photoswipe.css',
+                        'src/sass/vendors/plyr/plyrApollo.css'
                     ],
                     'dist/css/apollo-framework-rfe-latin-dark-2.0.min.css':[
                         'dist/css/apollo-framework-rfe-latin-dark-2.0.css',
                         'src/sass/vendors/photoswipe/default-skin.css',
-                        'src/sass/vendors/photoswipe/photoswipe.css'
+                        'src/sass/vendors/photoswipe/photoswipe.css',
+                        'src/sass/vendors/plyr/plyrApollo.css'
                     ]
                 }
             }

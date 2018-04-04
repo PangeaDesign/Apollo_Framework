@@ -181,6 +181,8 @@
 
     </main>
 
+
+
     <script src="src/js/configs/_configSVG.js"></script>
     <script src="src/js/configs/_configSites.js"></script>
     <script src="src/js/configs/_configPaths.js"></script>
@@ -194,39 +196,35 @@
     <script src="src/js/_initImages.js"></script>
     <script src="src/js/_initVideos.js"></script>
 
-    <script src="dist/vendor/photoswipe/photoswipe-ui-default.min.js"></script>
-    <script src="dist/vendor/photoswipe/photoswipe.min.js"></script>
 
-    <script src="dist/vendor/plyr/plyr.js"></script>
+    <script src="src/js/vendors/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script src="src/js/vendors/photoswipe/photoswipe.min.js"></script>
+    <script src="src/js/vendors/plyr/plyr.js"></script>
     <script>
         //plyr.setup();
         var videoInstances = plyr.setup(".video");
-        console.log(videoInstances.length)
 
         for (var i = 0; i < videoInstances.length; i++) {
+            videoInstances[i].getContainer().setAttribute("xmlid", i);
             videoInstances[i].on("playing", function() {
-                /*console.log(this);*/
                 for (var i = 0; i < videoInstances.length; i++) {
-                    //console.log(videoInstances[i].getContainer(), videoInstances[i].getContainer().classList.contains("plyr--playing"));
-                    if (videoInstances[i].getContainer().classList.contains("plyr--playing")) {
-                        console.log("YES");
+                    if(i!=this.getAttribute("xmlid")){
+                      videoInstances[i].pause();
                     }
+                    /*if (videoInstances[i].getContainer().classList.contains("plyr--playing")) {
+                        //videoInstances[i].pause();
+                    }*/
                 }
             });
         };
         var audioInstances = plyr.setup(".audio");
-        /*videoInstances.on("playing", function(){
-          console.log("playing");
-        });*/
+        for (var i = 0; i < audioInstances.length;i++){
+            audioInstances[i].getContainer(.setAttribute("xmlid", i));
+            audioInstances[i].on("playing", function(){
+              
+            });
+        };
     </script>
-    <link rel="stylesheet" href="dist/vendor/plyr/plyrApollo.css">
-
-    <!--link rel="stylesheet" href="dist/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="dist/photoswipe/default-skin/default-skin.css"-->
-
-    <!--script src="src/js/photoswipe.min.js"></script>
-    <script src="src/js/photoswipe-ui-default.min.js"></script-->
-    <!--script src="src/js/_initGallerySwipe.js"></script-->
 </body>
 
 </html>
