@@ -142,30 +142,24 @@ main {
 .align--right {
   text-align: right; }
 
-/*$color-text:           '#1f2124';//light black
-$color-text-inverted:  '#ffffff';*/
-/* Imports */
 @font-face {
   font-family: "Skolar Sans PE";
-  font-weight: 400;
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/SkolarSans_Regular.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/SkolarSans_Regular.woff") format("woff"); }
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/SkolarSans_Regular.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/SkolarSans_Regular.woff") format("woff");
+  font-weight: 400; }
 @font-face {
   font-family: "Skolar Sans PE";
-  font-weight: 700;
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/SkolarSans_Bold.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/SkolarSans_Bold.woff") format("woff"); }
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/SkolarSans_Bold.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/SkolarSans_Bold.woff") format("woff");
+  font-weight: 700; }
 @font-face {
   font-family: "Skolar PE";
-  font-weight: 300;
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Light.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Light.woff") format("woff"); }
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Light.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Light.woff") format("woff");
+  font-weight: 300; }
 @font-face {
   font-family: "Skolar PE";
-  font-weight: 700;
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Bold.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Bold.woff") format("woff"); }
-html, body {
+  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Bold.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Bold.woff") format("woff");
+  font-weight: 700; }
+body,
+html {
   font-size: 18px;
   background-color: #ffffff; }
 
@@ -468,7 +462,7 @@ h6 {
 p {
   box-sizing: border-box;
   padding: 15px 0;
-  color: #1f2124;
+  color: "#1f2124";
   font-size: 1rem;
   line-height: 1.5;
   font-family: "Skolar Sans PE", "Georgia", "Times New Roman", "Times", serif;
@@ -489,19 +483,19 @@ hr {
 hr.divider--short {
   width: 40%;
   height: 1px;
-  border-bottom: 1px solid #1f2124;
+  border-bottom: 1px solid "#1f2124";
   opacity: 0.1; }
 
 hr.divider--solid {
-  border-bottom: 1px solid #1f2124;
+  border-bottom: 1px solid "#1f2124";
   opacity: 0.1; }
 
 hr.divider--dotted {
-  border-bottom: 1px dotted #1f2124;
+  border-bottom: 1px dotted "#1f2124";
   opacity: 0.1; }
 
 hr.divider--dashed {
-  border-bottom: 1px dashed #1f2124;
+  border-bottom: 1px dashed "#1f2124";
   opacity: 0.1; }
 
 /* Blockquotes */

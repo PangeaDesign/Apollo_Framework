@@ -1,8 +1,5 @@
-# OS generated files #
-######################
 .DS_Store
 .DS_Store?
-._*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
@@ -10,3 +7,11 @@ Thumbs.db
 .sass-cache
 .sass-cache/*.*
 *.scssc
+.scssc
+dist/css/apollo-framework-rfe-latin-dark-2.0.css.map
+*.map
+*.css
+dist/css/apollo-framework-rfe-latin-dark-2.0.css.map
+dist/css/apollo-framework-rfe-latin-dark-2.0.min.css
+*.map
+*.css
