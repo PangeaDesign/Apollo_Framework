@@ -21,8 +21,17 @@ var siteConfig = {
             followUs: "ما را تعقیب کنید",
             share: "شریک ساختن"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
-            facebook: "AzadiR",
+            facebook: "Azadir",
             twitter: "DaRadioAzadi",
             youtube: "user/Azadiradio",
             vkontakte: undefined,
@@ -55,6 +64,15 @@ var siteConfig = {
             copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. All Rights Reserved.",
             followUs: "Follow Us",
             share: "Share"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "GandharaRFE",
@@ -91,6 +109,15 @@ var siteConfig = {
             followUs: "راسره ملګري شئ",
             share: "شريکول"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "azadiradio",
             twitter: "pazadiradio",
@@ -125,6 +152,15 @@ var siteConfig = {
             copyright: "«Ազատ Եվրոպա/Ազատություն» ռադիոկայան © " + new Date().getFullYear() + "",
             followUs: "ՀԵՏԵՎԵՔ ՄԵԶ",
             share: "Կիսվել"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "azatutyun",
@@ -161,6 +197,15 @@ var siteConfig = {
             followUs: "Социальные сети",
             share: "Поделиться"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "azatutyunru",
             twitter: "azatutyunradio",
@@ -195,6 +240,15 @@ var siteConfig = {
             copyright: "Azadlıq Radiosu © " + new Date().getFullYear() + " Inc. | Bütün hüquqlar qorunur",
             followUs: "Bizi izlə",
             share: "Paylaş"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: true
         },
         siteSocial: {
             facebook: "azadliqradiosu",
@@ -231,6 +285,15 @@ var siteConfig = {
             followUs: "Сачыце за абнаўленьнямі",
             share: "Падзяліцца"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: true
+        },
         siteSocial: {
             facebook: "svaboda.org",
             twitter: "svaboda",
@@ -265,6 +328,15 @@ var siteConfig = {
             copyright: "© Крым.Реалии, " + new Date().getFullYear() + " | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: true
         },
         siteSocial: {
             facebook: "krymrealii",
@@ -301,6 +373,15 @@ var siteConfig = {
             followUs: "Qoşulıñız!",
             share: "Paylaşmaq"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: true
+        },
         siteSocial: {
             facebook: "krymrealii",
             twitter: "krymrealii",
@@ -335,6 +416,15 @@ var siteConfig = {
             copyright: "© Крим.Реалії, " + new Date().getFullYear() + " | Усі права застережено.",
             followUs: "Долучайся",
             share: "Поділитись"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: true
         },
         siteSocial: {
             facebook: "krymrealii",
@@ -371,6 +461,15 @@ var siteConfig = {
             followUs: "Follow Us",
             share: "Share"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "rferl",
             twitter: "RFERL",
@@ -405,6 +504,15 @@ var siteConfig = {
             copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. All Rights Reserved.",
             followUs: "Follow Us",
             share: "Share"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "rferl",
@@ -441,6 +549,15 @@ var siteConfig = {
             followUs: "გამოიწერე",
             share: "გაზიარება"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "radiotavisupleba",
             twitter: "Rtavisupleba",
@@ -475,6 +592,15 @@ var siteConfig = {
             copyright: "Эхо Кавказа © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "ekhokavkaza",
@@ -511,6 +637,15 @@ var siteConfig = {
             followUs: "Жазылыңыз",
             share: "Бөлісу"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "azattyq",
             twitter: "AzattyqRadiosy",
@@ -545,6 +680,15 @@ var siteConfig = {
             copyright: "Радио Азаттык © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "RadioAzattyq",
@@ -581,6 +725,15 @@ var siteConfig = {
             followUs: "Na ndiqni",
             share: "Shpërndaje"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "evropaelire",
             twitter: "RFE_Kosova",
@@ -615,6 +768,15 @@ var siteConfig = {
             copyright: "Radio Evropa e Lirë © " + new Date().getFullYear() + " RFE/RL, Inc. Të gjitha të drejtat e rezervuara.",
             followUs: "Онлайн шерине",
             share: "Бөлүшүңүз"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: true
         },
         siteSocial: {
             facebook: "Azattyk.unalgysy",
@@ -651,6 +813,15 @@ var siteConfig = {
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: true
+        },
         siteSocial: {
             facebook: "azattyk",
             twitter: "AzattykMedia",
@@ -685,6 +856,15 @@ var siteConfig = {
             copyright: "Радио Слободна Европа / Радио Слобода. Сите права се резервирани",
             followUs: "Следете не",
             share: "Сподели"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "RSEMK",
@@ -721,6 +901,15 @@ var siteConfig = {
             followUs: "Urmărește-ne",
             share: "Distribuie"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: true
+        },
         siteSocial: {
             facebook: "europalibera.org",
             twitter: undefined,
@@ -755,6 +944,15 @@ var siteConfig = {
             copyright: "Маршо Радио © " + new Date().getFullYear() + " RFE/RL, Inc. Ерриг бакъонаш долаяьхна ю",
             followUs: "Лаха тхо",
             share: "Яхьийта"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "radiomarsho",
@@ -791,6 +989,15 @@ var siteConfig = {
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: true
+        },
         siteSocial: {
             facebook: "KavkazRealii",
             twitter: "kavkaz_realii",
@@ -825,6 +1032,15 @@ var siteConfig = {
             copyright: "د دې سایټ دټولومطالبوحقوق له مشال راډیوسره خوندي دي",
             followUs: "موږ وڅارئ",
             share: "شریک کړئ"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "mashaalradio",
@@ -861,6 +1077,15 @@ var siteConfig = {
             followUs: "به ما بپیوندید",
             share: "ارسال"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "radio.farda",
             twitter: "radiofarda_",
@@ -895,6 +1120,15 @@ var siteConfig = {
             copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. All Rights Reserved.",
             followUs: "Follow Us",
             share: "Share"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: undefined,
@@ -931,6 +1165,15 @@ var siteConfig = {
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "radiosvoboda",
             twitter: "SvobodaRadio",
@@ -965,6 +1208,15 @@ var siteConfig = {
             copyright: "Сибирь.Реалии © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: true
         },
         siteSocial: {
             facebook: "sibrealii",
@@ -1001,6 +1253,15 @@ var siteConfig = {
             followUs: "Pratite nas",
             share: "Podijelite"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "RSE.Balkan",
             twitter: "RSE_Balkan",
@@ -1035,6 +1296,15 @@ var siteConfig = {
             copyright: "Радиои Аврупои Озод / Радиои Озодӣ © " + new Date().getFullYear() + " RFE/RL. Inc. Ҳамаи ҳуқуқ маҳфуз аст.",
             followUs: "Пайгирӣ кунед",
             share: "Пахш"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "radio.ozodi",
@@ -1071,6 +1341,15 @@ var siteConfig = {
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "radio.ozodi",
             twitter: "RadioiOzodi",
@@ -1105,6 +1384,15 @@ var siteConfig = {
             copyright: "Азатлык Радиосы © " + new Date().getFullYear() + " RFE/RL, Inc. | Бар хокуклар сакланган",
             followUs: "Безгә кушылыгыз!",
             share: "Уртаклаш"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: true
         },
         siteSocial: {
             facebook: "azatliq",
@@ -1141,6 +1429,15 @@ var siteConfig = {
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: true
+        },
         siteSocial: {
             facebook: "Idel.Realii",
             twitter: "Idel_Realii",
@@ -1175,6 +1472,15 @@ var siteConfig = {
             copyright: "Azat Ýewropa/Azatlyk Radiosy © " + new Date().getFullYear() + " RFE/RL, Inc. Ähli hukuklar goralan.",
             followUs: "Bizi yzarlaň",
             share: "Paýlaş"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: false,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
         },
         siteSocial: {
             facebook: "azatlykradiosy",
@@ -1211,6 +1517,15 @@ var siteConfig = {
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: false
+        },
         siteSocial: {
             facebook: "azatlykradiosy",
             twitter: "azathabar",
@@ -1245,6 +1560,15 @@ var siteConfig = {
             copyright: "© Радіо Свобода, " + new Date().getFullYear() + " | Усі права застережено.",
             followUs: "Долучайся!",
             share: "Поділитись"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: true
         },
         siteSocial: {
             facebook: "RadioSvoboda.Org",
@@ -1281,6 +1605,15 @@ var siteConfig = {
             followUs: "Социал Тармоқлар",
             share: "Ўртоқлашинг"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: false,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: true,
+            share_odnoklassniki: true
+        },
         siteSocial: {
             facebook: "ozodlikradiosi",
             twitter: "ozodlik",
@@ -1316,6 +1649,15 @@ var siteConfig = {
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
         },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: true,
+            share_email: true,
+            share_telegram: false,
+            share_odnoklassniki: true
+        },
         siteSocial: {
             facebook: "Ozodlik",
             twitter: "ozodlik",
@@ -1350,6 +1692,15 @@ var siteConfig = {
             copyright: "Настоящее Время © Все права защищены",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
+        },
+        siteShare: {
+            share_facebook: true,
+            share_twitter: true,
+            share_vkontakte: true,
+            share_googleplus: false,
+            share_email: false,
+            share_telegram: true,
+            share_odnoklassniki: true
         },
         siteSocial: {
             facebook: "currenttimetv",

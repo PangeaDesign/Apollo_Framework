@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        body {
+            background: white;
+        }
+
+        svg path {
+            fill: black !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="logo"></div>
+    <script>
+        function httpGetLogo(logoUrl) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    document.getElementById("logo").innerHTML = xmlHttp.response;
+            }
+            xmlHttp.open("GET", logoUrl, true);
+            xmlHttp.send(null);
+        }
+
+        httpGetLogo("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/en.svg");
+    </script>
+</body>
+
+</html>

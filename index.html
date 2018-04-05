@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -207,9 +208,9 @@
         for (var i = 0; i < videoInstances.length; i++) {
             videoInstances[i].getContainer().setAttribute("xmlid", i);
             videoInstances[i].on("playing", function() {
-                for (var i = 0; i < videoInstances.length; i++) {
-                    if(i!=this.getAttribute("xmlid")){
-                      videoInstances[i].pause();
+                for (var j = 0; j < videoInstances.length; j++) {
+                    if (j != this.getAttribute("xmlid")) {
+                        videoInstances[j].pause();
                     }
                     /*if (videoInstances[i].getContainer().classList.contains("plyr--playing")) {
                         //videoInstances[i].pause();
@@ -218,10 +219,14 @@
             });
         };
         var audioInstances = plyr.setup(".audio");
-        for (var i = 0; i < audioInstances.length;i++){
-            audioInstances[i].getContainer(.setAttribute("xmlid", i));
-            audioInstances[i].on("playing", function(){
-              
+        for (var i = 0; i < audioInstances.length; i++) {
+            audioInstances[i].getContainer().setAttribute("xmlid", i);
+            audioInstances[i].on("playing", function() {
+                for (var j = 0; j < audioInstances.length; j++) {
+                    if (j != this.getAttribute("xmlid")) {
+                        videoInstances[j].pause();
+                    }
+                }
             });
         };
     </script>

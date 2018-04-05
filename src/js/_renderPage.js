@@ -18,7 +18,7 @@ if (setupWizard.haltStatus !== true) {
     if (heroMedia.indexOf(".jpg") >= 0 || heroMedia.indexOf(".jpeg") >= 0 || heroMedia.indexOf(".png") >= 0 || heroMedia.indexOf(".gif") >= 0) {
         heroBackgroundNode.setAttribute("style", "background-image: url(\"" + apolloConfig.heroMedia + "\"); background-size: cover; background-position: center;");
 
-    // In case media type is mp4 video
+        // In case media type is mp4 video
     } else if (heroMedia.indexOf(".mp4") >= 0) {
         heroBackgroundNode.className += " hero__background--video";
         heroBackgroundNode.innerHTML = "<video playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";
@@ -67,11 +67,31 @@ if (setupWizard.haltStatus !== true) {
     headerNode.setAttribute("id", "page__header");
     pagePreloaderNode.parentNode.insertBefore(headerNode, pagePreloaderNode.nextSibling);
 
+    var headerProgressNode = document.createElement("div");
+    headerProgressNode.setAttribute("id", "progress");
+    headerNode.appendChild(headerProgressNode);
+    var headerProgressBarNode = document.createElement("div");
+    headerProgressBarNode.setAttribute("id", "bar");
+    headerProgressNode.appendChild(headerProgressBarNode);
+
     var headerLogoNode = document.createElement("a");
     headerLogoNode.className += ("page__header-logo");
+    headerLogoNode.setAttribute("id", "page__header-logo");
     headerLogoNode.setAttribute("href", siteConfig[apolloConfig.projectSite].siteURL);
     headerLogoNode.setAttribute("target", "_blank");
-    headerLogoNode.innerHTML = logos[apolloConfig.projectSite];
+    /*headerLogoNode.innerHTML = logos[apolloConfig.projectSite];*/
+    function httpGetLogo(logoUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            console.log("statechange", xmlHttp.readyState, xmlHttp.status);
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                document.getElementById("page__header-logo").innerHTML = xmlHttp.response;
+            }
+        }
+        xmlHttp.open("GET", logoUrl, true);
+        xmlHttp.send(null);
+    }
+
 
     var headerShareNode = document.createElement("a");
     headerShareNode.className += ("page__header-share");
@@ -80,8 +100,8 @@ if (setupWizard.haltStatus !== true) {
     headerShareNode.innerHTML = icons.share + siteConfig[apolloConfig.projectSite].siteLocal["share"];
 
     headerNode.appendChild(headerLogoNode);
+    httpGetLogo("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/" + apolloConfig.projectSite + ".svg");
     headerNode.appendChild(headerShareNode);
-
 
     ///////////////////
     // G A L L E R Y //
@@ -157,4 +177,15 @@ if (setupWizard.haltStatus !== true) {
     footerNode.appendChild(footerBlockNode);
     footerNode.appendChild(footerFollowUsNode);
     footerNode.appendChild(footerCopyrightNode);
+}
+
+// FUNCTION: Scroll Status
+window.onscroll = function() {
+    console.log("scroll");
+    var pageHeight = heightMain + heightFooter;
+    var scrollPosition = document.body.getBoundingClientRect().top;
+    document.getElementById("bar").setAttribute("width", scrollPosition / pageHeight * 100 + "%");
+}
+window.onresize = function() {
+    console.log("resize");
 }
