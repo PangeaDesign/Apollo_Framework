@@ -1,27 +1,23 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
-
 @import 'colors-rfe';
-
-$direction-forwards:  'right';
-$direction-backwards:  'left';
-
-/* Imports */
 @font-face {
-  font-family:"Nassim Bold";
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Bold.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Bold.woff") format("woff");
-  }
+    font-family: "Nassim";
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Bold.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Bold.woff") format("woff");
+    font-weight: 700;
+}
 @font-face {
-  font-family:"Nassim Regular";
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Regular.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Regular.woff") format("woff");
-  }
+    font-family: "Nassim";
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Regular.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/Nassim_Regular.woff") format("woff");
+    font-weight: 400;
+}
+$direction-forwards: 'right';
+$direction-backwards: 'left';
+$primary-font: "Nassim";
+$secondary-font: "Nassim";
 
-$primary-font:    "Nassim Bold";
-$secondary-font:  "Nassim Regular";
-
-html, body{
-  font-size:20px;
+body,
+html {
+    font-size: 20px;
 }

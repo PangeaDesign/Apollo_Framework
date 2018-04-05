@@ -1,23 +1,18 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
-
 @import 'colors-rfe';
-
-$direction-forwards:  'left';
-$direction-backwards:  'right';
-
-/* Imports */
 @font-face {
-  font-family:"Arian AMU (Bold)";
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Bold.woff2") format("woff2");
-  src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Bold.woff") format("woff");
-  }
-
-  @font-face {
-    font-family:"Arian AMU (Regular)";
-    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Regular.woff2") format("woff2");
-    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Regular.woff") format("woff");
-    }
-$primary-font:    "Arian AMU (Bold)";
-$secondary-font:  "Arian AMU (Regular)";
+    font-family: "Arian AMU";
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Bold.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Bold.woff") format("woff");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Arian AMU";
+    src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Regular.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/ArianAMU_Regular.woff") format("woff");
+    font-weight: 400;
+}
+$direction-forwards: 'left';
+$direction-backwards: 'right';
+$primary-font: "Arian AMU";
+$secondary-font: "Arian AMU";
