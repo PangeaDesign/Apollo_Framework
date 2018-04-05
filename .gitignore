@@ -8,3 +8,6 @@ Thumbs.db
 .sass-cache/*.*
 *.scssc
 .scssc
+dist/css/apollo-framework-rfe-latin-dark-2.0.css.map
+*.map
+*.css

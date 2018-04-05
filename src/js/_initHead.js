@@ -54,6 +54,7 @@ if (setupWizard.haltStatus === false) {
 // Prepare the mandatory meta data log and print it in console
 var numberOfMeta = pageHeadNode.getElementsByTagName("meta").length;
 
+
 // Send info to the setupWizard
 if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
     if (setupWizard.configParser.status === "no-go-1") {

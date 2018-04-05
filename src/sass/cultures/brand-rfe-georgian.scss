@@ -12,7 +12,12 @@
     src: url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/DejaVuSans_Book.woff2") format("woff2"), url("https://docs.rferl.org/Branding/Apollo_Framework/2.0/dist/assets/fonts/DejaVuSans_Book.woff") format("woff");
     font-weight: 400;
 }
+<<<<<<< HEAD
 $direction-forwards: 'left';
 $direction-backwards: 'right';
 $primary-font: "DejaVu";
 $secondary-font: "DejaVu";
+=======
+$primary-font: "DejaVu (Bold)";
+$secondary-font: "DejaVu (Book)";
+>>>>>>> 0f70270f85c4cfdb53c0509d7646d936a65835b6
