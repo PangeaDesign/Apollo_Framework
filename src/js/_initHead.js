@@ -111,24 +111,14 @@ if (setupWizard.haltStatus === false) {
     }
 }
 
-if (setupWizard.haltStatus === false) {
-    if (apolloConfig.pageGallery === true) {
-        var newDOMNode
-        /*newDOMNode = document.createElement('link');
-        newDOMNode.setAttribute("rel", "stylesheet");
-        newDOMNode.setAttribute("href", configPaths.vendor.photoswipe + "photoswipe.css");
-        document.head.appendChild(newDOMNode);
-        newDOMNode = document.createElement('link');
-        newDOMNode.setAttribute("rel", "stylesheet");
-        newDOMNode.setAttribute("href", configPaths.vendor.photoswipe + "default-skin/default-skin.css");
-        document.head.appendChild(newDOMNode);*/
-        /*newDOMNode = document.createElement('script');
-        newDOMNode.type = 'text/javascript';
-        newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "photoswipe.min.js");
-        document.head.appendChild(newDOMNode);
-        newDOMNode = document.createElement('script');
-        newDOMNode.type = 'text/javascript';
-        newDOMNode.setAttribute("src", configPaths.vendor.photoswipe + "photoswipe-ui-default.min.js");
-        document.head.appendChild(newDOMNode);*/
+function progressBar() {
+    var heightMain = document.getElementsByTagName("main")[0].offsetHeight;
+    var heightFooter = document.getElementById("page__footer").offsetHeight;
+    var pageHeight = heightMain + heightFooter;
+    var scrollPosition = document.body.getBoundingClientRect().top;
+    if (scrollPosition <= 0) {
+        document.getElementById("bar").style.width = -scrollPosition / pageHeight * 100 + "%";
+    } else {
+        document.getElementById("bar").style.width = "0px";
     }
 }

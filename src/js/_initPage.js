@@ -16,8 +16,10 @@ window.onresize = function() {
 
 }
 // Scroll scripts
+progressBar();
 window.onscroll = function() {
-
+    lazyLoad();
+    progressBar();
 }
 // Remove config part from the page
 if (setupWizard.haltStatus === false) {

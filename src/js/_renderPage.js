@@ -84,7 +84,6 @@ if (setupWizard.haltStatus !== true) {
     function httpGetLogo(logoUrl) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
-            console.log("statechange", xmlHttp.readyState, xmlHttp.status);
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                 document.getElementById("page__header-logo").innerHTML = xmlHttp.response;
             }
