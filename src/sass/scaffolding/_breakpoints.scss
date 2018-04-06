@@ -1,9 +1,14 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
-
-$breakpoint-xs:		576px;
-$breakpoint-s:		768px;
-$breakpoint-m:		992px;
-$breakpoint-l:		1200px;
-$breakpoint-xl:	    1600px;
+$breakpoint-xs: 576px;
+$breakpoint-s: 768px;
+$breakpoint-m: 992px;
+$breakpoint-l: 1200px;
+$breakpoint-xl: 1600px;
+/* Font Size Multipliers */
+$font-multiplier-xs: 0.7;
+$font-multiplier-s: 0.8;
+$font-multiplier-m: 0.9;
+$font-multiplier-l: 1;
+$font-multiplier-xl: 1;

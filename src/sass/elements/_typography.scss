@@ -15,7 +15,7 @@ h1 {
     color: $color-text-secondary;
     font-size: 2rem;
     font-weight: 700;
-    font-family: $secondary-font, $font-fallback-secondary;
+    font-family: $font-secondary, $font-fallback-secondary;
     text-align: center;
 }
 
@@ -23,16 +23,17 @@ h2 {
     color: $color-text-secondary;
     font-size: 1.6rem; //28.8px
     font-weight: 700;
-    font-family: $secondary-font, $font-fallback-secondary;
+    font-family: $font-secondary, $font-fallback-secondary;
     text-align: center;
 }
 
 h3 {
-    color: $color-text-secondary;
-    font-size: 1.3rem; //23.4px
-    font-weight: 700;
-    font-family: $secondary-font, $font-fallback-secondary;
+    color: $color-tertiary;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: $font-primary, $font-fallback-primary;
     text-align: center;
+    text-transform: uppercase;
 }
 
 h4 {
@@ -41,7 +42,7 @@ h4 {
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: $secondary-font, $font-fallback-secondary;
+    font-family: $font-secondary, $font-fallback-secondary;
     text-align: center;
 }
 
@@ -50,7 +51,7 @@ h5 {
     color: $color-text-secondary;
     font-size: 1.6rem; //28.8px
     font-weight: 700;
-    font-family: $secondary-font, $font-fallback-secondary;
+    font-family: $font-secondary, $font-fallback-secondary;
     text-align: center;
 }
 
@@ -68,7 +69,7 @@ h5:before {
 
 h5 span {
     background: #fff;
-    padding: 0 5px;
+    padding: 0 $gutter;
     display: inline-block;
     position: relative;
     z-index: 5;
@@ -79,18 +80,18 @@ h6 {
     color: $color-text-secondary;
     font-size: 1.2rem; //21.6px
     font-weight: 300;
-    font-family: $secondary-font, $font-fallback-secondary;
+    font-family: $font-secondary, $font-fallback-secondary;
     text-align: center;
 }
 /* Paragraphs */
 p {
     box-sizing: border-box;
-    padding: 1.5*$gutter 0;
+    padding: (1.5 * $gutter 0);
     color: $color-text;
     font-size: 1rem;
     line-height: 1.5;
-    font-family: $primary-font, $font-fallback;
-    text-align: $direction-forwards;
+    font-weight: 300;
+    font-family: $font-secondary, $font-fallback-secondary;
 }
 
 .interview p {
@@ -147,7 +148,7 @@ blockquote cite {
     line-height: 1.2;
     font-weight: 300;
     font-style: italic;
-    font-family: $primary-font, $font-fallback;
+    font-family: $font-primary, $font-fallback-primary;
     border-left: 5px solid $color-text-secondary;
 }
 
@@ -155,6 +156,6 @@ blockquote footer {
     margin: $gutter 0;
     color: $color-text-secondary;
     font-size: 0.8rem;
-    font-family: $secondary-font, $font-fallback-secondary;
+    font-family: $font-secondary, $font-fallback-secondary;
     text-align: $direction-backwards;
 }
