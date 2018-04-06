@@ -200,33 +200,9 @@
     <script src="src/js/vendors/photoswipe/photoswipe.min.js"></script>
     <script src="src/js/vendors/plyr/plyr.js"></script>
     <script>
-        //plyr.setup();
-        var videoInstances = plyr.setup(".video");
-
-        for (var i = 0; i < videoInstances.length; i++) {
-            videoInstances[i].getContainer().setAttribute("xmlid", i);
-            videoInstances[i].on("playing", function() {
-                for (var j = 0; j < videoInstances.length; j++) {
-                    if (j != this.getAttribute("xmlid")) {
-                        videoInstances[j].pause();
-                    }
-                    /*if (videoInstances[i].getContainer().classList.contains("plyr--playing")) {
-                        //videoInstances[i].pause();
-                    }*/
-                }
-            });
-        };
-        var audioInstances = plyr.setup(".audio");
-        for (var i = 0; i < audioInstances.length; i++) {
-            audioInstances[i].getContainer().setAttribute("xmlid", i);
-            audioInstances[i].on("playing", function() {
-                for (var j = 0; j < audioInstances.length; j++) {
-                    if (j != this.getAttribute("xmlid")) {
-                        videoInstances[j].pause();
-                    }
-                }
-            });
-        };
+        /*var pageHeight = heightMain + heightFooter;
+                var scrollPosition = document.body.getBoundingClientRect().top;
+                document.getElementById("bar").setAttribute("width", scrollPosition / pageHeight * 100 + "%");*/
     </script>
 </body>
 

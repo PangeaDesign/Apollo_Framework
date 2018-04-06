@@ -15,7 +15,10 @@ window.onload = function() {
 window.onresize = function() {
 
 }
+// Scroll scripts
+window.onscroll = function() {
 
+}
 // Remove config part from the page
 if (setupWizard.haltStatus === false) {
     var configDOM = document.getElementById('apollo-config');

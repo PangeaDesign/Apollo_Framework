@@ -1,6 +1,7 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
+// FUNCTION: Scroll Status
 
 if (setupWizard.haltStatus !== true) {
 
@@ -177,15 +178,4 @@ if (setupWizard.haltStatus !== true) {
     footerNode.appendChild(footerBlockNode);
     footerNode.appendChild(footerFollowUsNode);
     footerNode.appendChild(footerCopyrightNode);
-}
-
-// FUNCTION: Scroll Status
-window.onscroll = function() {
-    console.log("scroll");
-    var pageHeight = heightMain + heightFooter;
-    var scrollPosition = document.body.getBoundingClientRect().top;
-    document.getElementById("bar").setAttribute("width", scrollPosition / pageHeight * 100 + "%");
-}
-window.onresize = function() {
-    console.log("resize");
 }

@@ -28,7 +28,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "Azadir",
@@ -72,7 +76,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "GandharaRFE",
@@ -116,7 +124,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "azadiradio",
@@ -160,7 +172,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "azatutyun",
@@ -204,7 +220,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "azatutyunru",
@@ -248,7 +268,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "azadliqradiosu",
@@ -292,7 +316,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "svaboda.org",
@@ -336,7 +364,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "krymrealii",
@@ -380,7 +412,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "krymrealii",
@@ -424,7 +460,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "krymrealii",
@@ -468,7 +508,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: true,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "rferl",
@@ -512,7 +556,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "rferl",
@@ -556,7 +604,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "radiotavisupleba",
@@ -600,7 +652,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "ekhokavkaza",
@@ -644,7 +700,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: true,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "azattyq",
@@ -688,7 +748,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "RadioAzattyq",
@@ -732,7 +796,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "evropaelire",
@@ -776,7 +844,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "Azattyk.unalgysy",
@@ -820,7 +892,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "azattyk",
@@ -864,7 +940,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "RSEMK",
@@ -908,7 +988,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "europalibera.org",
@@ -952,7 +1036,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "radiomarsho",
@@ -996,7 +1084,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "KavkazRealii",
@@ -1040,7 +1132,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "mashaalradio",
@@ -1084,7 +1180,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: true,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "radio.farda",
@@ -1128,7 +1228,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: true,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: undefined,
@@ -1172,7 +1276,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "radiosvoboda",
@@ -1216,7 +1324,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: true,
+            share_balatarin: false,
+            share_connectMail: true,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "sibrealii",
@@ -1260,7 +1372,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "RSE.Balkan",
@@ -1304,7 +1420,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "radio.ozodi",
@@ -1348,7 +1468,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "radio.ozodi",
@@ -1392,7 +1516,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "azatliq",
@@ -1436,7 +1564,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "Idel.Realii",
@@ -1480,7 +1612,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "azatlykradiosy",
@@ -1524,7 +1660,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: false
+            share_odnoklassniki: false,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "azatlykradiosy",
@@ -1568,7 +1708,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "RadioSvoboda.Org",
@@ -1612,7 +1756,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: true,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "ozodlikradiosi",
@@ -1656,7 +1804,11 @@ var siteConfig = {
             share_googleplus: true,
             share_email: true,
             share_telegram: false,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: false
         },
         siteSocial: {
             facebook: "Ozodlik",
@@ -1700,7 +1852,11 @@ var siteConfig = {
             share_googleplus: false,
             share_email: false,
             share_telegram: true,
-            share_odnoklassniki: true
+            share_odnoklassniki: true,
+            share_linkedin: false,
+            share_balatarin: false,
+            share_connectMail: false,
+            share_whatsUp: true
         },
         siteSocial: {
             facebook: "currenttimetv",
