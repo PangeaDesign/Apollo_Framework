@@ -4,21 +4,22 @@
 
 footer#page__footer {
     width: 100%;
-    padding: $gutter;
+    padding: ($gutter * 2);
     box-sizing: border-box;
     text-align: center;
     background-color: $color-complimentary;
+    border-bottom: 5px solid $color-primary;
 
     .footer__block {
+        text-align: center;
         margin: auto;
         max-width: $breakpoint-s;
 
-        h3 {
-            color: $color-white;
-        }
-
         p {
+            padding: 0;
+            font-family: $font-primary, $font-fallback-primary;
             color: $color-white;
+            font-weight: 400;
         }
     }
 
@@ -26,25 +27,32 @@ footer#page__footer {
         margin: auto;
         max-width: $breakpoint-s;
 
-        h3 {
-            color: $color-white;
-        }
-
         a {
             width: 42px;
             height: 42px;
-            margin: ($gutter / 4);
+            margin: ($gutter / 3);
             display: inline-block;
 
             svg {
                 width: 42px;
                 height: 42px;
                 display: block;
-                transition: fill 0.3s;
+                transition: fill 0.5s;
                 fill: $color-white;
 
                 .svg__path {
+                    transition: fill 0.5s;
                     fill: $color-complimentary;
+                }
+            }
+
+            &:hover {
+                svg {
+                    fill: $color-secondary;
+
+                    .svg__path {
+                        fill: $color-white;
+                    }
                 }
             }
         }
@@ -55,8 +63,11 @@ footer#page__footer {
         max-width: $breakpoint-s;
 
         p {
+            font-family: $font-primary, $font-fallback-primary;
+            font-size: 0.8rem;
             color: $color-white;
             text-align: center;
+            padding: ($gutter * 3) 0;
         }
     }
 }
