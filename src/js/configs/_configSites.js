@@ -1611,7 +1611,7 @@ var siteConfig = {
             share_vkontakte: true,
             share_googleplus: false,
             share_email: true,
-            share_telegram: false,
+            share_telegram: true,
             share_odnoklassniki: false,
             share_linkedin: false,
             share_balatarin: false,
@@ -1625,7 +1625,7 @@ var siteConfig = {
             vkontakte: "azathabar",
             googlePlus: undefined,
             instagram: undefined,
-            telegram: undefined,
+            telegram: "azatlykradiosy",
             odnoklassniki: "radioazatlyk",
             livejournal: undefined,
             soundcloud: undefined
