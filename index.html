@@ -207,32 +207,40 @@
         /*Navigation*/
         var allContainers = document.getElementsByClassName("container");
         var chaptersCount = 0;
-        var chaptersTitles;
+        var chaptersTitles = new Array();
         for (var i = 0; i < allContainers.length; i++) {
             var title = allContainers[i].getAttribute("navigation-title");
             if (title != null) {
+                chaptersTitles[chaptersCount] = title;
                 chaptersCount++;
-                chaptersTitle[i] = title;
                 allContainers[i].setAttribute("id", "chapter-" + chaptersCount);
             };
         };
+        if (chaptersTitles.length > 1) {
+            var navSiteNode = document.createElement("aside");
+            navSiteNode.setAttribute("id", "nav__site");
+            document.getElementById("page__header").appendChild(navSiteNode);
 
-        var navSiteNode = document.createElement("aside");
-        navSiteNode.setAttribute("id", "nav__site");
+            var navSiteContainerNode = document.createElement("div");
+            navSiteContainerNode.setAttribute("id", "nav__site-container");
+            navSiteNode.appendChild(navSiteContainerNode);
 
-        var navSiteContainerNode = document.createElement("div");
-        navSiteContainerNode.setAttribute("id", "nav__site-container");
+            var navSiteCloseNode = document.createElement("div");
+            navSiteCloseNode.setAttribute("id", "nav__site-close");
+            navSiteContainerNode.appendChild(navSiteCloseNode);
 
-        var navSiteCloseNode = document.createElement("div");
-        navSiteCloseNode.setAttribute("id", "nav__site-close");
-        var navSiteUlNode = document.createElement("ul");
-        var navSiteLiNode, navSiteANode;
-        for (var i = 0; i < chaptersCount; i++) {
-            navSite = document.createElement("li");
-            navSiteANode = document.createElement("a");
-            navSiteANode.setAttribute("class", "anchor");
-            navSiteANode.setAttribute("href", "#chapter" + i);
-            navSiteANode.text = chaptersTitles[i];
+            var navSiteUlNode = document.createElement("ul");
+            navSiteContainerNode.appendChild(navSiteUlNode);
+            var navSiteLiNode, navSiteANode;
+            for (var i = 0; i < chaptersCount; i++) {
+                navSiteLiNode = document.createElement("li");
+                navSiteUlNode.appendChild(navSiteLiNode);
+                navSiteANode = document.createElement("a");
+                navSiteLiNode.appendChild(navSiteANode);
+                navSiteANode.setAttribute("class", "anchor");
+                navSiteANode.setAttribute("href", "#chapter" + i);
+                navSiteANode.text = chaptersTitles[i];
+            }
         }
     </script>
 </body>
