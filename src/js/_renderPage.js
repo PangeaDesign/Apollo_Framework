@@ -76,16 +76,17 @@ if (setupWizard.haltStatus !== true) {
     headerProgressNode.appendChild(headerProgressBarNode);
 
     var headerLogoNode = document.createElement("a");
-    headerLogoNode.className += ("page__header-logo");
+    headerLogoNode.classList.add("page__header-logo");
     headerLogoNode.setAttribute("id", "page__header-logo");
     headerLogoNode.setAttribute("href", siteConfig[apolloConfig.projectSite].siteURL);
     headerLogoNode.setAttribute("target", "_blank");
     /*headerLogoNode.innerHTML = logos[apolloConfig.projectSite];*/
-    function httpGetLogo(logoUrl) {
+    function httpGetIcon(logoUrl, logoContainerId) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                document.getElementById("page__header-logo").innerHTML = xmlHttp.response;
+                document.getElementById(logoContainerId).innerHTML = xmlHttp.response;
+                return xmlHttp.response;
             }
         }
         xmlHttp.open("GET", logoUrl, true);
@@ -94,14 +95,21 @@ if (setupWizard.haltStatus !== true) {
 
 
     var headerShareNode = document.createElement("a");
-    headerShareNode.className += ("page__header-share");
+    headerShareNode.classList.add("page__header-share");
     headerShareNode.setAttribute("href", "#");
     headerShareNode.setAttribute("target", "_blank");
     headerShareNode.innerHTML = icons.share + siteConfig[apolloConfig.projectSite].siteLocal["share"];
 
     headerNode.appendChild(headerLogoNode);
-    httpGetLogo("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/" + apolloConfig.projectSite + ".svg");
+    httpGetIcon("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/" + apolloConfig.projectSite + ".svg", "page__header-logo");
     headerNode.appendChild(headerShareNode);
+
+    var headerNavNode = document.createElement("a");
+    headerNavNode.classList.add("page__header-nav");
+    headerNavNode.setAttribute("id", "page__header-nav");
+    headerNode.appendChild(headerNavNode);
+    httpGetIcon("../../src/assets/export/navigation.svg", "page__header-nav")
+
 
     ///////////////////
     // G A L L E R Y //
@@ -117,10 +125,10 @@ if (setupWizard.haltStatus !== true) {
     var footerNode = document.createElement("footer");
 
     var footerBlockNode = document.createElement("div");
-    footerBlockNode.className += ("footer__block");
+    footerBlockNode.classList.add("footer__block");
 
     if (apolloConfig.footerBlock) {
-        footerBlockNode.className += (" footer__block--rendered");
+        footerBlockNode.classList.add(" footer__block--rendered");
 
         var footerBlockTitleNode = document.createElement("h3");
         footerBlockTitleNode.textContent += apolloConfig.footerBlockTitle;
@@ -132,7 +140,7 @@ if (setupWizard.haltStatus !== true) {
     }
 
     var footerFollowUsNode = document.createElement("div");
-    footerFollowUsNode.className += ("footer__follow-us");
+    footerFollowUsNode.classList.add("footer__follow-us");
 
     var footerFollowUsH3Node = document.createElement("h3");
     footerFollowUsH3Node.textContent += siteConfig[apolloConfig.projectSite].siteLocal["followUs"];

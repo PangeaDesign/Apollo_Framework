@@ -162,7 +162,11 @@ main {
 body,
 html {
   font-size: 18px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  scroll-behavior: smooth; }
+
+main {
+  scroll-behavior: smooth; }
 
 code {
   width: 100%;
