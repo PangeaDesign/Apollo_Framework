@@ -58,7 +58,7 @@
 
     <main class="content">
         <div class="container" navigation-title="Welcome to Reykjavík" id="chapter-0">
-            <h1><a href="#chapter-1">Welcome to Iceland</a></h1>
+            <h1>Welcome to Iceland</h1>
             <p class="paragraph--lead">Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[8] The capital and largest
                 city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population.</p>
             <hr class="divider--short divider--solid">
@@ -228,6 +228,7 @@
             var navSiteCloseNode = document.createElement("div");
             navSiteCloseNode.setAttribute("id", "nav__site-close");
             navSiteContainerNode.appendChild(navSiteCloseNode);
+            httpGetIcon("src/assets/export/close.svg", "nav__site-close");
 
             var navSiteUlNode = document.createElement("ul");
             navSiteContainerNode.appendChild(navSiteUlNode);
@@ -241,6 +242,15 @@
                 navSiteANode.setAttribute("href", "#chapter-" + i);
                 navSiteANode.text = chaptersTitles[i];
             }
+            document.getElementById("page__header-nav").addEventListener("click", function() {
+                navSiteNode.classList.add("nav__site-visible");
+            });
+            navSiteCloseNode.addEventListener("click", function() {
+                navSiteNode.classList.remove("nav__site-visible");
+            });
+            navSiteUlNode.addEventListener("click", function() {
+                navSiteNode.classList.remove("nav__site-visible");
+            })
         }
     </script>
 </body>

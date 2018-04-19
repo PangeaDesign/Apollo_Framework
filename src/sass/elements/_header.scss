@@ -16,6 +16,11 @@ header#page__header {
     align-items: center;
     justify-content: space-between;
     // Service Logo
+    div {
+        display: flex;
+        align-items: center;
+    }
+
     a.page__header-logo {
         width: auto;
         height: 35px;
@@ -40,6 +45,8 @@ header#page__header {
         color: $color-white;
         font-size: 0.8rem;
         font-family: $font-secondary, $font-fallback-secondary;
+        float: left;
+        position: relative;
 
         svg {
             width: 24px;
@@ -62,70 +69,113 @@ body header #progress {
     left: 0;
     right: 0;
     position: absolute;
-}
 
-body header #progress #bar {
-    width: 50%;
-    height: 3px;
-    background-color: $color-primary;
-    top: 0;
-    left: 0;
-    transition: width 0.3s;
+    #bar {
+        width: 50%;
+        height: 3px;
+        background-color: $color-primary;
+        top: 0;
+        left: 0;
+        transition: width 0.3s;
+    }
 }
 // Navigation
+
+header#page__header {
+    a.page__header-nav {
+        width: 27px;
+        height: 27px;
+        padding: 4px 4px 4px 16px;
+        display: flex;
+        color: #fff;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+        float: right;
+        position: relative;
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
 
 body header aside#nav__site {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
     display: none;
     z-index: 999;
     background-color: rgba(255,255,255,0.85);
+
+    #nav__site-container {
+        width: 300px;
+        height: 100%;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: #24292D;
+
+        #nav__site-header {
+            width: 100%;
+            padding: 0 15px;
+            box-sizing: border-box;
+
+            svg {
+                fill: #fff;
+            }
+        }
+    }
 }
 
-body header aside#nav__site #nav__site-container {
-    width: 300px;
-    height: 100%;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: #24292D;
+body header aside#nav__site.nav__site-visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
-body header aside#nav__site #nav__site-container #nav__site-header {
-    width: 100%;
-    padding: 0 15px;
-    box-sizing: border-box;
+body header aside#nav__site #nav__site-container #nav__site-close {
+    width: 27px;
+    height: 27px;
+    padding: 8px;
+    float: right;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-primary;
+    }
+
+    svg {
+        fill: #fff;
+    }
 }
 
-body header aside#nav__site #nav__site-container #nav__site-header svg {
-    fill: #fff;
-}
-
-body header aside#nav__site #nav__site-container > ul {
+body header aside#nav__site #nav__site-container ul {
     padding: 20px;
     margin: 0;
     list-style: none;
-}
 
-aside#nav__site #nav__site-container ul li {
-    padding: 0;
-    margin: 0;
-}
+    li {
+        padding: 0;
+        margin: 0;
 
-aside#nav__site #nav__site-container ul li a {
-    display: block;
-    padding: 12px 10px;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-    font-family: $font-secondary;
-    font-size: 18px;
-    text-transform: uppercase;
-}
+        a {
+            display: block;
+            padding: 12px 10px;
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+            font-family: $font-secondary;
+            font-size: 18px;
+            text-transform: uppercase;
 
-aside#nav__site #nav__site-container ul li a {
-    color: $color-primary;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
 }

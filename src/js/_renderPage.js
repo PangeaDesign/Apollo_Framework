@@ -60,7 +60,6 @@ if (setupWizard.haltStatus !== true) {
     heroNode.appendChild(heroContentNode);
     heroNode.appendChild(heroContinueNode);
 
-
     /////////////////
     // H E A D E R //
     /////////////////
@@ -75,6 +74,7 @@ if (setupWizard.haltStatus !== true) {
     headerProgressBarNode.setAttribute("id", "bar");
     headerProgressNode.appendChild(headerProgressBarNode);
 
+    var headerLeftNode = document.createElement("div");
     var headerLogoNode = document.createElement("a");
     headerLogoNode.classList.add("page__header-logo");
     headerLogoNode.setAttribute("id", "page__header-logo");
@@ -86,29 +86,43 @@ if (setupWizard.haltStatus !== true) {
         xmlHttp.onreadystatechange = function() {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                 document.getElementById(logoContainerId).innerHTML = xmlHttp.response;
-                return xmlHttp.response;
             }
         }
         xmlHttp.open("GET", logoUrl, true);
         xmlHttp.send(null);
     }
 
-
+    var headerRightNode = document.createElement("div");
     var headerShareNode = document.createElement("a");
     headerShareNode.classList.add("page__header-share");
     headerShareNode.setAttribute("href", "#");
     headerShareNode.setAttribute("target", "_blank");
     headerShareNode.innerHTML = icons.share + siteConfig[apolloConfig.projectSite].siteLocal["share"];
 
-    headerNode.appendChild(headerLogoNode);
+    headerNode.appendChild(headerLeftNode);
+    headerLeftNode.appendChild(headerLogoNode);
     httpGetIcon("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/" + apolloConfig.projectSite + ".svg", "page__header-logo");
-    headerNode.appendChild(headerShareNode);
+    headerNode.appendChild(headerRightNode);
+    headerRightNode.appendChild(headerShareNode);
+
+    var allContainers = document.getElementsByClassName("container");
+    var chaptersCount = 0;
+    var chaptersTitles = new Array();
+    for (var i = 0; i < allContainers.length; i++) {
+        var title = allContainers[i].getAttribute("navigation-title");
+        if (title != null) {
+            chaptersTitles[chaptersCount] = title;
+            chaptersCount++;
+            //allContainers[i].setAttribute("id", "chapter-" + chaptersCount);
+        };
+    };
 
     var headerNavNode = document.createElement("a");
     headerNavNode.classList.add("page__header-nav");
     headerNavNode.setAttribute("id", "page__header-nav");
-    headerNode.appendChild(headerNavNode);
-    httpGetIcon("../../src/assets/export/navigation.svg", "page__header-nav")
+    headerRightNode.appendChild(headerNavNode);
+    httpGetIcon("src/assets/export/navigation.svg", "page__header-nav");
+
 
 
     ///////////////////
@@ -128,7 +142,7 @@ if (setupWizard.haltStatus !== true) {
     footerBlockNode.classList.add("footer__block");
 
     if (apolloConfig.footerBlock) {
-        footerBlockNode.classList.add(" footer__block--rendered");
+        footerBlockNode.classList.add("footer__block--rendered");
 
         var footerBlockTitleNode = document.createElement("h3");
         footerBlockTitleNode.textContent += apolloConfig.footerBlockTitle;
