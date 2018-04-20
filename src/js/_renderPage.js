@@ -93,6 +93,7 @@ if (setupWizard.haltStatus !== true) {
     }
 
     var headerRightNode = document.createElement("div");
+    headerRightNode.classList.add("a__container");
     var headerShareNode = document.createElement("a");
     headerShareNode.classList.add("page__header-share");
     headerShareNode.setAttribute("href", "#");

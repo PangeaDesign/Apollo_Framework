@@ -16,7 +16,7 @@ header#page__header {
     align-items: center;
     justify-content: space-between;
     // Service Logo
-    div {
+    .a__container {
         display: flex;
         align-items: center;
     }
@@ -58,6 +58,18 @@ header#page__header {
                 fill: $color-white;
             }
         }
+
+        &:hover {
+            color: $color-primary;
+            transition: color 0.4s;
+
+            svg {
+                .svg__path {
+                    fill: $color-primary;
+                    transition: fill 0.4s;
+                }
+            }
+        }
     }
 }
 
@@ -97,6 +109,12 @@ header#page__header {
         svg {
             fill: #fff;
         }
+
+        &:hover {
+            svg {
+                fill: $color-primary;
+            }
+        }
     }
 }
 
@@ -105,7 +123,7 @@ body header aside#nav__site {
     height: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     opacity: 0;
     transition: opacity 0.5s;
     display: none;
@@ -113,12 +131,14 @@ body header aside#nav__site {
     background-color: rgba(255,255,255,0.85);
 
     #nav__site-container {
+        right: 0;
         width: 300px;
         height: 100%;
         box-shadow: 0 5px 10px rgba(0,0,0,0.5);
         overflow-y: auto;
         overflow-x: hidden;
         background-color: #24292D;
+        align-items: flex-start;
 
         #nav__site-header {
             width: 100%;

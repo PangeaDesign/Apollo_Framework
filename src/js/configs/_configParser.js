@@ -15,7 +15,6 @@ var apolloConfigDefaults = {
     heroByline: "Story by Björk",
     heroOverlay: true,
     pageTheme: "light",
-    footerBlock: true,
     footerBlockTitle: "Credits",
     footerBlockContent: "Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe. The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population."
 }
