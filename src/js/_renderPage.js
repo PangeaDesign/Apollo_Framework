@@ -141,17 +141,18 @@ if (setupWizard.haltStatus !== true) {
 
     var footerBlockNode = document.createElement("div");
     footerBlockNode.classList.add("footer__block");
-
-    if (apolloConfig.footerBlock) {
-        footerBlockNode.classList.add("footer__block--rendered");
-
-        var footerBlockTitleNode = document.createElement("h3");
-        footerBlockTitleNode.textContent += apolloConfig.footerBlockTitle;
-        footerBlockNode.appendChild(footerBlockTitleNode);
-
+    console.log(apolloConfig.footerBlockTitle, apolloConfig.footerBlockContent);
+    if (apolloConfig.footerBlockContent != "" && apolloConfig.footerBlockContent != false && apolloConfig.footerBlockContent != undefined) {
+        if (apolloConfig.footerBlockTitle != "" && apolloConfig.footerBlockTitle != false && apolloConfig.footerBlockTitle != undefined) {
+            console.log(apolloConfig.footerBlockTitle);
+            var footerBlockTitleNode = document.createElement("h3");
+            footerBlockTitleNode.textContent += apolloConfig.footerBlockTitle;
+            footerBlockNode.appendChild(footerBlockTitleNode);
+        }
         var footerBlockContentNode = document.createElement("p");
         footerBlockContentNode.textContent += apolloConfig.footerBlockContent;
         footerBlockNode.appendChild(footerBlockContentNode);
+        footerBlockNode.classList.add("footer__block--rendered");
     }
 
     var footerFollowUsNode = document.createElement("div");
