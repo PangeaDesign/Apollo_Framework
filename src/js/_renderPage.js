@@ -106,23 +106,6 @@ if (setupWizard.haltStatus !== true) {
     headerNode.appendChild(headerRightNode);
     headerRightNode.appendChild(headerShareNode);
 
-    var allContainers = document.getElementsByClassName("container");
-    var chaptersCount = 0;
-    var chaptersTitles = new Array();
-    for (var i = 0; i < allContainers.length; i++) {
-        var title = allContainers[i].getAttribute("navigation-title");
-        if (title != null) {
-            chaptersTitles[chaptersCount] = title;
-            chaptersCount++;
-            //allContainers[i].setAttribute("id", "chapter-" + chaptersCount);
-        };
-    };
-
-    var headerNavNode = document.createElement("a");
-    headerNavNode.classList.add("page__header-nav");
-    headerNavNode.setAttribute("id", "page__header-nav");
-    headerRightNode.appendChild(headerNavNode);
-    httpGetIcon("src/assets/export/navigation.svg", "page__header-nav");
 
 
 
@@ -141,10 +124,8 @@ if (setupWizard.haltStatus !== true) {
 
     var footerBlockNode = document.createElement("div");
     footerBlockNode.classList.add("footer__block");
-    console.log(apolloConfig.footerBlockTitle, apolloConfig.footerBlockContent);
     if (apolloConfig.footerBlockContent != "" && apolloConfig.footerBlockContent != false && apolloConfig.footerBlockContent != undefined) {
         if (apolloConfig.footerBlockTitle != "" && apolloConfig.footerBlockTitle != false && apolloConfig.footerBlockTitle != undefined) {
-            console.log(apolloConfig.footerBlockTitle);
             var footerBlockTitleNode = document.createElement("h3");
             footerBlockTitleNode.textContent += apolloConfig.footerBlockTitle;
             footerBlockNode.appendChild(footerBlockTitleNode);

@@ -55,7 +55,7 @@
     <!-- END: No Script - Localize text between <noscript></noscript> tags -->
 
     <main class="content">
-        <div class="container" navigation-title="Welcome to Reykjavík" id="chapter-0">
+        <div class="container" navigation-title="Welcome to Reykjavík">
             <h1>Welcome to Iceland</h1>
             <p class="paragraph--lead">Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[8] The capital and largest
                 city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population.</p>
@@ -120,7 +120,7 @@
             <div class="audio" data-audio-id="https://audio.rferl.org/TLTR/2018/03/12/348d44b1-7241-43b6-89dc-b25142c4692c.mp3"></div>
         </div>
 
-        <div class="container interview" navigation-title="The Middle Ages" id="chapter-1">
+        <div class="container interview" navigation-title="The Middle Ages">
             <h3>The Middle Ages</h3>
             <p><span>Interrogator:</span> Carbon dating indicates that it was abandoned sometime between 770 and 880.</p>
             <p><span>K:</span> In 2016.</p>
@@ -173,7 +173,7 @@
 
         <hr class="divider--dashed">
 
-        <div class="container container-aside" navigation-title="Geography" id="chapter-2">
+        <div class="container container-aside" navigation-title="Geography">
             <figure data-gallery="true" data-caption="Some testing image 3" data-thumb-caption="false" data-source="https://gdb.rferl.org/B21812AF-277D-4438-AC7B-5738BB9B9A18.jpg"></figure>
 
             <h5><span>Geography</span></h5>
@@ -202,7 +202,6 @@
     <script src="src/js/vendors/photoswipe/photoswipe-ui-default.min.js"></script>
     <script src="src/js/vendors/photoswipe/photoswipe.min.js"></script>
     <script>
-        /*Navigation*/
         var allContainers = document.getElementsByClassName("container");
         var chaptersCount = 0;
         var chaptersTitles = new Array();
@@ -211,10 +210,18 @@
             if (title != null) {
                 chaptersTitles[chaptersCount] = title;
                 chaptersCount++;
-                //allContainers[i].setAttribute("id", "chapter-" + chaptersCount);
+                allContainers[i].setAttribute("id", "chapter-" + chaptersCount);
             };
         };
         if (chaptersTitles.length > 1) {
+            var headerNavNode = document.createElement("a");
+            headerNavNode.classList.add("page__header-nav");
+            headerNavNode.setAttribute("id", "page__header-nav");
+            headerRightNode.appendChild(headerNavNode);
+            console.log(headerRightNode, headerNavNode)
+            console.log(document.getElementById("page__header-nav"));
+            httpGetIcon("src/assets/export/navigation.svg", "page__header-nav");
+
             var navSiteNode = document.createElement("aside");
             navSiteNode.setAttribute("id", "nav__site");
             document.getElementById("page__header").appendChild(navSiteNode);
@@ -240,7 +247,9 @@
                 navSiteANode.setAttribute("href", "#chapter-" + i);
                 navSiteANode.text = chaptersTitles[i];
             }
+            console.log(document.getElementById("page__header-nav"));
             document.getElementById("page__header-nav").addEventListener("click", function() {
+                console.log("YES");
                 navSiteNode.classList.add("nav__site-visible");
             });
             navSiteCloseNode.addEventListener("click", function() {
