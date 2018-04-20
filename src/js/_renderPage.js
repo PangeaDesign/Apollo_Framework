@@ -146,20 +146,19 @@ if (setupWizard.haltStatus !== true) {
             navSiteANode = document.createElement("a");
             navSiteLiNode.appendChild(navSiteANode);
             navSiteANode.setAttribute("class", "anchor");
-            navSiteANode.setAttribute("href", "#chapter-" + i);
+            navSiteANode.setAttribute("href", "#chapter-" + (i + 1));
             navSiteANode.text = chaptersTitles[i];
         }
-        console.log(document.getElementById("page__header-nav"));
-        document.getElementById("page__header-nav").addEventListener("click", function() {
-            console.log("YES");
-            navSiteNode.classList.add("nav__site-visible");
-        });
-        navSiteCloseNode.addEventListener("click", function() {
-            navSiteNode.classList.remove("nav__site-visible");
-        });
-        navSiteUlNode.addEventListener("click", function() {
-            navSiteNode.classList.remove("nav__site-visible");
-        })
+        document.getElementById("page__header-nav").setAttribute("onclick", "openSharing()");
+        document.getElementById("nav__site").setAttribute("onclick", "closeSharing()");
+
+        function openSharing() {
+            document.getElementById("nav__site").classList.add("nav__site-visible");
+        };
+
+        function closeSharing() {
+            document.getElementById("nav__site").classList.remove("nav__site-visible");
+        };
     }
 
 
