@@ -202,6 +202,29 @@
     <script src="src/js/_initVideos.js"></script>
 
     <script>
+        // Render Header Social Media Sharing Links
+        var renderSharingIcons = function() {
+            //var sharingIcons = config.header_sharing_services;
+            var sharingIcons = siteConfig[apolloConfig.projectSite].siteShare;
+            console.log(sharingIcons);
+
+            var sharingIconsContainer = document.createElement('div');
+            sharingIconsContainer.setAttribute("class", "sharing-icons");
+            var currentURL = window.location.href;
+
+            for (i = 0; i < sharingIcons.length; i++) {
+                var thisIcon = sharingIcons[i];
+                sharingIconsContainer.innerHTML += '<a href="' + icons[thisIcon].sharing_url + currentURL + '">' + icons[thisIcon].svg + '</a>';
+            }
+
+            sharingIconsContainer.innerHTML += '<a>' + icons.close.svg + '</a>';
+
+            var headerSharingContainer = document.getElementById("header-sharing");
+            //headerSharingContainer.innerHTML += '<div class="sharing-text">' + apolloConfig.siteConfigObject.loc_share + '</div>';
+            //headerSharingContainer.appendChild(sharingIconsContainer);
+            headerNode.appendChild(sharingIconsContainer);
+        }
+        renderSharingIcons();
     </script>
 </body>
 

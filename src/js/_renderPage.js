@@ -149,14 +149,14 @@ if (setupWizard.haltStatus !== true) {
             navSiteANode.setAttribute("href", "#chapter-" + (i + 1));
             navSiteANode.text = chaptersTitles[i];
         }
-        document.getElementById("page__header-nav").setAttribute("onclick", "openSharing()");
-        document.getElementById("nav__site").setAttribute("onclick", "closeSharing()");
+        document.getElementById("page__header-nav").setAttribute("onclick", "openNavigation()");
+        document.getElementById("nav__site").setAttribute("onclick", "closeNavigation()");
 
-        function openSharing() {
+        function openNavigation() {
             document.getElementById("nav__site").classList.add("nav__site-visible");
         };
 
-        function closeSharing() {
+        function closeNavigation() {
             document.getElementById("nav__site").classList.remove("nav__site-visible");
         };
     }

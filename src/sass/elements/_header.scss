@@ -170,7 +170,6 @@ body header aside#nav__site {
     background-color: rgba(255,255,255,0.85);
 
     #nav__site-container {
-        right: 0;
         width: 300px;
         height: 100%;
         box-shadow: 0 5px 10px rgba(0,0,0,0.5);
@@ -178,6 +177,7 @@ body header aside#nav__site {
         overflow-x: hidden;
         background-color: #24292D;
         align-items: flex-start;
+        float: $direction-backwards;
 
         #nav__site-header {
             width: 100%;
@@ -198,14 +198,18 @@ body header aside#nav__site.nav__site-visible {
 }
 
 body header aside#nav__site #nav__site-container #nav__site-close {
+    position: absolute;
+    right: 0;
     width: 27px;
     height: 27px;
     padding: 8px;
-    float: right;
     cursor: pointer;
 
     &:hover {
-        color: $color-primary;
+        svg {
+            transition: fill 0.3s;
+            fill: $color-primary;
+        }
     }
 
     svg {
@@ -214,7 +218,7 @@ body header aside#nav__site #nav__site-container #nav__site-close {
 }
 
 body header aside#nav__site #nav__site-container ul {
-    padding: 20px;
+    padding: 46px 20px 20px;
     margin: 0;
     list-style: none;
 
