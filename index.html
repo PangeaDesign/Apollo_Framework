@@ -208,23 +208,37 @@
             var sharingIcons = siteConfig[apolloConfig.projectSite].siteShare;
             console.log(sharingIcons);
 
-            var sharingIconsContainer = document.createElement('div');
+            var sharingIconsContainer = document.createElement("div");
             sharingIconsContainer.setAttribute("class", "sharing-icons");
+            headerNode.appendChild(sharingIconsContainer);
+            console.log(headerNode, document.getElementsByClassName("sharing-icons")[0]);
             var currentURL = window.location.href;
 
-            for (i = 0; i < sharingIcons.length; i++) {
+            if (sharingIcons.share_facebook) {
+                var shareFacebook = document.createElement('a');
+                shareFacebook.setAttribute("id", "share__facebook");
+                shareFacebook.setAttribute("href", configPaths.shareMedia.facebook + currentURL);
+                sharingIconsContainer.appendChild(shareFacebook);
+                console.log(document.getElementById("share__facebook"));
+                httpGetIcon("src/assets/export/fabook.svg", "share__facebook");
+            };
+
+            /*for (i = 0; i < sharingIcons.length; i++) {
                 var thisIcon = sharingIcons[i];
                 sharingIconsContainer.innerHTML += '<a href="' + icons[thisIcon].sharing_url + currentURL + '">' + icons[thisIcon].svg + '</a>';
-            }
+            }*/
 
-            sharingIconsContainer.innerHTML += '<a>' + icons.close.svg + '</a>';
+            var shareClose = document.createElement('a');
+            shareClose.setAttribute("id", "share__close");
+            sharingIconsContainer.appendChild(shareClose);
+            httpGetIcon("src/assets/export/close.svg", "share__close");
 
-            var headerSharingContainer = document.getElementById("header-sharing");
+            //var headerSharingContainer = document.getElementById("header-sharing");
             //headerSharingContainer.innerHTML += '<div class="sharing-text">' + apolloConfig.siteConfigObject.loc_share + '</div>';
             //headerSharingContainer.appendChild(sharingIconsContainer);
-            headerNode.appendChild(sharingIconsContainer);
+
         }
-        //renderSharingIcons();
+        renderSharingIcons();
     </script>
 </body>
 

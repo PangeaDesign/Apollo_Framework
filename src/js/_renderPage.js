@@ -94,10 +94,10 @@ if (setupWizard.haltStatus !== true) {
 
     var headerRightNode = document.createElement("div");
     headerRightNode.classList.add("a__container");
-    var headerShareNode = document.createElement("a");
+    var headerShareNode = document.createElement("div"); //instead a
     headerShareNode.classList.add("page__header-share");
-    headerShareNode.setAttribute("href", "#");
-    headerShareNode.setAttribute("target", "_blank");
+    /*headerShareNode.setAttribute("href", "#");
+    headerShareNode.setAttribute("target", "_blank");*/
     headerShareNode.innerHTML = icons.share + siteConfig[apolloConfig.projectSite].siteLocal["share"];
 
     headerNode.appendChild(headerLeftNode);

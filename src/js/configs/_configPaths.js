@@ -16,12 +16,12 @@ var configPaths = {
         twitter: "https://twitter.com/home?status=",
         vkontakte: "http://vk.com/share.php?url=",
         googleplus: "https://plus.google.com/share?url=",
-        email: "mailto:?body=", //subject?
+        email: ["mailto:?body=", "&subject="], //subject?
         telegram: "https://t.me/share/url?url=",
         odnoklassniki: "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=",
-        linkedin: "https://www.linkedin.com/shareArticle?mini=true&url=", //title?
-        balatarin: false,
-        connectMail: "https://connect.mail.ru/share?url=", //title?
+        linkedin: ["https://www.linkedin.com/shareArticle?mini=true&url=", "&title="], //title?
+        balatarin: "https://www.balatarin.com/links/submit?phase=2&url=",
+        connectMail: "https://connect.mail.ru/share?url=", //title in html?
         whatsUp: "https://web.whatsapp.com/send?text="
     },
     socialMedia: {
