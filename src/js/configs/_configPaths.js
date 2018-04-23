@@ -11,12 +11,12 @@ var configPaths = {
     logos: "dist/assets/logos/",
     favicons: "dist/assets/favicons/",
     version: "2.0",
-    shareMedia {
+    shareMedia: {
         facebook: "https://www.facebook.com/sharer/sharer.php?u=",
         twitter: "https://twitter.com/home?status=",
         vkontakte: "http://vk.com/share.php?url=",
         googleplus: "https://plus.google.com/share?url=",
-        email: https: "mailto:?body=", //subject?
+        email: "mailto:?body=", //subject?
         telegram: "https://t.me/share/url?url=",
         odnoklassniki: "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=",
         linkedin: "https://www.linkedin.com/shareArticle?mini=true&url=", //title?
