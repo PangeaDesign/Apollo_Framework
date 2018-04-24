@@ -72,35 +72,57 @@ document.body.innerHTML += pswpHTML;
         var imageThumb = imageContainers[i].getAttribute("data-thumb");
         var imageThumbCaption = imageContainers[i].getAttribute("data-thumb-caption");
         var imageElement = document.createElement("picture");
-        var imageSourceElement = document.createElement("source");
+        var imageSourceElementA = document.createElement("source");
+        var imageSourceElementB = document.createElement("source");
+        var imageSourceElementC = document.createElement("source");
+        var imageImgElement = document.createElement("img");
         if (imageThumb != null) {
             if (imageThumb.slice(0, 22) == "https://gdb.rferl.org/") {
-                //imageSourceElement.setAttribute("media", "(min-width: 568px)");
-                imageSourceElement.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
+                imageSourceElementA.setAttribute("media", "(max-width: 568px)");
+                imageSourceElementA.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
+                imageSourceElementB.setAttribute("media", "(max-width: 1024px)");
+                imageSourceElementB.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
+                imageSourceElementC.setAttribute("media", "(mim-width: 1025px)");
+                imageSourceElementC.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
+                imageImgElement.setAttribute("src", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
             } else {
-                //imageSourceElement.setAttribute("media", "(min-width: 568px)");
-                imageSourceElement.setAttribute("srcset", imageThumb);
+                //imageSourceElementA.setAttribute("media", "(max-width: 568px)");
+                imageSourceElementA.setAttribute("srcset", imageThumb);
+                imageSourceElementB.setAttribute("srcset", imageThumb);
+                imageSourceElementC.setAttribute("srcset", imageThumb);
+                imageImgElement.setAttribute("src", imageThumb);
             }
         } else {
             if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
-                //imageSourceElement.setAttribute("media", "(min-width: 568px)");
-                imageSourceElement.setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w200." + imageSource.split(".")[3]);
+                imageSourceElementA.setAttribute("media", "(max-width: 568px)");
+                imageSourceElementA.setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w200." + imageSource.split(".")[3]);
+                imageSourceElementB.setAttribute("media", "(max-width: 1024px)");
+                imageSourceElementB.setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w200." + imageSource.split(".")[3]);
+                imageSourceElementC.setAttribute("media", "(min-width: 1025px)");
+                imageSourceElementC.setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w200." + imageSource.split(".")[3]);
+                imageImgElement.setAttribute("src", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w200." + imageSource.split(".")[3]);
             } else {
-                //imageSourceElement.setAttribute("media", "(min-width: 568px)");
-                imageSourceElement.setAttribute("set", imageSource);
+                //imageSourceElementA.setAttribute("media", "(max-width: 568px)");
+                imageSourceElementA.setAttribute("srcset", imageSource);
+                imageSourceElementB.setAttribute("srcset", imageSource);
+                imageSourceElementC.setAttribute("srcset", imageSource);
+                imageImgElement.setAttribute("src", imageSource);
             }
         }
 
-        /*if (imageCaption != null) {
-            imageElement.setAttribute("alt", imageCaption);
+        if (imageCaption != null) {
+            imageImgElement.setAttribute("alt", imageCaption);
         } else {
-            imageElement.setAttribute("alt", "Image " + i);
-        }*/
+            imageImgElement.setAttribute("alt", "Image " + i);
+        }
         var imageLinkElement = document.createElement("a");
 
         imageContainers[i].appendChild(imageLinkElement);
         imageLinkElement.appendChild(imageElement);
-        imageElement.appendChild(imageSourceElement);
+        imageElement.appendChild(imageSourceElementA);
+        imageElement.appendChild(imageSourceElementB);
+        imageElement.appendChild(imageSourceElementC);
+        imageElement.appendChild(imageImgElement);
         if (imageGallery == "false") {
             //imageLinkElement.setAttribute("href", "");
         } else {
@@ -117,9 +139,9 @@ document.body.innerHTML += pswpHTML;
             imageLinkElement.appendChild(galleryIcon);
         }
 
-        /*imageElement.onload = function() {
+        imageImgElement.onload = function() {
             this.parentNode.parentNode.parentNode.setAttribute("data-size", "1200x" + Math.round((1 / (this.width / this.height)) * 1200));
-        };*/
+        };
         if (imageCaption != null) {
             var imageCaptionElement = document.createElement("figcaption");
             imageContainers[i].appendChild(imageCaptionElement);
@@ -137,7 +159,9 @@ function lazyLoad() {
         var imageSource = changeImage.getAttribute("data-source");
         if (changeImage.getBoundingClientRect().top < window.innerHeight) {
             if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
-                changeImage.children[0].children[0].children[0].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1200." + imageSource.split(".")[3]);
+                changeImage.children[0].children[0].children[0].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w568." + imageSource.split(".")[3]);
+                changeImage.children[0].children[0].children[1].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1024." + imageSource.split(".")[3]);
+                changeImage.children[0].children[0].children[2].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1920." + imageSource.split(".")[3]);
             }
         };
     };
