@@ -16,11 +16,6 @@ header#page__header {
     align-items: center;
     justify-content: space-between;
     // Service Logo
-    .a__container {
-        display: flex;
-        align-items: center;
-    }
-
     a.page__header-logo {
         width: auto;
         height: 35px;
@@ -32,48 +27,54 @@ header#page__header {
             fill: $color-white;
         }
     }
-    // Share Button
-    a.page__header-share {
-        width: auto;
-        height: 35px;
+
+    .header__right-container {
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $color-white;
-        font-size: 0.8rem;
-        font-family: $font-secondary, $font-fallback-secondary;
-        float: left;
-        position: relative;
-
-        svg {
-            width: 24px;
-            height: 24px;
-            margin-top: -3px;
-            margin-right: ($gutter / 2);
-
-            .svg__path {
-                fill: $color-white;
-            }
-        }
-
-        &:hover {
-            color: $color-primary;
-            transition: color 0.4s;
+        // Share Button
+        div.page__header-share {
+            width: auto;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color-white;
+            font-size: 0.8rem;
+            font-family: $font-secondary, $font-fallback-secondary;
+            float: left;
+            position: relative;
+            cursor: pointer;
 
             svg {
+                width: 24px;
+                height: 24px;
+                margin-top: -3px;
+                margin-right: ($gutter / 2);
+
                 .svg__path {
-                    fill: $color-primary;
-                    transition: fill 0.4s;
+                    fill: $color-white;
+                }
+            }
+
+            &:hover {
+                color: $color-primary;
+                transition: color 0.4s;
+
+                svg {
+                    .svg__path {
+                        fill: $color-primary;
+                        transition: fill 0.4s;
+                    }
                 }
             }
         }
     }
 }
 
-header #header-sharing .sharing-icons {
+header .header__right-container .sharing-icons {
     display: block;
     width: auto;
     padding: 5px 4px 2px;
@@ -83,7 +84,7 @@ header #header-sharing .sharing-icons {
     border-bottom-left-radius: 21px;
     top: 8px;
     right: -100%;
-    transition: right 0.2s ease-in;
+    transition: right 0.3s ease-in;
 
     a {
         width: 32px;
@@ -91,23 +92,34 @@ header #header-sharing .sharing-icons {
         display: inline-block;
         margin: 0 2px;
 
-        svg .background {
+        svg circle {
+            /*.background*/
             transition: fill 0.3s;
             fill: #5c646b;
         }
 
-        svg .logo {
+        svg .svg__path {
+            /*.logo*/
             fill: #fff;
         }
 
-        svg:hover .background {
+        svg:hover circle {
+            /*.background*/
             transition: fill 0.3s;
             fill: #ea6903;
+        }
+
+        &:last-child {
+            cursor: pointer;
+
+            svg .svg__path {
+                fill: #000;
+            }
         }
     }
 }
 
-header #header-sharing.opened .sharing-icons {
+header .header__right-container .opened {
     right: 0;
 }
 

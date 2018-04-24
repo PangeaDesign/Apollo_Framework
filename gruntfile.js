@@ -32,7 +32,9 @@ module.exports = function(grunt) {
                     'dist/css/launch.css': 'src/sass/launch.scss',
                     /*'dist/css/apollo-framework-2.0.css': 'src/sass/main.scss',*/
                     'dist/css/apollo-framework-rfe-latin-light-2.0.css': 'src/sass/main-rfe-latin-light.scss',
-                    'dist/css/apollo-framework-rfe-latin-dark-2.0.css': 'src/sass/main-rfe-latin-dark.scss'
+                    'dist/css/apollo-framework-rfe-latin-dark-2.0.css': 'src/sass/main-rfe-latin-dark.scss',
+                    'dist/css/apollo-framework-rfe-arabic-light-2.0.css': 'src/sass/main-rfe-arabic-light.scss',
+                    'dist/css/apollo-framework-rfe-arabic-dark-2.0.css': 'src/sass/main-rfe-arabic-dark.scss'
                 }
             }
         },
@@ -48,6 +50,19 @@ module.exports = function(grunt) {
                     ],
                     'dist/css/apollo-framework-rfe-latin-dark-2.0.min.css': [
                         'dist/css/apollo-framework-rfe-latin-dark-2.0.css',
+                        'src/sass/vendors/photoswipe/default-skin.css',
+                        'src/sass/vendors/photoswipe/photoswipe.css',
+                        'src/sass/vendors/plyr/plyrApollo.css'
+                    ],
+                    'dist/css/launch.min.css': 'dist/css/launch.css',
+                    'dist/css/apollo-framework-rfe-arabic-light-2.0.min.css': [
+                        'dist/css/apollo-framework-rfe-arabic-light-2.0.css',
+                        'src/sass/vendors/photoswipe/default-skin.css',
+                        'src/sass/vendors/photoswipe/photoswipe.css',
+                        'src/sass/vendors/plyr/plyrApollo.css'
+                    ],
+                    'dist/css/apollo-framework-rfe-arabic-dark-2.0.min.css': [
+                        'dist/css/apollo-framework-rfe-arabic-dark-2.0.css',
                         'src/sass/vendors/photoswipe/default-skin.css',
                         'src/sass/vendors/photoswipe/photoswipe.css',
                         'src/sass/vendors/plyr/plyrApollo.css'

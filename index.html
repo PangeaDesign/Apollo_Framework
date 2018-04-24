@@ -66,6 +66,11 @@
 
         <div class="container">
             <figure data-gallery="true" data-caption="Some testing image 1" data-thumb-caption="true" data-thumb="https://gdb.rferl.org/061E4790-A8E6-4427-AEFD-CCC00F3582B6_w500.jpg" data-source="https://gdb.rferl.org/061E4790-A8E6-4427-AEFD-CCC00F3582B6.jpg"></figure>
+            <!--picture>
+                <source media="(min-width: 960px)" srcset="">
+                <source media="(min-width: 420px)" srcset="">
+                <img src="" alt="">
+            </picture-->
         </div>
 
         <div class="container">
@@ -202,43 +207,6 @@
     <script src="src/js/_initVideos.js"></script>
 
     <script>
-        // Render Header Social Media Sharing Links
-        var renderSharingIcons = function() {
-            //var sharingIcons = config.header_sharing_services;
-            var sharingIcons = siteConfig[apolloConfig.projectSite].siteShare;
-            console.log(sharingIcons);
-
-            var sharingIconsContainer = document.createElement("div");
-            sharingIconsContainer.setAttribute("class", "sharing-icons");
-            headerNode.appendChild(sharingIconsContainer);
-            console.log(headerNode, document.getElementsByClassName("sharing-icons")[0]);
-            var currentURL = window.location.href;
-
-            if (sharingIcons.share_facebook) {
-                var shareFacebook = document.createElement('a');
-                shareFacebook.setAttribute("id", "share__facebook");
-                shareFacebook.setAttribute("href", configPaths.shareMedia.facebook + currentURL);
-                sharingIconsContainer.appendChild(shareFacebook);
-                console.log(document.getElementById("share__facebook"));
-                httpGetIcon("src/assets/export/fabook.svg", "share__facebook");
-            };
-
-            /*for (i = 0; i < sharingIcons.length; i++) {
-                var thisIcon = sharingIcons[i];
-                sharingIconsContainer.innerHTML += '<a href="' + icons[thisIcon].sharing_url + currentURL + '">' + icons[thisIcon].svg + '</a>';
-            }*/
-
-            var shareClose = document.createElement('a');
-            shareClose.setAttribute("id", "share__close");
-            sharingIconsContainer.appendChild(shareClose);
-            httpGetIcon("src/assets/export/close.svg", "share__close");
-
-            //var headerSharingContainer = document.getElementById("header-sharing");
-            //headerSharingContainer.innerHTML += '<div class="sharing-text">' + apolloConfig.siteConfigObject.loc_share + '</div>';
-            //headerSharingContainer.appendChild(sharingIconsContainer);
-
-        }
-        renderSharingIcons();
     </script>
 </body>
 

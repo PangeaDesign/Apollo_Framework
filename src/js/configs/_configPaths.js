@@ -15,7 +15,7 @@ var configPaths = {
         facebook: "https://www.facebook.com/sharer/sharer.php?u=",
         twitter: "https://twitter.com/home?status=",
         vkontakte: "http://vk.com/share.php?url=",
-        googleplus: "https://plus.google.com/share?url=",
+        googlePlus: "https://plus.google.com/share?url=",
         email: ["mailto:?body=", "&subject="], //subject?
         telegram: "https://t.me/share/url?url=",
         odnoklassniki: "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=",

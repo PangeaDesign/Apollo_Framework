@@ -93,9 +93,10 @@ if (setupWizard.haltStatus !== true) {
     }
 
     var headerRightNode = document.createElement("div");
-    headerRightNode.classList.add("a__container");
+    headerRightNode.classList.add("header__right-container");
     var headerShareNode = document.createElement("div"); //instead a
     headerShareNode.classList.add("page__header-share");
+    headerShareNode.setAttribute("id", "page__header-share");
     /*headerShareNode.setAttribute("href", "#");
     headerShareNode.setAttribute("target", "_blank");*/
     headerShareNode.innerHTML = icons.share + siteConfig[apolloConfig.projectSite].siteLocal["share"];
@@ -161,7 +162,45 @@ if (setupWizard.haltStatus !== true) {
         };
     }
 
+    // Render Header Social Media Sharing Links
+    var renderSharingIcons = function() {
+        var sharingIcons = siteConfig[apolloConfig.projectSite].siteShare;
 
+        var sharingIconsContainer = document.createElement("div");
+        sharingIconsContainer.setAttribute("class", "sharing-icons");
+        sharingIconsContainer.setAttribute("id", "sharing-icons");
+        document.getElementsByClassName("header__right-container")[0].appendChild(sharingIconsContainer);
+        var currentURL = window.location.href;
+
+        Object.keys(sharingIcons).forEach(function(key) {
+            if (sharingIcons[key]) {
+                var newShareIcon = document.createElement("a");
+                if (key == "linkedin" || key == "email") {
+                    newShareIcon.setAttribute("href", configPaths.shareMedia[key][0] + currentURL + configPaths.shareMedia[key][1] + apolloConfig.projectTitle);
+                } else {
+                    newShareIcon.setAttribute("href", configPaths.shareMedia[key] + currentURL);
+                };
+                newShareIcon.innerHTML = icons[key];
+                sharingIconsContainer.appendChild(newShareIcon);
+            };
+        });
+        var shareClose = document.createElement('a');
+        shareClose.setAttribute("id", "share__close");
+        shareClose.innerHTML = icons.close;
+        sharingIconsContainer.appendChild(shareClose);
+
+        document.getElementById("page__header-share").setAttribute("onclick", "openSharing()");
+        document.getElementById("share__close").setAttribute("onclick", "closeSharing()");
+    }
+
+    function openSharing() {
+        document.getElementById("sharing-icons").classList.add("opened");
+    }
+
+    function closeSharing() {
+        document.getElementById("sharing-icons").classList.remove("opened");
+    }
+    renderSharingIcons();
 
     ///////////////////
     // G A L L E R Y //

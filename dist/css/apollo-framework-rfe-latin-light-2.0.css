@@ -297,9 +297,6 @@ header#page__header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between; }
-  header#page__header .a__container {
-    display: flex;
-    align-items: center; }
   header#page__header a.page__header-logo {
     width: auto;
     height: 35px;
@@ -308,35 +305,39 @@ header#page__header {
       width: auto;
       height: 35px;
       fill: #fff; }
-  header#page__header a.page__header-share {
-    width: auto;
-    height: 35px;
+  header#page__header .header__right-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    font-size: 0.8rem;
-    font-family: "Skolar PE", "Georgia", "Times New Roman", "Times", serif;
-    float: left;
-    position: relative; }
-    header#page__header a.page__header-share svg {
-      width: 24px;
-      height: 24px;
-      margin-top: -3px;
-      margin-right: 5px; }
-      header#page__header a.page__header-share svg .svg__path {
-        fill: #fff; }
-    header#page__header a.page__header-share:hover {
-      color: #ea6903;
-      transition: color 0.4s; }
-      header#page__header a.page__header-share:hover svg .svg__path {
-        fill: #ea6903;
-        transition: fill 0.4s; }
+    align-items: center; }
+    header#page__header .header__right-container div.page__header-share {
+      width: auto;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      font-size: 0.8rem;
+      font-family: "Skolar PE", "Georgia", "Times New Roman", "Times", serif;
+      float: left;
+      position: relative;
+      cursor: pointer; }
+      header#page__header .header__right-container div.page__header-share svg {
+        width: 24px;
+        height: 24px;
+        margin-top: -3px;
+        margin-right: 5px; }
+        header#page__header .header__right-container div.page__header-share svg .svg__path {
+          fill: #fff; }
+      header#page__header .header__right-container div.page__header-share:hover {
+        color: #ea6903;
+        transition: color 0.4s; }
+        header#page__header .header__right-container div.page__header-share:hover svg .svg__path {
+          fill: #ea6903;
+          transition: fill 0.4s; }
 
-header #header-sharing .sharing-icons {
+header .header__right-container .sharing-icons {
   display: block;
   width: auto;
   padding: 5px 4px 2px;
@@ -346,22 +347,29 @@ header #header-sharing .sharing-icons {
   border-bottom-left-radius: 21px;
   top: 8px;
   right: -100%;
-  transition: right 0.2s ease-in; }
-  header #header-sharing .sharing-icons a {
+  transition: right 0.3s ease-in; }
+  header .header__right-container .sharing-icons a {
     width: 32px;
     height: 32px;
     display: inline-block;
     margin: 0 2px; }
-    header #header-sharing .sharing-icons a svg .background {
+    header .header__right-container .sharing-icons a svg circle {
+      /*.background*/
       transition: fill 0.3s;
       fill: #5c646b; }
-    header #header-sharing .sharing-icons a svg .logo {
+    header .header__right-container .sharing-icons a svg .svg__path {
+      /*.logo*/
       fill: #fff; }
-    header #header-sharing .sharing-icons a svg:hover .background {
+    header .header__right-container .sharing-icons a svg:hover circle {
+      /*.background*/
       transition: fill 0.3s;
       fill: #ea6903; }
+    header .header__right-container .sharing-icons a:last-child {
+      cursor: pointer; }
+      header .header__right-container .sharing-icons a:last-child svg .svg__path {
+        fill: #000; }
 
-header #header-sharing.opened .sharing-icons {
+header .header__right-container .opened {
   right: 0; }
 
 body header #progress {
