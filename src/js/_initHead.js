@@ -97,7 +97,6 @@ if (setupWizard.haltStatus === false) {
             }
         }
     }
-
     // Send info to the setupWizard
     if (analyticsInit === false && analyticsLocal === false) {
         setupWizard.analytics.status = "go-warn-1";
