@@ -82,7 +82,7 @@ document.body.innerHTML += pswpHTML;
                 imageSourceElementA.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
                 imageSourceElementB.setAttribute("media", "(max-width: 1024px)");
                 imageSourceElementB.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
-                imageSourceElementC.setAttribute("media", "(mim-width: 1025px)");
+                imageSourceElementC.setAttribute("media", "(min-width: 1025px)");
                 imageSourceElementC.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
                 imageImgElement.setAttribute("src", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
             } else {
@@ -127,9 +127,8 @@ document.body.innerHTML += pswpHTML;
             //imageLinkElement.setAttribute("href", "");
         } else {
             imageContainers[i].setAttribute("class", "gallery");
-            //imageContainers[i].innerHTML = "<div class=\"gallery-icon\"><svg viewBox=\"0 0 533.333 533.333\"><path d=\"M533.333,0v216.667L450,133.333l-100,100l-50-50l100-100L316.667,0H533.333z M233.333,350l-100,100l83.333,83.333H0 V316.667L83.333,400l100-100L233.333,350z\"/></svg></div>";
             if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
-                imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1200." + imageSource.split(".")[3]);
+                imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1200." + imageSource.split(".")[3]); // !!! change to resize ???
             } else {
                 imageLinkElement.setAttribute("href", imageSource);
             }
@@ -140,7 +139,7 @@ document.body.innerHTML += pswpHTML;
         }
 
         imageImgElement.onload = function() {
-            this.parentNode.parentNode.parentNode.setAttribute("data-size", "1200x" + Math.round((1 / (this.width / this.height)) * 1200));
+            this.parentNode.parentNode.parentNode.setAttribute("data-size", "1200x" + Math.round((1 / (this.width / this.height)) * 1200)); // !!! change to resize ???
         };
         if (imageCaption != null) {
             var imageCaptionElement = document.createElement("figcaption");
@@ -162,6 +161,8 @@ function lazyLoad() {
                 changeImage.children[0].children[0].children[0].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w568." + imageSource.split(".")[3]);
                 changeImage.children[0].children[0].children[1].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1024." + imageSource.split(".")[3]);
                 changeImage.children[0].children[0].children[2].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1920." + imageSource.split(".")[3]);
+                changeImage.children[0].children[0].children[3].setAttribute("src", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w" + window.innerWidth + "." + imageSource.split(".")[3]);
+
             }
         };
     };
