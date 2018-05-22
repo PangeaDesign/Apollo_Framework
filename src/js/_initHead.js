@@ -72,7 +72,7 @@ if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
 
 // Check if is this domain part of the analytics config
 if (setupWizard.haltStatus === false) {
-    if (thisPageURL.includes("file://")) {
+    if (thisPageURL.includes("file://") || thisPageURL.includes("localhost")) {
         var analyticsInit = false;
         var analyticsLocal = true;
     } else {
