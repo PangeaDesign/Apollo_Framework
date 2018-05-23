@@ -54,7 +54,7 @@ var siteConfig = {
     },
     af_en: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Afghan [English]",
         siteNameLocal: "Gandhara RFE/RL",
         siteURL: "https://gandhara.rferl.org/",
@@ -246,7 +246,7 @@ var siteConfig = {
     },
     az: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Azeri",
         siteNameLocal: "AzadlıqRadiosu",
         siteURL: "https://www.azadliq.org/",
@@ -390,7 +390,7 @@ var siteConfig = {
     },
     cr_tb: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Crimea [Tatar-Bashkir]",
         siteNameLocal: "Qırım.Aqiqat",
         siteURL: "https://ktat.krymr.com/",
@@ -486,7 +486,7 @@ var siteConfig = {
     },
     en: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "English",
         siteNameLocal: "Radio Free Europe / Radio Liberty",
         siteURL: "https://www.rferl.org/",
@@ -534,7 +534,7 @@ var siteConfig = {
     },
     press: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "English Press Room",
         siteNameLocal: "Radio Free Europe / Radio Liberty",
         siteURL: "https://pressroom.rferl.org/",
@@ -678,7 +678,7 @@ var siteConfig = {
     },
     kz: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Kazakh",
         siteNameLocal: "Азат Еуропа / Азаттық Радиосы",
         siteURL: "https://www.azattyq.org/",
@@ -774,7 +774,7 @@ var siteConfig = {
     },
     al: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Kosovo",
         siteNameLocal: "Radio Evropa e Lirë",
         siteURL: "https://www.evropaelire.org/",
@@ -822,7 +822,7 @@ var siteConfig = {
     },
     kg: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Kyrgyz",
         siteNameLocal: "Азаттык Υналгысы",
         siteURL: "https://www.azattyk.org/",
@@ -918,7 +918,7 @@ var siteConfig = {
     },
     mk: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Macedonian",
         siteNameLocal: "Радио Слободна Eвропа",
         siteURL: "https://www.slobodnaevropa.mk/",
@@ -966,7 +966,7 @@ var siteConfig = {
     },
     mo: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Moldovan",
         siteNameLocal: "Europa Liberă",
         siteURL: "https://www.europalibera.org/",
@@ -1014,7 +1014,7 @@ var siteConfig = {
     },
     nc_ce: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "North Caucasus [Chechen]",
         siteNameLocal: "Маршо Радио",
         siteURL: "https://www.radiomarsho.com/",
@@ -1206,7 +1206,7 @@ var siteConfig = {
     },
     fa_en: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Radio Farda [English]",
         siteNameLocal: "Radio Farda English Site",
         siteURL: "https://en.radiofarda.com/",
@@ -1350,7 +1350,7 @@ var siteConfig = {
     },
     sh: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "South Slavic",
         siteNameLocal: "Radio Slobodna Evropa",
         siteURL: "https://www.slobodnaevropa.org/",
@@ -1398,7 +1398,7 @@ var siteConfig = {
     },
     tj: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Tajik",
         siteNameLocal: "Радиои Озодӣ",
         siteURL: "https://www.ozodi.org/",
@@ -1590,7 +1590,7 @@ var siteConfig = {
     },
     tu: {
         siteBrand: "rfe",
-        siteCulture: "rfe-latin",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Turkmen",
         siteNameLocal: "Azat Ýewropa/Azatlyk Radiosy",
         siteURL: "https://www.azathabar.com/",

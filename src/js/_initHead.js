@@ -14,27 +14,26 @@ var pageMainNode = document.getElementsByTagName("main")[0];
 var configAnalyticsSize = Object.keys(siteAnalytics).length;
 var thisPageURL = window.location.href;
 
-
 //////////////////////////
 // R E N D E R  H E A D //
 //////////////////////////
 // Get the language and direction and add it to the <html> and <body>
-if (setupWizard.haltStatus === false) {
+if(setupWizard.haltStatus === false) {
     pageHtmlNode.setAttribute("lang", siteConfig[apolloConfig.projectSite].siteLangISO);
     pageHtmlNode.setAttribute("dir", siteConfig[apolloConfig.projectSite].siteDir);
     pageBodyNode.setAttribute("dir", siteConfig[apolloConfig.projectSite].siteDir);
 }
 
 // Get the culture and add proper CSS to the <head>
-if (setupWizard.haltStatus === false) {
+if(setupWizard.haltStatus === false) {
     var apolloCulture = siteConfig[apolloConfig.projectSite].siteCulture;
     setupWizard.culture.status = "go";
 }
 
 // Get the theme and add proper CSS to the <head>
-if (setupWizard.haltStatus === false) {
+if(setupWizard.haltStatus === false) {
     var apolloTheme = apolloConfig.pageTheme;
-    if (apolloTheme === "light" || apolloTheme === "dark") {
+    if(apolloTheme === "light" || apolloTheme === "dark") {
         setupWizard.theme.status = "go";
     } else {
         setupWizard.haltStatus = true;
@@ -43,21 +42,20 @@ if (setupWizard.haltStatus === false) {
 }
 
 // Get the main CSS to the <head>
-if (setupWizard.haltStatus === false) {
+if(setupWizard.haltStatus === false) {
     var apolloVersion = configPaths.version;
     var newDOMNode = document.createElement('link');
     newDOMNode.setAttribute("rel", "stylesheet");
-    newDOMNode.setAttribute("href", configPaths.css.root + "apollo-framework-" + apolloCulture + "-" + apolloTheme + "-" + apolloVersion + ".min.css");
+    newDOMNode.setAttribute("href", configPaths.css.root + "apollo-framework-" + apolloVersion + "-" + apolloCulture + "-" + apolloTheme + ".min.css");
     pageHeadNode.appendChild(newDOMNode);
 }
 
 // Prepare the mandatory meta data log and print it in console
 var numberOfMeta = pageHeadNode.getElementsByTagName("meta").length;
 
-
 // Send info to the setupWizard
-if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
-    if (setupWizard.configParser.status === "no-go-1") {
+if(numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
+    if(setupWizard.configParser.status === "no-go-1") {
         setupWizard.haltStatus = true;
         setupWizard.meta.status = "no-go-1";
     } else {
@@ -71,13 +69,13 @@ if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
 }
 
 // Check if is this domain part of the analytics config
-if (setupWizard.haltStatus === false) {
-    if (thisPageURL.includes("file://") || thisPageURL.includes("localhost")) {
+if(setupWizard.haltStatus === false) {
+    if(thisPageURL.includes("file://") || thisPageURL.includes("localhost")) {
         var analyticsInit = false;
         var analyticsLocal = true;
     } else {
-        for (i = 0; i < configAnalyticsSize; i++) {
-            if (thisPageURL.includes(siteAnalytics[i].siteURL)) {
+        for(i = 0; i < configAnalyticsSize; i++) {
+            if(thisPageURL.includes(siteAnalytics[i].siteURL)) {
                 break;
                 var analyticsEntity = siteAnalytics[i].entity;
                 var analyticsLang = siteAnalytics[i].lang;
@@ -98,11 +96,11 @@ if (setupWizard.haltStatus === false) {
         }
     }
     // Send info to the setupWizard
-    if (analyticsInit === false && analyticsLocal === false) {
+    if(analyticsInit === false && analyticsLocal === false) {
         setupWizard.analytics.status = "go-warn-1";
-    } else if (analyticsInit === false && analyticsLocal === true) {
+    } else if(analyticsInit === false && analyticsLocal === true) {
         setupWizard.analytics.status = "go-warn-2";
-    } else if (analyticsInit === true) {
+    } else if(analyticsInit === true) {
         setupWizard.analytics.status = "go";
     } else {
         setupWizard.haltStatus = true;
@@ -115,7 +113,7 @@ function progressBar() {
     var heightFooter = document.getElementById("page__footer").offsetHeight;
     var pageHeight = heightMain + heightFooter;
     var scrollPosition = document.body.getBoundingClientRect().top;
-    if (scrollPosition <= 0) {
+    if(scrollPosition <= 0) {
         document.getElementById("bar").style.width = -scrollPosition / pageHeight * 100 + "%";
     } else {
         document.getElementById("bar").style.width = "0px";
