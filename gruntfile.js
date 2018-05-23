@@ -1,6 +1,7 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
+// Main Grunt File
 
 module.exports = function(grunt) {
     grunt.initConfig({
