@@ -39,9 +39,9 @@
         figcaption {
             padding: $gutter $gutter*2;
             color: $color-text-secondary;
-            font-size: 0.8rem;
-            font-family: $font-secondary, $font-fallback-secondary;
-            text-align: $direction-backwards;
+            font-size: .85rem;
+            font-family: $font-primary, $font-fallback-primary;
+            text-align: $direction-forwards;
         }
     }
 

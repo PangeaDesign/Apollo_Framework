@@ -22,7 +22,7 @@
     src: url("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Bold.woff2") format("woff2"), url("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/fonts/Skolar_Bold.woff") format("woff");
     font-weight: 700;
 }
-$direction-forwards: 'left';
-$direction-backwards: 'right';
+$direction-forwards: left;
+$direction-backwards: right;
 $font-primary: "Roboto Condensed";
 $font-secondary: "Skolar PE";

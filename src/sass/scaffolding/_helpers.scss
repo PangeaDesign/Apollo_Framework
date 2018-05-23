@@ -2,18 +2,105 @@
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
 
-.align--center {
+.align-center {
     text-align: center;
 }
 
-.align--justify {
+.align-justify {
     text-align: justify;
 }
 
-.align--left {
+.align-left {
     text-align: left;
 }
 
-.align--right {
+.align-right {
     text-align: right;
+}
+
+.float-left,
+.float-right {
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.float-left::after,
+.float-right::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.float-left {
+    float: left;
+    margin-right: -204px;
+    transform: translateX(-224px);
+}
+
+.float-right {
+    float: right;
+    margin-left: -170px;
+    transform: translateX(200px);
+}
+
+@media(max-width: 1160px) {
+    .float-left,
+    .float-right {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .float-left {
+        float: left;
+        margin-right: -20px;
+        transform: translateX(-50px);
+    }
+
+    .float-right {
+        float: right;
+        margin-left: 20px;
+        transform: translateX(50px);
+    }
+}
+
+@media(max-width: 870px) {
+    .float-left,
+    .float-right {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .float-left {
+        float: left;
+        margin-right: -20px;
+        transform: translateX(-50px);
+    }
+
+    .float-right {
+        float: right;
+        margin-left: 20px;
+        transform: translateX(50px);
+    }
+}
+
+@media(max-width: 869px) {
+    .float-left,
+    .float-right {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .float-left {
+        float: none;
+        margin-right: 0;
+        transform: translateX(0);
+    }
+
+    .float-right {
+        float: none;
+        margin-left: 0;
+        transform: translateX(0);
+    }
 }
