@@ -133,9 +133,11 @@ hr.divider--dashed {
 }
 /* Blockquotes */
 blockquote {
+    padding: 0;
     margin: 0 auto;
     width: 100%;
     max-width: 900px;
+    box-sizing: border-box;
 }
 
 blockquote cite {
@@ -145,11 +147,11 @@ blockquote cite {
     max-width: inherit;
     padding-left: 20px;
     color: $color-text-secondary;
-    font-size: 2rem;
+    font-size: 1.85rem;
     line-height: 1.2;
     font-weight: 300;
     font-style: italic;
-    font-family: $font-primary, $font-fallback-primary;
+    font-family: $font-secondary, $font-fallback-secondary;
     border-left: 5px solid $color-text-secondary;
 }
 
@@ -157,6 +159,6 @@ blockquote footer {
     margin: $gutter 0;
     color: $color-text-secondary;
     font-size: 0.8rem;
-    font-family: $font-secondary, $font-fallback-secondary;
+    font-family: $font-primary, $font-fallback-primary;
     text-align: $direction-backwards;
 }

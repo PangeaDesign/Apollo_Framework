@@ -1,10 +1,6 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
-@import 'vendors/photoswipe/photoswipe';
-@import 'vendors/photoswipe/default-skin';
-@import 'vendors/plyr/plyr';
-
 @import 'scaffolding/reset';
 @import 'scaffolding/variables';
 @import 'scaffolding/breakpoints';
@@ -28,3 +24,7 @@
 @import 'elements/tables';
 @import 'elements/typography';
 @import 'elements/videos';
+
+@import 'vendors/photoswipe/photoswipe';
+@import 'vendors/photoswipe/default-skin';
+@import 'vendors/plyr/plyr';
