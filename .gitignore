@@ -14,5 +14,3 @@ Thumbs.db
 dist/css/*
 dist/js/*
 node_modules/*
-*.map
-*.css
