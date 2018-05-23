@@ -3,13 +3,11 @@
 // All rights reserved
 // FUNCTION: Scroll Status
 
-console.log("BEFORE" + setupWizard.haltStatus)
 if (setupWizard.haltStatus !== true) {
 
     /////////////
     // H E R O //
     /////////////
-    console.log("AFTER" + setupWizard.haltStatus)
     var heroNode = document.createElement("div");
     var heroBackgroundNode = document.createElement("div");
     heroBackgroundNode.className += ("hero__background");
