@@ -2,7 +2,7 @@
     "name": "apollo-framework",
     "version": "2.0.0",
     "author": "Pangea Digital",
-    "description": "Source for Pangea Apollo Framework 2.0",
+    "description": "Pangea Apollo Framework 2.0",
     "license": "MIT",
     "devDependencies": {
         "autoprefixer": "^8.5.0",

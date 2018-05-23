@@ -13,6 +13,6 @@ Thumbs.db
 *.map
 dist/css/*.css
 dist/js/*.js
-node_modules/
+/node_modules/
 *.map
 *.css
