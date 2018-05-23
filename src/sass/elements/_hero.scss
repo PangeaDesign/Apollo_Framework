@@ -13,6 +13,7 @@
     * {
         color: $color-white;
     }
+}
 
     .hero__background {
         width: 100%;
@@ -74,6 +75,20 @@
         justify-content: center;
         text-align: center;
         z-index: 2;
+        padding: 0 $gutter * 2;
+        max-width: $breakpoint-xl;
+
+        h1 {
+        font-family: $font-primary;
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        padding: 0;
+        }
+
+        h2 {
+        font-size: 1.4rem;
+        font-weight: 400
+        }
     }
 
     .hero__continue {
@@ -97,7 +112,7 @@
         }
     }
 
-    &.hero__container--centered {
+    .hero__container--centered {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -108,16 +123,20 @@
         }
     }
 
-    &.hero__container--tabloid {
+    .hero__container--tabloid {
         width: 100%;
 
         .hero__content {
-            text-align: left;
-            max-width: calc(100% - 140px);
+            // max-width: calc(100% - 140px);
             align-items: flex-start;
             justify-content: flex-end;
             box-sizing: border-box;
             padding: ($gutter * 2);
+
+            h1,
+            h2 {
+                text-align: left;
+            }
         }
 
         .hero__background {
@@ -130,8 +149,8 @@
         }
     }
 
-    &.hero__container--cover-left,
-    &.hero__container--cover-right {
+    .hero__container--cover-left,
+    .hero__container--cover-right {
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -147,7 +166,7 @@
         }
     }
 
-    &.hero__container--cover-left {
+    .hero__container--cover-left {
         flex-direction: row-reverse;
 
         .hero__continue {
@@ -155,11 +174,18 @@
         }
     }
 
-    &.hero__container--cover-right {
+    .hero__container--cover-right {
         flex-direction: row;
 
         .hero__continue {
             margin-left: 25%;
         }
     }
+@media(max-width: $breakpoint-s) {
+.hero__content h1 {
+    font-size: 2rem;
+}
+.hero__content h2 {
+    font-size: 1.4rem;
+}
 }
