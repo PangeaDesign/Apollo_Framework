@@ -9,17 +9,16 @@ module.exports = function(grunt) {
             apolloFramework: {
                 files: {
                     'dist/css/apollo-framework-2.0-launch.min.css': 'src/sass/launch.scss',
-                    'dist/css/apollo-framework-2.0-ct-cyrillic-light.min.css': 'src/sass/main-ct-cyrillic-light.scss',
-                    'dist/css/apollo-framework-2.0-ct-cyrillic-dark.min.css': 'src/sass/main-ct-cyrillic-dark.scss',
-                    'dist/css/apollo-framework-2.0-rfe-arabic-light.min.css': 'src/sass/main-rfe-arabic-light.scss',
-                    'dist/css/apollo-framework-2.0-rfe-arabic-dark.min.css': 'src/sass/main-rfe-arabic-dark.scss',
-                    'dist/css/apollo-framework-2.0-rfe-armenian-light.min.css': 'src/sass/main-rfe-armenian-light.scss',
-                    'dist/css/apollo-framework-2.0-rfe-armenian-dark.min.css': 'src/sass/main-rfe-armenian-dark.scss',
-                    'dist/css/apollo-framework-2.0-rfe-georgian-light.min.css': 'src/sass/main-rfe-georgian-light.scss',
-                    'dist/css/apollo-framework-2.0-rfe-georgian-dark.min.css': 'src/sass/main-rfe-georgian-dark.scss',
-                    'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-light.min.css': 'src/sass/main-rfe-latin-cyrillic-light.scss',
-                    'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-dark.min.css': 'src/sass/main-rfe-latin-cyrillic-dark.scss'
-
+                    'dist/css/apollo-framework-2.0-ct-cyrillic-light.min.css': ['src/sass/main-ct-cyrillic-light.scss'],
+                    'dist/css/apollo-framework-2.0-ct-cyrillic-dark.min.css': ['src/sass/main-ct-cyrillic-dark.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-arabic-light.min.css': ['src/sass/main-rfe-arabic-light.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-arabic-dark.min.css': ['src/sass/main-rfe-arabic-dark.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-armenian-light.min.css': ['src/sass/main-rfe-armenian-light.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-armenian-dark.min.css': ['src/sass/main-rfe-armenian-dark.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-georgian-light.min.css': ['src/sass/main-rfe-georgian-light.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-georgian-dark.min.css': ['src/sass/main-rfe-georgian-dark.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-light.min.css': ['src/sass/main-rfe-latin-cyrillic-light.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-dark.min.css': ['src/sass/main-rfe-latin-cyrillic-dark.scss']
                 }
             }
         },

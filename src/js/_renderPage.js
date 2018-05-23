@@ -3,7 +3,7 @@
 // All rights reserved
 // FUNCTION: Scroll Status
 
-if (setupWizard.haltStatus !== true) {
+if(setupWizard.haltStatus !== true) {
 
     /////////////
     // H E R O //
@@ -16,11 +16,11 @@ if (setupWizard.haltStatus !== true) {
     var heroMedia = apolloConfig.heroMedia;
 
     // In case media type is image
-    if (heroMedia.indexOf(".jpg") >= 0 || heroMedia.indexOf(".jpeg") >= 0 || heroMedia.indexOf(".png") >= 0 || heroMedia.indexOf(".gif") >= 0) {
+    if(heroMedia.indexOf(".jpg") >= 0 || heroMedia.indexOf(".jpeg") >= 0 || heroMedia.indexOf(".png") >= 0 || heroMedia.indexOf(".gif") >= 0) {
         heroBackgroundNode.setAttribute("style", "background-image: url(\"" + apolloConfig.heroMedia + "\"); background-size: cover; background-position: center;");
 
         // In case media type is mp4 video
-    } else if (heroMedia.indexOf(".mp4") >= 0) {
+    } else if(heroMedia.indexOf(".mp4") >= 0) {
         heroBackgroundNode.className += " hero__background--video";
         heroBackgroundNode.innerHTML = "<video playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";
     } else {
@@ -31,7 +31,7 @@ if (setupWizard.haltStatus !== true) {
     // Render hero overlay
     var heroOverlayNode = document.createElement("div");
     heroOverlayNode.className += ("hero__overlay");
-    if (apolloConfig.heroOverlay) {
+    if(apolloConfig.heroOverlay) {
         heroOverlayNode.className += (" hero__overlay--rendered");
     }
 
@@ -84,7 +84,7 @@ if (setupWizard.haltStatus !== true) {
     function httpGetIcon(logoUrl, logoContainerId) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                 document.getElementById(logoContainerId).innerHTML = xmlHttp.response;
             }
         }
@@ -110,20 +110,20 @@ if (setupWizard.haltStatus !== true) {
     var allContainers = document.getElementsByClassName("container");
     var chaptersCount = 0;
     var chaptersTitles = new Array();
-    for (var i = 0; i < allContainers.length; i++) {
+    for(var i = 0; i < allContainers.length; i++) {
         var title = allContainers[i].getAttribute("navigation-title");
-        if (title != null) {
+        if(title != null) {
             chaptersTitles[chaptersCount] = title;
             chaptersCount++;
             allContainers[i].setAttribute("id", "chapter-" + chaptersCount);
         };
     };
-    if (chaptersTitles.length > 1) {
+    if(chaptersTitles.length > 1) {
         var headerNavNode = document.createElement("a");
         headerNavNode.classList.add("page__header-nav");
         headerNavNode.setAttribute("id", "page__header-nav");
         headerRightNode.appendChild(headerNavNode);
-        httpGetIcon("src/assets/export/navigation.svg", "page__header-nav");
+        //httpGetIcon("src/assets/export/navigation.svg", "page__header-nav");
 
         var navSiteNode = document.createElement("aside");
         navSiteNode.setAttribute("id", "nav__site");
@@ -136,12 +136,12 @@ if (setupWizard.haltStatus !== true) {
         var navSiteCloseNode = document.createElement("div");
         navSiteCloseNode.setAttribute("id", "nav__site-close");
         navSiteContainerNode.appendChild(navSiteCloseNode);
-        httpGetIcon("src/assets/export/close.svg", "nav__site-close");
+        //httpGetIcon("src/assets/export/close.svg", "nav__site-close");
 
         var navSiteUlNode = document.createElement("ul");
         navSiteContainerNode.appendChild(navSiteUlNode);
         var navSiteLiNode, navSiteANode;
-        for (var i = 0; i < chaptersCount; i++) {
+        for(var i = 0; i < chaptersCount; i++) {
             navSiteLiNode = document.createElement("li");
             navSiteUlNode.appendChild(navSiteLiNode);
             navSiteANode = document.createElement("a");
@@ -173,9 +173,9 @@ if (setupWizard.haltStatus !== true) {
         var currentURL = window.location.href;
 
         Object.keys(sharingIcons).forEach(function(key) {
-            if (sharingIcons[key]) {
+            if(sharingIcons[key]) {
                 var newShareIcon = document.createElement("a");
-                if (key == "linkedin" || key == "email") {
+                if(key == "linkedin" || key == "email") {
                     newShareIcon.setAttribute("href", configPaths.shareMedia[key][0] + currentURL + configPaths.shareMedia[key][1] + apolloConfig.projectTitle);
                 } else {
                     newShareIcon.setAttribute("href", configPaths.shareMedia[key] + currentURL);
@@ -209,7 +209,6 @@ if (setupWizard.haltStatus !== true) {
     galleryNode.setAttribute("id", "page__gallery");
     pageMainNode.parentNode.insertBefore(galleryNode, pageMainNode.nextSibling);
 
-
     /////////////////
     // F O O T E R //
     /////////////////
@@ -217,8 +216,8 @@ if (setupWizard.haltStatus !== true) {
 
     var footerBlockNode = document.createElement("div");
     footerBlockNode.classList.add("footer__block");
-    if (apolloConfig.footerBlockContent != "" && apolloConfig.footerBlockContent != false && apolloConfig.footerBlockContent != undefined) {
-        if (apolloConfig.footerBlockTitle != "" && apolloConfig.footerBlockTitle != false && apolloConfig.footerBlockTitle != undefined) {
+    if(apolloConfig.footerBlockContent != "" && apolloConfig.footerBlockContent != false && apolloConfig.footerBlockContent != undefined) {
+        if(apolloConfig.footerBlockTitle != "" && apolloConfig.footerBlockTitle != false && apolloConfig.footerBlockTitle != undefined) {
             var footerBlockTitleNode = document.createElement("h3");
             footerBlockTitleNode.textContent += apolloConfig.footerBlockTitle;
             footerBlockNode.appendChild(footerBlockTitleNode);
@@ -237,9 +236,9 @@ if (setupWizard.haltStatus !== true) {
     footerFollowUsNode.appendChild(footerFollowUsH3Node);
 
     var siteSocialMeta = siteConfig[apolloConfig.projectSite].siteSocial;
-    for (var socialProfile in siteSocialMeta) {
-        if (siteSocialMeta.hasOwnProperty(socialProfile)) {
-            if (siteSocialMeta[socialProfile] !== undefined) {
+    for(var socialProfile in siteSocialMeta) {
+        if(siteSocialMeta.hasOwnProperty(socialProfile)) {
+            if(siteSocialMeta[socialProfile] !== undefined) {
                 var footerFollowUsANode = document.createElement("a");
                 footerFollowUsANode.setAttribute("href", configPaths.socialMedia[socialProfile] + siteSocialMeta[socialProfile]);
                 footerFollowUsANode.setAttribute("target", "_blank");
@@ -250,9 +249,9 @@ if (setupWizard.haltStatus !== true) {
     }
 
     var siteServiceMeta = siteConfig[apolloConfig.projectSite].siteServices;
-    for (var siteService in siteServiceMeta) {
-        if (siteServiceMeta.hasOwnProperty(siteService)) {
-            if (siteServiceMeta[siteService] !== false) {
+    for(var siteService in siteServiceMeta) {
+        if(siteServiceMeta.hasOwnProperty(siteService)) {
+            if(siteServiceMeta[siteService] !== false) {
                 var footerFollowUsANode = document.createElement("a");
                 footerFollowUsANode.setAttribute("href", siteConfig[apolloConfig.projectSite].siteURL + configPaths.siteServices[siteService]);
                 footerFollowUsANode.setAttribute("target", "_blank");
