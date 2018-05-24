@@ -29,7 +29,7 @@ h2 {
 }
 
 h3 {
-    color: $color-tertiary;
+    color: lighten($color-primary, 15%);
     font-size: 1.1rem;
     font-weight: 400;
     font-family: $font-primary, $font-fallback-primary;
@@ -103,34 +103,7 @@ p {
         color: $color-text-secondary;
     }
 }
-/* Dividers & Decorations */
-hr {
-    margin: 50px auto;
-    border: none;
-    box-sizing: border-box;
-}
 
-hr.divider--short {
-    width: 40%;
-    height: 1px;
-    border-bottom: 1px solid $color-text;
-    opacity: 0.1;
-}
-
-hr.divider--solid {
-    border-bottom: 1px solid $color-text;
-    opacity: 0.1;
-}
-
-hr.divider--dotted {
-    border-bottom: 1px dotted $color-text;
-    opacity: 0.1;
-}
-
-hr.divider--dashed {
-    border-bottom: 1px dashed $color-text;
-    opacity: 0.1;
-}
 /* Blockquotes */
 blockquote {
     padding: 0;

@@ -7,7 +7,7 @@ footer#page__footer {
     padding: ($gutter * 2);
     box-sizing: border-box;
     text-align: center;
-    background-color: $color-complimentary;
+    background-color: darken($color-primary, 15%);
     border-bottom: 5px solid $color-primary;
 
     .footer__block {
@@ -42,7 +42,7 @@ footer#page__footer {
 
                 .svg__path {
                     transition: fill 0.5s;
-                    fill: $color-complimentary;
+                    fill: darken($color-primary, 15%);
                 }
             }
 

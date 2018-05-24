@@ -2,6 +2,8 @@
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
 
-$color-text:           #ffffff;
-$color-text-secondary: #4f6d7a;
-$color-background:     #1f2124;
+$color-text:           $color-white;
+$color-background:     $color-black;
+body {
+    background-color: $color-background;
+}
