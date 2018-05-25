@@ -1,9 +1,12 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
-$color-primary: #2D1996;
-$color-secondary: #0ECAE3;
-// $color-tertiary: #ff0055;
+$color-primary: #2D1996; //plum
+$color-secondary: #0ECAE3; //pool
+$color-tertiary: #ff0055; //raspberry
 $color-gray: #DEE5EC;
 $color-text: #383838;
-$color-text-secondary: $color-primary;
+$color-text-secondary: $color-text;
+
+$color-footer: $color-primary;
+$color-table: darken($color-gray, 15%);

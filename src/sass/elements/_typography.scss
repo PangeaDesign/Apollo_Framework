@@ -29,7 +29,7 @@ h2 {
 }
 
 h3 {
-    color: lighten($color-primary, 15%);
+    color: $color-primary;
     font-size: 1.1rem;
     font-weight: 400;
     font-family: $font-primary, $font-fallback-primary;
@@ -59,7 +59,7 @@ h5 {
 h5:before {
     content: "";
     display: block;
-    border-top: solid 1px #ccc;
+    border-top: solid 1px $color-gray;
     width: 80%;
     height: 1px;
     position: absolute;
@@ -69,7 +69,7 @@ h5:before {
 }
 
 h5 span {
-    background: #fff;
+    background: $color-background;
     padding: 0 $gutter;
     display: inline-block;
     position: relative;
@@ -93,15 +93,31 @@ p {
     line-height: 1.5;
     font-weight: 300;
     font-family: $font-secondary, $font-fallback-secondary;
+
+    .interview & {
+        padding: $gutter 0;
+        span {
+            font-weight: 700;
+            color: $color-text-secondary;
+        }
+    }
 }
 
-.interview p {
-    padding: $gutter 0;
+.p--lead {
+    color: $color-text-secondary;
+    font-weight: 600;
+}
 
-    span {
-        font-weight: 700;
+.p--dropcap::first-letter {
         color: $color-text-secondary;
-    }
+        float: left;
+        font-family: Georgia;
+        font-size: 85px;
+        line-height: 60px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 3px;
 }
 
 /* Blockquotes */

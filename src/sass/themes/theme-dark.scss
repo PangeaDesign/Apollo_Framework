@@ -3,7 +3,9 @@
 // All rights reserved
 
 $color-text:           $color-white;
+$color-text-secondary: lighten($color-gray, 10%);
 $color-background:     $color-black;
+$color-table:          $color-black;
 body {
     background-color: $color-background;
 }
