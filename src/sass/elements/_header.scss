@@ -2,7 +2,7 @@
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
 
-header#page__header {
+#page__header {
     width: 100%;
     height: 65px;
     padding: ($gutter * 1.5);
@@ -15,66 +15,74 @@ header#page__header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    // Service Logo
-    a.page__header-logo {
+}
+#page__header.page__header--onpage {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba($color-black,.2);
+    transition: all .5s;
+}
+
+
+// Service Logo
+
+a.page__header-logo {
+    width: auto;
+    height: 35px;
+    display: inline-block;
+
+    svg {
         width: auto;
         height: 35px;
-        display: inline-block;
+        fill: $color-white;
+    }
+}
 
-        svg {
-            width: auto;
-            height: 35px;
+.header__right-container {
+    display: flex;
+    align-items: center;
+}
+// Share Button
+div.page__header-share {
+    width: auto;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 0.8rem;
+    font-family: $font-primary, $font-fallback-primary;
+    float: left;
+    position: relative;
+    cursor: pointer;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        margin-top: -3px;
+        margin-right: ($gutter / 2);
+
+        .svg__path {
             fill: $color-white;
         }
     }
 
-    .header__right-container {
-        display: flex;
-        align-items: center;
-        // Share Button
-        div.page__header-share {
-            width: auto;
-            height: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: $color-white;
-            font-size: 0.8rem;
-            font-family: $font-primary, $font-fallback-primary;
-            float: left;
-            position: relative;
-            cursor: pointer;
+    &:hover {
+        color: $color-primary;
+        transition: color 0.4s;
 
-            svg {
-                width: 24px;
-                height: 24px;
-                margin-top: -3px;
-                margin-right: ($gutter / 2);
-
-                .svg__path {
-                    fill: $color-white;
-                }
-            }
-
-            &:hover {
-                color: $color-primary;
-                transition: color 0.4s;
-
-                svg {
-                    .svg__path {
-                        fill: $color-primary;
-                        transition: fill 0.4s;
-                    }
-                }
+        svg {
+            .svg__path {
+                fill: $color-primary;
+                transition: fill 0.4s;
             }
         }
     }
 }
 
-header .header__right-container .sharing-icons {
+.header__right-container .sharing-icons {
     display: block;
     width: auto;
     padding: 5px 4px 2px;
@@ -119,11 +127,11 @@ header .header__right-container .sharing-icons {
     }
 }
 
-header .header__right-container .opened {
+.header__right-container .opened {
     right: 0;
 }
 
-body header #progress {
+#progress {
     width: 100%;
     height: 3px;
     background-color: #555555;
@@ -131,45 +139,43 @@ body header #progress {
     left: 0;
     right: 0;
     position: absolute;
+}
 
-    #bar {
-        width: 50%;
-        height: 3px;
-        background-color: $color-primary;
-        top: 0;
-        left: 0;
-        transition: width 0.3s;
-    }
+#bar {
+    width: 50%;
+    height: 3px;
+    background-color: $color-primary;
+    top: 0;
+    left: 0;
+    transition: width 0.3s;
 }
 // Navigation
 
-header#page__header {
-    a.page__header-nav {
-        width: 27px;
-        height: 27px;
-        padding: 4px 4px 4px 16px;
-        display: flex;
-        color: #fff;
-        flex-direction: row;
-        justify-content: center;
-        cursor: pointer;
-        float: right;
-        position: relative;
+a.page__header-nav {
+    width: 27px;
+    height: 27px;
+    padding: 4px 4px 4px 16px;
+    display: flex;
+    color: #fff;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    float: right;
+    position: relative;
 
+    svg {
+        fill: #fff;
+    }
+
+    &:hover {
         svg {
-            fill: #fff;
-        }
-
-        &:hover {
-            svg {
-                transition: fill 0.3s;
-                fill: $color-primary;
-            }
+            transition: fill 0.3s;
+            fill: $color-primary;
         }
     }
 }
 
-body header aside#nav__site {
+#nav__site {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -179,37 +185,37 @@ body header aside#nav__site {
     transition: opacity 0.5s;
     display: none;
     z-index: 999;
-    background-color: rgba(255,255,255,0.85);
+    background-color: rgba($color-black,0.85);
+}
 
-    #nav__site-container {
-        width: 300px;
-        height: 100%;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-        overflow-y: auto;
-        overflow-x: hidden;
-        background-color: #24292D;
-        align-items: flex-start;
-        float: $direction-backwards;
+#nav__site-container {
+    width: 300px;
+    height: 100%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #24292D;
+    align-items: flex-start;
+    float: $direction-backwards;
+}
 
-        #nav__site-header {
-            width: 100%;
-            padding: 0 15px;
-            box-sizing: border-box;
+#nav__site-header {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
 
-            svg {
-                fill: #fff;
-            }
-        }
+    svg {
+        fill: #fff;
     }
 }
 
-body header aside#nav__site.nav__site-visible {
+#nav__site.nav__site-visible {
     display: block;
     opacity: 1;
     transition: opacity 0.5s;
 }
 
-body header aside#nav__site #nav__site-container #nav__site-close {
+#nav__site-close {
     position: absolute;
     right: 0;
     width: 27px;
@@ -229,7 +235,7 @@ body header aside#nav__site #nav__site-container #nav__site-close {
     }
 }
 
-body header aside#nav__site #nav__site-container ul {
+#nav__site-container ul {
     padding: 46px 20px 20px;
     margin: 0;
     list-style: none;
