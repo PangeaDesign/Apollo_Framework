@@ -77,8 +77,8 @@
     max-width: $breakpoint-xl;
 
     h1 {
-        font-family: $font-secondary;
         font-size: 3.3rem;
+        font-weight: 300;
         padding: 0;
         text-shadow: 1px 1px 3px rgba($color-black, .5);
     }

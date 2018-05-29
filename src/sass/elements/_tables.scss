@@ -32,7 +32,7 @@ table {
   border: none;
   border-spacing: 0;
   text-align: center;
-  outline: 1px solid lighten($color-black, 80%);
+  outline: 1px solid rgba($color-black,.2);
   font-family: $font-primary;
   font-size: .85rem;
   color: $color-text;
