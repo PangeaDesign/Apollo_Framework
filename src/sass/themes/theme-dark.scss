@@ -5,7 +5,7 @@
 $color-text:           $color-white;
 $color-text-secondary: lighten($color-gray, 10%);
 $color-background:     $color-black;
-$color-table:          $color-black;
+$color-table:          lighten($color-black,5%);
 body {
     background-color: $color-background;
 }
