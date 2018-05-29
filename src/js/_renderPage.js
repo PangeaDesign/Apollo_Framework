@@ -47,8 +47,9 @@ if (setupWizard.haltStatus !== true) {
     heroContentH2Node.textContent += apolloConfig.heroByline;
     heroContentNode.appendChild(heroContentH2Node);
 
-    var heroContinueNode = document.createElement("div");
+    var heroContinueNode = document.createElement("a");
     heroContinueNode.className += ("hero__continue");
+    heroContinueNode.setAttribute("href", "#main");
     heroContinueNode.innerHTML = icons.more;
 
     heroNode.setAttribute("id", "hero");
