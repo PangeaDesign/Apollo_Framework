@@ -15,16 +15,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-#page__header.page__header--onpage {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba($color-black,.2);
-    transition: all .5s;
-}
 
-
+    .page__header--onpage {
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba($color-black,.2);
+        transition: all 0.5s;
+    }
+}
 // Service Logo
-
 a.page__header-logo {
     width: auto;
     height: 35px;
@@ -42,6 +40,7 @@ a.page__header-logo {
     align-items: center;
 }
 // Share Button
+
 div.page__header-share {
     width: auto;
     height: 35px;

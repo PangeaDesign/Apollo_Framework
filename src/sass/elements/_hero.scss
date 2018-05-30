@@ -73,7 +73,8 @@
     justify-content: center;
     text-align: center;
     z-index: 2;
-    padding: 0 $gutter * 2;
+    padding: 0 $gutter * 4;
+    box-sizing: border-box;
     max-width: $breakpoint-xl;
 
     h1 {
