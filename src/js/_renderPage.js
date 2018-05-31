@@ -22,7 +22,7 @@ if (setupWizard.haltStatus !== true) {
         // In case media type is mp4 video
     } else if (heroMedia.indexOf(".mp4") >= 0) {
         heroBackgroundNode.className += " hero__background--video";
-        heroBackgroundNode.innerHTML = "<video playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";
+        heroBackgroundNode.innerHTML = "<video poster=\"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";
     } else {
         console.log("%c[Warning] Hero media type is not supported! Use only [jpg/jpeg], [png], [gif] or [mp4].\nMedia from [youtu.be] and [vimeo.com] are not allowed for the hero section of the page.", configSetupWizard.warningMessage);
         heroBackgroundNode.setAttribute("style", "background-image: url(\"dist/assets/media-not-supported.jpg\"); background-size: cover; background-position: center;");
