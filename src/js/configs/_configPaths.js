@@ -21,7 +21,7 @@ var configPaths = {
         odnoklassniki: "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=",
         linkedin: ["https://www.linkedin.com/shareArticle?mini=true&url=", "&title="], //title?
         balatarin: "https://www.balatarin.com/links/submit?phase=2&url=",
-        connectMail: "https://connect.mail.ru/share?url=", //title in html?
+        mailRu: "https://connect.mail.ru/share?url=", //title in html?
         whatsUp: "https://web.whatsapp.com/send?text="
     },
     socialMedia: {

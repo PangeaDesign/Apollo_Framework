@@ -31,7 +31,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -79,7 +79,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -127,7 +127,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -175,7 +175,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -223,7 +223,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -271,7 +271,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -319,7 +319,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -367,7 +367,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -415,7 +415,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -463,7 +463,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -511,7 +511,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: true,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -559,7 +559,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -607,7 +607,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -655,7 +655,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -703,7 +703,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: true,
+            mailRu: true,
             whatsUp: false
         },
         siteSocial: {
@@ -751,7 +751,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -799,7 +799,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -847,7 +847,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
@@ -895,7 +895,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
@@ -943,7 +943,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -991,7 +991,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1039,7 +1039,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
@@ -1087,7 +1087,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
@@ -1135,7 +1135,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
@@ -1183,7 +1183,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: true,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1231,7 +1231,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: true,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1279,7 +1279,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
@@ -1327,7 +1327,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: true,
             balatarin: false,
-            connectMail: true,
+            mailRu: true,
             whatsUp: true
         },
         siteSocial: {
@@ -1375,7 +1375,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1423,7 +1423,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1471,7 +1471,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1519,7 +1519,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
@@ -1567,7 +1567,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
@@ -1615,7 +1615,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1663,7 +1663,7 @@ var siteConfig = {
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1711,7 +1711,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1759,7 +1759,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1807,7 +1807,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: false
         },
         siteSocial: {
@@ -1855,7 +1855,7 @@ var siteConfig = {
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
-            connectMail: false,
+            mailRu: false,
             whatsUp: true
         },
         siteSocial: {
