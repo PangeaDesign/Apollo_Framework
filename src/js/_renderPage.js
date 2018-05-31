@@ -144,6 +144,14 @@ if (setupWizard.haltStatus !== true) {
         var navSiteUlNode = document.createElement("ul");
         navSiteContainerNode.appendChild(navSiteUlNode);
         var navSiteLiNode, navSiteANode;
+        navSiteLiNode = document.createElement("li");
+        navSiteUlNode.appendChild(navSiteLiNode);
+        navSiteANode = document.createElement("a");
+        navSiteLiNode.appendChild(navSiteANode);
+        navSiteANode.setAttribute("class", "anchor");
+        navSiteANode.setAttribute("href", "#hero");
+        navSiteANode.text = "Home"; //add translations
+
         for (var i = 0; i < chaptersCount; i++) {
             navSiteLiNode = document.createElement("li");
             navSiteUlNode.appendChild(navSiteLiNode);
