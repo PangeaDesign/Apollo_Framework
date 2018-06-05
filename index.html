@@ -27,6 +27,10 @@
     <!-- END: Meta - Copy & Pste Meta Data from Browser's Console -->
 
     <script id="apollo-config">
+        var parallaxConfig = {
+            parallax: true,
+            dynamic: false
+        }
         var apolloConfig = {
             setupWizard: true,
             projectSite: "en",
@@ -39,7 +43,7 @@
             heroMediaPoster: "https://www.icelandairhotels.com/static/strevda/lg/1475075635-1473434601-rvk-vetur04.jpg", // in case of heroMedia mp4
             heroOverlay: true,
             heroByline: "Story by Ralph Wiggum",
-            pageTheme: "dark",
+            pageTheme: "light",
             pageParallax: false,
             footerBlockTitle: "About",
             footerBlockContent: "Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe. The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population."
@@ -79,8 +83,8 @@
                 egislative assemblies. Following a period of civil strife, Iceland acceded to Norwegian rule in the 13th century.</p>
         </div>
 
-        <div class="container container--full">
-            <figure data-gallery="false" data-caption="Some testing image 2" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
+        <div class="container container--full parallax-container">
+            <figure data-gallery="true" data-caption="Some testing image 2" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
         </div>
 
         <div class="container container--big">
@@ -140,8 +144,8 @@
 
         <hr class="divider--dashed">
 
-        <div class="container container--jumbo">
-            <figure data-gallery="true" data-caption="Some testing image 3" data-thumb-caption="false" data-source="https://gdb.rferl.org/35D86AD4-CF63-4260-BE61-A7114D3AC84D.jpg"></figure>
+        <div class="container container--jumbo parallax-container">
+            <figure data-gallery="false" data-caption="Some testing image 3" data-thumb-caption="false" data-source="https://gdb.rferl.org/35D86AD4-CF63-4260-BE61-A7114D3AC84D.jpg"></figure>
         </div>
 
         <div class="container container-aside">
@@ -195,13 +199,22 @@
     <script src="src/js/_initSetupWizard.js"></script>
     <script src="src/js/_renderPage.js"></script>
     <script src="src/js/_initPage.js"></script>
+
+    <script src="src/js/_initContainers.js"></script>
+
     <script src="src/js/_initImages.js"></script>
+
+    <!--link rel="stylesheet" href="src/sass/vendors/_parallax.css" />
+    <script src="src/js/vendors/_parallax1.js"></script-->
+
+    <script src="src/js/_initGallery.js"></script>
 
     <script src="src/js/vendors/photoswipe/photoswipe-ui-default.min.js"></script>
     <script src="src/js/vendors/photoswipe/photoswipe.min.js"></script>
 
     <script src="src/js/vendors/plyr/plyr.js"></script>
     <script src="src/js/_initVideos.js"></script>
+
 
     <script>
     </script>
