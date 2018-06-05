@@ -80,20 +80,27 @@ a.page__header-logo {
         height: 24px;
         margin-top: -3px;
         margin-right: ($gutter / 2);
-
-        .svg__path {
-            fill: $color-white;
-        }
+        fill: $color-white;
+        stroke: $color-white;
     }
 
     &:hover {
         color: $color-primary;
-        transition: color 0.4s;
+        transition: color 0.3s;
 
         svg {
-            .svg__path {
-                fill: $color-primary;
-                transition: fill 0.4s;
+            // transition: all 0.3s;
+            fill: $color-primary;
+            stroke: $color-primary;
+
+             path {
+                // animation: share 1s;
+                            animation: share 1s forwards;
+            }
+            circle:not(:first-of-type) {
+                fill: none;
+                stroke: none;
+                animation: sharecirc 1s forwards;
             }
         }
     }
@@ -275,5 +282,25 @@ a.page__header-nav {
                 color: $color-primary;
             }
         }
+    }
+}
+// animation
+@keyframes share {
+    from {
+        fill: none;
+        stroke: none;
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke: $color-primary;
+        stroke-dasharray: 15;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes sharecirc {
+    to {
+        fill: $color-primary;
     }
 }
