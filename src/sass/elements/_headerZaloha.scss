@@ -37,6 +37,7 @@
                 fill: $color-text;
             }
         }
+
     }
 }
 // Service Logo
@@ -93,11 +94,10 @@ a.page__header-logo {
             fill: $color-primary;
             stroke: $color-primary;
 
-            path {
+             path {
                 // animation: share 1s;
-                animation: share 1s forwards;
+                            animation: share 1s forwards;
             }
-
             circle:not(:first-of-type) {
                 fill: none;
                 stroke: none;
@@ -284,11 +284,10 @@ a.page__header-nav {
             }
         }
     }
+<<<<<<< HEAD
 }
-/*<<<<<<< HEAD*/
-/*}
 =======
-}*/
+}
 // animation
 @keyframes share {
     from {
@@ -309,4 +308,4 @@ a.page__header-nav {
         fill: $color-primary;
     }
 }
-/*>>>>>>> c122d5d9bd386302d2e426af6658fd57fd3cdf57*/
+>>>>>>> c122d5d9bd386302d2e426af6658fd57fd3cdf57

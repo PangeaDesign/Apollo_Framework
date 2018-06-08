@@ -22,7 +22,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 continue;
             }
             linkEl = figureEl.children[0]; // <a> element
-            console.log(linkEl);
             size = linkEl.parentNode.getAttribute('data-size').split('x');
             //console.log(linkEl);
             // create slide object

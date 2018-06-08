@@ -49,6 +49,29 @@ window.addEventListener("scroll", onScroll);
 function onScroll() {
     lazyLoad();
     progressBar();
+    headerBackground();
+}
+
+function progressBar() {
+    var heightMain = document.getElementsByTagName("main")[0].offsetHeight;
+    var heightFooter = document.getElementById("page__footer").offsetHeight;
+    var pageHeight = heightMain + heightFooter;
+    var scrollPosition = document.body.getBoundingClientRect().top;
+    if (scrollPosition <= 0) {
+        document.getElementById("bar").style.width = -scrollPosition / pageHeight * 100 + "%";
+    } else {
+        document.getElementById("bar").style.width = "0px";
+    }
+}
+
+function headerBackground() {
+    var heightWindow = window.innerHeight;
+    scrollPosition = document.body.getBoundingClientRect().top;
+    if (heightWindow + scrollPosition - 65 > 0) {
+        document.getElementById("page__header").classList.remove("page__header--onpage");
+    } else {
+        document.getElementById("page__header").classList.add("page__header--onpage");
+    }
 }
 // Remove config part from the page
 if (setupWizard.haltStatus === false) {

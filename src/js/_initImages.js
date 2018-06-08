@@ -139,7 +139,6 @@ document.body.innerHTML += pswpHTML;
         }
 
         imageImgElement.onload = function() {
-            //console.log(this.naturalWidth);
             this.parentNode.parentNode.parentNode.setAttribute("data-size", window.innerWidth + "x" + Math.round((1 / (this.width / this.height)) * window.innerWidth)); // !!! some max width ???
         };
         if (imageCaption != null) {
@@ -153,12 +152,18 @@ document.body.innerHTML += pswpHTML;
     };
 })();
 // Lazy Load
+var imagesLoaded = [];
+for (var i = 0; i < document.getElementsByTagName("figure").length; i++) {
+    imagesLoaded[i] = false;
+}
+
 function lazyLoad() {
     for (var i = 0; i < document.getElementsByTagName("figure").length; i++) {
         var changeImage = document.getElementsByTagName("figure")[i];
         var imageSource = changeImage.getAttribute("data-source");
         //console.log(changeImage);
-        if (changeImage.getBoundingClientRect().top < window.innerHeight) {
+        if (changeImage.getBoundingClientRect().top < window.innerHeight && imagesLoaded[i] == false) {
+            imagesLoaded[i] = true;
             if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
                 changeImage.children[0].children[0].children[0].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w568." + imageSource.split(".")[3]);
                 changeImage.children[0].children[0].children[1].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1024." + imageSource.split(".")[3]);
