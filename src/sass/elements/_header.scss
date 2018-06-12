@@ -93,17 +93,12 @@ a.page__header-logo {
             fill: $color-primary;
             stroke: $color-primary;
 
-            <<<<<<< HEAD path {
+            path {
                 // animation: share 1s;
                 animation: share 1s forwards;
             }
 
-            ======= path {
-                // animation: share 1s;
-                animation: share 1s forwards;
-            }
-
-            >  >  >  >  >  >  > c122d5d9bd386302d2e426af6658fd57fd3cdf57 circle:not(:first-of-type) {
+            circle:not(:first-of-type) {
                 fill: none;
                 stroke: none;
                 animation: sharecirc 1s forwards;

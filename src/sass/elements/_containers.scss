@@ -26,3 +26,18 @@
         max-width: $breakpoint-s;
     }
 }
+
+.container--aside figure {
+    float: left;
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.container--aside figure::after {
+    content: "";
+    clear: both;
+    display: block;
+}

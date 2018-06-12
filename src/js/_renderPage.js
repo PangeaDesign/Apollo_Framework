@@ -234,7 +234,7 @@ if (setupWizard.haltStatus !== true) {
             footerBlockNode.appendChild(footerBlockTitleNode);
         }
         var footerBlockContentNode = document.createElement("p");
-        footerBlockContentNode.textContent += apolloConfig.footerBlockContent;
+        footerBlockContentNode.innerHTML += apolloConfig.footerBlockContent;
         footerBlockNode.appendChild(footerBlockContentNode);
         footerBlockNode.classList.add("footer__block--rendered");
     }

@@ -126,7 +126,7 @@ document.body.innerHTML += pswpHTML;
         if (imageGallery == "false") {
             //imageLinkElement.setAttribute("href", "");
         } else {
-            imageContainers[i].setAttribute("class", "gallery");
+            imageContainers[i].classList.add("gallery");
             if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
                 imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1200." + imageSource.split(".")[3]); // !!! change to resize ???
             } else {
