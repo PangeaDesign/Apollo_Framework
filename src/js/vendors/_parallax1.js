@@ -36,13 +36,12 @@ function startParallax() {
         imagesTops[i] = images[i].getBoundingClientRect().top - bodyTop - 65;
         imagesURL[i] = images[i].children[0].children[0].getAttribute("data-source");
         if (images[i].classList.contains("container--aside")) {
-            var imagesAside = images[i].children[0].getElementsByTagName("figure");
             images[i].classList.add("parallax-aside");
-            var content = images[i].children[0].children[0].children;
+            var content = images[i].children[0].children;
             var wrapper = document.createElement("div");
             wrapper.classList.add("parallax-aside-image");
-            console.log();
             images[i].children[0].insertBefore(wrapper, content[0]);
+            var imagesAside = images[i].children[0].getElementsByTagName("figure");
             var imagesAsideLength = imagesAside.length;
             for (var j = 0; j < imagesAsideLength; j++) {
                 //console.log(j, wrapper, imagesAside[j])

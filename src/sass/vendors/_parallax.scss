@@ -2,7 +2,7 @@
 /* CSS Document */
 /* from master.html body*/
 body {
-    background-color: white;
+    background-color: $color-background;
 }
 
 .container,
@@ -13,7 +13,7 @@ body {
     /*background-color:rgba(255,255,255,0.9)*/
     /*testing background*/
     position: relative;
-    background-color: white;
+    background-color: $color-background;
     width: 100%;
     max-width: none !important;
     margin: 0 auto;
@@ -93,7 +93,7 @@ footer#footer {
     max-width: 100%;
 }
 
-.container--aside.parallax-container .container-stripe {
+.container--aside.parallax-container .container-inner {
     padding-right: 330px;
     box-sizing: border-box;
 }
@@ -124,7 +124,7 @@ footer#footer {
 .parallax-aside figure {
     position: absolute;
     width: 450px;
-    right: 0;
+    /*right: 0;*/
     /*margin-right:0px !important;*/
     transform: translateX(0px) !important;
 }
@@ -138,8 +138,13 @@ footer#footer {
     padding: 0;
     top: 56px;
     left: 0;
+    right: 0;
     float: none;
     z-index: 100;
+}
+
+.parallax-aside-fixed figure {
+    right: -70px;
 }
 
 .parallax-aside .parallax-opacity-anim {
