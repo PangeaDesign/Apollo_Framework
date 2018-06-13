@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* from master.html body*/
+
+body {
+    background-color: white;
+}
+
+.container, .container--big, .container--jumbo, .container--full, .container--aside {
+    /*background-color:rgba(255,255,255,0.9)*/
+    /*testing background*/
+    position: relative;
+    background-color: white;
+    width: 100%;
+    max-width: none !important;
+    margin: 0 auto;
+}
+
+.container-opacity {
+    padding: 0px 20px !important;
+    background-color: transparent;
+}
+
+.container-opacity .container-inner {
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container-inner {
+    margin: auto;
+    width: 100%;
+    max-width: 850px;
+}
+
+.container--big .container-inner {
+    max-width: 1200px;
+}
+
+.container--jumbo .container-inner {
+    max-width: 1400px;
+}
+
+.container--full .container-inner {
+    max-width: none !important;
+}
+
+footer#footer {
+    margin-top: 0px !important;
+}
+
+/* parallax */
+
+.parallax-container {
+    position: relative;
+    padding: 0px !important;
+    /*background:none !important;*/
+    line-height: 0;
+}
+
+.parallax-background {
+    background: none !important;
+}
+
+.parallax-image {
+    width: 100%;
+    height: auto;
+}
+
+.parallax-image-fixed {
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px;
+    max-width: 850px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 56px;
+    z-index: -100;
+}
+
+.container--big.parallax-container .parallax-image-fixed {
+    max-width: 1200px;
+}
+
+.container--jumbo.parallax-container .parallax-image-fixed {
+    max-width: 1400px;
+}
+
+.container--full.parallax-container .parallax-image-fixed {
+    max-width: 100%;
+}
+
+.container--aside.parallax-container .container-stripe {
+    padding-right: 330px;
+    box-sizing: border-box;
+}
+
+.parallax-image-fake {
+    display: none;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+}
+
+.parallax-image-fake-fixed {
+    display: block;
+}
+
+.parallax-opacity {
+    opacity: 0;
+}
+
+.parallax-aside {
+    overflow: hidden;
+}
+
+.parallax-aside .container-inner {
+    position: relative;
+}
+
+.parallax-aside figure {
+    position: absolute;
+    width: 450px;
+    right: 0px;
+    /*margin-right:0px !important;*/
+    transform: translateX(0px) !important;
+}
+
+.parallax-aside .parallax-aside-fixed {
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 0px;
+    top: 56px;
+    left: 0px;
+    float: none;
+    z-index: 100;
+}
+
+.parallax-aside .parallax-opacity-anim {
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.parallax-aside-image {
+    position: absolute;
+    right: -150px;
+    width: 450px;
+}

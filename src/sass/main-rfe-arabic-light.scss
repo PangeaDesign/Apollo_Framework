@@ -5,8 +5,7 @@
 @import 'scaffolding/variables';
 @import 'scaffolding/breakpoints';
 @import 'scaffolding/grid';
-@import 'scaffolding/helpers';
-// @import 'themes/theme-light';
+@import 'scaffolding/helpers'; // @import 'themes/theme-light';
 @import 'cultures/brand-rfe-arabic';
 @import 'elements/audios';
 @import 'elements/codes';
@@ -24,7 +23,7 @@
 @import 'elements/tables';
 @import 'elements/typography';
 @import 'elements/videos';
-
 @import 'vendors/photoswipe/photoswipe';
 @import 'vendors/photoswipe/default-skin';
 @import 'vendors/plyr/plyr';
+@import 'vendors/_parallax';
