@@ -39,5 +39,5 @@
 .container--aside figure::after {
     content: "";
     clear: both;
-    display: block;
+    display: table;
 }
