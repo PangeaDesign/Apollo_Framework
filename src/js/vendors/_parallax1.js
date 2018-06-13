@@ -36,15 +36,18 @@ function startParallax() {
         imagesTops[i] = images[i].getBoundingClientRect().top - bodyTop - 65;
         imagesURL[i] = images[i].children[0].children[0].getAttribute("data-source");
         if (images[i].classList.contains("container--aside")) {
+            var imagesAside = images[i].children[0].getElementsByTagName("figure");
             images[i].classList.add("parallax-aside");
             var content = images[i].children[0].children[0].children;
             var wrapper = document.createElement("div");
             wrapper.classList.add("parallax-aside-image");
-            images[i].children[0].children[0].insertBefore(wrapper, content[0]);
-            var contentLength = content.length;
-            for (var j = 0; j < contentLength; j++) {
-                wrapper.appendChild(content[1]);
+            images[i].children[0].insertBefore(wrapper, content[0]);
+            var imagesAsideLength = imagesAside.length;
+            for (var j = 0; j < imagesAsideLength; j++) {
+                //console.log(j, wrapper, imagesAside[j])
+                wrapper.appendChild(imagesAside[j]);
             };
+
             //images[i].children[0].children[0].innerHTML = '<div class="parallax-aside-image">' + images[i].children[0].children[0].innerHTML + '</div><div class="parallax-image-fake"></div>';
         } else {
             //imagesURL[i] = images[i].childElementCount

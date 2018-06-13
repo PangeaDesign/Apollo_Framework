@@ -8,7 +8,7 @@ var allContainersOpacity = document.getElementsByClassName("container-opacity");
 for (var i = 0; i < allContainers.length; i++) {
     var content = allContainers[i].children;
     var wrapper = document.createElement("div");
-    wrapper.classList.add("container-stripe");
+    wrapper.classList.add("container-inner");
     allContainers[i].insertBefore(wrapper, content[0]);
     var contentLength = content.length;
     for (var j = 1; j < contentLength; j++) {
