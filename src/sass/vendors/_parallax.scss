@@ -1,13 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
-
 /* from master.html body*/
-
 body {
     background-color: white;
 }
 
-.container, .container--big, .container--jumbo, .container--full, .container--aside {
+.container,
+.container--aside,
+.container--big,
+.container--full,
+.container--jumbo {
     /*background-color:rgba(255,255,255,0.9)*/
     /*testing background*/
     position: relative;
@@ -18,7 +20,7 @@ body {
 }
 
 .container-opacity {
-    padding: 0px 20px !important;
+    padding: 0 20px !important;
     background-color: transparent;
 }
 
@@ -29,6 +31,7 @@ body {
 
 .container-inner {
     margin: auto;
+    padding: 20px 0;
     width: 100%;
     max-width: 850px;
 }
@@ -46,14 +49,12 @@ body {
 }
 
 footer#footer {
-    margin-top: 0px !important;
+    margin-top: 0 !important;
 }
-
 /* parallax */
-
 .parallax-container {
     position: relative;
-    padding: 0px !important;
+    padding: 0 !important;
     /*background:none !important;*/
     line-height: 0;
 }
@@ -71,11 +72,11 @@ footer#footer {
     position: fixed;
     box-sizing: border-box;
     width: 100%;
-    padding: 0px;
+    padding: 0;
     max-width: 850px;
     margin: auto;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     top: 56px;
     z-index: -100;
 }
@@ -123,7 +124,7 @@ footer#footer {
 .parallax-aside figure {
     position: absolute;
     width: 450px;
-    right: 0px;
+    right: 0;
     /*margin-right:0px !important;*/
     transform: translateX(0px) !important;
 }
@@ -134,9 +135,9 @@ footer#footer {
     width: 100%;
     max-width: 850px;
     margin: auto;
-    padding: 0px;
+    padding: 0;
     top: 56px;
-    left: 0px;
+    left: 0;
     float: none;
     z-index: 100;
 }

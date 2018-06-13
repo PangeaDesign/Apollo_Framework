@@ -41,6 +41,7 @@ function startParallax() {
             var content = images[i].children[0].children[0].children;
             var wrapper = document.createElement("div");
             wrapper.classList.add("parallax-aside-image");
+            console.log();
             images[i].children[0].insertBefore(wrapper, content[0]);
             var imagesAsideLength = imagesAside.length;
             for (var j = 0; j < imagesAsideLength; j++) {
