@@ -1,6 +1,7 @@
 // JavaScript Document
 
 var bodyTop, images, imagesURL, imagesTops, imagesHeights, imagesCount, imagesFake;
+var imagesAside = [];
 var textSpecialHeight;
 
 if (parallaxConfig.parallax == true) {
@@ -41,16 +42,20 @@ function startParallax() {
             var wrapper = document.createElement("div");
             wrapper.classList.add("parallax-aside-image");
             images[i].children[0].insertBefore(wrapper, content[0]);
-            var imagesAside = images[i].children[0].getElementsByTagName("figure");
-            var imagesAsideLength = imagesAside.length;
+            imagesAside[i] = images[i].children[0].getElementsByTagName("figure");
+            var imagesAsideLength = imagesAside[i].length;
             for (var j = 0; j < imagesAsideLength; j++) {
                 //console.log(j, wrapper, imagesAside[j])
-                wrapper.appendChild(imagesAside[j]);
+                wrapper.appendChild(imagesAside[i][j]);
+                if (j > 0) {
+                    imagesAside[i][j].classList.add("parallax-opacity-anim");
+                }
             };
 
             //images[i].children[0].children[0].innerHTML = '<div class="parallax-aside-image">' + images[i].children[0].children[0].innerHTML + '</div><div class="parallax-image-fake"></div>';
         } else {
             //imagesURL[i] = images[i].childElementCount
+            imagesAside[i] = false;
             imagesHeights[i] = images[i].clientHeight;
             var pictureTag = images[i].children[0].children[0].children[0].children[0].cloneNode(true);
             images[i].children[0].children[0].children[0].appendChild(pictureTag);
@@ -128,12 +133,25 @@ function scrollingParallax() {
             } else {
                 images[i].children[0].children[0].classList.remove("parallax-opacity-anim");
             }
-            if (imagesTops[i] < window.pageYOffset) {
+            if (imagesTops[i] < window.pageYOffset - 30) {
                 //images[i].children[0].children[0].style.transform = "translateY("+Math.floor(window.pageYOffset-imagesTops[i])+"px)";
                 images[i].children[0].children[0].classList.add("parallax-aside-fixed");
             } else {
                 //images[i].children[0].children[0].style.transform = "translateY(0px)";
                 images[i].children[0].children[0].classList.remove("parallax-aside-fixed");
+            }
+            if (imagesTops[i] < window.pageYOffset - images[i].clientHeight / imagesAside[i].length) {
+                imagesAside[i][0].classList.add("parallax-opacity-anim");
+            } else {
+                imagesAside[i][0].classList.remove("parallax-opacity-anim");
+            }
+            if (imagesAside[i].length > 1) {
+                for (var j = 1; j < imagesAside[i].length; j++) {
+                    imagesAside[i][j].classList.add("parallax-opacity-anim");
+                    if (imagesTops[i] < window.pageYOffset - images[i].clientHeight / imagesAside[i].length * j && imagesTops[i] > window.pageYOffset - images[i].clientHeight / imagesAside[i].length * (j + 1)) {
+                        imagesAside[i][j].classList.remove("parallax-opacity-anim");
+                    }
+                }
             }
         } else {
             if (images[i].classList.contains("specialImage")) {
@@ -167,5 +185,5 @@ function scrollingParallax() {
                 }
             }
         }
-    }
+    } //end for
 }
