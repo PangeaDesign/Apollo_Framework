@@ -3,6 +3,8 @@
 // All rights reserved
 
 footer#page__footer {
+    position: relative;
+    z-index: 0;
     width: 100%;
     padding: ($gutter * 2);
     box-sizing: border-box;
