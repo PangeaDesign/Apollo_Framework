@@ -7,7 +7,7 @@
     height: 65px;
     padding: 5px 15px 0;
     box-sizing: border-box;
-    background: rgba(0,0,0,0);
+    // background-color: rgba(0,0,0,0);
     position: fixed;
     top: 0;
     z-index: 997;
@@ -15,8 +15,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
 
-    &.page__header--onpage {
+.page__header--onpage {
         background-color: $color-background;
         // border-bottom: 2px solid $color-secondary;
         box-shadow: 0 2px 5px $color-header-shadow;
@@ -33,12 +34,17 @@
         .page__header-share {
             color: $color-text;
 
-            .svg__path {
+            svg {
                 fill: $color-text;
+                stroke: $color-text;
+                }
+            &:hover circle:first-of-type {
+                fill: $color-primary;
+                stroke: none;
+            }
             }
         }
-    }
-}
+
 // Service Logo
 
 a.page__header-logo {
@@ -89,19 +95,15 @@ a.page__header-logo {
         transition: color 0.3s;
 
         svg {
-            // transition: all 0.3s;
             fill: $color-primary;
             stroke: $color-primary;
 
             path {
-                // animation: share 1s;
-                animation: share 1s forwards;
+                animation: share .4s ease-in-out forwards;
             }
 
             circle:not(:first-of-type) {
-                fill: none;
-                stroke: none;
-                animation: sharecirc 1s forwards;
+                animation: sharecirc .4s ease-in-out forwards;
             }
         }
     }
@@ -177,25 +179,38 @@ a.page__header-logo {
 // Navigation
 
 a.page__header-nav {
-    width: 27px;
-    height: 27px;
-    padding: 4px 4px 4px 16px;
+    width: auto;
+    height: 35px;
     display: flex;
-    color: #fff;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    cursor: pointer;
-    float: right;
+    flex-direction: row;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 0.8rem;
+    font-family: $font-primary, $font-fallback-primary;
+    float: left;
     position: relative;
+    cursor: pointer;
 
     svg {
         fill: #fff;
+        width: 24px;
+        height: 24px;
+        line {
+            stroke:$color-white;
+            stroke-width: 2px;
+            stroke-linecap: round;
+        }
     }
 
     &:hover {
-        svg {
-            transition: fill 0.3s;
-            fill: $color-primary;
+        color: $color-primary;
+        transition: color 0.3s;
+        svg line {
+            transition: stroke 0.3s;
+            stroke: $color-primary;
         }
     }
 }
@@ -285,6 +300,12 @@ a.page__header-nav {
         }
     }
 }
+@media(max-width: $breakpoint-m){
+    .page__header-share,
+    a.page__header-nav {
+        font-size: 0;
+    }
+}
 
 // animation
 @keyframes share {
@@ -294,15 +315,22 @@ a.page__header-nav {
         stroke-dasharray: 0;
         stroke-dashoffset: 0;
     }
-
-    50% {
+    to {
         stroke: $color-primary;
         stroke-dasharray: 15;
         stroke-dashoffset: 0;
     }
 }
 @keyframes sharecirc {
+    from {
+        fill: none;
+        stroke: none;
+    }
+    80% {
+        fill: none;
+    }
     to {
+        stroke: none;
         fill: $color-primary;
     }
 }
