@@ -19,7 +19,7 @@
                 border-radius: 5px;
                 width: 38px;
                 height: 38px;
-                z-index: 999;
+                z-index: 900;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -39,7 +39,7 @@
         figcaption {
             padding: $gutter $gutter*2;
             color: $color-text-secondary;
-            font-size: .85rem;
+            font-size: 0.85rem;
             font-family: $font-primary, $font-fallback-primary;
             text-align: $direction-forwards;
         }
