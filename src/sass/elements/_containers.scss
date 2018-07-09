@@ -28,12 +28,25 @@
 }
 
 .container--aside figure {
-    float: left;
+    float: right;
     max-width: 350px;
     width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
-    margin-right: 20px;
+    margin-left: -50px;
+    transform: translateX(70px);
+}
+@media(max-width:782px) {
+    .container--aside figure {
+        margin-left: 20px;
+        transform: none;
+    }
+}
+@media(max-width:624px) {
+    .container--aside figure {
+        margin: 20px auto;
+        float: none;
+    }
 }
 
 .container--aside figure::after {
