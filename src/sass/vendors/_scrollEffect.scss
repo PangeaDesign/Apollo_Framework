@@ -51,24 +51,24 @@ body {
 footer#footer {
     margin-top: 0 !important;
 }
-/* parallax */
-.parallax-container {
+/* scrollEffect */
+.scroll-container {
     position: relative;
     padding: 0 !important;
     /*background:none !important;*/
     line-height: 0;
 }
 
-.parallax-background {
+.scroll-background {
     background: none !important;
 }
 
-.parallax-image {
+.scroll-image {
     width: 100%;
     height: auto;
 }
 
-.parallax-image-fixed {
+.scroll-image-fixed {
     position: fixed;
     box-sizing: border-box;
     width: 100%;
@@ -81,47 +81,47 @@ footer#footer {
     z-index: -100;
 }
 
-.container--big.parallax-container .parallax-image-fixed {
+.container--big.scroll-container .scroll-image-fixed {
     max-width: 1200px;
 }
 
-.container--jumbo.parallax-container .parallax-image-fixed {
+.container--jumbo.scroll-container .scroll-image-fixed {
     max-width: 1400px;
 }
 
-.container--full.parallax-container .parallax-image-fixed {
+.container--full.scroll-container .scroll-image-fixed {
     max-width: 100%;
 }
 
-.container--aside.parallax-container .container-inner {
+.container--aside.scroll-container .container-inner {
     padding-right: 300px;
     box-sizing: border-box;
 }
 
-.parallax-image-fake {
+.scroll-image-fake {
     display: none;
     width: 100%;
     height: auto;
     opacity: 0;
 }
 
-.parallax-image-fake-fixed {
+.scroll-image-fake-fixed {
     display: block;
 }
 
-.parallax-opacity {
+.scroll-opacity {
     opacity: 0;
 }
 
-.parallax-aside {
+.scroll-aside {
     overflow: hidden;
 }
 
-.parallax-aside .container-inner {
+.scroll-aside .container-inner {
     position: relative;
 }
 
-.parallax-aside figure {
+.scroll-aside figure {
     position: absolute;
     width: 350px;
     /*right: 0;*/
@@ -129,7 +129,7 @@ footer#footer {
     transform: translateX(0px) !important;
 }
 
-.parallax-aside .parallax-aside-fixed {
+.scroll-aside .scroll-aside-fixed {
     position: fixed;
     box-sizing: border-box;
     width: 100%;
@@ -143,17 +143,17 @@ footer#footer {
     z-index: 100;
 }
 
-.parallax-aside-fixed figure {
+.scroll-aside-fixed figure {
     right: -70px;
 }
 
-.parallax-aside .parallax-opacity-anim {
+.scroll-aside .scroll-opacity-anim {
     opacity: 0;
     z-index: -1;
     transition: all 0.4s;
 }
 
-.parallax-aside-image {
+.scroll-aside-image {
     position: absolute;
     right: -120px;
     width: 350px;
