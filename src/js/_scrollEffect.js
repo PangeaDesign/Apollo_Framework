@@ -15,6 +15,12 @@ if (scrollEffectConfig.scrollEffect == true) {
         resizingScrollEffect();
         scrollingScrollEffect();
     });
+} else {
+    var images = document.getElementsByClassName("scroll-container");
+    for (var i = 0; i < images.length; i++) {
+        images[i].classList.remove("scroll-container");
+    }
+    startScrollEffect();
 }
 /*window.onresize = function() {
     resizingParallax();
