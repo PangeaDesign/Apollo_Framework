@@ -100,11 +100,11 @@ a.page__header-logo {
             stroke: $color-primary;
 
             path {
-                animation: share 0.4s ease-in-out forwards;
+                animation: share 0.2s ease-out forwards;
             }
 
             circle:not(:first-of-type) {
-                animation: sharecirc 0.4s ease-in-out forwards;
+                animation: sharecirc 0.2s ease-out forwards;
             }
         }
     }
@@ -120,11 +120,11 @@ a.page__header-logo {
     border-bottom-left-radius: 21px;
     top: 13px;
     right: -100%;
-    transition: right 0.3s ease-in;
+    transition: right 0.4s ease-out;
 
     a {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
         display: inline-block;
         margin: 0 2px;
 
@@ -144,14 +144,13 @@ a.page__header-logo {
             transition: fill 0.3s;
             fill: #ea6903;
         }
+    }
+}
 
-        &:last-child {
-            cursor: pointer;
-
-            svg .svg__path {
-                fill: #000;
-            }
-        }
+#share__close {
+    cursor: pointer;
+    svg .svg__path {
+        fill: #000;
     }
 }
 
@@ -260,10 +259,10 @@ a.page__header-nav {
 
 #nav__site-close {
     position: absolute;
-    right: 0;
-    width: 27px;
-    height: 27px;
-    padding: 8px;
+    right: 18px;
+    top: 22px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
 
     &:hover {

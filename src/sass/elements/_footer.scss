@@ -11,6 +11,7 @@ footer#page__footer {
     text-align: center;
     background-color: $color-footer;
     border-bottom: 5px solid $color-primary;
+    margin-top: 60px;
 
     h3 {
         color: lighten(desaturate($color-footer, 60%), 40%);
