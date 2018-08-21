@@ -63,6 +63,12 @@ if (typeof apolloConfig === 'undefined' || apolloConfig.setupWizard === true) {
         }
     }
 
+    if (setupWizard.template4.status === "no-go") {
+        console.log("%c" + setupWizard.template4.noGoMessage, configSetupWizard.errorMessage);
+    } else {
+
+    }
+
     if (setupWizard.haltStatus === true) {
         setupWizard.launchStatus.status = "no-go";
     }

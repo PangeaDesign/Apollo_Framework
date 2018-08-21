@@ -76,7 +76,7 @@ if (setupWizard.haltStatus === false) {
     } else {
         for (i = 0; i < configAnalyticsSize; i++) {
             if (thisPageURL.includes(siteAnalytics[i].siteURL)) {
-                break;
+                //break; //??? it happens everytime I think or metadata is still not created ??? on the end ???
                 var analyticsEntity = siteAnalytics[i].entity;
                 var analyticsLang = siteAnalytics[i].lang;
                 var analyticsLangService = siteAnalytics[i].langService;
@@ -89,12 +89,20 @@ if (setupWizard.haltStatus === false) {
                 var newDOMNode = document.createElement('script');
                 newDOMNode.type = 'text/javascript';
                 newDOMNode.text = '\nvar utag_data = {\nentity: \'' + analyticsEntity + '\',\nlanguage: \'' + analyticsLang + '\',\nlanguage_service: \'' + analyticsLangService + '\',\nshort_language_service: \'' + analyticsShortLangService + '\',\nproperty_id: \'' + analyticsPropertyID + '\',\nplatform: \'Responsive\',\nplatform_short: \'R\',\nruns_js: \'Yes\',\npage_title: \'' + apolloConfigParsed.projectTitle + '\'\n};\nif(typeof(TealiumTagFrom) === \'function\' && typeof(TealiumTagSearchKeyword) === \'function\') {\nvar utag_from = TealiumTagFrom();\nvar utag_searchKeyword = TealiumTagSearchKeyword();\nif (utag_searchKeyword != null && utag_searchKeyword !== \'\' && utag_data["search_keyword"] == null)\nutag_data["search_keyword"] = utag_searchKeyword;\nif (utag_from != null && utag_from !== \'\')\nutag_data["from"] = TealiumTagFrom();\n}\n(function(a, b, c, d) {\na ="//tags.tiqcdn.com/utag/bbg/rferl-pangea/prod/utag.js";\nb = document;\nc = "script";\nd = b.createElement(c);\nd.src = a;\nd.type = "text/java" + c;\nd.async = true;\na = b.getElementsByTagName(c)[0];\na.parentNode.insertBefore(d, a);\n})();\n';
-                document.head.appendChild(newDOMNode);
+
+                if (typeof utag_data == 'undefined') {
+                    document.head.appendChild(newDOMNode);
+                    setupWizard.template4.status = "go";
+                } else {
+                    setupWizard.template4.status = "no-go";
+                }
+                break;
             } else {
                 var analyticsInit = false;
             }
         }
     }
+
     // Send info to the setupWizard
     if (analyticsInit === false && analyticsLocal === false) {
         setupWizard.analytics.status = "go-warn-1";

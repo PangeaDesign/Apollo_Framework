@@ -72,6 +72,10 @@ var setupWizard = {
         noGoMessage: "[NO-GO] RFE/RL's Adobe Analytics unknown error.",
         goMessage: "[GO] RFE/RL's Adobe Analytics initiated for this domain."
     },
+    template4: {
+        status: "no-go",
+        noGoMessage: "[NO-GO] Check your \"Infographics page layout\" in CMS, this code is prepared for Template 4 (Empty Canvas)"
+    },
     launchStatus: {
         status: "no-go",
         goMessage: "============ L A U N C H   S T A T U S ============\n[GO] Your project is ready for liftoff! Bon Voyage!\n\n\n",
