@@ -59,6 +59,10 @@ footer#footer {
     line-height: 0;
 }
 
+.scroll-container.scroll-aside {
+    padding: 0 20px;
+}
+
 .scroll-background {
     background: none !important;
 }
@@ -157,4 +161,22 @@ footer#footer {
     position: absolute;
     right: -120px;
     width: 350px;
+}
+@media(max-width:782px) {
+    .container--aside.scroll-container .container-inner {
+        padding-right: 364px;
+    }
+
+    .scroll-aside-fixed figure {
+        right: 0;
+    }
+
+    .scroll-aside-image {
+        right: 20px;
+    }
+}
+@media(max-width:624px) {
+    .container--aside.scroll-container .container-inner {
+        padding: 60px 20px 0;
+    }
 }
