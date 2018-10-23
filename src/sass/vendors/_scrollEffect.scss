@@ -31,7 +31,7 @@ body {
 
 .container-inner {
     margin: auto;
-    padding: 60px 0 0;
+    padding: 65px 0 0;
     width: 100%;
     max-width: $breakpoint-s;
 }
@@ -60,7 +60,7 @@ footer#footer {
 }
 
 .scroll-container.scroll-aside {
-    padding: 0 20px;
+    padding: 0 20px !important;
 }
 
 .scroll-background {
@@ -81,7 +81,7 @@ footer#footer {
     margin: auto;
     left: 0;
     right: 0;
-    top: 56px;
+    top: 65px;
     z-index: -100;
 }
 
@@ -140,7 +140,7 @@ footer#footer {
     max-width: $breakpoint-s;
     margin: auto;
     padding: 0;
-    top: 56px;
+    top: 65px;
     left: 0;
     right: 0;
     float: none;
@@ -162,7 +162,7 @@ footer#footer {
     right: -120px;
     width: 350px;
 }
-@media(max-width:782px) {
+@media(max-width:796px) {
     .container--aside.scroll-container .container-inner {
         padding-right: 364px;
     }
@@ -177,6 +177,22 @@ footer#footer {
 }
 @media(max-width:624px) {
     .container--aside.scroll-container .container-inner {
-        padding: 60px 20px 0;
+        padding: 65px 20px 0;
+    }
+    .scroll-aside-image {
+        position: relative;
+        margin: auto;
+        right: inherit;
+    }
+    .scroll-aside-image figure{
+        position: relative;
+    }
+    .scroll-aside-image figure.scroll-opacity-anim {
+        opacity: 1;
+        z-index: 100;
+    }
+    .scroll-aside .scroll-aside-image.scroll-aside-fixed {
+        position: relative;
+        top: inherit;
     }
 }

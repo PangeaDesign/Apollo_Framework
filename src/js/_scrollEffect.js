@@ -51,7 +51,6 @@ function startScrollEffect() {
             imagesAside[i] = images[i].children[0].getElementsByTagName("figure");
             var imagesAsideLength = imagesAside[i].length;
             for (var j = 0; j < imagesAsideLength; j++) {
-                //console.log(j, wrapper, imagesAside[j])
                 wrapper.appendChild(imagesAside[i][j]);
                 if (j > 0) {
                     imagesAside[i][j].classList.add("scroll-opacity-anim");
@@ -87,7 +86,7 @@ function resizingScrollEffect() {
             } else {
                 images[i].children[0].children[0].classList.remove("scroll-opacity-anim");
             }
-            if (imagesTops[i] < window.pageYOffset - 70) {
+            if (imagesTops[i] < window.pageYOffset - 65) {
                 images[i].children[0].children[0].classList.add("scroll-aside-fixed");
             } else {
                 images[i].children[0].children[0].classList.remove("scroll-aside-fixed");
@@ -106,7 +105,7 @@ function resizingScrollEffect() {
                     images[i].classList.remove("scroll-opacity");
                 }
             }
-            if (imagesTops[i] < window.pageYOffset) {
+            if (imagesTops[i] < window.pageYOffset - 65) {
                 //images[i].firstChild.firstChild.classList.add("parallax-image-fixed");
                 images[i].children[0].children[0].children[0].children[0].classList.add("scroll-image-fixed");
                 imagesFake[i].classList.add("scroll-image-fake-fixed");
@@ -139,7 +138,7 @@ function scrollingScrollEffect() {
             } else {
                 images[i].children[0].children[0].classList.remove("scroll-opacity-anim");
             }
-            if (imagesTops[i] < window.pageYOffset - 70) {
+            if (imagesTops[i] < window.pageYOffset - 65) {
                 //images[i].children[0].children[0].style.transform = "translateY("+Math.floor(window.pageYOffset-imagesTops[i])+"px)";
                 images[i].children[0].children[0].classList.add("scroll-aside-fixed");
             } else {
@@ -173,7 +172,7 @@ function scrollingScrollEffect() {
                     images[i].classList.remove("scroll-opacity");
                 }
             }
-            if (imagesTops[i] < window.pageYOffset) {
+            if (imagesTops[i] < window.pageYOffset - 65) {
                 images[i].children[0].children[0].children[0].children[0].classList.add("scroll-image-fixed");
                 imagesFake[i].classList.add("scroll-image-fake-fixed");
                 images[i].classList.add("scroll-background");
