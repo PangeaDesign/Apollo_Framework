@@ -133,12 +133,13 @@ function resizingScrollEffect() {
 function scrollingScrollEffect() {
     for (var i = 0; i < imagesCount; i++) {
         if (images[i].classList.contains("container--aside")) {
+            console.log(imagesAside[i][0].clientHeight, images[i].clientHeight, imagesAside[i][0]);
             if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight) {
                 images[i].children[0].children[0].classList.add("scroll-opacity-anim");
             } else {
                 images[i].children[0].children[0].classList.remove("scroll-opacity-anim");
             }
-            if (imagesTops[i] < window.pageYOffset - 65) {
+            if (imagesTops[i] < window.pageYOffset) {/*-65*/
                 //images[i].children[0].children[0].style.transform = "translateY("+Math.floor(window.pageYOffset-imagesTops[i])+"px)";
                 images[i].children[0].children[0].classList.add("scroll-aside-fixed");
             } else {
@@ -153,7 +154,7 @@ function scrollingScrollEffect() {
             if (imagesAside[i].length > 1) {
                 for (var j = 1; j < imagesAside[i].length; j++) {
                     imagesAside[i][j].classList.add("scroll-opacity-anim");
-                    if (imagesTops[i] < window.pageYOffset - images[i].clientHeight / imagesAside[i].length * j && imagesTops[i] > window.pageYOffset - images[i].clientHeight / imagesAside[i].length * (j + 1)) {
+                    if (imagesTops[i] < window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / imagesAside[i].length * j && imagesTops[i] > window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / imagesAside[i].length * (j + 1)) {
                         imagesAside[i][j].classList.remove("scroll-opacity-anim");
                     }
                 }
@@ -172,7 +173,7 @@ function scrollingScrollEffect() {
                     images[i].classList.remove("scroll-opacity");
                 }
             }
-            if (imagesTops[i] < window.pageYOffset - 65) {
+            if (imagesTops[i] < window.pageYOffset) {/*-65?*/
                 images[i].children[0].children[0].children[0].children[0].classList.add("scroll-image-fixed");
                 imagesFake[i].classList.add("scroll-image-fake-fixed");
                 images[i].classList.add("scroll-background");
