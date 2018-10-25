@@ -136,7 +136,7 @@ footer#footer {
 .scroll-aside .scroll-aside-fixed {
     position: fixed;
     box-sizing: border-box;
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: $breakpoint-s;
     margin: auto;
     padding: 0;
@@ -177,7 +177,7 @@ footer#footer {
 }
 @media(max-width:624px) {
     .container--aside.scroll-container .container-inner {
-        padding: 65px 20px 0;
+        padding: 65px 0 0;
     }
     .scroll-aside-image {
         position: relative;

@@ -54,3 +54,14 @@
     clear: both;
     display: table;
 }
+
+.columns .container-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 20px;
+}
+.columns figure {
+  padding: 0 5px;
+  margin: 32px 0;
+}

@@ -36,14 +36,14 @@
             projectSite: "en",
             projectTitle: "All my friends have birthdays this year!",
             projectDescription: "Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe. The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population.",
-            projectAuthor: "Björk",
+            /*projectAuthor: "Björk",*/
             projectImage: "https://www.icelandairhotels.com/static/strevda/lg/1475075635-1473434601-rvk-vetur04.jpg",
-            heroStyle: "cover-left",
-            heroMedia: "images/TestVideo.mp4", // possible values mp4, jpg, jpeg, gif, png
+            heroStyle: "tabloid", // possible values: cover-left, cover-right, cover, tabloid
+            heroMedia: "images/TestVideo.mp4", // possible values: mp4, jpg, jpeg, gif, png
             heroMediaPoster: "https://www.icelandairhotels.com/static/strevda/lg/1475075635-1473434601-rvk-vetur04.jpg", // in case of heroMedia is mp4
             heroOverlay: true,
             heroByline: "Story by Ralph Wiggum",
-            pageTheme: "dark", // possible values: dark, light
+            pageTheme: "light", // possible values: dark, light
             footerBlockTitle: "About",
             footerBlockContent: "Iceland is a Nordic island country of Europe located in the North Atlantic Ocean.<br>It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe. The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population."
         }
@@ -60,15 +60,37 @@
     <!-- END: No Script - Localize text between <noscript></noscript> tags -->
 
     <main class="content" id="main">
-        <div class="container" navigation-title="Welcome to Reykjavík">
-            <h1>Welcome to Iceland</h1>
+        <div class="container" navigation-title="Titles">
+            <h2>Titles:</h2>
+            <h1>h1 - Welcome to Iceland</h1>
+            <h2>h2 - Welcome to Iceland</h2>
+            <h3>h3 - Welcome to Iceland</h3>
+            <h4>h4 - Welcome to Iceland</h4>
+            <h5>h5 - Welcome to Iceland</h5>
+            <h6>h6 - Welcome to Iceland</h6>
+        </div>
+        <div class="container" navigation-title="Paragraph">
+            <h2>Lead paragraph:</h2>
+            <code>&lt;p class="p--lead"&gt;Iceland is a Nordic island country...</code>
             <p class="p--lead">Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[8] The capital and largest
                 city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population.</p>
+            <h2>Devider lines:</h2>
+            <code>&lt;hr class="divider--solid"&gt;<br>
+                  &lt;hr class="divider--dotted"&gt;<br>
+                  &lt;hr class="divider--dashed"&gt;
+            </code>
             <hr class="divider--short divider--solid">
+            <hr class="divider--dotted">
+            <hr class="divider--dashed">
+            <code>&lt;p class="p--dropcap"&gt;The establishment of the Kalmar Union...</code>
+            <h2>Drop cap</h2>
             <p class="p--dropcap">The establishment of the Kalmar Union in 1397 united the kingdoms of Norway, Denmark, and Sweden. Iceland thus followed Norway's integration to that union and came under Danish rule, after Sweden's secession from that union in 1523. Although
                 the Danish kingdom introduced Lutheranism forcefully in 1550, Iceland remained a distant semi-colonial territory in which Danish institutions and infrastructures were conspicuous by their absence.</p>
             <p><a href="https://cs.wikipedia.org/wiki/Reykjav%C3%ADk">Reykjavik</a></p>
             <a href="https://cs.wikipedia.org/wiki/Reykjav%C3%ADk">Reykjavik</a>
+
+            <p>Iceland is volcanically and geologically active. <a href="https://cs.wikipedia.org/wiki/Reykjav%C3%ADk">Reykjavik</a> The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, while many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf
+                Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a tundra climate.</p>
         </div>
 
         <div class="container">
@@ -76,14 +98,18 @@
         </div>
 
         <div class="container">
-            <p>Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, while many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf
-                Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a tundra climate.</p>
             <code>Testing Code Block</code>
             <p>According to the ancient manuscript Landnámabók, the settlement of Iceland began in 874 AD when the Norwegian chieftain Ingólfr Arnarson became the first permanent settler on the island.[9] In the following centuries, Norwegians, and to a
                 lesser extent other Scandinavians, emigrated to Iceland, bringing with them thralls (i.e., slaves or serfs) of Gaelic origin. The island was governed as an independent commonwealth under the Althing, one of the world's oldest functioning
                 egislative assemblies. Following a period of civil strife, Iceland acceded to Norwegian rule in the 13th century.</p>
         </div>
 
+        <div class="container container--full scroll-container">
+            <figure data-gallery="true" data-caption="Some testing image 2" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
+        </div>
+        <div class="container container--full scroll-container">
+            <figure data-gallery="true" data-caption="Some testing image 2" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
+        </div>
         <div class="container container--full scroll-container">
             <figure data-gallery="true" data-caption="Some testing image 2" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
         </div>
@@ -112,22 +138,26 @@
 
         <div class="container">
             <h2>Youtube</h2>
+            <code>&lt;div class="video" data-type="youtube" data-video-id="R7lDuUaRD-4"&gt;&lt;/div&gt;</code>
             <!--iframe src="https://www.youtube.com/embed/Umc9ezAyJv0?rel=0&amp;showinfo=0" frameborder="0"></iframe-->
             <div class="video" data-type="youtube" data-video-id="R7lDuUaRD-4"></div>
         </div>
 
         <div class="container">
             <h2>Vimeo</h2>
+            <code>&lt;div class="video" data-type="vimeo" data-video-id="26880424"&gt;&lt;/div&gt;</code>
             <div class="video" data-type="vimeo" data-video-id="26880424"></div>
         </div>
 
-        <div class="container">
+        <div class="container container--full">
             <h2>mp4 video (cms)</h2>
+            <code>&lt;div class="video" data-type="pangea" data-video-poster="url_of_poster.jpg" data-video-id="url_of_video.mp4"&gt;&lt;/div&gt;</code>
             <div class="video" data-type="pangea" data-video-poster="../Testing/VideoExample/IcelandPoster.jpg" data-video-id="https://rfe.pangea-cms.com/videoroot/Pangeavideo/2018/03/1/1f/1ff0b410-92d3-4fbf-a717-2c6b82c15540_fullhd.mp4"></div>
         </div>
 
         <div class="container">
             <h2>mp3 audio</h2>
+            <code>&lt;div class="audio" data-audio-id="url_of_audio.mp3"&gt;&lt;/div&gt;</code>
             <div class="audio" data-audio-id="https://audio.rferl.org/TLTR/2018/03/12/348d44b1-7241-43b6-89dc-b25142c4692c.mp3"></div>
         </div>
 
@@ -188,18 +218,20 @@
         </div>
 
         <div class="container container--aside scroll-container" navigation-title="Geography">
-            <figure data-gallery="true" data-caption="Some testing image 5" data-thumb-caption="false" data-source="https://gdb.rferl.org/B21812AF-277D-4438-AC7B-5738BB9B9A18.jpg"></figure>
+            <figure data-gallery="true" data-caption="Some testing image 5" data-thumb-caption="false" data-source="https://media.shorthand.com/media/templates/set-a/placeholders/scrollmation-landscape-image-3.breakpoints-@0-555x824~137929.jpg"></figure>
 
             <h5>Geography</h5>
             <p>Iceland is at the juncture of the North Atlantic and Arctic Oceans. The main island is entirely south of the Arctic Circle, which passes through the small Icelandic island of Grímsey off the main island's northern coast. The country lies between
                 latitudes 63 and 68°N, and longitudes 25 and 13°W.</p>
             <p>Iceland is closer to continental Europe than to mainland North America; thus, the island is generally included in Europe for historical, political, cultural, geographical, and practical reasons.[52][53][54][55] Geologically, the island includes
                 parts of both continental plates. The closest body of land is Greenland (290 km, 180 mi).</p>
-            <figure data-gallery="true" data-caption="Some testing image 6" data-thumb-caption="false" data-source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Icelandic_landscapes.jpg/1024px-Icelandic_landscapes.jpg"></figure>
+            <figure data-gallery="true" data-caption="Some testing image 6" data-thumb-caption="false" data-source="https://media.shorthand.com/media/templates/set-a/placeholders/scrollmation-landscape-image-1.breakpoints-@0-555x824~145019.jpg"></figure>
 
             <p>The closest bodies of land in Europe are the Faroe Islands (420 km, 260 mi); Jan Mayen Island (570 km, 350 mi); Shetland and the Outer Hebrides, both about 740 km (460 mi); and the Scottish mainland and Orkney, both about 750 km (470 mi).
                 The mainland of Norway is about 970 km (600 mi) away.</p>
+                    <figure data-gallery="true" data-caption="Some testing image 5" data-thumb-caption="false" data-source="https://gdb.rferl.org/B21812AF-277D-4438-AC7B-5738BB9B9A18.jpg"></figure>
             <p>Iceland is the world's 18th largest island, and Europe's second-largest island after Great Britain. The main island is 101,826 km2 (39,315 sq mi), but the entire country is 103,000 km2 (39,768.5 sq mi) in size, of which 62.7% is tundra.</p>
+        <figure data-gallery="true" data-caption="Some testing image 6" data-thumb-caption="false" data-source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Icelandic_landscapes.jpg/1024px-Icelandic_landscapes.jpg"></figure>
         </div>
 
         <div class="container container--aside">
@@ -210,6 +242,50 @@
             <p>Geologically, Iceland is part of the Mid-Atlantic Ridge, a ridge along which the oceanic crust spreads and forms new oceanic crust.</p>
             <p>This part of the mid-ocean ridge is located above a mantle plume, causing Iceland to be subaerial (above the surface of the sea).</p>
             <p>The ridge marks the boundary between the Eurasian and North American Plates, and Iceland was created by rifting and accretion through volcanism along the ridge.</p>
+
+            <h2>Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>List of Escaped Replicants</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Physical-A</td>
+                        <td>Mental-A</td>
+                        <td>N6MAA10816</td>
+                    </tr>
+                    <tr>
+                        <td>Physical-A</td>
+                        <td>Mental-B</td>
+                        <td>N6FAB21416</td>
+                    </tr>
+                    <tr>
+                        <td>Physical-A</td>
+                        <td>Mental-B</td>
+                        <td>N6FAB61216</td>
+                    </tr>
+                    <tr>
+                        <td>Physical-A</td>
+                        <td>Mental-C</td>
+                        <td>N6MAC41717</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <h2>Columns</h2>
+            <code>&lt;div class="container columns"&gt;</code>
+        </div>
+        <div class="container columns">
+            <figure data-source="images/Silhouette1.jpg"></figure>
+            <figure data-source="images/Silhouette2.jpg"></figure>
+            <figure data-source="images/Silhouette3.jpg"></figure>
+            <figure data-source="images/Silhouette2.jpg"></figure>
+            <figure data-source="images/Silhouette1.jpg"></figure>
         </div>
 
     </main>
