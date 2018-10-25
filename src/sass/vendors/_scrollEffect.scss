@@ -19,12 +19,12 @@ body {
     margin: 0 auto;
 }
 
-.container-opacity {
+.container--opacity {
     padding: 0 20px !important;
     background-color: transparent;
 }
 
-.container-opacity .container-inner {
+.container--opacity .container-inner {
     padding: 16px;
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -52,17 +52,17 @@ footer#footer {
     margin-top: 0 !important;
 }
 /* scrollEffect */
-.scroll-container {
+.scroll--container {
     position: relative;
     padding: 0 !important;
     /*background:none !important;*/
     line-height: 0;
 }
-.scroll-container .container-inner{
+.scroll--container .container-inner{
     padding: 0 /*!important;*/
 }
 
-.scroll-container.scroll-aside {
+.scroll--container.scroll-aside {
     padding: 0 20px !important;
 }
 
@@ -70,7 +70,7 @@ footer#footer {
     background: none !important;
 }
 
-.scroll-image {
+.scroll-image-image {
     width: 100%;
     height: auto;
 }
@@ -88,19 +88,19 @@ footer#footer {
     z-index: -100;
 }
 
-.container--big.scroll-container .scroll-image-fixed {
+.container--big.scroll--container .scroll-image-fixed {
     max-width: 1200px;
 }
 
-.container--jumbo.scroll-container .scroll-image-fixed {
+.container--jumbo.scroll--container .scroll-image-fixed {
     max-width: 1400px;
 }
 
-.container--full.scroll-container .scroll-image-fixed {
+.container--full.scroll--container .scroll-image-fixed {
     max-width: 100%;
 }
 
-.container--aside.scroll-container .container-inner {
+.container--aside.scroll--container .container-inner {
     padding-right: 300px;
     box-sizing: border-box;
 }
@@ -166,7 +166,7 @@ footer#footer {
     width: 350px;
 }
 @media(max-width:796px) {
-    .container--aside.scroll-container .container-inner {
+    .container--aside.scroll--container .container-inner {
         padding-right: 364px;
     }
 
@@ -179,7 +179,7 @@ footer#footer {
     }
 }
 @media(max-width:624px) {
-    .container--aside.scroll-container .container-inner {
+    .container--aside.scroll--container .container-inner {
         padding: 65px 0 0;
     }
     .scroll-aside-image {

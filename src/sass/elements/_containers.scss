@@ -48,8 +48,12 @@
         float: none;
     }
 }
-
-.container--aside figure::after {
+.container--aside figure::before {// ???
+    content: "";
+    clear: both;
+    display: table;
+}
+.container--aside figure::after {// ???
     content: "";
     clear: both;
     display: table;

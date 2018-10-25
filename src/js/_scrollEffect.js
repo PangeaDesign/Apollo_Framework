@@ -16,9 +16,9 @@ if (scrollEffectConfig.scrollEffect == true) {
         scrollingScrollEffect();
     });
 } else {
-    var images = document.getElementsByClassName("scroll-container");
+    var images = document.getElementsByClassName("scroll--container");
     for (var i = 0; i < images.length; i++) {
-        images[i].classList.remove("scroll-container");
+        images[i].classList.remove("scroll--container");
     }
     startScrollEffect();
 }
@@ -34,7 +34,7 @@ window.onscroll = function() {
 function startScrollEffect() {
     bodyTop = document.body.getBoundingClientRect().top;
     //images
-    images = document.getElementsByClassName("scroll-container");
+    images = document.getElementsByClassName("scroll--container");
     imagesCount = images.length;
     imagesTops = [];
     imagesHeights = [];
@@ -133,7 +133,6 @@ function resizingScrollEffect() {
 function scrollingScrollEffect() {
     for (var i = 0; i < imagesCount; i++) {
         if (images[i].classList.contains("container--aside")) {
-            console.log(imagesAside[i][0].clientHeight, images[i].clientHeight, imagesAside[i][0]);
             if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight) {
                 images[i].children[0].children[0].classList.add("scroll-opacity-anim");
             } else {

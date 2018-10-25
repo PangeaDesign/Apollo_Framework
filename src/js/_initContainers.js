@@ -1,9 +1,9 @@
 var allContainers = document.getElementsByClassName("container");
-var allContainersBig = document.getElementsByClassName("container-big");
-var allContainersJumbo = document.getElementsByClassName("container-jumbo");
-var allContainersFull = document.getElementsByClassName("container-full");
-var allContainersAside = document.getElementsByClassName("container-aside");
-var allContainersOpacity = document.getElementsByClassName("container-opacity");
+var allContainersBig = document.getElementsByClassName("container--big");
+var allContainersJumbo = document.getElementsByClassName("container--jumbo");
+var allContainersFull = document.getElementsByClassName("container--full");
+var allContainersAside = document.getElementsByClassName("container--aside");
+var allContainersOpacity = document.getElementsByClassName("container--opacity");
 
 for (var i = 0; i < allContainers.length; i++) {
     var content = allContainers[i].children;
