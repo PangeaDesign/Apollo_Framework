@@ -89,11 +89,11 @@ footer#footer {
 }
 
 .container--big.scroll--container .scroll-image-fixed {
-    max-width: 1200px;
+    max-width: $breakpoint-l;
 }
 
 .container--jumbo.scroll--container .scroll-image-fixed {
-    max-width: 1400px;
+    max-width: $breakpoint-xl;
 }
 
 .container--full.scroll--container .scroll-image-fixed {

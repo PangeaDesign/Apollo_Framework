@@ -60,8 +60,26 @@
     <!-- END: No Script - Localize text between <noscript></noscript> tags -->
 
     <main class="content" id="main">
+        <div class="container">
+            <h2>Containers:</h2>
+            <p>All content should be inside these containers. There are four types. First "container" is regular, which can be used for all content.
+            "Big, jumbo and full" are good for media content like images and videos.</p>
+            <code>
+              &lt;div class="container"&gt;
+              <br><br>
+              &lt;/div&gt;
+            </code>
+            <code>
+              &lt;div class="container container-big"&gt;  &lt;/div&gt;<br>
+              &lt;div class="container container-jumbo"&gt;  &lt;/div&gt;<br>
+              &lt;div class="container container-full"&gt;  &lt;/div&gt;
+            </code>
+            <p>Don't use big, jumbo and full containers for paragraph texts because of design reasons.</p>
+        </div>
         <div class="container" navigation-title="Titles">
-            <h2>Titles:</h2>
+            <h2>Headlines:</h2>
+            <p>You can use 6 different headlines in your project:</p>
+            <code>&lt;h1&gt;Your Headline&lt;/h1&gt;</code>
             <h1>h1 - Welcome to Iceland</h1>
             <h2>h2 - Welcome to Iceland</h2>
             <h3>h3 - Welcome to Iceland</h3>
@@ -70,12 +88,19 @@
             <h6>h6 - Welcome to Iceland</h6>
         </div>
         <div class="container" navigation-title="Paragraph">
+            <h2>Paragraphs</h2>
+            <p>All texts should be in paragraphs:</p>
+            <code>
+                &lt;p&gt;This is my paragraph.&lt;/p&gt;<br>
+            </code>
             <h2>Lead paragraph:</h2>
+            <p>For introduction or important text, you can use lead paragraph when you add class:</p>
             <code>&lt;p class="p--lead"&gt;Iceland is a Nordic island country...</code>
             <p class="p--lead">Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[8] The capital and largest
                 city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population.</p>
             <h2>Devider lines:</h2>
-            <code>&lt;hr class="divider--solid divider--short"&gt;<br>
+            <code>
+                  &lt;hr class="divider--solid divider--short"&gt;<br>
                   &lt;hr class="divider--dotted"&gt;<br>
                   &lt;hr class="divider--dashed"&gt;
             </code>
@@ -107,13 +132,13 @@
         </div>
 
         <div class="container container--full scroll--container">
-            <figure data-gallery="true" data-caption="Some testing image 2" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
+            <figure data-gallery="true" data-caption="Some testing image 2a" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
         </div>
         <div class="container container--full scroll--container">
-            <figure data-gallery="true" data-caption="Some testing image 2" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
+            <figure data-gallery="true" data-caption="Some testing image 2a" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
         </div>
         <div class="container container--full scroll--container">
-            <figure data-gallery="true" data-caption="Some testing image 2" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
+            <figure data-gallery="true" data-caption="Some testing image 2a" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
         </div>
 
         <div class="container container--big">
@@ -151,9 +176,12 @@
             <div class="video" data-type="vimeo" data-video-id="26880424"></div>
         </div>
 
-        <div class="container container--full">
+        <div class="container">
             <h2>mp4 video (cms)</h2>
             <code>&lt;div class="video" data-type="pangea" data-video-poster="url_of_poster.jpg" data-video-id="url_of_video.mp4"&gt;&lt;/div&gt;</code>
+        </div>
+
+        <div class="container container--full">
             <div class="video" data-type="pangea" data-video-poster="../Testing/VideoExample/IcelandPoster.jpg" data-video-id="https://rfe.pangea-cms.com/videoroot/Pangeavideo/2018/03/1/1f/1ff0b410-92d3-4fbf-a717-2c6b82c15540_fullhd.mp4"></div>
         </div>
 
@@ -178,9 +206,6 @@
             <p><span>Interrogator:</span> The Norwegian-Norse chieftain Ingólfr Arnarson.</p>
             <p><span>K:</span> Ingólfr Arnarson built his homestead in present-day Reykjavík in 874.</p>
         </div>
-
-        <hr class="divider--dashed">
-
         <div class="container container--jumbo scroll--container">
             <figure data-gallery="false" data-caption="Some testing image 4" data-thumb-caption="false" data-source="https://gdb.rferl.org/35D86AD4-CF63-4260-BE61-A7114D3AC84D.jpg"></figure>
         </div>
@@ -213,10 +238,6 @@
             <p>Lack of arable land also served impetus to the settlement of Greenland starting in 986. The period of these early settlements coincided with the Medieval Warm Period, when temperatures were similar to those of the early 20th century.</p>
             <p>At this time, about 25% of Iceland was covered with forest, compared to 1% in the present day. Christianity was adopted by consensus around 999–1000, although Norse paganism persisted among some segments of the population for some years afterwards.</p>
 
-        </div>
-
-        <div class="container">
-            <hr class="divider--dashed">
         </div>
 
         <div class="container container--aside scroll--container" navigation-title="Geography">
