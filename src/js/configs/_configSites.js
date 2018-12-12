@@ -198,7 +198,7 @@ var siteConfig = {
     },
     ar_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Armenian [Russian]",
         siteNameLocal: "Радио Азатутюн",
         siteURL: "https://rus.azatutyun.am/",
@@ -294,7 +294,7 @@ var siteConfig = {
     },
     be: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Belarus",
         siteNameLocal: "Радыё Свабода. Навіны Беларусі",
         siteURL: "https://www.svaboda.org/",
@@ -342,7 +342,7 @@ var siteConfig = {
     },
     cr_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Crimea [Russian]",
         siteNameLocal: "Крым.Реалии",
         siteURL: "https://ru.krymr.com/",
@@ -438,7 +438,7 @@ var siteConfig = {
     },
     cr_uk: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Crimea [Ukrainian]",
         siteNameLocal: "Крим Реалії",
         siteURL: "https://ua.krymr.com/",
@@ -630,7 +630,7 @@ var siteConfig = {
     },
     ge_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Georgian [Russian]",
         siteNameLocal: "Эхо Кавказа",
         siteURL: "https://www.ekhokavkaza.com/",
@@ -726,7 +726,7 @@ var siteConfig = {
     },
     kz_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Kazakh [Russian]",
         siteNameLocal: "Радио Азаттык",
         siteURL: "https://rus.azattyq.org/",
@@ -870,7 +870,7 @@ var siteConfig = {
     },
     kg_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Kyrgyz [Russian]",
         siteNameLocal: "Радио Азаттык",
         siteURL: "https://rus.azattyk.org/",
@@ -1062,7 +1062,7 @@ var siteConfig = {
     },
     nc_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "North Caucasus [Russian]",
         siteNameLocal: "Кавказ.Реалии",
         siteURL: "https://www.kavkazr.com/",
@@ -1254,7 +1254,7 @@ var siteConfig = {
     },
     ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Russian",
         siteNameLocal: "Радио Свобода",
         siteURL: "https://www.svoboda.org/",
@@ -1302,7 +1302,7 @@ var siteConfig = {
     },
     sib: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Sibreal",
         siteNameLocal: "Сибирь.Реалии",
         siteURL: "https://www.sibreal.org/",
@@ -1446,7 +1446,7 @@ var siteConfig = {
     },
     tj_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Tajik [Russian]",
         siteNameLocal: "Радио Озоди",
         siteURL: "https://rus.ozodi.org/",
@@ -1494,7 +1494,7 @@ var siteConfig = {
     },
     tb: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Tatar-Bashkir",
         siteNameLocal: "Азатлык Радиосы",
         siteURL: "https://www.azatliq.org/",
@@ -1542,7 +1542,7 @@ var siteConfig = {
     },
     tb_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Tatar-Bashkir [Russian]",
         siteNameLocal: "Idel.Реалии",
         siteURL: "https://www.idelreal.org/",
@@ -1638,7 +1638,7 @@ var siteConfig = {
     },
     tu_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Turkmen [Russian]",
         siteNameLocal: "Радио Азатлык",
         siteURL: "https://rus.azathabar.com/",
@@ -1686,7 +1686,7 @@ var siteConfig = {
     },
     ua: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Ukrainian",
         siteNameLocal: "Радіо Свобода",
         siteURL: "https://www.radiosvoboda.org/",
@@ -1734,7 +1734,7 @@ var siteConfig = {
     },
     uz: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Uzbek",
         siteNameLocal: "Озодлик радиоси",
         siteURL: "https://www.ozodlik.org/",
@@ -1782,7 +1782,7 @@ var siteConfig = {
     },
     uz_ru: {
         siteBrand: "rfe",
-        siteCulture: "rfe-cyrillic",
+        siteCulture: "rfe-latin-cyrillic",
         siteName: "Uzbek [Russian]",
         siteNameLocal: "Радио Озодлик",
         siteURL: "https://rus.ozodlik.org/",

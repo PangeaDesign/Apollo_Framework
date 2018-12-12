@@ -17,34 +17,6 @@
     justify-content: space-between;
 }
 
-.page__header--onpage {
-    background-color: $color-background;
-    // border-bottom: 2px solid $color-secondary;
-    box-shadow: 0 2px 5px $color-header-shadow;
-    transition: all 0.5s;
-
-    .logo__avatar {
-        fill: $color-logo;
-    }
-
-    .logo__type {
-        fill: $color-logotype;
-    }
-
-    .page__header-share {
-        color: $color-text;
-
-        svg {
-            fill: $color-text;
-            stroke: $color-text;
-        }
-
-        &:hover circle:first-of-type {
-            fill: $color-primary;
-            stroke: none;
-        }
-    }
-}
 // Service Logo
 
 a.page__header-logo {
@@ -214,6 +186,38 @@ a.page__header-nav {
             transition: stroke 0.3s;
             stroke: $color-primary;
         }
+    }
+}
+
+.page__header--onpage {
+    background-color: $color-background;
+    // border-bottom: 2px solid $color-secondary;
+    box-shadow: 0 2px 5px $color-header-shadow;
+    transition: all 0.5s;
+
+    .logo__avatar {
+        fill: $color-logo;
+    }
+
+    .logo__type {
+        fill: $color-logotype;
+    }
+
+    .page__header-share {
+        color: $color-text;
+
+        svg {
+            fill: $color-text;
+            stroke: $color-text;
+        }
+
+        &:hover circle:first-of-type {
+            fill: $color-primary;
+            stroke: none;
+        }
+    }
+    .page__header-nav svg line {
+        stroke: $color-text;
     }
 }
 
