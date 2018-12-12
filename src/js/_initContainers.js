@@ -17,3 +17,20 @@ for (var i = 0; i < allContainers.length; i++) {
     /*var content = allContainers[i].innerHTML;
     allContainers[i].innerHTML = "<div class=\"container-stripe\">" + content + "</div>";*/
 }
+/*containerAside figures clear*/
+for(var i = 0; i < allContainersAside.length; i++){
+    if(!allContainersAside[i].classList.contains("scroll--container")){
+        var innerContainer = allContainersAside[i].querySelectorAll(".container-inner")[0];
+        var innerAsideFigures = innerContainer.querySelectorAll("figure");
+        for(var j = 0; j < innerAsideFigures.length; j ++){
+          var newNode = document.createElement("div");
+          newNode.style.clear = "both";
+          innerAsideFigures[j].parentNode.insertBefore(newNode, innerAsideFigures[j]);
+        }
+    }
+}
+
+var allLinks = document.getElementById("main").querySelectorAll("a");
+for(var i = 0; i < allLinks.length; i++) {
+    allLinks[i].setAttribute("target", "_blank");
+}

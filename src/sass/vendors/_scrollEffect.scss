@@ -186,6 +186,7 @@ footer#footer {
         position: relative;
         margin: auto;
         right: inherit;
+        right: 0;
     }
     .scroll-aside-image figure{
         position: relative;
@@ -197,5 +198,6 @@ footer#footer {
     .scroll-aside .scroll-aside-image.scroll-aside-fixed {
         position: relative;
         top: inherit;
+        width: 100%;
     }
 }

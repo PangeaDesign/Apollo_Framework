@@ -4,12 +4,12 @@
 
 var configPaths = {
     css: {
-        themes: "dist/css/themes/",
-        cultures: "dist/css/cultures/",
-        root: "dist/css/"
+        themes: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/css/themes/",
+        cultures: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/css/cultures/",
+        root: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/css/"
     },
-    logos: "dist/assets/logos/",
-    favicons: "dist/assets/favicons/",
+    logos: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/assets/logos/",
+    favicons: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/assets/favicons/",
     version: "2.0",
     shareMedia: {
         facebook: "https://www.facebook.com/sharer/sharer.php?u=",
@@ -42,6 +42,6 @@ var configPaths = {
         podcast: "podcasts"
     },
     vendor: {
-        photoswipe: "dist/vendor/photoswipe/"
+        photoswipe: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/vendor/photoswipe/"
     }
 }
