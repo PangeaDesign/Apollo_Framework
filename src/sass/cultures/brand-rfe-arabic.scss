@@ -16,8 +16,15 @@ $direction-forwards: right;
 $direction-backwards: left;
 $font-primary: "Nassim";
 $font-secondary: "Nassim";
+$margin-continue: 0 auto 0 20px;
 
 body,
 html {
     font-size: 20px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+main {
+    scroll-behavior: smooth;
 }

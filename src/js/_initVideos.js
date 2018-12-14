@@ -11,6 +11,7 @@ for (var i = 0; i < videoContainers.length; i++) {
         videoContainers[i].removeAttribute("data-video-id");
         var newVideoNode = document.createElement("video");
         newVideoNode.setAttribute("controls", "controls");
+        newVideoNode.setAttribute("playsinline", "");
         newVideoNode.setAttribute("poster", videoPoster);
         var newSourceNode = document.createElement("source");
         newSourceNode.setAttribute("src", videoURL);

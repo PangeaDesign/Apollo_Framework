@@ -49,9 +49,19 @@ if (setupWizard.haltStatus === false) {
     newDOMNode.setAttribute("href", configPaths.css.root + "apollo-framework-" + apolloVersion + "-" + apolloCulture + "-" + apolloTheme + ".min.css");
     pageHeadNode.appendChild(newDOMNode);
 }
+newDOMNode.onload = function(){
+  window.onload = function() {
+      var preloaderDOM = document.getElementById("preloader");
+      preloaderDOM.className += "preloader--loading";
+      setTimeout(function() {
+          preloaderDOM.className = "preloader--loaded";
+      }, 1500);
+  }
+}
 
 // Prepare the mandatory meta data log and print it in console
 var numberOfMeta = pageHeadNode.getElementsByTagName("meta").length;
+
 
 // Send info to the setupWizard
 if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {

@@ -9,6 +9,9 @@ if (typeof apolloConfig === 'undefined' || apolloConfig.setupWizard === true) {
     console.log("%c" + setupWizard.title.message, configSetupWizard.headline);
     console.log("%c" + setupWizard.version.message, configSetupWizard.copyright);
     console.log("%c" + setupWizard.copyright.message, configSetupWizard.copyright);
+    console.log("%c" + "CONFIG TO PASTE:", configSetupWizard.copyright);
+    console.log("%c" + setupWizard.meta.metaList, configSetupWizard.infoMessage);
+
     console.log("%c" + setupWizard.instructions.message, configSetupWizard.paragraph);
     console.log("%c" + setupWizard.summary.message, configSetupWizard.subHeadline);
 

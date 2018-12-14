@@ -104,7 +104,7 @@ if (setupWizard.haltStatus !== true) {
 
     headerNode.appendChild(headerLeftNode);
     headerLeftNode.appendChild(headerLogoNode);
-    httpGetIcon("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/" + apolloConfig.projectSite + ".svg", "page__header-logo");
+    httpGetIcon("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/" + apolloConfig.projectSite + ".svg?nocache=1", "page__header-logo");
     headerNode.appendChild(headerRightNode);
     headerRightNode.appendChild(headerShareNode);
 

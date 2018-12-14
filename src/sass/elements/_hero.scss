@@ -147,8 +147,11 @@
         }
 
         .hero__continue {
-            right: ($gutter * 2);
-            bottom: ($gutter * 3);
+          left: 0;
+          right:0;
+          margin: $margin-continue;
+          right: ($gutter * 2);
+          bottom: ($gutter * 3);
         }
     }
 

@@ -2,14 +2,8 @@
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
 
-// Hide preloader & load all post-render scripts
-window.onload = function() {
-    var preloaderDOM = document.getElementById("preloader");
-    preloaderDOM.className += "preloader--loading";
-    setTimeout(function() {
-        preloaderDOM.className = "preloader--loaded";
-    }, 1500);
-}
+// Load all post-render scripts
+
 
 // Resize scripts
 /*window.onresize = function() {

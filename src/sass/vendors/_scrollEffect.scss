@@ -87,6 +87,9 @@ footer#footer {
     top: 65px;
     z-index: -100;
 }
+.container.scroll--container .scroll-image-fixed {
+    max-width: $breakpoint-s;
+}
 
 .container--big.scroll--container .scroll-image-fixed {
     max-width: $breakpoint-l;
@@ -187,6 +190,7 @@ footer#footer {
         margin: auto;
         right: inherit;
         right: 0;
+        width: 100%;
     }
     .scroll-aside-image figure{
         position: relative;

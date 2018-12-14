@@ -26,3 +26,15 @@ $direction-forwards: left;
 $direction-backwards: right;
 $font-primary: "Skolar Sans PE";
 $font-secondary: "Skolar PE";
+$margin-continue: 0 20px 0 auto;
+
+body,
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+main {
+    scroll-behavior: smooth;
+}
