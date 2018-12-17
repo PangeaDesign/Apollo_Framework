@@ -117,6 +117,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         options = {
             shareEl: false,
             history: false, //disable hashes
+            focus: false,
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
             getThumbBoundsFn: function(index) {
@@ -175,4 +176,5 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 };
 
 // execute above function
+
 initPhotoSwipeFromDOM('.content');

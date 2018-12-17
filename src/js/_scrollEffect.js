@@ -3,7 +3,10 @@
 var bodyTop, images, imagesURL, imagesTops, imagesHeights, imagesCount, imagesFake;
 var imagesAside = [];
 var textSpecialHeight;
-
+var hasTouch = 'ontouchstart' in window;
+if(hasTouch){
+    scrollEffectConfig.scrollEffect = false
+}
 if (scrollEffectConfig.scrollEffect == true) {
     startScrollEffect();
     window.addEventListener("resize", function() {

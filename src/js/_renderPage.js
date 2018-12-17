@@ -139,7 +139,7 @@ if (setupWizard.haltStatus !== true) {
         navSiteCloseNode.setAttribute("id", "nav__site-close");
         navSiteContainerNode.appendChild(navSiteCloseNode);
         navSiteCloseNode.innerHTML = icons.close;
-        //httpGetIcon("src/assets/export/close.svg", "nav__site-close");
+        //("src/assets/export/close.svg", "nav__site-close");
 
         var navSiteUlNode = document.createElement("ul");
         navSiteContainerNode.appendChild(navSiteUlNode);

@@ -210,3 +210,6 @@ $pswp__include-minimal-style: true !default;
 	color: $pswp__error-text-color;
 	text-decoration: underline;
 }
+.pswp__top-bar {
+  opacity: 1 !important;
+}

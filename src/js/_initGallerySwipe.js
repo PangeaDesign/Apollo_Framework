@@ -26,7 +26,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             linkEl = figureEl.children[0]; // <a> element
 
             size = linkEl.parentNode.getAttribute('data-size').split('x');
-            console.log(size);
             // create slide object
             item = {
                 src: linkEl.getAttribute('href'),
@@ -140,7 +139,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         // define options (if needed)
         options = {
 			       history:false,//disable hashes
-
+             focus:false,
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
