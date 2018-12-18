@@ -210,6 +210,11 @@ $pswp__include-minimal-style: true !default;
 	color: $pswp__error-text-color;
 	text-decoration: underline;
 }
+/* Kuba's CSS */
 .pswp__top-bar {
   opacity: 1 !important;
+}
+
+.pswp--supports-fs .pswp__button--fs{
+		display: none;/* Full screen button*/
 }
