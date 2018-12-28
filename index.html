@@ -76,7 +76,7 @@
 
         <div class="container interview" navigation-title="Apollo config">
             <h2>Apollo config</h2>
-            <p>First thing in creating new project is main apollo configuration.</p>
+            <p>The first thing that should be done when creating a new Apollo project is to setup the configuration</p>
             <code>
               &lt;script id="apollo-config"&gt;<br>
               ...<br>
@@ -85,29 +85,29 @@
               &nbsp;&nbsp;projectSite: "en",<br>
               &nbsp;&nbsp;...
             </code>
-            <p><span>setupWizard</span> - It is helping by massages in console to create main config correctly. Before publishing choose false to turn it off.</p>
-            <p><span>projectSite</span> - See the list of sites: <a href="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/projectSites.html">List of sites</a></p>
-            <p><span>projectTitle</span> - Here should be title of your story.</p>
-            <p><span>projectDescription</span> - You can fill here description or introduction of your story.</p>
-            <p><span>projectImage</span> - Here should be url of image for social media.</p>
-            <p><span>heroStyle</span>This is style of begining of the page with a title, description and your media(picture or video). You can choose from following possibilities<br>possible values: cover-left, cover-right, cover, tabloid</p>
-            <p><span>heroMedia</span> - Here you can fill url of media, which will be on the starting page on the background.<br>possible values: mp4, jpg, jpeg, gif, png</p>
-            <p><span>heroMediaPoster</span> - In case media is mp4, you can choose poster for video.</p>
-            <p><span>heroOverlay</span> - This will overlay picture or video, than title and texts will be more visible on its background.<br>possible values: true, false</p>
-            <p><span>heroByline</span> - Here you can fill author of your story.</p>
-            <p><span>pageTheme</span> - possible values: light, dark</p>
-            <p><span>footerBlockTitle</span> - This is title of footer.</p>
-            <p><span>footerBlockContent</span> - This is content of footer.</p>
+            <p><span>setupWizard</span> is helping you to setup the main config correctly with the messages in the console. Before publishing your project, choose 'false' to turn it off.</p>
+            <p><span>projectSite</span> - Put the abbreviation of your site here (e.g. en for RFE English). See the list of all abbreviations here: <a href="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/projectSites.html">List of abbreviations</a></p>
+            <p><span>projectTitle</span> - Put the title of your story here.</p>
+            <p><span>projectDescription</span> - Here you can add the description or introduction of your story.</p>
+            <p><span>projectImage</span> - Place a URL leading to the image that you would like to have as the main image of your story</p>
+            <p><span>heroStyle</span> - Here you can define the style of the so-called Hero page (first screen of the story). This is there you would see the title, the description and the main media(picture or video) of the story. You can choose the style of the Hero page from these values: <b>cover-left, cover-right, cover, tabloid</b></p>
+            <p><span>heroMedia</span> - Here you can put the URL of the media that you choose for the first screen of the story, which can be in these formats: <b>mp4, jpg, jpeg, gif, png</b></p>
+            <p><span>heroMediaPoster</span> - In case the media for the Hero page is mp4, you can choose poster for the video (the image that will be shown while the video is being loaded).</p>
+            <p><span>heroOverlay</span> - This is a color overlay for hero media, so that the title and info about your project will be more visible. Possible values: <b>true, false</b></p>
+            <p><span>heroByline</span> - Here you can place the author's of your story name.</p>
+            <p><span>pageTheme</span> - Possible values: <b>light, dark</b></p>
+            <p><span>footerBlockTitle</span> - This is the title of the footer.</p>
+            <p><span>footerBlockContent</span> - This is the content text of the footer.</p>
             <br>
-            <p>Now on the begining of the document you can find html tag head and inside more others meta tags. To fill them correctly you have to do this:</p>
+            <p>In the begining of the document you can find an html tag &lt;head&gt; with some meta tags inside of it. To fill them correctly you have to do this:</p>
             <p>
               1) Open index.html in your Browser.<br>
-              2) Click right button on mouse and choose inspect or inspect element.<br>
-              3) In inspect window choose console in menu.<br>
-              4) Here you can see info about your project and script, which belongs to begining of the page into head element.<br>
+              2) Click the right mouse button and choose inspect or inspect element, this will open a web inspector window.<br>
+              3) In the web inspector window choose 'console' tab in the menu.<br>
+              4) Here you will see the info about your project and script, which belongs to begining of the page into head element.<br>
               5) Copy it and paste it between  "&lt;!-- START: Meta - Copy & Paste Meta Data from Browser's Console --&gt;" and "&lt;!-- END: Meta - Copy & Paste Meta Data from Browser's Console --&gt;".<br>
               6) Now, if you have url which will have your document in CMS, you can copy it into content here: &lt;meta property="og:url" content="url of your project?"&gt;<br>
-              7) Main configuration is now ready and you can start building content of your story.
+              7) Main configuration is now done and you can start adding the content of your story.
             </p>
         </div>
 
@@ -115,8 +115,9 @@
 
         <div class="container" navigation-title="Containers">
             <h2>Containers:</h2>
-            <p>All content should be inside these containers. There are five possibilities. First "container" is regular and mandatory, which have to be for parts of content.
-            "Big, jumbo and full" you can add to regular container. It is good for media content like images and videos. See more in images chapter.</p>
+            <p>All content should be placed inside of these divs with a class name '.container'. There are five possibilities. The first container is mandatory, it is being used for technical purposes.
+            'Big', 'Jumbo' and 'Full' can be added to a regular container class name. Using one of them makes the content placed inside wider and is good for media content like images and videos. See more in the images chapter.</p>
+            <p>The 'Aside' container is being used for making the content stand out</p>
             <code>
               &lt;div class="container"&gt;
               <br><br>
@@ -128,12 +129,12 @@
               &lt;div class="container container--full"&gt;  &lt;/div&gt;<br>
               &lt;div class="container container--aside"&gt;  &lt;/div&gt;
             </code>
-            <p>Don't use big, jumbo and full containers for paragraph texts because of design reasons.</p>
+            <p>Please, don't use big, jumbo and full containers for the texts for design reasons.</p>
         </div>
 
         <div class="container" navigation-title="Navigation">
             <h2>Navigation</h2>
-            <p>On the right top of the page is menu with navigation. You can to container tag add navigation-title attribute and htan it will appear in the navigation menu.</p>
+            <p>On the top right corner of the page there is a menu with navigation. You can add to container a 'navigation-title' tag attribute and and it will appear in the navigation menu.</p>
             <code>
               &lt;div class="container" navigation-title="Menu item"&gt;  &lt;/div&gt;<br>
             </code>
@@ -143,7 +144,7 @@
 
         <div class="container" navigation-title="Text">
             <h2>Headlines:</h2>
-            <p>You can use 6 different headlines in your project:</p>
+            <p>You can use 6 different types of headlines in your project:</p>
             <code>&lt;h1&gt;Your Headline&lt;/h1&gt;</code>
             <h1>h1 - Welcome to Iceland</h1>
             <h2>h2 - Welcome to Iceland</h2>
@@ -154,7 +155,7 @@
         </div>
         <div class="container">
             <h2>Paragraphs</h2>
-            <p>All texts should be in paragraphs tags:</p>
+            <p>All texts should be in paragraph tags:</p>
             <code>
                 &lt;p&gt;This is my paragraph.&lt;/p&gt;<br>
             </code>
@@ -193,7 +194,7 @@
 
         <div class="container interview">
             <h2>Other text styles - Interview text</h2>
-            <p>Here is example, how you can create an interview paragraphs:</p>
+            <p>Here is an example of the interview paragraphs:</p>
             <code>
               &lt;div class="container container-big"&gt;<br>
               &nbsp;&nbsp;&lt;p&gt;&lt;span&gt;Interrogator:&lt;/span&gt;&lt;p&gt;<br>
@@ -217,12 +218,12 @@
 
         <div class="container">
             <h2>Other text styles - Tables</h2>
-            <p>You can create tables with this code. There are two examples with and without class "float-left"</p>
+            <p>You can create tables with this code. There are two possibilities: with and without class name "float-left"</p>
             <code>
               &lt;table class="float-left"&gt;<br>
               &nbsp;&nbsp;&lt;thead&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Head of table&lt;/th&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th colspan="100%"&gt;Head of table&lt;/th&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
               &nbsp;&nbsp;&lt;/thead&gt;<br>
               &nbsp;&nbsp;&lt;tbody&gt;<br>
@@ -242,7 +243,7 @@
             <table class="float-left">
                 <thead>
                     <tr>
-                        <th>List of Escaped Replicants</th>
+                        <th colspan="100%">List of Escaped Replicants</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -274,7 +275,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>List of Escaped Replicants</th>
+                        <th colspan="100%">List of Escaped Replicants</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -312,7 +313,7 @@
               &nbsp;&nbsp;&lt;footer&gt;Author&lt;/footer&gt;<br>
               &lt;/bloquote&gt;
             </code>
-            <p>Here you can see example of quote, which is inside container--big.</p>
+            <p>Here you can see example of a quote, which is placed inside of the 'container--big'.</p>
         </div>
 
         <div class="container container--big">
@@ -452,7 +453,7 @@
 
         <div class="container" navigation-title="Scroll Effect">
             <h2>Scroll effect</h2>
-            <p>On the begining of this html document is this code:</p>
+            <p>In the begining of this html document you can see this code:</p>
             <code>
               &lt;script id="apollo-config"&gt;<br>
               var scrollEffectConfig = {<br>
@@ -461,10 +462,10 @@
               }<br>
               &lt;/script&gt;
             </code>
-            <p>Here you can try to change scrollEffect to true or false. It isturning on/off for whole document.</p>
-            <p>Second variable scrollEffectDynamic will change behavior of the scrolling images.</p>
-            <p>If you can use scroll efect for different images you can use following class (scroll--container) for containers. This containers should contains only picture (figure element). Only containers--aside should contains text and image or more of them.</p>
-            <p>See examples bellow.</p>
+            <p>Here you can try changing scrollEffect value to 'true' or 'false'. It is turning the scrolling effect on/off for the whole document.</p>
+            <p>Second variable, 'scrollEffectDynamic' will change behavior of the scrolling images.</p>
+            <p>If you want to use scroll efect for different images you can add following class ('scroll--container') for containers. This containers should contain only pictures (&lt;figure&gt; element). Only 'container--aside's can contain both text and images.</p>
+            <p>See examples below:</p>
         </div>
 
         <div class="container">
