@@ -128,6 +128,18 @@ blockquote footer {
     font-family: $font-primary, $font-fallback-primary;
     text-align: $direction-backwards;
 }
+@media(max-width:$breakpoint-s){
+    blockquote cite {
+        padding-left: 16px;
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:$breakpoint-xs){
+    blockquote cite {
+        padding-left: 12px;
+        font-size: 1.2rem;
+    }
+}
 //links
 
 p a {
