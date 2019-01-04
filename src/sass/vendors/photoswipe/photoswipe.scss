@@ -213,6 +213,7 @@ $pswp__include-minimal-style: true !default;
 /* Kuba's CSS */
 .pswp__top-bar {
   opacity: 1 !important;
+	display: block;
 }
 
 .pswp--supports-fs .pswp__button--fs{

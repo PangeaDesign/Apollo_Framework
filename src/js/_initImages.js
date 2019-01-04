@@ -127,8 +127,14 @@ document.body.innerHTML += pswpHTML;
             //imageLinkElement.setAttribute("href", "");
         } else {
             imageContainers[i].classList.add("gallery");
-            if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
-                imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1200." + imageSource.split(".")[3]); // !!! change to resize ???
+            if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") { // !!! also in resize ???
+                if(window.innerWidth <= 568){
+                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w568." + imageSource.split(".")[3]);
+                }else if(window.innerWidth > 568 && window.innerWidth <= 1024){
+                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1024." + imageSource.split(".")[3]);
+                }else if(window.innerWidth > 1024){
+                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1920." + imageSource.split(".")[3]);
+                }
             } else {
                 imageLinkElement.setAttribute("href", imageSource);
             }

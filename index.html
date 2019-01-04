@@ -44,8 +44,8 @@
             footerBlockContent: "Iceland is a Nordic island country of Europe located in the North Atlantic Ocean.<br>It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe. The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population."
             }
         var scrollEffectConfig = {
-                scrollEffect: true,
-                scrollEffectDynamic: false
+            scrollEffect: true,
+            scrollEffectDynamic: false
             }
     </script>
     <link rel="stylesheet" href="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/css/apollo-framework-2.0-launch.min.css" />
@@ -54,22 +54,23 @@
 
 <body>
     <div id="preloader"></div>
-    <style>
-        .plyr__video-wrapper{
-            max-width: 100%;
-        }
-    </style>
     <!-- START: No Script - Localize text between <noscript></noscript> tags -->
     <noscript>We are sorry, but this content is not available on your device.<br><a href="https:/www.rferl.org">Go back to the homepage</a></noscript>
     <!-- END: No Script - Localize text between <noscript></noscript> tags -->
 
     <main class="content" id="main">
-        <div class="container" navigation-title="Welcome">
+        <div class="container" navigation-title="Welcome and begin">
             <h2>Welcome to Apollo 2.0</h2>
-            <p>Welcome...</p>
+            <p>Welcome to Apollo version 2.0, template for creating microsite.</p>
             <video width="100%" poster="" playsinline="" autoplay="" muted="" loop=""><source src="https://flashvideo.rferl.org/Videoroot/Pangeavideo/2018/03/1/1f/1ff0b410-92d3-4fbf-a717-2c6b82c15540_fullhd.mp4" type="video/mp4"></video>
+            <video width="100%" poster="" playsinline="" autoplay="" muted="" loop=""><source src="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/videos/Hero_fullhd.mp4" type="video/mp4"></video>
             <video width="100%" poster="" playsinline="" autoplay="" muted="" loop=""><source src="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/videos/Hero_hd.mp4" type="video/mp4"></video>
           </div>
+
+        <div class="container">
+            <h2>How to start?</h2>
+            <p>To start, you can download <a download="index.html" style="cursor: pointer;">index.html</a> file and open it in some text editor. Then you can change content by following instructions:</p>
+        </div>
 
         <hr class="divider--solid">
 
@@ -141,8 +142,9 @@
 
         <hr class="divider--solid">
 
-        <div class="container" navigation-title="Text">
-            <h2>Headlines:</h2>
+        <div class="container" navigation-title="Typography">
+            <h2>Typography</h2>
+            <h4>Headlines:</h4>
             <p>You can use 6 different types of headlines in your project:</p>
             <code>&lt;h1&gt;Your Headline&lt;/h1&gt;</code>
             <h1>h1 - Welcome to Iceland</h1>
@@ -153,17 +155,17 @@
             <h6>h6 - Welcome to Iceland</h6>
         </div>
         <div class="container">
-            <h2>Paragraphs</h2>
+            <h4>Paragraphs</h4>
             <p>All texts should be in paragraph tags:</p>
             <code>
                 &lt;p&gt;This is my paragraph.&lt;/p&gt;<br>
             </code>
-            <h2>Lead paragraph:</h2>
+            <h4>Lead paragraph:</h4>
             <p>For introduction or important text, you can use lead paragraph when you add class:</p>
             <code>&lt;p class="p--lead"&gt;Iceland is a Nordic island country...</code>
             <p class="p--lead">Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[8] The capital and largest
                 city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population.</p>
-            <h2>Divider lines:</h2>
+            <h4>Divider lines:</h4>
             <code>
                   &lt;hr class="divider--solid divider--short"&gt;<br>
                   &lt;hr class="divider--dotted"&gt;<br>
@@ -172,7 +174,7 @@
             <hr class="divider--short divider--solid">
             <hr class="divider--dotted">
             <hr class="divider--dashed">
-            <h2>Drop caps:</h2>
+            <h4>Drop caps:</h4>
             <code>&lt;p class="p--dropcap"&gt;The establishment of the Kalmar Union...</code>
             <p class="p--dropcap">The establishment of the Kalmar Union in 1397 united the kingdoms of Norway, Denmark, and Sweden. Iceland thus followed Norway's integration to that union and came under Danish rule, after Sweden's secession from that union in 1523. Although
                 the Danish kingdom introduced Lutheranism forcefully in 1550, Iceland remained a distant semi-colonial territory in which Danish institutions and infrastructures were conspicuous by their absence.</p>
@@ -181,7 +183,7 @@
             <p class="p--lead p--dropcap">Iceland is a Nordic island country of Europe located in the North Atlantic Ocean. It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[8] The capital and largest
                 city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population.</p>
 
-            <h2>Links:</h2>
+            <h4>Links:</h4>
             <code>&lt;a href="your url"&gt;Reykjavik&lt;/a&gt;</code>
             <p><a href="https://cs.wikipedia.org/wiki/Reykjav%C3%ADk">Reykjavik</a></p>
             <a href="https://cs.wikipedia.org/wiki/Reykjav%C3%ADk">Reykjavik</a>
@@ -192,7 +194,7 @@
         <hr class="divider--solid">
 
         <div class="container interview">
-            <h2>Other text styles - Interview text</h2>
+            <h4>Other text styles - Interview text</h4>
             <p>Here is an example of the interview paragraphs:</p>
             <code>
               &lt;div class="container container-big"&gt;<br>
@@ -216,7 +218,7 @@
         </div>
 
         <div class="container">
-            <h2>Other text styles - Tables</h2>
+            <h4>Other text styles - Tables</h4>
             <p>You can create tables with this code. There are two possibilities: with and without class name "float-left"</p>
             <code>
               &lt;table class="float-left"&gt;<br>
@@ -238,7 +240,7 @@
               &nbsp;&nbsp;&lt;/tbody&gt;<br>
               &lt;/table&gt;<br>
             </code>
-            <h4>Reformation and the Early Modern period</h4>
+            <h3>Reformation and the Early Modern period</h3>
             <table class="float-left">
                 <thead>
                     <tr>
@@ -305,7 +307,7 @@
         </div>
 
         <div class="container">
-            <h2>Other text styles - Quotes</h2>
+            <h4>Other text styles - Quotes</h4>
             <code>
               &lt;bloquote&gt;<br>
               &nbsp;&nbsp;&lt;cite&gt;Some quote&lt;/cite&gt;<br>
@@ -410,7 +412,7 @@
 
         <hr class="divider--solid">
 
-        <div class="container" navigation-title="Videos">
+        <div class="container" navigation-title="Videos, Audios">
             <h2>Videos - Youtube</h2>
             <code>&lt;div class="video" data-type="youtube" data-video-id="R7lDuUaRD-4"&gt;&lt;/div&gt;</code>
             <!--iframe src="https://www.youtube.com/embed/Umc9ezAyJv0?rel=0&amp;showinfo=0" frameborder="0"></iframe-->
@@ -528,7 +530,7 @@
         </div>
 
     </main>
-    <!--script src="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/js/apollo-framework-2.0.min.js?nocache=4"></script-->
+    <!--script src="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/js/apollo-framework-2.0.min.js"></script-->
     <script src="dist/js/apollo-framework-2.0.min.js"></script>
 
     <!--script src="src/js/configs/_configSVG.js"></script>

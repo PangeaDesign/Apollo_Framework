@@ -37,7 +37,7 @@
         }
 
         figcaption {
-            padding: $gutter $gutter*2;
+            padding: $gutter 0;
             color: $color-text-secondary;
             font-size: 0.85rem;
             font-family: $font-primary, $font-fallback-primary;
@@ -54,6 +54,13 @@
     figure:hover a {
         .gallery-icon {
             opacity: 1;
+        }
+    }
+}
+.container.container--full{
+    figure {
+        figcaption {
+            padding: $gutter $gutter*2;
         }
     }
 }
