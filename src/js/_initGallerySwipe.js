@@ -140,6 +140,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         options = {
 			       history:false,//disable hashes
              focus:false,
+             closeEl: true,
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 

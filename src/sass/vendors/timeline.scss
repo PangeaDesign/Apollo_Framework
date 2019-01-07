@@ -1,0 +1,38 @@
+.timeline {
+
+}
+.events {
+  background-repeat: repeat-y;
+  background-position: center;
+  background-image: url(https://docs.rferl.org/Infographics/2018/2018_10/KAFKA/snake.png);
+}
+.item {
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+    .content {
+        background: $color-background;
+        max-width: 100%;
+        padding: 0;
+        margin: 12px auto;
+        text-align: $direction-forwards;
+        border-radius: 4px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+        img {
+            max-width: 100%;
+            margin-bottom: 0px;
+            border-radius: 4px 4px 0px 0px;
+        }
+        p {
+            padding: 8px 16px 12px;
+        }
+    }
+}
+.date {
+    text-align: center;
+    padding: 4px 6px;
+    background-color: $color-primary;
+    border-radius: 4px;
+    color: #fff;
+    font-size: .9rem;
+    margin-top: .5rem;
+}
