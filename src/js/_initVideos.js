@@ -7,6 +7,7 @@ var videoContainers = document.getElementsByClassName("video");
 for (var i = 0; i < videoContainers.length; i++) {
     if (videoContainers[i].getAttribute("data-type") === "pangea") {
         var videoURL = videoContainers[i].getAttribute("data-video-id");
+        var videoMobileURL = videoContainers[i].getAttribute("data-video-mobile");
         var videoPoster = videoContainers[i].getAttribute("data-video-poster");
         videoContainers[i].removeAttribute("data-video-id");
         var newVideoNode = document.createElement("video");
@@ -17,7 +18,19 @@ for (var i = 0; i < videoContainers.length; i++) {
         newSourceNode.setAttribute("src", videoURL);
         newSourceNode.setAttribute("type", "video/mp4");
         videoContainers[i].appendChild(newVideoNode);
-        newVideoNode.appendChild(newSourceNode);
+        if(videoMobileURL != "" || videoMobileURL != undefined || videoMobileURL != null){
+            newVideoNode.appendChild(newSourceNode);
+        }else{
+            var newSourceMobileNode = document.createElement("source");
+            newSourceMobileNode.setAttribute("src", videoMobileURL);
+            newSourceMobileNode.setAttribute("type", "video/mp4");
+            if (window.innerWidth <= 568) {
+                newVideoNode.appendChild(newSourceMobileNode);
+            }else{
+                newVideoNode.appendChild(newSourceNode);
+                newVideoNode.appendChild(newSourceMobileNode);
+            }
+        }
     }
 }
 
