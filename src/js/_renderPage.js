@@ -22,7 +22,7 @@ if (setupWizard.haltStatus !== true) {
         // In case media type is mp4 video
     } else if (heroMedia.indexOf(".mp4") >= 0) {
         heroBackgroundNode.className += " hero__background--video";
-        if(apolloConfig.heroMediaMobile==""||apolloConfig.heroMediaMobile==undefined){
+        if(apolloConfig.heroMediaMobile==""||apolloConfig.heroMediaMobile==undefined||apolloConfig.heroMediaMobile==null){
             if (window.innerWidth <= 568) {
                 heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMediaMobile + "\" type=\"video/mp4\"></video>"
             }else{
