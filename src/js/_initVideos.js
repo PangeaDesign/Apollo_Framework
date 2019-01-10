@@ -18,9 +18,12 @@ for (var i = 0; i < videoContainers.length; i++) {
         newSourceNode.setAttribute("src", videoURL);
         newSourceNode.setAttribute("type", "video/mp4");
         videoContainers[i].appendChild(newVideoNode);
+        console.log(videoMobileURL);
         if(videoMobileURL != "" || videoMobileURL != undefined || videoMobileURL != null){
+          console.log("UNDONE");
             newVideoNode.appendChild(newSourceNode);
         }else{
+            console.log("DONE");
             var newSourceMobileNode = document.createElement("source");
             newSourceMobileNode.setAttribute("src", videoMobileURL);
             newSourceMobileNode.setAttribute("type", "video/mp4");
