@@ -218,6 +218,7 @@ a.page__header-nav {
         }
 
         &:hover circle:first-of-type {
+            color: $color-primary;
             fill: $color-primary;
             stroke: none;
         }

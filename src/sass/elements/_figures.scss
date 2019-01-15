@@ -64,3 +64,29 @@
         }
     }
 }
+.columns .container-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.columns figure {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 5px;
+    margin: 32px 0;
+}
+@media(max-width: $breakpoint-s){
+    .columns .container-inner {
+        flex-wrap: wrap;
+    }
+    .columns figure {
+        width:33.3%;
+    }
+}
+@media(max-width: $breakpoint-xs){
+    .columns figure {
+        width:50%;
+    }
+}

@@ -6,34 +6,44 @@ var videoContainers = document.getElementsByClassName("video");
 
 for (var i = 0; i < videoContainers.length; i++) {
     if (videoContainers[i].getAttribute("data-type") === "pangea") {
+        //videoContainers[i].classList.add("videoPlyr");
         var videoURL = videoContainers[i].getAttribute("data-video-id");
         var videoMobileURL = videoContainers[i].getAttribute("data-video-mobile");
         var videoPoster = videoContainers[i].getAttribute("data-video-poster");
         videoContainers[i].removeAttribute("data-video-id");
         var newVideoNode = document.createElement("video");
+        //newVideoNode.setAttribute("class", "videoPlyr");
         newVideoNode.setAttribute("controls", "controls");
         newVideoNode.setAttribute("playsinline", "");
-        newVideoNode.setAttribute("poster", videoPoster);
+        if(videoPoster != "" || videoPoster != undefined || videoPoster != null) {
+            newVideoNode.setAttribute("poster", videoPoster);
+        }
         var newSourceNode = document.createElement("source");
         newSourceNode.setAttribute("src", videoURL);
         newSourceNode.setAttribute("type", "video/mp4");
         videoContainers[i].appendChild(newVideoNode);
-        console.log(videoMobileURL);
         if(videoMobileURL == "" || videoMobileURL == undefined || videoMobileURL == null){
-            console.log("DONE");
             newVideoNode.appendChild(newSourceNode);
         }else{
-            console.log("UNDONE");
             var newSourceMobileNode = document.createElement("source");
             newSourceMobileNode.setAttribute("src", videoMobileURL);
             newSourceMobileNode.setAttribute("type", "video/mp4");
-            if (window.innerWidth <= 568) {
+            if (document.documentElement.clientWidth <= 568) {
                 newVideoNode.appendChild(newSourceMobileNode);
             }else{
                 newVideoNode.appendChild(newSourceNode);
                 newVideoNode.appendChild(newSourceMobileNode);
             }
         }
+    /*}else if(videoContainers[i].getAttribute("data-type") === "pangeaEmbed"){
+        var videoURL = videoContainers[i].getAttribute("data-video-id");
+        var videoMobileURL = videoContainers[i].getAttribute("data-video-mobile");
+        var videoPoster = videoContainers[i].getAttribute("data-video-poster");
+        videoContainers[i].removeAttribute("data-video-id");
+        var newVideoNode = "<iframe class=\"videoPangea\" src=\"https://www.rferl.org/embed/player/0/"+videoURL+".html?type=video\" frameborder=\"0\" scrolling=\"no\" width=\"640\" height=\"360\" allowfullscreen></iframe>";
+        videoContainers[i].innerHTML = newVideoNode;*/
+    }else{
+        videoContainers[i].classList.add("videoPlyr");
     }
 }
 
@@ -53,22 +63,23 @@ for (var i = 0; i < audioContainers.length; i++) {
     audioContainers[i].appendChild(newAudioNode);
     newAudioNode.appendChild(newSourceNode);
 }
+//var player = new Plyr(videoContainers);
+//var videoInstances = plyr.setup(".video");
+var videoInstances = plyr.setup(".videoPlyr");
 
-var videoInstances = plyr.setup(".video");
-
-for (var i = 0; i < videoInstances.length; i++) {
+/*for (var i = 0; i < videoInstances.length; i++) {
     videoInstances[i].getContainer().setAttribute("xmlid", i);
     videoInstances[i].on("playing", function() {
         for (var j = 0; j < videoInstances.length; j++) {
             if (j != this.getAttribute("xmlid")) {
                 videoInstances[j].pause();
             }
-            /*if (videoInstances[i].getContainer().classList.contains("plyr--playing")) {
+            //if (videoInstances[i].getContainer().classList.contains("plyr--playing")) {
                 //videoInstances[i].pause();
-            }*/
+            //}
         }
     });
-};
+};*/
 var audioInstances = plyr.setup(".audio");
 for (var i = 0; i < audioInstances.length; i++) {
     audioInstances[i].getContainer().setAttribute("xmlid", i);

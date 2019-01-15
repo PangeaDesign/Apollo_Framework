@@ -23,7 +23,7 @@ if (setupWizard.haltStatus !== true) {
     } else if (heroMedia.indexOf(".mp4") >= 0) {
         heroBackgroundNode.className += " hero__background--video";
         if(apolloConfig.heroMediaMobile==""||apolloConfig.heroMediaMobile==undefined||apolloConfig.heroMediaMobile==null){
-            if (window.innerWidth <= 568) {
+            if (document.documentElement.clientWidth <= 568) {
                 heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMediaMobile + "\" type=\"video/mp4\"></video>"
             }else{
                 heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";
