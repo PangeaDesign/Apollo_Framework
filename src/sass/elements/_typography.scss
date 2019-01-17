@@ -148,7 +148,11 @@ p a {
     color: $color-primary;
     text-decoration: none;
 
-    &:after {
+    border-bottom: 1px solid $color-gray;
+    &:hover {
+        border-bottom: 1px solid $color-primary;
+    }
+    /*&:after {
         content: '';
         position: absolute;
         width: 100%;
@@ -156,11 +160,11 @@ p a {
         left: 0;
         top: 23px;
         border-top: 1px solid $color-gray;
-    }
+    }*/
 
-    &:hover:after {
+    /*&:hover:after {
         border-top: 1px solid $color-primary;
-    }
+    }*/
 }
 
 .container-inner > a {
@@ -169,7 +173,11 @@ p a {
     color: $color-primary;
     text-decoration: none;
 
-    &:after {
+    border-bottom: 1px solid $color-gray;
+    &:hover {
+        border-bottom: 1px solid $color-primary;
+    }
+    /*&:after {
         content: '';
         position: absolute;
         width: 100%;
@@ -181,5 +189,5 @@ p a {
 
     &:hover:after {
         border-top: 1px solid $color-primary;
-    }
+    }*/
 }

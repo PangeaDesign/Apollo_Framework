@@ -23,13 +23,13 @@ if (setupWizard.haltStatus !== true) {
     } else if (heroMedia.indexOf(".mp4") >= 0) {
         heroBackgroundNode.className += " hero__background--video";
         if(apolloConfig.heroMediaMobile==""||apolloConfig.heroMediaMobile==undefined||apolloConfig.heroMediaMobile==null){
+            heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";          
+        }else{
             if (document.documentElement.clientWidth <= 568) {
                 heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMediaMobile + "\" type=\"video/mp4\"></video>"
             }else{
-                heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";
-                }
-        }else{
-            heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"><source src=\""+apolloConfig.heroMediaMobile+"\" type=\"video/mp4\"></video>";
+                heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"><source src=\""+apolloConfig.heroMediaMobile+"\" type=\"video/mp4\"></video>";
+            }
         }
     } else {
         console.log("%c[Warning] Hero media type is not supported! Use only [jpg/jpeg], [png], [gif] or [mp4].\nMedia from [youtu.be] and [vimeo.com] are not allowed for the hero section of the page.", configSetupWizard.warningMessage);

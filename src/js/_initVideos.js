@@ -35,6 +35,7 @@ for (var i = 0; i < videoContainers.length; i++) {
                 newVideoNode.appendChild(newSourceMobileNode);
             }
         }
+        videoContainers[i].classList.add("videoCMS");
     /*}else if(videoContainers[i].getAttribute("data-type") === "pangeaEmbed"){
         var videoURL = videoContainers[i].getAttribute("data-video-id");
         var videoMobileURL = videoContainers[i].getAttribute("data-video-mobile");
@@ -65,7 +66,21 @@ for (var i = 0; i < audioContainers.length; i++) {
 }
 //var player = new Plyr(videoContainers);
 //var videoInstances = plyr.setup(".video");
-var videoInstances = plyr.setup(".videoPlyr");
+var videoInstancesExternal = plyr.setup(".videoPlyr");
+var videoInstances = document.getElementsByClassName("videoCMS");
+
+for (var i = 0; i < videoInstances.length; i++){
+    videoInstances[i].setAttribute("xmlid", i);
+    videoInstances[i].children[0].onplay = videosPause;
+};
+function videosPause(){
+    for(var j = 0; j < videoInstances.length; j++){
+        if(j != this.parentNode.getAttribute("xmlid")){
+            //console.log(this.parentNode.getAttribute("xmlid"), videoInstances[j]);
+            videoInstances[j].children[0].pause();
+        }
+    }
+}
 
 /*for (var i = 0; i < videoInstances.length; i++) {
     videoInstances[i].getContainer().setAttribute("xmlid", i);
@@ -86,7 +101,7 @@ for (var i = 0; i < audioInstances.length; i++) {
     audioInstances[i].on("playing", function() {
         for (var j = 0; j < audioInstances.length; j++) {
             if (j != this.getAttribute("xmlid")) {
-                videoInstances[j].pause();
+                audioInstances[j].pause();
             }
         }
     });

@@ -76,7 +76,7 @@ document.body.innerHTML += pswpHTML;
         var imageSourceElementB = document.createElement("source");
         var imageSourceElementC = document.createElement("source");
         var imageImgElement = document.createElement("img");
-        if (imageThumb != null) {
+        if (imageThumb != null&&imageThumb != "") {
             if (imageThumb.slice(0, 22) == "https://gdb.rferl.org/") {
                 imageSourceElementA.setAttribute("media", "(max-width: 568px)");
                 imageSourceElementA.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
@@ -87,9 +87,12 @@ document.body.innerHTML += pswpHTML;
                 imageImgElement.setAttribute("src", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
             } else {
                 //imageSourceElementA.setAttribute("media", "(max-width: 568px)");
+                imageSourceElementA.setAttribute("media", "(max-width: 568px)");
                 imageSourceElementA.setAttribute("srcset", imageThumb);
-                imageSourceElementB.setAttribute("srcset", imageThumb);
-                imageSourceElementC.setAttribute("srcset", imageThumb);
+                imageSourceElementB.setAttribute("media", "(max-width: 1024px)");
+                imageSourceElementB.setAttribute("srcset", imageSource);
+                imageSourceElementC.setAttribute("media", "(min-width: 1025px)");
+                imageSourceElementC.setAttribute("srcset", imageSource);
                 imageImgElement.setAttribute("src", imageThumb);
             }
         } else {
@@ -123,7 +126,7 @@ document.body.innerHTML += pswpHTML;
         imageElement.appendChild(imageSourceElementB);
         imageElement.appendChild(imageSourceElementC);
         imageElement.appendChild(imageImgElement);
-        if (imageGallery == "false") {
+        if (imageGallery == "false" || imageGallery == null) {
             //imageLinkElement.setAttribute("href", "");
         } else {
             imageContainers[i].classList.add("gallery");

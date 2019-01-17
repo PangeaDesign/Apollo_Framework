@@ -98,6 +98,7 @@
             <p><span>projectImage</span> - Place a URL leading to the image that you would like to have as the main image of your story</p>
             <p><span>heroStyle</span> - Here you can define the style of the so-called Hero page (first screen of the story). This is there you would see the title, the description and the main media(picture or video) of the story. You can choose the style of the Hero page from these values: <b>cover-left, cover-right, cover, tabloid</b></p>
             <p><span>heroMedia</span> - Here you can put the URL of the media that you choose for the first screen of the story, which can be in these formats: <b>mp4, jpg, jpeg, gif, png</b></p>
+            <p><span>heroMediaMobile</span> - This is place for url of video for smaller devices.</p>
             <p><span>heroMediaPoster</span> - In case the media for the Hero page is mp4, you can choose poster for the video (the image that will be shown while the video is being loaded).</p>
             <p><span>heroOverlay</span> - This is a color overlay for hero media, so that the title and info about your project will be more visible. Possible values: <b>true, false</b></p>
             <p><span>heroByline</span> - Here you can place the author's of your story name.</p>
@@ -444,10 +445,10 @@
             <h3>Full HD + HD, docs.rferl, regular container</h3>
             <div class="video" data-type="pangea" data-video-id="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/videos/Hero_fullhd.mp4" data-video-mobile="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/videos/Hero_hd.mp4"></div>
         </div>
-        <div class="container">
+        <!--div class="container">
             <h3>Full HD, docs.rferl, regular container</h3>
             <div class="video" data-type="pangea" data-video-id="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/videos/Hero_fullhd.mp4"></div>
-        </div>
+        </div-->
         <div class="container container--full">
             <h3>Full HD + HD, CMS, full container</h3>
             <div class="video" data-type="pangea" data-video-poster="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/images/IcelandPoster.jpg" data-video-id="https://flashvideo.rferl.org/Videoroot/Pangeavideo/2018/03/1/1f/1ff0b410-92d3-4fbf-a717-2c6b82c15540_fullhd.mp4" data-video-mobile="https://flashvideo.rferl.org/Videoroot/Pangeavideo/2018/03/1/1f/1ff0b410-92d3-4fbf-a717-2c6b82c15540_hq.mp4"></div>
@@ -487,7 +488,7 @@
             </code>
         </div>
         <div class="container scroll--container">
-            <figure data-gallery="true" data-caption="Some testing image 2a" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
+            <figure data-caption="Some testing image 2a" data-thumb-caption="true" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
         </div>
         <div class="container container--full scroll--container">
             <figure data-gallery="true" data-caption="Some testing image 2b" data-thumb-caption="true" data-source="https://gdb.rferl.org/535ADBE1-F80B-4494-9EA9-2341E52AEB1D.jpg"></figure>
@@ -502,7 +503,7 @@
 
         <div class="container container--aside scroll--container">
             <h5>Geography</h5>
-            <figure data-gallery="true" data-caption="Some testing image 5" data-thumb-caption="false" data-source="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/images/Aside1.jpg"></figure>
+            <figure data-caption="Some testing image 5" data-thumb-caption="false" data-source="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/images/Aside1.jpg"></figure>
             <p>Iceland is at the juncture of the North Atlantic and Arctic Oceans. The main island is entirely south of the Arctic Circle, which passes through the small Icelandic island of Grímsey off the main island's northern coast. The country lies between
                 latitudes 63 and 68°N, and longitudes 25 and 13°W. </p>
             <p>Iceland is closer to continental Europe than to mainland North America; thus, the island is generally included in Europe for historical, political, cultural, geographical, and practical reasons.[52][53][54][55] Geologically, the island includes
@@ -539,11 +540,11 @@
         </div>
 
     </main>
-    <!--script src="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/js/apollo-framework-2.0.min.js?nocache=3"></script-->
+    <script src="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/js/apollo-framework-2.0.min.js?nocache=3"></script>
     <!--script src="dist/js/apollo-framework-2.0.min.js"></script-->
 
 
-    <script src="src/js/configs/_configSVG.js"></script>
+    <!--script src="src/js/configs/_configSVG.js"></script>
     <script src="src/js/configs/_configSites.js"></script>
     <script src="src/js/configs/_configPaths.js"></script>
     <script src="src/js/configs/_configSetupWizard.js"></script>
@@ -565,7 +566,7 @@
     <script src="src/js/vendors/photoswipe/photoswipe.min.js"></script>
 
     <script src="src/js/vendors/plyr/plyr.js"></script>
-    <script src="src/js/_initVideos.js"></script>
+    <script src="src/js/_initVideos.js"></script-->
 
 </body>
 

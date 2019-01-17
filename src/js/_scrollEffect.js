@@ -1,6 +1,6 @@
 // JavaScript Document
 
-var bodyTop, images, imagesURL, imagesTops, imagesHeights, imagesCount, imagesFake;
+var bodyTop, images, imagesURL, imagesTops, imagesHeights, imagesCount, imagesFake = [];
 var imagesAside = [];
 var textSpecialHeight;
 var hasTouch = 'ontouchstart' in window;
@@ -70,13 +70,17 @@ function startScrollEffect() {
             images[i].children[0].children[0].children[0].children[0].classList.add("scroll-image");
             if (images[i].children[0].children[0].getAttribute("data-gallery") == "true") {
                 images[i].children[0].children[0].children[0].children[2].classList.add("scroll-image-fake");
+                imagesFake[i] = images[i].children[0].children[0].children[0].children[2]
             } else {
                 images[i].children[0].children[0].children[0].children[1].classList.add("scroll-image-fake");
+                imagesFake[i] = images[i].children[0].children[0].children[0].children[1]
             };
-            images[i].children[0].children[0].children[1].classList.add("scroll-opacity");
+            if (images[i].getAttribute("data-caption")!=""&&images[i].getAttribute("data-caption")!=null){
+                images[i].children[0].children[0].children[1].classList.add("scroll-opacity");
+            }
         };
     };
-    imagesFake = document.getElementsByClassName("scroll-image-fake");
+    //imagesFake = document.getElementsByClassName("scroll-image-fake");
 }
 
 function resizingScrollEffect() {
@@ -118,8 +122,6 @@ function resizingScrollEffect() {
                     images[i].children[0].children[0].children[0].children[0].style.transform = "translateY(" + Math.round((imagesTops[i] - window.pageYOffset) / 2) + "px)";
                 }
             } else {
-                //console.log(images[i].firstChild.firstChild, images[i].children[0].children[0]);
-                //images[i].firstChild.firstChild.classList.remove("parallax-image-fixed");
                 images[i].children[0].children[0].children[0].children[0].classList.remove("scroll-image-fixed");
                 imagesFake[i].classList.remove("scroll-image-fixed");
                 images[i].classList.remove("scroll-background");
@@ -154,6 +156,10 @@ function scrollingScrollEffect() {
                 imagesAside[i][0].classList.remove("scroll-opacity-anim");
             }
             if (imagesAside[i].length > 1) {
+                imagesAside[i][0].classList.add("scroll-opacity-anim");
+                if(imagesTops[i] > window.pageYOffset-(images[i].clientHeight-imagesAside[i][0].clientHeight)/imagesAside[i].length){
+                    imagesAside[i][0].classList.remove("scroll-opacity-anim");
+                }
                 for (var j = 1; j < imagesAside[i].length; j++) {
                     imagesAside[i][j].classList.add("scroll-opacity-anim");
                     if (imagesTops[i] < window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / imagesAside[i].length * j && imagesTops[i] > window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / imagesAside[i].length * (j + 1)) {
