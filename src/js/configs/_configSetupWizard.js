@@ -29,10 +29,10 @@ var setupWizard = {
         message: "Copryight " + new Date().getFullYear() + " © Pangea Digital\n\n"
     },
     version: {
-        message: "Pangea Apollo Framework 2.0 [Reykjavík]"
+        message: "Pangea Apollo Framework 2.0 [Iceland]"
     },
     instructions: {
-        message: "Please fill the apolloConfig part of your page and follow the instructions displayed in the following summary.\nFor more information read Pangea Apollo Framework documentation on https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/HowTo.html.\nAll messages should be green with [GO] prefix before publishing."
+        message: "Please fill the apolloConfig part of your page and follow the instructions displayed in the following summary.\nFor more information read Pangea Apollo Framework documentation on https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/HowTo.html.\nAll messages should be green with [GO] prefix before publishing."
     },
     summary: {
         message: "\nLaunch sequence summary\n-----------------------"

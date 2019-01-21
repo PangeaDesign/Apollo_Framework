@@ -17,6 +17,7 @@ var siteConfig = {
             twitter: "@RadioAzadi"
         },
         siteLocal: {
+            home: "",
             copyright: "همۀ حقوق چاپ و کاپی رایت این سایت برای رادیو آزادی محفوظ است",
             followUs: "ما را تعقیب کنید",
             share: "شریک ساختن"
@@ -65,6 +66,7 @@ var siteConfig = {
             twitter: "@GandharaRFE"
         },
         siteLocal: {
+            home: "Home",
             copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. All Rights Reserved.",
             followUs: "Follow Us",
             share: "Share"
@@ -113,6 +115,7 @@ var siteConfig = {
             twitter: "@pazadio"
         },
         siteLocal: {
+            home: "",
             copyright: "د دې سایټ د ټولو مطالبو حقوق له ازادي راډیو سره خوندي دي",
             followUs: "راسره ملګري شئ",
             share: "شريکول"
@@ -161,6 +164,7 @@ var siteConfig = {
             twitter: "@azatutyunradio"
         },
         siteLocal: {
+            home: "",
             copyright: "«Ազատ Եվրոպա/Ազատություն» ռադիոկայան © " + new Date().getFullYear() + "",
             followUs: "ՀԵՏԵՎԵՔ ՄԵԶ",
             share: "Կիսվել"
@@ -209,6 +213,7 @@ var siteConfig = {
             twitter: "@armenialiberty"
         },
         siteLocal: {
+            home: "",
             copyright: "Радио Азатутюн © " + new Date().getFullYear() + " RFE/RL, Inc. Все права защищены.",
             followUs: "Социальные сети",
             share: "Поделиться"
@@ -257,6 +262,7 @@ var siteConfig = {
             twitter: "@RadioAzadliq"
         },
         siteLocal: {
+            home: "",
             copyright: "Azadlıq Radiosu © " + new Date().getFullYear() + " Inc. | Bütün hüquqlar qorunur",
             followUs: "Bizi izlə",
             share: "Paylaş"
@@ -305,6 +311,7 @@ var siteConfig = {
             twitter: "@svaboda"
         },
         siteLocal: {
+            home: "",
             copyright: "Радыё Свабода © " + new Date().getFullYear() + " РС | Усе правы захаваныя.",
             followUs: "Сачыце за абнаўленьнямі",
             share: "Падзяліцца"
@@ -340,6 +347,55 @@ var siteConfig = {
             email: false
         }
     },
+    bg: {
+      siteBrand: "rfe",
+      siteCulture: "",
+      siteName: "Bulgaria",
+      siteNameLocal: "",
+      siteURL: "",
+      siteLangISO: "",
+      siteDir: "ltr",
+      siteSocialMeta: {
+          facebook: undefined,
+          twitter: ""
+      },
+      siteLocal: {
+          home: "",
+          copyright: "",
+          followUs: "",
+          share: ""
+      },
+      siteShare: {
+          facebook: false,
+          twitter: false,
+          vkontakte: false,
+          googlePlus: false,
+          email: false,
+          telegram: false,
+          odnoklassniki: false,
+          linkedin: false,
+          balatarin: false,
+          mailRu: false,
+          whatsUp: false
+      },
+      siteSocial: {
+          facebook: undefined,
+          twitter: undefined,
+          youtube: undefined,
+          vkontakte: undefined,
+          googlePlus: undefined,
+          instagram: undefined,
+          telegram: undefined,
+          odnoklassniki: undefined,
+          livejournal: undefined,
+          soundcloud: undefined
+      },
+      siteServices: {
+          rss: false,
+          podcast: false,
+          email: false
+      }
+    },
     cr_ru: {
         siteBrand: "rfe",
         siteCulture: "rfe-latin-cyrillic",
@@ -353,6 +409,7 @@ var siteConfig = {
             twitter: "@krymrealii"
         },
         siteLocal: {
+            home: "",
             copyright: "© Крым.Реалии, " + new Date().getFullYear() + " | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -401,6 +458,7 @@ var siteConfig = {
             twitter: "@krymrealii"
         },
         siteLocal: {
+            home: "",
             copyright: "© Qırım.Aqiqat, " + new Date().getFullYear() + " | All Rights Reserved.",
             followUs: "Qoşulıñız!",
             share: "Paylaşmaq"
@@ -449,6 +507,7 @@ var siteConfig = {
             twitter: "@krymrealii"
         },
         siteLocal: {
+            home: "",
             copyright: "© Крим.Реалії, " + new Date().getFullYear() + " | Усі права застережено.",
             followUs: "Долучайся",
             share: "Поділитись"
@@ -497,6 +556,7 @@ var siteConfig = {
             twitter: "@RFERL"
         },
         siteLocal: {
+            home: "Home",
             copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. All Rights Reserved.",
             followUs: "Follow Us",
             share: "Share"
@@ -545,6 +605,7 @@ var siteConfig = {
             twitter: "@RFERL"
         },
         siteLocal: {
+            home: "Home",
             copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. All Rights Reserved.",
             followUs: "Follow Us",
             share: "Share"
@@ -593,6 +654,7 @@ var siteConfig = {
             twitter: "@Rtavisupleba"
         },
         siteLocal: {
+            home: "",
             copyright: "რადიო თავისუფლება, RFE/RL, Inc. ყველა უფლება დაცულია",
             followUs: "გამოიწერე",
             share: "გაზიარება"
@@ -641,6 +703,7 @@ var siteConfig = {
             twitter: "@ekhokavkaza"
         },
         siteLocal: {
+            home: "",
             copyright: "Эхо Кавказа © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -689,6 +752,7 @@ var siteConfig = {
             twitter: "@AzattyqRadiosy"
         },
         siteLocal: {
+            home: "",
             copyright: "Азат Еуропа / Азаттық радиосы © " + new Date().getFullYear() + ", Inc. | Барлық құқықтары қорғалған",
             followUs: "Жазылыңыз",
             share: "Бөлісу"
@@ -737,6 +801,7 @@ var siteConfig = {
             twitter: "@Radio_Azattyk"
         },
         siteLocal: {
+            home: "",
             copyright: "Радио Азаттык © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -785,6 +850,7 @@ var siteConfig = {
             twitter: "@RFE_Kosova"
         },
         siteLocal: {
+            home: "",
             copyright: "Radio Evropa e Lirë © " + new Date().getFullYear() + " RFE/RL, Inc. Të gjitha të drejtat e rezervuara.",
             followUs: "Na ndiqni",
             share: "Shpërndaje"
@@ -833,6 +899,7 @@ var siteConfig = {
             twitter: "@Azattyk_Radiosu"
         },
         siteLocal: {
+            home: "",
             copyright: "Radio Evropa e Lirë © " + new Date().getFullYear() + " RFE/RL, Inc. Të gjitha të drejtat e rezervuara.",
             followUs: "Онлайн шерине",
             share: "Бөлүшүңүз"
@@ -881,6 +948,7 @@ var siteConfig = {
             twitter: "@AzattykMedia"
         },
         siteLocal: {
+            home: "",
             copyright: "Радио Азаттык (Кыргызская служба РСЕ/РС) © Радио Свободная Европа/Радио Свобода. Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -929,6 +997,7 @@ var siteConfig = {
             twitter: "RSE_makedonski"
         },
         siteLocal: {
+            home: "",
             copyright: "Радио Слободна Европа / Радио Слобода. Сите права се резервирани",
             followUs: "Следете не",
             share: "Сподели"
@@ -977,6 +1046,7 @@ var siteConfig = {
             twitter: undefined
         },
         siteLocal: {
+            home: "",
             copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. Toate drepturile rezervate",
             followUs: "Urmărește-ne",
             share: "Distribuie"
@@ -1025,6 +1095,7 @@ var siteConfig = {
             twitter: "@radiomarsho"
         },
         siteLocal: {
+            home: "",
             copyright: "Маршо Радио © " + new Date().getFullYear() + " RFE/RL, Inc. Ерриг бакъонаш долаяьхна ю",
             followUs: "Лаха тхо",
             share: "Яхьийта"
@@ -1073,6 +1144,7 @@ var siteConfig = {
             twitter: "@kavkaz_realii"
         },
         siteLocal: {
+            home: "",
             copyright: "© Кавказ.Реалии, " + new Date().getFullYear() + " | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -1121,6 +1193,7 @@ var siteConfig = {
             twitter: "@Mashaalradio"
         },
         siteLocal: {
+            home: "",
             copyright: "د دې سایټ دټولومطالبوحقوق له مشال راډیوسره خوندي دي",
             followUs: "موږ وڅارئ",
             share: "شریک کړئ"
@@ -1169,6 +1242,7 @@ var siteConfig = {
             twitter: "@RadioFarda_"
         },
         siteLocal: {
+            home: "",
             copyright: "© " + new Date().getFullYear() + " تمام حقوق این وب‌سایت، بر اساس مقررات کپی‌رایت، برای رادیو فردا محفوظ است.",
             followUs: "به ما بپیوندید",
             share: "ارسال"
@@ -1217,6 +1291,7 @@ var siteConfig = {
             twitter: "@RadioFarda_Eng"
         },
         siteLocal: {
+            home: "Home",
             copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. All Rights Reserved.",
             followUs: "Follow Us",
             share: "Share"
@@ -1252,6 +1327,55 @@ var siteConfig = {
             email: false
         }
     },
+    ro: {
+      siteBrand: "rfe",
+      siteCulture: "",
+      siteName: "Romania",
+      siteNameLocal: "",
+      siteURL: "",
+      siteLangISO: "",
+      siteDir: "ltr",
+      siteSocialMeta: {
+          facebook: undefined,
+          twitter: ""
+      },
+      siteLocal: {
+          home: "",
+          copyright: "",
+          followUs: "",
+          share: ""
+      },
+      siteShare: {
+          facebook: false,
+          twitter: false,
+          vkontakte: false,
+          googlePlus: false,
+          email: false,
+          telegram: false,
+          odnoklassniki: false,
+          linkedin: false,
+          balatarin: false,
+          mailRu: false,
+          whatsUp: false
+      },
+      siteSocial: {
+          facebook: undefined,
+          twitter: undefined,
+          youtube: undefined,
+          vkontakte: undefined,
+          googlePlus: undefined,
+          instagram: undefined,
+          telegram: undefined,
+          odnoklassniki: undefined,
+          livejournal: undefined,
+          soundcloud: undefined
+      },
+      siteServices: {
+          rss: false,
+          podcast: false,
+          email: false
+      }
+    },
     ru: {
         siteBrand: "rfe",
         siteCulture: "rfe-latin-cyrillic",
@@ -1265,6 +1389,7 @@ var siteConfig = {
             twitter: "@SvobodaRadio"
         },
         siteLocal: {
+            home: "",
             copyright: "Радио Свобода © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -1313,6 +1438,7 @@ var siteConfig = {
             twitter: "@sibrealii"
         },
         siteLocal: {
+            home: "",
             copyright: "Сибирь.Реалии © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -1361,6 +1487,7 @@ var siteConfig = {
             twitter: "@RSE_Balkan"
         },
         siteLocal: {
+            home: "",
             copyright: "Sva prava zadržana. Radio Free Europe / Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc.",
             followUs: "Pratite nas",
             share: "Podijelite"
@@ -1409,6 +1536,7 @@ var siteConfig = {
             twitter: "@RadioiOzodi"
         },
         siteLocal: {
+            home: "",
             copyright: "Радиои Аврупои Озод / Радиои Озодӣ © " + new Date().getFullYear() + " RFE/RL. Inc. Ҳамаи ҳуқуқ маҳфуз аст.",
             followUs: "Пайгирӣ кунед",
             share: "Пахш"
@@ -1457,6 +1585,7 @@ var siteConfig = {
             twitter: "@RadioiOzodi"
         },
         siteLocal: {
+            home: "",
             copyright: "TAJIK RU © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -1505,6 +1634,7 @@ var siteConfig = {
             twitter: "@Azatliq"
         },
         siteLocal: {
+            home: "",
             copyright: "Азатлык Радиосы © " + new Date().getFullYear() + " RFE/RL, Inc. | Бар хокуклар сакланган",
             followUs: "Безгә кушылыгыз!",
             share: "Уртаклаш"
@@ -1553,6 +1683,7 @@ var siteConfig = {
             twitter: "@Idel_Realii"
         },
         siteLocal: {
+            home: "",
             copyright: "Idel.Реалии © " + new Date().getFullYear() + " RFE/RL, Inc. Все права защищены",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -1601,6 +1732,7 @@ var siteConfig = {
             twitter: "@azathabar"
         },
         siteLocal: {
+            home: "",
             copyright: "Azat Ýewropa/Azatlyk Radiosy © " + new Date().getFullYear() + " RFE/RL, Inc. Ähli hukuklar goralan.",
             followUs: "Bizi yzarlaň",
             share: "Paýlaş"
@@ -1649,6 +1781,7 @@ var siteConfig = {
             twitter: "@azathabar"
         },
         siteLocal: {
+            home: "",
             copyright: "Радио Азатлык © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -1697,6 +1830,7 @@ var siteConfig = {
             twitter: "@radiosvoboda"
         },
         siteLocal: {
+            home: "",
             copyright: "© Радіо Свобода, " + new Date().getFullYear() + " | Усі права застережено.",
             followUs: "Долучайся!",
             share: "Поділитись"
@@ -1745,6 +1879,7 @@ var siteConfig = {
             twitter: "@ozodlik"
         },
         siteLocal: {
+            home: "",
             copyright: "Озодлик радиоси © " + new Date().getFullYear() + " RFE/RL, Inc. | Барча ҳуқуқлар ҳимояланган.",
             followUs: "Социал Тармоқлар",
             share: "Ўртоқлашинг"
@@ -1793,6 +1928,7 @@ var siteConfig = {
             twitter: "@ozodlik"
         },
         siteLocal: {
+            home: "",
             copyright: "Радио Озодлик © " + new Date().getFullYear() + " RFE/RL, Inc. | Все права защищены.",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"
@@ -1841,6 +1977,7 @@ var siteConfig = {
             twitter: "@CurrentTimeTv"
         },
         siteLocal: {
+            home: "",
             copyright: "Настоящее Время © Все права защищены",
             followUs: "Присоединяйтесь!",
             share: "Поделиться"

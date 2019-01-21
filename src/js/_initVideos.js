@@ -15,6 +15,7 @@ for (var i = 0; i < videoContainers.length; i++) {
         //newVideoNode.setAttribute("class", "videoPlyr");
         newVideoNode.setAttribute("controls", "controls");
         newVideoNode.setAttribute("playsinline", "");
+        newVideoNode.setAttribute("preload", "none");
         if(videoPoster != "" || videoPoster != undefined || videoPoster != null) {
             newVideoNode.setAttribute("poster", videoPoster);
         }

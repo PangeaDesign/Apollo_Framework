@@ -23,7 +23,7 @@ if (setupWizard.haltStatus !== true) {
     } else if (heroMedia.indexOf(".mp4") >= 0) {
         heroBackgroundNode.className += " hero__background--video";
         if(apolloConfig.heroMediaMobile==""||apolloConfig.heroMediaMobile==undefined||apolloConfig.heroMediaMobile==null){
-            heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";          
+            heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMedia + "\" type=\"video/mp4\"></video>";
         }else{
             if (document.documentElement.clientWidth <= 568) {
                 heroBackgroundNode.innerHTML = "<video poster=\""+apolloConfig.heroMediaPoster+"\" playsinline=\"\" autoplay=\"\" muted=\"\" loop=\"\"><source src=\"" + apolloConfig.heroMediaMobile + "\" type=\"video/mp4\"></video>"
@@ -158,7 +158,7 @@ if (setupWizard.haltStatus !== true) {
         navSiteLiNode.appendChild(navSiteANode);
         navSiteANode.setAttribute("class", "anchor");
         navSiteANode.setAttribute("href", "#hero");
-        navSiteANode.text = "Home"; //add translations
+        navSiteANode.text = siteConfig[apolloConfig.projectSite].siteLocal["home"]; //add translations
 
         for (var i = 0; i < chaptersCount; i++) {
             navSiteLiNode = document.createElement("li");
