@@ -6,12 +6,12 @@ write myMeta() into console
 
 ## Apollo config
 + `setupWizard` | boolean |
-+ `projectSite` | af_da | af_en | af_pa | ar | ar_ru | az | be | cr_ru | cr_tb | cr_uk | en | press | ge | ge_ru | kz | kz_ru | al | kg | kg_ru | mk | mo | nc_ce | nc_ru | pk | fa | fa_en | ru | sib | sh | tj | tj_ru | tb | tb_ru | tu | tu_ru | ua | uz | uz_ru | ct |
++ `projectSite` | af_da | af_en | af_pa | ar | ar_ru | az | be | bu | cr_ru | cr_tb | cr_uk | en | press | ge | ge_ru | kz | kz_ru | al | kg | kg_ru | mk | mo | nc_ce | nc_ru | pk | fa | fa_en | ro | ru | sib | sh | tj | tj_ru | tb | tb_ru | tu | tu_ru | ua | uz | uz_ru | ct |
 + `projectTitle` | string |
 + `projectDescription` | string |
 + `projectAuthor` | string |
 + `projectImage` | string (jpg, jpeg, png) |
-+ `heroStyle` | centered | tabloid | cover-left | cover-right |
++ `heroStyle` | cover | tabloid | cover-left | cover-right |
 + `heroMedia` | string (gif, jpg, jpeg, png, mp4) |
 + `heroOverlay` | boolean |
 + `heroByline` | string |
