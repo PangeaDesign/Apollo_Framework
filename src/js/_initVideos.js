@@ -5,7 +5,7 @@
 var videoContainers = document.getElementsByClassName("video");
 
 for (var i = 0; i < videoContainers.length; i++) {
-    if (videoContainers[i].getAttribute("data-type") === "pangea") {
+    if (videoContainers[i].getAttribute("data-type") === "link") {
         //videoContainers[i].classList.add("videoPlyr");
         var videoURL = videoContainers[i].getAttribute("data-video-id");
         var videoMobileURL = videoContainers[i].getAttribute("data-video-mobile");
@@ -36,7 +36,7 @@ for (var i = 0; i < videoContainers.length; i++) {
                 newVideoNode.appendChild(newSourceMobileNode);
             }
         }
-        videoContainers[i].classList.add("videoCMS");
+        videoContainers[i].classList.add("videoLink");
     /*}else if(videoContainers[i].getAttribute("data-type") === "pangeaEmbed"){
         var videoURL = videoContainers[i].getAttribute("data-video-id");
         var videoMobileURL = videoContainers[i].getAttribute("data-video-mobile");
@@ -68,7 +68,7 @@ for (var i = 0; i < audioContainers.length; i++) {
 //var player = new Plyr(videoContainers);
 //var videoInstances = plyr.setup(".video");
 var videoInstancesExternal = plyr.setup(".videoPlyr");
-var videoInstances = document.getElementsByClassName("videoCMS");
+var videoInstances = document.getElementsByClassName("videoLink");
 
 for (var i = 0; i < videoInstances.length; i++){
     videoInstances[i].setAttribute("xmlid", i);
