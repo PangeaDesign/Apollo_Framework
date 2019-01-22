@@ -349,49 +349,49 @@ var siteConfig = {
     },
     bg: {
       siteBrand: "rfe",
-      siteCulture: "",
+      siteCulture: "rfe-latin-cyrillic-bulgarian",
       siteName: "Bulgaria",
-      siteNameLocal: "",
-      siteURL: "",
-      siteLangISO: "",
+      siteNameLocal: "Свободна Европа",
+      siteURL: "https://www.svobodnaevropa.bg/",
+      siteLangISO: "bg",
       siteDir: "ltr",
       siteSocialMeta: {
-          facebook: undefined,
-          twitter: ""
+          facebook: 568280086670706,
+          twitter: "@SomeAccount"
       },
       siteLocal: {
           home: "",
-          copyright: "",
-          followUs: "",
-          share: ""
+          copyright: "Радио Свободна Европа/Радио Свобода © " + new Date().getFullYear() + " RFE/RL, Inc. Всички права запазени.",
+          followUs: "Последвайте ни",
+          share: "Share"
       },
       siteShare: {
-          facebook: false,
-          twitter: false,
+          facebook: true,
+          twitter: true,
           vkontakte: false,
-          googlePlus: false,
-          email: false,
+          googlePlus: true,
+          email: true,
           telegram: false,
           odnoklassniki: false,
-          linkedin: false,
+          linkedin: true,
           balatarin: false,
           mailRu: false,
           whatsUp: false
       },
       siteSocial: {
-          facebook: undefined,
-          twitter: undefined,
+          facebook: "svobodnaevropa.bg/",
+          twitter: "channel/UC4NwHyV2nUhKF3xV4wqAyxQ",
           youtube: undefined,
           vkontakte: undefined,
           googlePlus: undefined,
-          instagram: undefined,
+          instagram: "svobodnaevropa/",
           telegram: undefined,
           odnoklassniki: undefined,
           livejournal: undefined,
           soundcloud: undefined
       },
       siteServices: {
-          rss: false,
+          rss: true,
           podcast: false,
           email: false
       }
@@ -1329,28 +1329,28 @@ var siteConfig = {
     },
     ro: {
       siteBrand: "rfe",
-      siteCulture: "",
-      siteName: "Romania",
-      siteNameLocal: "",
-      siteURL: "",
-      siteLangISO: "",
+      siteCulture: "rfe-latin-cyrillic",
+      siteName: "Europa Liberă România",
+      siteNameLocal: "Europa Liberă România",
+      siteURL: "https://romania.europalibera.org/",
+      siteLangISO: "ro",
       siteDir: "ltr",
       siteSocialMeta: {
-          facebook: undefined,
-          twitter: ""
+          facebook: 568280086670706,
+          twitter: "@SomeAccount"
       },
       siteLocal: {
           home: "",
-          copyright: "",
-          followUs: "",
-          share: ""
+          copyright: "Radio Free Europe/Radio Liberty © " + new Date().getFullYear() + " RFE/RL, Inc. All Rights Reserved.",
+          followUs: "Urmărește-ne",
+          share: "Distribuie"
       },
       siteShare: {
-          facebook: false,
-          twitter: false,
+          facebook: true,
+          twitter: true,
           vkontakte: false,
-          googlePlus: false,
-          email: false,
+          googlePlus: true,
+          email: true,
           telegram: false,
           odnoklassniki: false,
           linkedin: false,
@@ -1359,12 +1359,12 @@ var siteConfig = {
           whatsUp: false
       },
       siteSocial: {
-          facebook: undefined,
+          facebook: "romania-europalibera",
           twitter: undefined,
-          youtube: undefined,
+          youtube: "channel/UCOk4Hl2jxsTJ4AoyV2zukoQ",
           vkontakte: undefined,
           googlePlus: undefined,
-          instagram: undefined,
+          instagram: "europalibera.romania/",
           telegram: undefined,
           odnoklassniki: undefined,
           livejournal: undefined,

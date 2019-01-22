@@ -1,0 +1,50 @@
+// Pangea Apollo Framework 2.0 [Reykjavík]
+// 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
+// All rights reserved
+@import 'colors-rfe';
+@font-face {
+    font-family: "Skolar Sans PE";
+    src: url("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/fonts/SkolarSansCyrlBGRCn-Bd_v3.0.woff2") format("woff2");
+    /*font-weight: 400;*/
+}
+/*@font-face {
+    font-family: "Skolar Sans PE";
+    src: url("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/fonts/SkolarSansCyrlBGRCn-Bd_v3.0.woff2") format("woff2");
+    font-weight: 700;
+}*/
+@font-face {
+    font-family: "Skolar PE";
+    src: url("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/fonts/SkolarCyrlBGR-Light_v3.0.woff2") format("woff2");
+    /*font-weight: 300;*/
+}
+/*@font-face {
+    font-family: "Skolar PE";
+    src: url("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/fonts/SkolarCyrlBGR-Light_v3.0.woff2") format("woff2");
+    font-weight: 700;
+}*/
+$direction-forwards: left;
+$direction-backwards: right;
+$font-primary: "Skolar Sans PE";
+$font-secondary: "Skolar PE";
+
+$margin-continue: 0 20px 0 auto;
+$border-left-quote: 5px solid $color-text-secondary;
+$border-right-quote: none;
+$padding-left-quote: 20px;
+$padding-right-quote: none;
+$padding-left-quote-s: 16px;
+$padding-right-quote-s: none;
+$padding-left-quote-xs: 12px;
+$padding-right-quote-xs: none;
+
+body,
+html {
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+main {
+    scroll-behavior: smooth;
+}

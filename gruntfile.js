@@ -18,7 +18,9 @@ module.exports = function(grunt) {
                     'dist/css/apollo-framework-2.0-rfe-georgian-light.min.css': ['src/sass/main-rfe-georgian-light.scss'],
                     'dist/css/apollo-framework-2.0-rfe-georgian-dark.min.css': ['src/sass/main-rfe-georgian-dark.scss'],
                     'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-light.min.css': ['src/sass/main-rfe-latin-cyrillic-light.scss'],
-                    'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-dark.min.css': ['src/sass/main-rfe-latin-cyrillic-dark.scss']
+                    'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-dark.min.css': ['src/sass/main-rfe-latin-cyrillic-dark.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-bulgarian-light.min.css': ['src/sass/main-rfe-latin-cyrillic-bulgarian-light.scss'],
+                    'dist/css/apollo-framework-2.0-rfe-latin-cyrillic-bulgarian-dark.min.css': ['src/sass/main-rfe-latin-cyrillic-bulgarian-dark.scss']
                 }
             }
         },

@@ -61,6 +61,14 @@ var siteAnalytics = {
         propertyID: 423
     },
     7: {
+        siteURL: "svobodnaevropa.bg",
+        entity: "RFE",
+        lang: "Bulgarian",
+        langService: "RFERL Bulgaria",
+        shortLangService: "BUL",
+        propertyID: 527
+    },
+    8: {
         siteURL: "ru.krymr.com",
         entity: "RFE",
         lang: "Russian",
@@ -68,7 +76,7 @@ var siteAnalytics = {
         shortLangService: "CRI",
         propertyID: 507
     },
-    8: {
+    9: {
         siteURL: "ktat.krymr.com",
         entity: "RFE",
         lang: "Tatar",
@@ -76,7 +84,7 @@ var siteAnalytics = {
         shortLangService: "CRI",
         propertyID: 508
     },
-    9: {
+    10: {
         siteURL: "ua.krymr.com",
         entity: "RFE",
         lang: "Ukrainian",
@@ -84,7 +92,7 @@ var siteAnalytics = {
         shortLangService: "CRI",
         propertyID: 509
     },
-    10: {
+    11: {
         siteURL: "rferl.org",
         entity: "RFE",
         lang: "English",
@@ -92,7 +100,7 @@ var siteAnalytics = {
         shortLangService: "ENG",
         propertyID: 420
     },
-    11: {
+    12: {
         siteURL: "pressroom.rferl.org",
         entity: "RFE",
         lang: "English",
@@ -100,7 +108,7 @@ var siteAnalytics = {
         shortLangService: "ENPR",
         propertyID: 539
     },
-    12: {
+    13: {
         siteURL: "radiotavisupleba.ge",
         entity: "RFE",
         lang: "Georgian",
@@ -108,7 +116,7 @@ var siteAnalytics = {
         shortLangService: "GEO",
         propertyID: 431
     },
-    13: {
+    14: {
         siteURL: "ekhokavkaza.com",
         entity: "RFE",
         lang: "Russian",
@@ -116,7 +124,7 @@ var siteAnalytics = {
         shortLangService: "GEO",
         propertyID: 436
     },
-    14: {
+    15: {
         siteURL: "azattyq.org",
         entity: "RFE",
         lang: "Kazakh",
@@ -124,7 +132,7 @@ var siteAnalytics = {
         shortLangService: "KAZ",
         propertyID: 417
     },
-    15: {
+    16: {
         siteURL: "rus.azattyq.org",
         entity: "RFE",
         lang: "Russian",
@@ -132,7 +140,7 @@ var siteAnalytics = {
         shortLangService: "KAZ",
         propertyID: 418
     },
-    16: {
+    17: {
         siteURL: "evropaelire.org",
         entity: "RFE",
         lang: "Albanian",
@@ -140,7 +148,7 @@ var siteAnalytics = {
         shortLangService: "KOS",
         propertyID: 416
     },
-    17: {
+    18: {
         siteURL: "azattyk.org",
         entity: "RFE",
         lang: "Kyrgyz",
@@ -148,7 +156,7 @@ var siteAnalytics = {
         shortLangService: "KYR",
         propertyID: 419
     },
-    18: {
+    19: {
         siteURL: "rus.azattyk.org",
         entity: "RFE",
         lang: "Russian",
@@ -156,7 +164,7 @@ var siteAnalytics = {
         shortLangService: "KYR",
         propertyID: 440
     },
-    19: {
+    20: {
         siteURL: "slobodnaevropa.mk",
         entity: "RFE",
         lang: "Macedonian",
@@ -164,7 +172,7 @@ var siteAnalytics = {
         shortLangService: "MAC",
         propertyID: 435
     },
-    20: {
+    21: {
         siteURL: "europalibera.org",
         entity: "RFE",
         lang: "Romanian",
@@ -172,7 +180,7 @@ var siteAnalytics = {
         shortLangService: "MOL",
         propertyID: 427
     },
-    21: {
+    22: {
         siteURL: "radiomarsho.com",
         entity: "RFE",
         lang: "Chechen",
@@ -180,7 +188,7 @@ var siteAnalytics = {
         shortLangService: "CHE",
         propertyID: 437
     },
-    22: {
+    23: {
         siteURL: "kavkazr.com",
         entity: "RFE",
         lang: "Russian",
@@ -188,7 +196,7 @@ var siteAnalytics = {
         shortLangService: "CHE",
         propertyID: 535
     },
-    23: {
+    24: {
         siteURL: "mashaalradio.com",
         entity: "RFE",
         lang: "Pashto",
@@ -196,7 +204,7 @@ var siteAnalytics = {
         shortLangService: "PAK",
         propertyID: 438
     },
-    24: {
+    25: {
         siteURL: "radiofarda.com",
         entity: "RFE",
         lang: "Persian",
@@ -204,7 +212,7 @@ var siteAnalytics = {
         shortLangService: "FAR",
         propertyID: 415
     },
-    25: {
+    26: {
         siteURL: "en.radiofarda.com",
         entity: "RFE",
         lang: "English",
@@ -212,7 +220,15 @@ var siteAnalytics = {
         shortLangService: "FAR",
         propertyID: 542
     },
-    26: {
+    27: {
+        siteURL: "romania.europalibera.org",
+        entity: "RFE",
+        lang: "Romanian",
+        langService: "RFERL Romanian",
+        shortLangService: "ROM",
+        propertyID: 526
+    },
+    28: {
         siteURL: "svoboda.org",
         entity: "RFE",
         lang: "Russian",
@@ -220,7 +236,7 @@ var siteAnalytics = {
         shortLangService: "RU",
         propertyID: 414
     },
-    27: {
+    29: {
         siteURL: "sibreal.org",
         entity: "RFE",
         lang: "Russian",
@@ -228,7 +244,7 @@ var siteAnalytics = {
         shortLangService: "RU",
         propertyID: 543
     },
-    28: {
+    30: {
         siteURL: "slobodnaevropa.org",
         entity: "RFE",
         lang: "Serbo-Croatian",
@@ -236,7 +252,7 @@ var siteAnalytics = {
         shortLangService: "SER",
         propertyID: 430
     },
-    29: {
+    31: {
         siteURL: "ozodi.org",
         entity: "RFE",
         lang: "Tajik",
@@ -244,7 +260,7 @@ var siteAnalytics = {
         shortLangService: "TAJ",
         propertyID: 422
     },
-    30: {
+    32: {
         siteURL: "rus.ozodi.org",
         entity: "RFE",
         lang: "Russian",
@@ -252,7 +268,7 @@ var siteAnalytics = {
         shortLangService: "TAJ",
         propertyID: 442
     },
-    31: {
+    33: {
         siteURL: "azatliq.org",
         entity: "RFE",
         lang: "Tatar-Bashkir",
@@ -260,7 +276,7 @@ var siteAnalytics = {
         shortLangService: "TB",
         propertyID: 424
     },
-    32: {
+    34: {
         siteURL: "idelreal.org",
         entity: "RFE",
         lang: "Russian",
@@ -268,7 +284,7 @@ var siteAnalytics = {
         shortLangService: "TB",
         propertyID: 534
     },
-    33: {
+    35: {
         siteURL: "azathabar.com",
         entity: "RFE",
         lang: "Turkmen",
@@ -276,7 +292,7 @@ var siteAnalytics = {
         shortLangService: "TUR",
         propertyID: 426
     },
-    34: {
+    36: {
         siteURL: "rus.azathabar.com",
         entity: "RFE",
         lang: "Russian",
@@ -284,7 +300,7 @@ var siteAnalytics = {
         shortLangService: "TUR",
         propertyID: 536
     },
-    35: {
+    37: {
         siteURL: "radiosvoboda.org",
         entity: "RFE",
         lang: "Ukrainian",
@@ -292,7 +308,7 @@ var siteAnalytics = {
         shortLangService: "UKR",
         propertyID: 421
     },
-    36: {
+    38: {
         siteURL: "ozodlik.org",
         entity: "RFE",
         lang: "Uzbek - Cyrillic",
@@ -300,7 +316,7 @@ var siteAnalytics = {
         shortLangService: "UZB",
         propertyID: 425
     },
-    37: {
+    39: {
         siteURL: "rus.ozodlik.org",
         entity: "RFE",
         lang: "Russian",
@@ -308,7 +324,7 @@ var siteAnalytics = {
         shortLangService: "UZB",
         propertyID: 529
     },
-    38: {
+    40: {
         siteURL: "currenttime.tv",
         entity: "RFE-VOA",
         lang: "Russian",
