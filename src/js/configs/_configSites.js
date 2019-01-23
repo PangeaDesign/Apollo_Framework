@@ -41,7 +41,7 @@ var siteConfig = {
             youtube: "user/Azadiradio",
             vkontakte: undefined,
             googlePlus: undefined,
-            instagram: undefined,
+            instagram: "radioazadi_da",
             telegram: undefined,
             odnoklassniki: undefined,
             livejournal: undefined,
@@ -139,7 +139,7 @@ var siteConfig = {
             youtube: "user/Azadiradio",
             vkontakte: undefined,
             googlePlus: undefined,
-            instagram: undefined,
+            instagram: "azadiradio_pa",
             telegram: undefined,
             odnoklassniki: undefined,
             livejournal: undefined,
@@ -187,7 +187,7 @@ var siteConfig = {
             twitter: "azatutyunradio",
             youtube: "azatutyunradio",
             vkontakte: "azatutyuntv",
-            googlePlus: "u/0/117496679283230849076/posts",
+            googlePlus: undefined, //"u/0/117496679283230849076/posts",
             instagram: "azatutyuntv",
             telegram: undefined,
             odnoklassniki: "azatutyun",
@@ -286,7 +286,7 @@ var siteConfig = {
             youtube: "user/AzadliqRadiosu",
             vkontakte: undefined,
             googlePlus: "u/0/+azadliqradiosu",
-            instagram: undefined,
+            instagram: "azadliqradiosu", //undefined
             telegram: undefined,
             odnoklassniki: "radioazadliq",
             livejournal: undefined,
@@ -322,7 +322,7 @@ var siteConfig = {
             vkontakte: true,
             googlePlus: false,
             email: true,
-            telegram: false,
+            telegram: true,
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
@@ -379,12 +379,12 @@ var siteConfig = {
           whatsUp: false
       },
       siteSocial: {
-          facebook: "svobodnaevropa.bg/",
-          twitter: "channel/UC4NwHyV2nUhKF3xV4wqAyxQ",
-          youtube: undefined,
+          facebook: "svobodnaevropa.bg",
+          twitter: undefined,
+          youtube: "channel/UC4NwHyV2nUhKF3xV4wqAyxQ",
           vkontakte: undefined,
           googlePlus: undefined,
-          instagram: "svobodnaevropa/",
+          instagram: "svobodnaevropa",
           telegram: undefined,
           odnoklassniki: undefined,
           livejournal: undefined,
@@ -420,7 +420,7 @@ var siteConfig = {
             vkontakte: true,
             googlePlus: true,
             email: true,
-            telegram: false,
+            telegram: true,
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
@@ -434,7 +434,7 @@ var siteConfig = {
             vkontakte: "krymrealii",
             googlePlus: undefined,
             instagram: "krymrealii",
-            telegram: undefined,
+            telegram: "krymrealii", //undefined,
             odnoklassniki: "group/52237190299809",
             livejournal: undefined,
             soundcloud: "radio-krym-realii"
@@ -532,7 +532,7 @@ var siteConfig = {
             vkontakte: "krymrealii",
             googlePlus: undefined,
             instagram: "krymrealii",
-            telegram: undefined,
+            telegram: "krymrealii", //undefined,
             odnoklassniki: "group/52237190299809",
             livejournal: undefined,
             soundcloud: "radio-krym-realii"
@@ -628,7 +628,7 @@ var siteConfig = {
             twitter: "RFERLPress",
             youtube: "user/rferlonline",
             vkontakte: undefined,
-            googlePlus: "rferl",
+            googlePlus: undefined, //"rferl",
             instagram: "rfe.rl",
             telegram: undefined,
             odnoklassniki: undefined,
@@ -727,7 +727,7 @@ var siteConfig = {
             youtube: "channel/UCFV9RoQ52yi6ls3_nIsYb-g",
             vkontakte: "ekhokavkaza",
             googlePlus: "u/0/+Ekhokavkaza",
-            instagram: undefined,
+            instagram: "ekho_kavkaza", //undefined,
             telegram: undefined,
             odnoklassniki: undefined,
             livejournal: undefined,
@@ -778,7 +778,7 @@ var siteConfig = {
             googlePlus: "b/116539418582921678432/+%D0%B0%D0%B7%D0%B0%D1%82%D1%82%D1%8B%D0%BA/posts",
             instagram: "azattyq",
             telegram: undefined,
-            odnoklassniki: "azattyq",
+            odnoklassniki: undefined, //"azattyq",
             livejournal: undefined,
             soundcloud: undefined
         },
@@ -827,7 +827,7 @@ var siteConfig = {
             googlePlus: "b/116539418582921678432/+%D0%B0%D0%B7%D0%B0%D1%82%D1%82%D1%8B%D0%BA/posts",
             instagram: "azattyq",
             telegram: undefined,
-            odnoklassniki: "azattyq",
+            odnoklassniki: undefined, //"azattyq",
             livejournal: undefined,
             soundcloud: undefined
         },
@@ -980,7 +980,7 @@ var siteConfig = {
         },
         siteServices: {
             rss: true,
-            podcast: true,
+            podcast: false,
             email: false
         }
     },
@@ -1037,13 +1037,13 @@ var siteConfig = {
         siteBrand: "rfe",
         siteCulture: "rfe-latin-cyrillic",
         siteName: "Moldovan",
-        siteNameLocal: "Europa Liberă",
-        siteURL: "https://www.europalibera.org/",
+        siteNameLocal: "Radio Europa Liberă",
+        siteURL: "https://www.moldova.europalibera.org/",
         siteLangISO: "ro",
         siteDir: "ltr",
         siteSocialMeta: {
-            facebook: 182173838166,
-            twitter: undefined
+            facebook: 1161189263936924,
+            twitter: "@SomeAccount"
         },
         siteLocal: {
             home: "",
@@ -1057,12 +1057,12 @@ var siteConfig = {
             vkontakte: true,
             googlePlus: true,
             email: true,
-            telegram: false,
+            telegram: true,
             odnoklassniki: true,
             linkedin: false,
             balatarin: false,
             mailRu: false,
-            whatsUp: false
+            whatsUp: true
         },
         siteSocial: {
             facebook: "europalibera.org",
@@ -1072,7 +1072,7 @@ var siteConfig = {
             googlePlus: undefined,
             instagram: "europalibera",
             telegram: undefined,
-            odnoklassniki: "profile/464250734781",
+            odnoklassniki: "group/52203659460797", //"profile/464250734781",
             livejournal: undefined,
             soundcloud: undefined
         },
@@ -1117,11 +1117,11 @@ var siteConfig = {
             facebook: "radiomarsho",
             twitter: "radiomarsho",
             youtube: "user/arsno10",
-            vkontakte: undefined,
+            vkontakte: "marshoradio",
             googlePlus: undefined,
-            instagram: undefined,
+            instagram: "marsho.radio",
             telegram: undefined,
-            odnoklassniki: undefined,
+            odnoklassniki: "radiomarsho",
             livejournal: undefined,
             soundcloud: undefined
         },
@@ -1168,7 +1168,7 @@ var siteConfig = {
             youtube: "channel/UCa0Vkb4iSyFGyy8arlz7MCQ",
             vkontakte: "kavkaz_realii",
             googlePlus: undefined,
-            instagram: undefined,
+            instagram: "kavkaz.realii",
             telegram: undefined,
             odnoklassniki: "kavkaz.realii",
             livejournal: undefined,
@@ -1265,7 +1265,7 @@ var siteConfig = {
             twitter: "radiofarda_",
             youtube: "user/TheRadiofarda",
             vkontakte: undefined,
-            googlePlus: "https://plus.google.com/+radiofarda/posts",
+            googlePlus: "+radiofarda/posts",
             instagram: "radiofarda",
             telegram: "radiofarda",
             odnoklassniki: undefined,
@@ -1364,7 +1364,7 @@ var siteConfig = {
           youtube: "channel/UCOk4Hl2jxsTJ4AoyV2zukoQ",
           vkontakte: undefined,
           googlePlus: undefined,
-          instagram: "europalibera.romania/",
+          instagram: "europalibera.romania",
           telegram: undefined,
           odnoklassniki: undefined,
           livejournal: undefined,
@@ -1416,7 +1416,7 @@ var siteConfig = {
             instagram: "radiosvoboda",
             telegram: "radiosvoboda",
             odnoklassniki: "radio.svoboda",
-            livejournal: "http://svobodaradio.livejournal.com/",
+            livejournal: undefined, //"http://svobodaradio.livejournal.com/",
             soundcloud: "radio-svoboda"
         },
         siteServices: {
@@ -1459,17 +1459,17 @@ var siteConfig = {
         siteSocial: {
             facebook: "sibrealii",
             twitter: "sibrealii",
-            youtube: undefined,
+            youtube: "channel/UCXbY7Lu7rj1ZwpkzDjJDFIw?fbclid=IwAR3cYD0PGvN5yBLPZ_9JnoJd3hsq4QglSv0bqZUFvMTytSx0hAwwgz26uNQ",
             vkontakte: "sibrealii",
             googlePlus: undefined,
-            instagram: undefined,
+            instagram: "sibrealii",
             telegram: undefined,
             odnoklassniki: "group/53813651439688",
             livejournal: undefined,
             soundcloud: undefined
         },
         siteServices: {
-            rss: false,
+            rss: true,
             podcast: false,
             email: false
         }
@@ -1506,7 +1506,7 @@ var siteConfig = {
             whatsUp: false
         },
         siteSocial: {
-            facebook: "RSE.Balkan", // ??? pages/Slobodna-Evropa-Balkanski-Servis/196390633882?_rdr
+            facebook: "RSE.Balkan", //"pages/Slobodna-Evropa-Balkanski-Servis/196390633882?_rdr",
             twitter: "RSE_Balkan",
             youtube: "user/RadioSlobodnaEvropa",
             vkontakte: undefined,
@@ -1520,7 +1520,7 @@ var siteConfig = {
         siteServices: {
             rss: true,
             podcast: true,
-            email: true
+            email: false
         }
     },
     tj: {
@@ -1743,7 +1743,7 @@ var siteConfig = {
             vkontakte: true,
             googlePlus: false,
             email: true,
-            telegram: true,
+            telegram: false,
             odnoklassniki: false,
             linkedin: false,
             balatarin: false,
@@ -1806,7 +1806,7 @@ var siteConfig = {
             vkontakte: "radioazatlyk",
             googlePlus: undefined,
             instagram: undefined,
-            telegram: undefined,
+            telegram: "azatlykradiosy",
             odnoklassniki: "radioazatlyk",
             livejournal: undefined,
             soundcloud: undefined
@@ -1838,7 +1838,7 @@ var siteConfig = {
         siteShare: {
             facebook: true,
             twitter: true,
-            vkontakte: false,
+            vkontakte: true,
             googlePlus: true,
             email: true,
             telegram: false,
@@ -1855,7 +1855,7 @@ var siteConfig = {
             vkontakte: "club18625777",
             googlePlus: "u/0/+radiosvoboda/posts",
             instagram: "radio.svoboda",
-            telegram: undefined,
+            telegram: "svoboda_radio",
             odnoklassniki: "group/52030404493473",
             livejournal: undefined,
             soundcloud: "radiosvoboda"
@@ -1953,7 +1953,7 @@ var siteConfig = {
             vkontakte: undefined,
             googlePlus: undefined,
             instagram: "radioozodlik",
-            telegram: undefined,
+            telegram: "joinchat/AAAAADwn2PokiMCcyNsWLw",
             odnoklassniki: "ozodlikradiosi",
             livejournal: undefined,
             soundcloud: "ozodlikradiosi"

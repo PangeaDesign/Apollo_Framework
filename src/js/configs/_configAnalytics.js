@@ -173,7 +173,7 @@ var siteAnalytics = {
         propertyID: 435
     },
     21: {
-        siteURL: "europalibera.org",
+        siteURL: "moldova.europalibera.org",
         entity: "RFE",
         lang: "Romanian",
         langService: "RFERL Moldovan",
