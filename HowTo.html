@@ -28,7 +28,7 @@
 
     <script id="apollo-config">
         var apolloConfig = {
-            setupWizard: true,
+            setupWizard: false,
             projectSite: "en",
             projectTitle: "Welcome to Apollo 2.0",
             projectDescription: "Welcome to Apollo version 2.0, template for creating microsite.",
@@ -40,6 +40,7 @@
             heroOverlay: true,
             heroByline: "microsite framework",
             pageTheme: "light", // possible values: dark, light
+            shareMenu: true, // possible values: false, true
             footerBlockTitle: "About",
             footerBlockContent: "Iceland is a Nordic island country of Europe located in the North Atlantic Ocean.<br>It has a population of 332,529 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe. The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population."
             }
@@ -85,12 +86,13 @@
             <p><span>setupWizard</span> is helping you to setup the main config correctly with the messages in the console. Before publishing your project, choose 'false' to turn it off.</p>
             <p><span>projectSite</span> - Put the abbreviation of your site here (e.g. en for RFE English). See the list of all abbreviations here: <a href="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/projectSites.html">List of abbreviations</a></p>
             <p><span>projectTitle</span> - Put the title of your story here.</p>
-            <p><span>projectDescription</span> - Here you can add the description or introduction of your story.</p>
-            <p><span>projectImage</span> - Place a URL leading to the image that you would like to have as the main image of your story</p>
+            <p><span>projectDescription</span> - Here you can add the description or introduction of your story for social media.</p>
+            <p><span>projectImage</span> - Place a URL leading to the image that you would like to have as the main image of your story for social media.</p>
             <p><span>heroStyle</span> - Here you can define the style of the so-called Hero page (first screen of the story). This is there you would see the title, the description and the main media(picture or video) of the story. You can choose the style of the Hero page from these values: <b>cover-left, cover-right, cover, tabloid</b></p>
             <p><span>heroMedia</span> - Here you can put the URL of the media that you choose for the first screen of the story, which can be in these formats: <b>mp4, jpg, jpeg, gif, png</b></p>
+            <p><sapn>heroMediaMobile</span> - Here you can put smaller version of your video for mobile devices.</p>
             <p><span>heroMediaPoster</span> - In case the media for the Hero page is mp4, you can choose poster for the video (the image that will be shown while the video is being loaded).</p>
-            <p><span>heroOverlay</span> - This is a color overlay for hero media, so that the title and info about your project will be more visible. Possible values: <b>true, false</b></p>
+            <p><span>heroOverlay</span> - This is a dark overlay for hero media, so that the title and info about your project will be more visible. Possible values: <b>true, false</b></p>
             <p><span>heroByline</span> - Here you can place the author's of your story name.</p>
             <p><span>pageTheme</span> - Possible values: <b>light, dark</b></p>
             <p><span>footerBlockTitle</span> - This is the title of the footer.</p>
@@ -201,7 +203,7 @@
             <h4>Other text styles - Interview text</h4>
             <p>Here is an example of the interview paragraphs:</p>
             <code>
-              &lt;div class="container container-big"&gt;<br>
+              &lt;div class="container interview"&gt;<br>
               &nbsp;&nbsp;&lt;p&gt;&lt;span&gt;Interrogator:&lt;/span&gt;&lt;p&gt;<br>
               &nbsp;&nbsp;&lt;p&gt;&lt;span&gt;Answerer:&lt;/span&gt;&lt;p&gt;<br>
               &lt;/div&gt;<br>
@@ -430,15 +432,15 @@
         </div>
 
         <div class="container">
-            <h2>Videos - mp4 video (cms)</h2>
+            <h2>Videos - mp4 video link</h2>
             <code>&lt;div class="video" data-type="link" data-video-poster="url_of_poster.jpg" data-video-id="url_of_video.mp4"&gt;&lt;/div&gt;</code>
-        </div>
-        <!--div class="container">
-            <h3>Iframe embeded from CMS</h3>
-            <div class="video" data-type="pangeaEmbed" data-video-id="29699199"></div>
-        </div-->
-        <div class="container">
             <div class="video" data-type="link" data-video-poster="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/images/IcelandPoster.jpg" data-video-id="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/videos/Hero_fullhd.mp4" data-video-mobile="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/videos/Hero_hd.mp4"></div>
+        </div>
+        <div class="container">
+            <h2>Videos - embedded from CMS</h2>
+            <p>If your video is already in CMS, you can copy "Embedded Code iframe" and paste it into one of containers.</p>
+            <code>&lt;iframe src="https://test.rferl.org/embed/player/article/29699199.html" csrolling="no" data-video-id="26880424"&gt;&lt;/iframe&gt;</code>
+            <iframe src="https://test.rferl.org/embed/player/article/29699199.html" scrolling="no" frameborder="0" width="640" height="363" allowfullscreen></iframe>
         </div>
         <p>Videos can be also in different containers:</p>
         <div class="container container--full">
@@ -531,7 +533,8 @@
         </div>
 
     </main>
-    <script src="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/js/apollo-framework-2.0.min.js"></script>
+    <!--script src="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/js/apollo-framework-2.0.min.js"></script-->
+    <script src="dist/js/apollo-framework-2.0.min.js"></script>
 
 </body>
 

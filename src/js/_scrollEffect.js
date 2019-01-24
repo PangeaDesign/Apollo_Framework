@@ -19,9 +19,10 @@ if (scrollEffectConfig.scrollEffect == true) {
         scrollingScrollEffect();
     });
 } else {
-    var images = document.getElementsByClassName("scroll--container");
-    for (var i = 0; i < images.length; i++) {
-        images[i].classList.remove("scroll--container");
+    images = document.getElementsByClassName("scroll--container");
+    imagesCount = images.length;
+    for (var i = 0; i < imagesCount; i++) {
+        images[0].classList.remove("scroll--container");
     }
     startScrollEffect();
 }

@@ -107,3 +107,22 @@ for (var i = 0; i < audioInstances.length; i++) {
         }
     });
 };
+
+var videoEmbedded = document.getElementsByTagName("iframe");
+var videoAspects = [];
+function startVideoEmbedded(){
+    for(var i = 0; i < videoEmbedded.length; i++){
+        videoAspects[i] = videoEmbedded[i].getAttribute("width")/videoEmbedded[i].getAttribute("height");
+        videoEmbedded[i].setAttribute("width", videoEmbedded[i].parentNode.getBoundingClientRect().width);
+        videoEmbedded[i].setAttribute("height", videoEmbedded[i].clientWidth/videoAspects[i]);
+    }
+}
+if(videoEmbedded.length>0){
+    window.addEventListener("resize", function(){
+        resizeVideoEmbedded();
+    });
+}
+function resizeVideoEmbedded(){
+    videoEmbedded[i].setAttribute("width", videoEmbedded[i].parentNode.getBoundingClientRect().width);
+    videoEmbedded[i].setAttribute("height", videoEmbedded[i].clientWidth/videoAspects[i]);
+}

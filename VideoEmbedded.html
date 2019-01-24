@@ -60,26 +60,14 @@
 
     <main class="content" id="main">
 
-        <div class="container">
-              <iframe id="videoEmbedded" src="https://test.rferl.org/embed/player/article/29699199.html" scrolling="no" frameborder="0" width="640" height="363" allowfullscreen></iframe>
+        <div class="container container--big">
+              <iframe src="https://test.rferl.org/embed/player/article/29699199.html" scrolling="no" frameborder="0" width="640" height="363" allowfullscreen></iframe>
         </div>
-
     </main>
 
     <!--script src="https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/js/apollo-framework-2.0.min.js"></script-->
-    <script src="dist/js/apollo-framework-2.0.min.js"></script>
-    <script>
-        var videoIframe = document.getElementById("videoEmbedded");
-        var videoAspect = videoIframe.getAttribute("width")/videoIframe.getAttribute("height");
+    <script src="dist/js/apollo-framework-2.0.min.js?nocache=1"></script>
 
-        videoIframe.setAttribute("width", "100%");
-        console.log(videoIframe.offsetWidth);
-        videoIframe.setAttribute("height", videoIframe.innerWidth*videoAspect);
-
-        window.addEventListener("resize", function() {
-
-        });
-    </script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
 ///////////////////////
 // V A R I A B L E S //
 ///////////////////////
+
 var pageHtmlNode = document.getElementsByTagName("html")[0];
 var pageHeadNode = document.getElementsByTagName("head")[0];
 var pageBodyNode = document.getElementsByTagName("body")[0];
@@ -52,6 +53,7 @@ if (setupWizard.haltStatus === false) {
       window.onload = function() {
           var preloaderDOM = document.getElementById("preloader");
           preloaderDOM.className += "preloader--loading";
+          startVideoEmbedded();
           setTimeout(function() {
               preloaderDOM.className = "preloader--loaded";
           }, 1500);
