@@ -77,6 +77,7 @@ footer#footer {
 
 .scroll-image-fixed {
     position: fixed;
+    transform: translate3d(0,0,0);
     box-sizing: border-box;
     width: 100%;
     padding: 0;
@@ -131,16 +132,26 @@ footer#footer {
     position: relative;
 }
 
+.scroll--container figure figcaption{
+    display: none;
+}
+
 .scroll-aside figure {
     position: absolute;
     width: 350px;
+    line-height: 1.2;
     /*right: 0;*/
     /*margin-right:0px !important;*/
     transform: translateX(0px) !important;
 }
 
+.scroll--container.scroll-aside figure figcaption {
+    display: block;
+}
+
 .scroll-aside .scroll-aside-fixed {
     position: fixed;
+    transform: translate3d(0,0,0);
     box-sizing: border-box;
     width: calc(100% - 40px);
     max-width: $breakpoint-s;

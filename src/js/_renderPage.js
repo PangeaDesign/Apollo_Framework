@@ -103,18 +103,19 @@ if (setupWizard.haltStatus !== true) {
 
     var headerRightNode = document.createElement("div");
     headerRightNode.classList.add("header__right-container");
-    var headerShareNode = document.createElement("div"); //instead a
-    headerShareNode.classList.add("page__header-share");
-    headerShareNode.setAttribute("id", "page__header-share");
-    /*headerShareNode.setAttribute("href", "#");
-    headerShareNode.setAttribute("target", "_blank");*/
-    headerShareNode.innerHTML = icons.share + siteConfig[apolloConfig.projectSite].siteLocal["share"];
-
     headerNode.appendChild(headerLeftNode);
     headerLeftNode.appendChild(headerLogoNode);
     httpGetIcon("https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/" + apolloConfig.projectSite + ".svg?nocache=1", "page__header-logo");
     headerNode.appendChild(headerRightNode);
-    headerRightNode.appendChild(headerShareNode);
+    if(apolloConfig.shareMenu!=false){
+    var headerShareNode = document.createElement("div"); //instead a
+        headerShareNode.classList.add("page__header-share");
+        headerShareNode.setAttribute("id", "page__header-share");
+        /*headerShareNode.setAttribute("href", "#");
+        headerShareNode.setAttribute("target", "_blank");*/
+        headerShareNode.innerHTML = icons.share + siteConfig[apolloConfig.projectSite].siteLocal["share"];
+        headerRightNode.appendChild(headerShareNode);
+    }
 
     var allContainers = document.getElementsByClassName("container");
     var chaptersCount = 0;
@@ -200,6 +201,7 @@ if (setupWizard.haltStatus !== true) {
                     newShareIcon.setAttribute("href", configPaths.shareMedia[key] + currentURL);
                 };
                 newShareIcon.innerHTML = icons[key];
+                newShareIcon.setAttribute("target", "_blank");
                 sharingIconsContainer.appendChild(newShareIcon);
             };
         });
@@ -219,7 +221,9 @@ if (setupWizard.haltStatus !== true) {
     function closeSharing() {
         document.getElementById("sharing-icons").classList.remove("opened");
     }
-    renderSharingIcons();
+    if(apolloConfig.shareMenu!=false){
+        renderSharingIcons();
+    }
 
     ///////////////////
     // G A L L E R Y //

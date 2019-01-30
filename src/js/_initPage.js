@@ -27,17 +27,17 @@ function onResize() {
         if (window.innerWidth <= 568) {
             changedDataSizeImage[i].setAttribute("data-size", "568x" + Math.round(1 / (changedDataSizeImage[i].children[0].children[0].children[3].width / changedDataSizeImage[i].children[0].children[0].children[3].height) * 568));
         } else if (window.innerWidth > 568 && window.innerWidth <= 1024) {
-            changedDataSizeImage[i].setAttribute("data-size", "1024x" + Math.round(1 / (changedDataSizeImage[i].children[0].children[0].children[3].width / changedDataSizeImage[i].children[0].children[0].children[3].height) * 1024));
+            changedDataSizeImage[i].setAttribute("data-size", Math.min(window.innerWidth, 1024) + "x" + Math.round(1 / (changedDataSizeImage[i].children[0].children[0].children[3].width / changedDataSizeImage[i].children[0].children[0].children[3].height) * Math.min(window.innerWidth, 1024)));
         } else if (window.innerWidth > 1024) {
-            changedDataSizeImage[i].setAttribute("data-size", "1920x" + Math.round(1 / (changedDataSizeImage[i].children[0].children[0].children[3].width / changedDataSizeImage[i].children[0].children[0].children[3].height) * 1920));
+            changedDataSizeImage[i].setAttribute("data-size", Math.min(window.innerWidth, 1600) +"x" + Math.round(1 / (changedDataSizeImage[i].children[0].children[0].children[3].width / changedDataSizeImage[i].children[0].children[0].children[3].height) * Math.min(window.innerWidth, 1600)));
         }
-        if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
+        if (imageSource.slice(0, 11) == "https://gdb") {
             if(window.innerWidth <= 568){
                 changedDataSizeImage[i].children[0].setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w568." + imageSource.split(".")[3]);
             }else if(window.innerWidth > 568 && window.innerWidth <=1024){
-                changedDataSizeImage[i].children[0].setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1024." + imageSource.split(".")[3]);
+                changedDataSizeImage[i].children[0].setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w" + Math.min(window.innerWidth, 1024) + "." + imageSource.split(".")[3]);
             }else if(window.innerWidth > 1024){
-                changedDataSizeImage[i].children[0].setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1920." + imageSource.split(".")[3]);
+                changedDataSizeImage[i].children[0].setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w" + Math.min(window.innerWidth, 1600) + "." + imageSource.split(".")[3]);
             }
         }
     }

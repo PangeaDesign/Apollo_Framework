@@ -77,7 +77,7 @@ document.body.innerHTML += pswpHTML;
         var imageSourceElementC = document.createElement("source");
         var imageImgElement = document.createElement("img");
         if (imageThumb != null&&imageThumb != "") {
-            if (imageThumb.slice(0, 22) == "https://gdb.rferl.org/") {
+            if (imageThumb.slice(0, 11) == "https://gdb") {
                 imageSourceElementA.setAttribute("media", "(max-width: 568px)");
                 imageSourceElementA.setAttribute("srcset", imageThumb.split(".")[0] + "." + imageThumb.split(".")[1] + "." + imageThumb.split(".")[2] + "_w200." + imageThumb.split(".")[3]);
                 imageSourceElementB.setAttribute("media", "(max-width: 1024px)");
@@ -96,7 +96,7 @@ document.body.innerHTML += pswpHTML;
                 imageImgElement.setAttribute("src", imageThumb);
             }
         } else {
-            if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
+            if (imageSource.slice(0, 11) == "https://gdb") {
                 imageSourceElementA.setAttribute("media", "(max-width: 568px)");
                 imageSourceElementA.setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w200." + imageSource.split(".")[3]);
                 imageSourceElementB.setAttribute("media", "(max-width: 1024px)");
@@ -130,13 +130,13 @@ document.body.innerHTML += pswpHTML;
             //imageLinkElement.setAttribute("href", "");
         } else {
             imageContainers[i].classList.add("gallery");
-            if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") { // !!! also in resize ???
+            if (imageSource.slice(0, 11) == "https://gdb") { // !!! also in resize ???
                 if(window.innerWidth <= 568){
                     imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w568." + imageSource.split(".")[3]);
                 }else if(window.innerWidth > 568 && window.innerWidth <= 1024){
-                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1024." + imageSource.split(".")[3]);
+                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w"+Math.min(window.innerWidth, 1024)+"." + imageSource.split(".")[3]);
                 }else if(window.innerWidth > 1024){
-                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1920." + imageSource.split(".")[3]);
+                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w"+Math.min(window.innerWidth, 1920)+"." + imageSource.split(".")[3]);
                 }
             } else {
                 imageLinkElement.setAttribute("href", imageSource);
@@ -173,11 +173,23 @@ function lazyLoad() {
         //console.log(changeImage);
         if (changeImage.getBoundingClientRect().top < window.innerHeight && imagesLoaded[i] == false) {
             imagesLoaded[i] = true;
-            if (imageSource.slice(0, 22) == "https://gdb.rferl.org/") {
-                changeImage.children[0].children[0].children[0].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w568." + imageSource.split(".")[3]);
-                changeImage.children[0].children[0].children[1].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1024." + imageSource.split(".")[3]);
-                changeImage.children[0].children[0].children[2].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w1920." + imageSource.split(".")[3]);
-                changeImage.children[0].children[0].children[3].setAttribute("src", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w" + window.innerWidth + "." + imageSource.split(".")[3]);
+            //console.log(changeImage.parentNode.parentNode.classList, changeImage.parentNode.parentNode.classList.contains("container--jumbo"));
+            var changeImageContainerClass = changeImage.parentNode.parentNode.classList;
+            var changeImageMaxWidth;
+            if(changeImageContainerClass.contains("container--full")||changeImageContainerClass.contains("container--jumbo")){
+                changeImageMaxWidth = 1600;
+            }else if(changeImageContainerClass.contains("container--big")){
+                changeImageMaxWidth = 1280;
+            }else if(changeImageContainerClass.contains("container--aside")){
+                changeImageMaxWidth = 350;
+            }else{
+                changeImageMaxWidth = 640;
+            }
+            if (imageSource.slice(0, 11) == "https://gdb") {
+                changeImage.children[0].children[0].children[0].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w" + Math.min(changeImageMaxWidth, 568) + "." + imageSource.split(".")[3]);
+                changeImage.children[0].children[0].children[1].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w" + Math.min(changeImageMaxWidth, 1024) + "." + imageSource.split(".")[3]);
+                changeImage.children[0].children[0].children[2].setAttribute("srcset", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w" + changeImageMaxWidth + "." + imageSource.split(".")[3]);
+                changeImage.children[0].children[0].children[3].setAttribute("src", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w" + Math.min(changeImageMaxWidth, window.innerWidth) + "." + imageSource.split(".")[3]);
 
             }
         };
