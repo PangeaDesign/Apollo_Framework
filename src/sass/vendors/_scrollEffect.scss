@@ -70,23 +70,27 @@ footer#footer {
     background: none !important;
 }
 
-.scroll-image-image {
+/*.scroll-image-image {
     width: 100%;
     height: auto;
+}*/
+.scroll-image {
+    top: 65px;
+    transform: translateZ(0);
 }
 
 .scroll-image-fixed {
     position: fixed;
-    transform: translate3d(0,0,0);
+    transform: translateZ(0);
     box-sizing: border-box;
     width: 100%;
-    padding: 0;
-    max-width: 850px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 65px;
-    z-index: -100;
+    /*padding: 0;*/
+    /*max-width: 850px;
+    margin: auto;*/
+    /*left: 0;
+    right: 0;*/
+    /*top: 65px;*/
+    /*z-index: -100;*/
 }
 .container.scroll--container .scroll-image-fixed {
     max-width: $breakpoint-s;
@@ -151,7 +155,7 @@ footer#footer {
 
 .scroll-aside .scroll-aside-fixed {
     position: fixed;
-    transform: translate3d(0,0,0);
+    transform: translateZ(0);
     box-sizing: border-box;
     width: calc(100% - 40px);
     max-width: $breakpoint-s;
