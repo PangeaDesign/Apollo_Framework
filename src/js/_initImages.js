@@ -65,7 +65,7 @@ document.body.innerHTML += pswpHTML;
 })();*/
 (function() {
     var imageContainers = document.body.getElementsByTagName('figure');
-    for (i = 0; i < imageContainers.length; i++) {
+    for (var i = 0; i < imageContainers.length; i++) {
         var imageCaption = imageContainers[i].getAttribute("data-caption");
         var imageSource = imageContainers[i].getAttribute("data-source");
         var imageGallery = imageContainers[i].getAttribute("data-gallery");
@@ -126,7 +126,8 @@ document.body.innerHTML += pswpHTML;
         imageElement.appendChild(imageSourceElementB);
         imageElement.appendChild(imageSourceElementC);
         imageElement.appendChild(imageImgElement);
-        if (imageGallery == "false" || imageGallery == null) {
+        console.log(imageGallery);
+        if (imageGallery == "false"/* || imageGallery == null*/) {
             //imageLinkElement.setAttribute("href", "");
         } else {
             imageContainers[i].classList.add("gallery");

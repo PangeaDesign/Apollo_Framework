@@ -36,9 +36,8 @@
             projectSite: "en",
             projectTitle: "Timeline",
             projectDescription: "This is timeline.",
-            /*projectAuthor: "Björk",*/
             projectImage: "mySocialImage.jpg",
-            heroStyle: "timeline", // possible values: cover-left, cover-right, cover, tabloid
+            heroStyle: "fixed", // possible values: cover-left, cover-right, cover, tabloid, NEW - fixed
             heroMedia: "https://rfe.pangea-cms.com/videoroot/Pangeavideo/2018/03/1/1f/1ff0b410-92d3-4fbf-a717-2c6b82c15540_fullhd.mp4", // possible values: mp4, jpg, jpeg, gif, png
             heroMediaPoster: "https://www.icelandairhotels.com/static/strevda/lg/1475075635-1473434601-rvk-vetur04.jpg", // in case of heroMedia is mp4
             heroOverlay: true,
@@ -59,35 +58,37 @@
     <noscript>We are sorry, but this content is not available on your device.<br><a href="https:/www.rferl.org">Go back to the homepage</a></noscript>
     <!-- END: No Script - Localize text between <noscript></noscript> tags -->
 
-    <main class="content" id="main">
+    <main class="content timeline" id="main">
         <div class="container timeline" navigation-title="Timeline"><!--url(https://docs.rferl.org/Infographics/2018/2018_10/KAFKA/snake.png)-->
           <h2>Timeline</h2>
-          <div class="events">
-              <div class="item long">
-                  <span class="date">1. Date</span>
-                  <div class="content">
+          <div class="timeline__events">
+              <div class="timeline__item">
+                  <span class="timeline__date timeline__date--big">1. Date</span>
+                  <div class="timeline__content">
+                      <h2>Lorem</h2>
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla quis diam. Aliquam ante. Nullam at arcu a est sollicitudin euismod. Duis viverra diam non justo. Maecenas libero. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.</p>
                       <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus.</p>
                   </div>
               </div>
-              <div class="item long">
-                  <span class="date time">2. Date</span>
-                  <div class="content">
-                      <img src="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg" class="img-fluid">
+              <div class="timeline__item">
+                  <span class="timeline__date">2. Date</span>
+                  <div class="timeline__content">
+                      <figure data-gallery="true" data-caption="Caption Number 1" data-source="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"></figure>
+                      <!--img src="https://gdb.rferl.org/70610F75-DF83-4629-96E4-D3C843648E77.jpg"-->
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla quis diam. Aliquam ante. Nullam at arcu a est sollicitudin euismod. Duis viverra diam non justo. Maecenas libero. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.</p>
                   </div>
               </div>
-              <div class="item long">
-                  <span class="date time">3. Date</span>
-                  <div class="content">
-                      <img src="https://gdb.rferl.org/535ADBE1-F80B-4494-9EA9-2341E52AEB1D.jpg" class="img-fluid">
+              <div class="timeline__item">
+                  <span class="timeline__date">3. Date</span>
+                  <div class="timeline__content">
+                      <figure data-source="https://gdb.rferl.org/535ADBE1-F80B-4494-9EA9-2341E52AEB1D.jpg"></figure>
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla quis diam. Aliquam ante. Nullam at arcu a est sollicitudin euismod. Duis viverra diam non justo. Maecenas libero. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.</p>
                   </div>
               </div>
-              <div class="item long">
-                  <span class="date time">3. Date</span>
-                  <div class="content">
-                      <img src="https://gdb.rferl.org/35D86AD4-CF63-4260-BE61-A7114D3AC84D.jpg" class="img-fluid">
+              <div class="timeline__item">
+                  <span class="timeline__date">4. Date</span>
+                  <div class="timeline__content">
+                      <figure data-source="https://gdb.rferl.org/35D86AD4-CF63-4260-BE61-A7114D3AC84D.jpg"></figure>
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla quis diam. Aliquam ante. Nullam at arcu a est sollicitudin euismod. Duis viverra diam non justo. Maecenas libero. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.</p>
                   </div>
               </div>
@@ -96,9 +97,9 @@
 
     </main>
     <!--script src="https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/js/apollo-framework-2.0.min.js"></script-->
-    <script src="dist/js/apollo-framework-2.0.min.js"></script>
+    <!--script src="dist/js/apollo-framework-2.0.min.js"></script-->
 
-    <!--script src="src/js/configs/_configSVG.js"></script>
+    <script src="src/js/configs/_configSVG.js"></script>
     <script src="src/js/configs/_configSites.js"></script>
     <script src="src/js/configs/_configPaths.js"></script>
     <script src="src/js/configs/_configSetupWizard.js"></script>
@@ -120,7 +121,7 @@
     <script src="src/js/vendors/photoswipe/photoswipe.min.js"></script>
 
     <script src="src/js/vendors/plyr/plyr.js"></script>
-    <script src="src/js/_initVideos.js"></script-->
+    <script src="src/js/_initVideos.js"></script>
 
 </body>
 

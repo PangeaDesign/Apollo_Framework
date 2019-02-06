@@ -1,15 +1,64 @@
 .timeline {
 
 }
-.events {
+
+/*   containers   */
+
+.timeline .container {
+    margin: ($gutter * 2) 42%;
+    width: 58%;
+    background: none;
+    /*background: rgba(0,0,0,0.2);*/
+}
+@media(max-width: $breakpoint-s){
+    .timeline .container {
+        margin: ($gutter * 2) 0;
+        width: 100%;
+    }
+}
+
+/*   hero   */
+
+.hero__container--fixed .hero__content {
+    position: relative;
+    width: 42%;
+}
+@media(max-width: $breakpoint-s) {
+    .hero__container--fake{
+        display: none;
+    }
+    #hero.hero__container--fixed {
+        position: relative;
+        background: none;
+    }
+    .hero__container--fixed .hero__content {
+        width: 100%;
+    }
+    .hero__container--fixed .hero__background{
+        position: fixed;
+        z-index: -1;
+    }
+}
+
+/*   typography   */
+.timeline h1, h2, h3, h4, h5, h6 {
+    color: $color-text-reverse;
+}
+.timeline__item {
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-text;
+        }
+}
+/*   special   */
+.timeline__events {
   background-repeat: repeat-y;
   background-position: center;
   background-image: url(https://docs.rferl.org/Infographics/2018/2018_10/KAFKA/snake.png);
 }
-.item {
+.timeline__item {
     margin: 1.5rem 0 2rem;
     text-align: center;
-    .content {
+    .timeline__content {
         background: $color-background;
         max-width: 100%;
         padding: 0;
@@ -17,22 +66,31 @@
         text-align: $direction-forwards;
         border-radius: 4px;
         box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-        img {
+        figure {
             max-width: 100%;
             margin-bottom: 0px;
             border-radius: 4px 4px 0px 0px;
+            overflow: hidden;
+            figcaption{
+                padding: 8px 16px 12px
+            }
         }
         p {
             padding: 8px 16px 12px;
         }
     }
 }
-.date {
+.timeline__date {
     text-align: center;
-    padding: 4px 6px;
+    padding: 6px 8px 4px;
     background-color: $color-primary;
     border-radius: 4px;
     color: #fff;
     font-size: .9rem;
     margin-top: .5rem;
+}
+
+.timeline__date--big {
+    font-size: 1.2em;
+    text-transform: uppercase;
 }

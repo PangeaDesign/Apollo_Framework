@@ -4,15 +4,15 @@
 
 var configPaths = {
     css: {
-        themes: "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/css/themes/",
+        /*themes: "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/css/themes/",
         cultures: "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/css/cultures/",
-        root: "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/css/"
+        root: "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/css/"*/
         /*themes: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/css/themes/",
         cultures: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/css/cultures/",
         root: "https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/dist/css/"*/
-        /*themes: "dist/css/themes/",
+        themes: "dist/css/themes/",
         cultures: "dist/css/cultures/",
-        root: "dist/css/"*/
+        root: "dist/css/"
     },
     logos: "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/logos/",
     favicons: "https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/favicons/",

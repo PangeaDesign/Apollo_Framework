@@ -69,6 +69,12 @@ if (setupWizard.haltStatus !== true) {
     heroNode.appendChild(heroContentNode);
     heroNode.appendChild(heroContinueNode);
 
+    /*   fixed   */
+    if(apolloConfig.heroStyle == "fixed"){
+        var heroContainerFake = document.createElement("div");
+        heroContainerFake.classList += ("hero__container--fake");
+        heroNode.parentNode.insertBefore(heroContainerFake, heroNode);
+    }
     /////////////////
     // H E A D E R //
     /////////////////
@@ -152,14 +158,15 @@ if (setupWizard.haltStatus !== true) {
 
         var navSiteUlNode = document.createElement("ul");
         navSiteContainerNode.appendChild(navSiteUlNode);
-        var navSiteLiNode, navSiteANode;
+        // HOME in the navigation ???
+        /*var navSiteLiNode, navSiteANode;
         navSiteLiNode = document.createElement("li");
         navSiteUlNode.appendChild(navSiteLiNode);
         navSiteANode = document.createElement("a");
         navSiteLiNode.appendChild(navSiteANode);
         navSiteANode.setAttribute("class", "anchor");
         navSiteANode.setAttribute("href", "#hero");
-        navSiteANode.text = siteConfig[apolloConfig.projectSite].siteLocal["home"]; //add translations
+        navSiteANode.text = siteConfig[apolloConfig.projectSite].siteLocal["home"];*/ //add translations
 
         for (var i = 0; i < chaptersCount; i++) {
             navSiteLiNode = document.createElement("li");
@@ -225,13 +232,6 @@ if (setupWizard.haltStatus !== true) {
         renderSharingIcons();
     }
 
-    ///////////////////
-    // G A L L E R Y //
-    ///////////////////
-    var galleryNode = document.createElement("div");
-    galleryNode.setAttribute("id", "page__gallery");
-    pageMainNode.parentNode.insertBefore(galleryNode, pageMainNode.nextSibling);
-
     /////////////////
     // F O O T E R //
     /////////////////
@@ -293,6 +293,7 @@ if (setupWizard.haltStatus !== true) {
 
     var heroContentNode = document.createElement("div");
     footerNode.setAttribute("id", "page__footer");
+    footerNode.classList.add("timeline");
     pageMainNode.parentNode.insertBefore(footerNode, pageMainNode.nextSibling);
     footerNode.appendChild(footerBlockNode);
     footerNode.appendChild(footerFollowUsNode);

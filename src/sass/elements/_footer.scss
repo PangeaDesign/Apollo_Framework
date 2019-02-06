@@ -7,6 +7,7 @@ footer#page__footer {
     z-index: 0;
     width: 100%;
     padding: ($gutter * 2);
+    box-shadow: 0 2px 5px rgba(20,24,25,.1);
     box-sizing: border-box;
     text-align: center;
     background-color: $color-footer;
@@ -77,3 +78,16 @@ footer#page__footer {
         }
     }
 }
+
+/*   timeline   */
+
+/*footer#page__footer.timeline {
+    margin: 0 0 0 42%;
+    width: 58%;
+}
+@media(max-width: $breakpoint-s){
+    footer#page__footer.timeline {
+        margin: auto;
+        width: 100%;
+    }
+}*/

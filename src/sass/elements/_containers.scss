@@ -45,13 +45,13 @@
     display: table;
     clear: both;
 }
-@media(max-width:796px) {
+@media(max-width: 796px) {
     .container--aside figure {
         margin-left: 20px;
         transform: none;
     }
 }
-@media(max-width:624px) {
+@media(max-width: 624px) {
     .container--aside figure {
         margin: 20px auto;
         float: none;

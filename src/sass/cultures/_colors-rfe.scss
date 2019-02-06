@@ -7,6 +7,7 @@ $color-secondary: #5B6770; //color gray dark
 $color-gray: #818a93; //color gray light
 $color-text: #1f2124;
 $color-text-secondary: $color-secondary;
+$color-text-reverse: $color-white;
 
 $color-footer: darken($color-primary, 15%);
 $color-table: lighten($color-secondary, 35%);
