@@ -4,7 +4,6 @@
 
 // Load all post-render scripts
 
-
 // Resize scripts
 /*window.onresize = function() {
 var changedDataSizeImage = document.getElementsByClassName("gallery");
@@ -80,5 +79,5 @@ function headerBackground() {
 // Remove config part from the page
 if (setupWizard.haltStatus === false) {
     var configDOM = document.getElementById('apollo-config');
-    configDOM.remove();
+    //configDOM.remove();
 }

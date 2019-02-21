@@ -77,7 +77,6 @@ for (var i = 0; i < videoInstances.length; i++){
 function videosPause(){
     for(var j = 0; j < videoInstances.length; j++){
         if(j != this.parentNode.getAttribute("xmlid")){
-            //console.log(this.parentNode.getAttribute("xmlid"), videoInstances[j]);
             videoInstances[j].children[0].pause();
         }
     }

@@ -50,12 +50,16 @@ if (setupWizard.haltStatus === false) {
     newDOMNode.setAttribute("href", configPaths.css.root + "apollo-framework-" + apolloVersion + "-" + apolloCulture + "-" + apolloTheme + ".min.css?nocache=1");
     pageHeadNode.appendChild(newDOMNode);
     newDOMNode.onload = function(){
+      document.getElementById("myConsole").innerHTML += " cssLoaded ";
       window.onload = function() {
+          document.getElementById("myConsole").innerHTML += " windowLoaded ";
           var preloaderDOM = document.getElementById("preloader");
           preloaderDOM.className += "preloader--loading";
           startVideoEmbedded();
           setTimeout(function() {
+              document.getElementById("myConsole").innerHTML += " startTimer ";
               preloaderDOM.className = "preloader--loaded";
+              document.getElementsByTagName("body")[0].style.overflow = "visible";
           }, 1500);
       }
     }
@@ -82,12 +86,12 @@ if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
 
 // Check if is this domain part of the analytics config
 if (setupWizard.haltStatus === false) {
-    if (thisPageURL.includes("file://") || thisPageURL.includes("localhost")) {
+    if (thisPageURL.indexOf("file://") >= 0 || thisPageURL.indexOf("localhost") >= 0) {
         var analyticsInit = false;
         var analyticsLocal = true;
     } else {
         for (i = 0; i < configAnalyticsSize; i++) {
-            if (thisPageURL.includes(siteAnalytics[i].siteURL)) {
+            if (thisPageURL.indexOf(siteAnalytics[i].siteURL) >= 0) {
                 //break; //??? it happens everytime I think or metadata is still not created ??? on the end ???
                 var analyticsEntity = siteAnalytics[i].entity;
                 var analyticsLang = siteAnalytics[i].lang;

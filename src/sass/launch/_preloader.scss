@@ -1,12 +1,14 @@
 // Pangea Apollo Framework 2.0 [Reykjavík]
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
-
+body {
+    overflow: hidden;
+}
 #preloader {
     width: 100%;
     height: 100%;
     opacity: 1;
-    background-color: #202223;
+    background-color: #0d0d0d;
     display: block;
     z-index: 998;
     position: fixed;
@@ -15,6 +17,10 @@
     left: 0;
     bottom: 0;
     transition: opacity 1.5s;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 128px 128px;
+    background-image: url("https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/images/preloader.gif");
 
     &.preloader--loading {
         opacity: 0;

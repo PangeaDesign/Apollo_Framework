@@ -75,7 +75,8 @@
     z-index: 2;
     padding: 0 $gutter * 4;
     box-sizing: border-box;
-    max-width: $breakpoint-xl;
+    width: 100%;
+    /*max-width: $breakpoint-xl;*/
 
     h1 {
         font-size: 3.3rem;
@@ -214,5 +215,8 @@
     text-align: center;
     .hero__continue {
         display: none;
+    }
+    .hero__content {
+        position: relative;
     }
 }

@@ -2,7 +2,6 @@
 // 2018 (c) Pangea Digital, Radio Free Europe/Radio Liberty, Inc.
 // All rights reserved
 // FUNCTION: Scroll Status
-
 if (setupWizard.haltStatus !== true) {
 
     /////////////
@@ -33,7 +32,7 @@ if (setupWizard.haltStatus !== true) {
         }
     } else {
         console.log("%c[Warning] Hero media type is not supported! Use only [jpg/jpeg], [png], [gif] or [mp4].\nMedia from [youtu.be] and [vimeo.com] are not allowed for the hero section of the page.", configSetupWizard.warningMessage);
-        heroBackgroundNode.setAttribute("style", "background-image: url(\"dist/assets/media-not-supported.jpg\"); background-size: cover; background-position: center;");
+        heroBackgroundNode.setAttribute("style", "background-image: url(\"https://docs.rferl.org/Branding/CDN/Apollo_Framework/2.0/dist/assets/media-not-supported.jpg\"); background-size: cover; background-position: center;");
     }
 
     // Render hero overlay
@@ -74,6 +73,10 @@ if (setupWizard.haltStatus !== true) {
         var heroContainerFake = document.createElement("div");
         heroContainerFake.classList += ("hero__container--fake");
         heroNode.parentNode.insertBefore(heroContainerFake, heroNode);
+    }
+    if(apolloConfig.timeline == true){
+        heroNode.classList.add("hero__container--timeline");
+        document.getElementById("main").classList.add("timeline");
     }
     /////////////////
     // H E A D E R //
@@ -127,7 +130,10 @@ if (setupWizard.haltStatus !== true) {
     var chaptersCount = 0;
     var chaptersTitles = new Array();
     for (var i = 0; i < allContainers.length; i++) {
-        var title = allContainers[i].getAttribute("navigation-title");
+        var title;
+        if(allContainers[i].hasAttribute("navigation-title")){
+            title = allContainers[i].getAttribute("navigation-title");
+            }
         if (title != null) {
             chaptersTitles[chaptersCount] = title;
             chaptersCount++;
@@ -198,7 +204,6 @@ if (setupWizard.haltStatus !== true) {
         sharingIconsContainer.setAttribute("id", "sharing-icons");
         document.getElementsByClassName("header__right-container")[0].appendChild(sharingIconsContainer);
         var currentURL = window.location.href;
-
         Object.keys(sharingIcons).forEach(function(key) {
             if (sharingIcons[key]) {
                 var newShareIcon = document.createElement("a");
@@ -293,7 +298,9 @@ if (setupWizard.haltStatus !== true) {
 
     var heroContentNode = document.createElement("div");
     footerNode.setAttribute("id", "page__footer");
-    footerNode.classList.add("timeline");
+    if(apolloConfig.timeline == true){
+        footerNode.classList.add("timeline");
+    }
     pageMainNode.parentNode.insertBefore(footerNode, pageMainNode.nextSibling);
     footerNode.appendChild(footerBlockNode);
     footerNode.appendChild(footerFollowUsNode);

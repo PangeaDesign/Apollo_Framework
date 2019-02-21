@@ -16,7 +16,7 @@ if (scrollEffectConfig.scrollEffect == true) {
 
     window.addEventListener("scroll", function() {
         resizingScrollEffect();
-        scrollingScrollEffect();
+        //scrollingScrollEffect();
     });
 } else {
     images = document.getElementsByClassName("scroll--container");
@@ -54,14 +54,33 @@ function startScrollEffect() {
             images[i].children[0].insertBefore(wrapper, content[0]);
             imagesAside[i] = images[i].children[0].getElementsByTagName("figure");
             var imagesAsideLength = imagesAside[i].length;
+            var cloneNode = [];
+            for (var j = 0; j < imagesAsideLength; j++) {
+                wrapper.appendChild(imagesAside[i][j*2].cloneNode(true));
+                imagesAside[i][j*2+1].classList.add("scroll-aside-origin");
+                if (j > 0) {
+                    if(!imagesAside[i][j].classList.contains("scroll-aside-origin")){
+                        imagesAside[i][j].classList.add("scroll-opacity-anim");
+                    }
+                }
+            };
+
+            //images[i].children[0].children[0].innerHTML = '<div class="parallax-aside-image">' + images[i].children[0].children[0].innerHTML + '</div><div class="parallax-image-fake"></div>';
+        } else if (images[i].classList.contains("container--aside")){
+            /*images[i].classList.add("scroll-aside-big");
+            images[i].classList.add("scroll-aside-big");
+            var content = images[i].children[0].children;
+            var wrapper = document.createElement("div");
+            wrapper.classList.add("scroll-aside-big-image");
+            images[i].children[0].insertBefore(wrapper, content[0]);
+            imagesAside[i] = images[i].children[0].getElementsByTagName("figure");
+            var imagesAsideLength = imagesAside[i].length;
             for (var j = 0; j < imagesAsideLength; j++) {
                 wrapper.appendChild(imagesAside[i][j]);
                 if (j > 0) {
                     imagesAside[i][j].classList.add("scroll-opacity-anim");
                 }
-            };
-
-            //images[i].children[0].children[0].innerHTML = '<div class="parallax-aside-image">' + images[i].children[0].children[0].innerHTML + '</div><div class="parallax-image-fake"></div>';
+            }*/
         } else {
             //imagesURL[i] = images[i].childElementCount
             imagesAside[i] = false;
@@ -81,6 +100,10 @@ function startScrollEffect() {
             }
         };
     };
+    imagesCount = images.length;
+    for (var i = 0; i < document.getElementsByTagName("figure").length; i++) {
+        imagesLoaded[i] = false;
+    }
     //imagesFake = document.getElementsByClassName("scroll-image-fake");
 }
 
@@ -89,45 +112,62 @@ function resizingScrollEffect() {
     for (var i = 0; i < imagesCount; i++) {
 
         if (images[i].classList.contains("container--aside")) {
-            if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight) {
-                images[i].children[0].children[0].classList.add("scroll-opacity-anim");
+            //changing fixed position
+            if (imagesTops[i] < window.pageYOffset && imagesTops[i] > window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight+20) {
+                if(!images[i].children[0].children[0].classList.contains("scroll-aside-fixed")){
+                    images[i].children[0].children[0].classList.add("scroll-aside-fixed");
+                }
             } else {
-                images[i].children[0].children[0].classList.remove("scroll-opacity-anim");
+                if(images[i].children[0].children[0].classList.contains("scroll-aside-fixed")){
+                    images[i].children[0].children[0].classList.remove("scroll-aside-fixed");
+                }
             }
-            if (imagesTops[i] < window.pageYOffset - 65) {
-                images[i].children[0].children[0].classList.add("scroll-aside-fixed");
+            //to dissapear when is end of container
+            if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight+20) {
+                images[i].children[0].children[0].style.top = (images[i].clientHeight - images[i].children[0].children[0].children[0].clientHeight-20) + "px";
             } else {
-                images[i].children[0].children[0].classList.remove("scroll-aside-fixed");
+                images[i].children[0].children[0].removeAttribute("style");
+            }
+            //when more images in container
+            if (imagesAside[i].length/2 > 1) {
+                if(!imagesAside[i][0].classList.contains("scroll-opacity-anim")){
+                    imagesAside[i][0].classList.add("scroll-opacity-anim");
+                }
+                if(imagesTops[i] > window.pageYOffset-(images[i].clientHeight-imagesAside[i][0].clientHeight)/(imagesAside[i].length/2)){
+                    if(imagesAside[i][0].classList.contains("scroll-opacity-anim")){
+                        imagesAside[i][0].classList.remove("scroll-opacity-anim");
+                    }
+                }
+                for (var j = 1; j < imagesAside[i].length/2-1; j++) {
+                    if(!imagesAside[i][j].classList.contains("scroll-opacity-anim")){
+                        imagesAside[i][j].classList.add("scroll-opacity-anim");
+                    }
+                    if (imagesTops[i] < window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / (imagesAside[i].length/2) * j && imagesTops[i] > window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / (imagesAside[i].length/2) * (j + 1)) {
+                        if(imagesAside[i][j].classList.contains("scroll-opacity-anim")){
+                            imagesAside[i][j].classList.remove("scroll-opacity-anim");
+                        }
+                    }
+                }
+                if(!imagesAside[i][imagesAside[i].length/2-1].classList.contains("scroll-opacity-anim")){
+                    imagesAside[i][imagesAside[i].length/2-1].classList.add("scroll-opacity-anim");
+                }
+                if(imagesTops[i] < window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / (imagesAside[i].length/2) * (imagesAside[i].length/2-1)){
+                    if(imagesAside[i][imagesAside[i].length/2-1].classList.contains("scroll-opacity-anim")){
+                        imagesAside[i][imagesAside[i].length/2-1].classList.remove("scroll-opacity-anim");
+                    }
+                }
             }
         } else {
-            if (images[i].classList.contains("specialImage")) {
-                if (imagesTops[i] < window.pageYOffset - images[i].clientHeight - textSpecialHeight) {
-                    images[i].classList.add("scroll-opacity");
-                } else {
-                    images[i].classList.remove("scroll-opacity");
-                }
-            } else {
-                if (imagesTops[i] < window.pageYOffset - images[i].clientHeight) {
-                    images[i].classList.add("scroll-opacity");
-                } else {
-                    images[i].classList.remove("scroll-opacity");
-                }
-            }
-            if (imagesTops[i] < window.pageYOffset - 65) {
-                //images[i].firstChild.firstChild.classList.add("parallax-image-fixed");
+            if (imagesTops[i] < window.pageYOffset) {
                 images[i].children[0].children[0].children[0].children[0].classList.add("scroll-image-fixed");
                 imagesFake[i].classList.add("scroll-image-fake-fixed");
-                images[i].classList.add("scroll-background");
                 if (scrollEffectConfig.scrollEffectDynamic) {
-                    //images[i].firstChild.firstChild.style.WebkitTransform = "translateY("+(imagesTops[i] - window.pageYOffset)/2+"px)";
                     images[i].children[0].children[0].children[0].children[0].style.transform = "translateY(" + Math.round((imagesTops[i] - window.pageYOffset) / 2) + "px)";
                 }
             } else {
                 images[i].children[0].children[0].children[0].children[0].classList.remove("scroll-image-fixed");
-                imagesFake[i].classList.remove("scroll-image-fixed");
-                images[i].classList.remove("scroll-background");
+                imagesFake[i].classList.remove("scroll-image-fake-fixed");
                 if (scrollEffectConfig.scrollEffectDynamic) {
-                    //images[i].firstChild.firstChild.style.WebkitTransform = "translateY("+(imagesTops[i] - window.pageYOffset)/2+"px)";
                     images[i].children[0].children[0].children[0].children[0].style.transform = "translateY(" + Math.round((imagesTops[i] - window.pageYOffset) / 2) + "px)";
                 }
             }
@@ -138,25 +178,24 @@ function resizingScrollEffect() {
 
 function scrollingScrollEffect() {
     for (var i = 0; i < imagesCount; i++) {
-        if (images[i].classList.contains("container--aside")) {
-            if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight) {
+        if (images[i].classList.contains("container--aside")) {//for containers "containers--aside"
+            /*if (imagesTops[i] < window.pageYOffset) {
+                if(!images[i].children[0].children[0].classList.contains("scroll-aside-fixed")){
+                    images[i].children[0].children[0].classList.add("scroll-aside-fixed");
+                }
+            } else {
+                if(images[i].children[0].children[0].classList.contains("scroll-aside-fixed")){
+                    images[i].children[0].children[0].classList.remove("scroll-aside-fixed");
+                }
+            }*/
+            //to dissapear when is end of container
+            /*if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight) {
                 images[i].children[0].children[0].classList.add("scroll-opacity-anim");
             } else {
                 images[i].children[0].children[0].classList.remove("scroll-opacity-anim");
-            }
-            if (imagesTops[i] < window.pageYOffset) {/*-65*/
-                //images[i].children[0].children[0].style.transform = "translateY("+Math.floor(window.pageYOffset-imagesTops[i])+"px)";
-                images[i].children[0].children[0].classList.add("scroll-aside-fixed");
-            } else {
-                //images[i].children[0].children[0].style.transform = "translateY(0px)";
-                images[i].children[0].children[0].classList.remove("scroll-aside-fixed");
-            }
-            if (imagesTops[i] < window.pageYOffset - images[i].clientHeight / imagesAside[i].length) {
-                imagesAside[i][0].classList.add("scroll-opacity-anim");
-            } else {
-                imagesAside[i][0].classList.remove("scroll-opacity-anim");
-            }
-            if (imagesAside[i].length > 1) {
+            }*/
+
+            /*if (imagesAside[i].length > 1) {
                 imagesAside[i][0].classList.add("scroll-opacity-anim");
                 if(imagesTops[i] > window.pageYOffset-(images[i].clientHeight-imagesAside[i][0].clientHeight)/imagesAside[i].length){
                     imagesAside[i][0].classList.remove("scroll-opacity-anim");
@@ -167,38 +206,23 @@ function scrollingScrollEffect() {
                         imagesAside[i][j].classList.remove("scroll-opacity-anim");
                     }
                 }
-            }
-        } else {
-            if (images[i].classList.contains("specialImage")) {
-                if (imagesTops[i] < window.pageYOffset - images[i].clientHeight - textSpecialHeight) {
-                    images[i].classList.add("scroll-opacity");
-                } else {
-                    images[i].classList.remove("scroll-opacity");
-                }
-            } else {
-                if (imagesTops[i] < window.pageYOffset - images[i].clientHeight) {
-                    images[i].classList.add("scroll-opacity");
-                } else {
-                    images[i].classList.remove("scroll-opacity");
-                }
-            }
-            if (imagesTops[i] < window.pageYOffset) {/*-65?*/
+            }*/
+        } else {//for all containers without "container--aside"
+            /*if (imagesTops[i] < window.pageYOffset) {
                 images[i].children[0].children[0].children[0].children[0].classList.add("scroll-image-fixed");
                 imagesFake[i].classList.add("scroll-image-fake-fixed");
-                images[i].classList.add("scroll-background");
+                //images[i].classList.add("scroll-background");
                 if (scrollEffectConfig.scrollEffectDynamic) {
-                    //images[i].firstChild.firstChild.style.WebkitTransform = "translateY("+(imagesTops[i] - window.pageYOffset)/2+"px)";
                     images[i].children[0].children[0].children[0].children[0].style.transform = "translateY(" + (imagesTops[i] - window.pageYOffset) / 2 + ")";
                 }
             } else {
                 images[i].children[0].children[0].children[0].children[0].classList.remove("scroll-image-fixed");
                 imagesFake[i].classList.remove("scroll-image-fake-fixed");
-                images[i].classList.remove("scroll-background");
+                //images[i].classList.remove("scroll-background");
                 if (scrollEffectConfig.scrollEffectDynamic) {
-                    //images[i].firstChild.firstChild.style.WebkitTransform = "translateY(0px)";
                     images[i].children[0].children[0].children[0].children[0].style.transform = "translateY(0px)";
                 }
-            }
+            }*/
         }
     } //end for
 }

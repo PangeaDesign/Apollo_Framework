@@ -6,6 +6,7 @@
     figure {
         position: relative;
         width: 100%;
+        opacity: 0;
 
         img {
             width: 100%;
@@ -89,4 +90,9 @@
     .columns figure {
         width:50%;
     }
+}
+
+figure.appeared {
+    opacity: 1;
+    transition: opacity 0.4s;
 }

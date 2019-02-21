@@ -66,11 +66,11 @@ document.body.innerHTML += pswpHTML;
 (function() {
     var imageContainers = document.body.getElementsByTagName('figure');
     for (var i = 0; i < imageContainers.length; i++) {
-        var imageCaption = imageContainers[i].getAttribute("data-caption");
-        var imageSource = imageContainers[i].getAttribute("data-source");
-        var imageGallery = imageContainers[i].getAttribute("data-gallery");
-        var imageThumb = imageContainers[i].getAttribute("data-thumb");
-        var imageThumbCaption = imageContainers[i].getAttribute("data-thumb-caption");
+        var imageCaption = imageContainers[i].hasAttribute("data-caption")?imageContainers[i].getAttribute("data-caption"):null;
+        var imageSource = imageContainers[i].hasAttribute("data-source")?imageContainers[i].getAttribute("data-source"):null;
+        var imageGallery = imageContainers[i].hasAttribute("data-gallery")?imageContainers[i].getAttribute("data-gallery"):null;
+        var imageThumb = imageContainers[i].hasAttribute("data-thumb")?imageContainers[i].getAttribute("data-thumb"):null;
+        var imageThumbCaption = imageContainers[i].hasAttribute("data-thumb-caption")?imageContainers[i].getAttribute("data-thumb-caption"):null;
         var imageElement = document.createElement("picture");
         var imageSourceElementA = document.createElement("source");
         var imageSourceElementB = document.createElement("source");
@@ -126,7 +126,6 @@ document.body.innerHTML += pswpHTML;
         imageElement.appendChild(imageSourceElementB);
         imageElement.appendChild(imageSourceElementC);
         imageElement.appendChild(imageImgElement);
-        console.log(imageGallery);
         if (imageGallery == "false"/* || imageGallery == null*/) {
             //imageLinkElement.setAttribute("href", "");
         } else {
@@ -137,7 +136,7 @@ document.body.innerHTML += pswpHTML;
                 }else if(window.innerWidth > 568 && window.innerWidth <= 1024){
                     imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w"+Math.min(window.innerWidth, 1024)+"." + imageSource.split(".")[3]);
                 }else if(window.innerWidth > 1024){
-                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w"+Math.min(window.innerWidth, 1920)+"." + imageSource.split(".")[3]);
+                    imageLinkElement.setAttribute("href", imageSource.split(".")[0] + "." + imageSource.split(".")[1] + "." + imageSource.split(".")[2] + "_w"+Math.min(window.innerWidth, 1600)+"." + imageSource.split(".")[3]);
                 }
             } else {
                 imageLinkElement.setAttribute("href", imageSource);
@@ -163,18 +162,19 @@ document.body.innerHTML += pswpHTML;
 })();
 // Lazy Load
 var imagesLoaded = [];
-for (var i = 0; i < document.getElementsByTagName("figure").length; i++) {
+/*for (var i = 0; i < document.getElementsByTagName("figure").length; i++) {
     imagesLoaded[i] = false;
-}
+}*/
 
 function lazyLoad() {
     for (var i = 0; i < document.getElementsByTagName("figure").length; i++) {
         var changeImage = document.getElementsByTagName("figure")[i];
         var imageSource = changeImage.getAttribute("data-source");
-        //console.log(changeImage);
         if (changeImage.getBoundingClientRect().top < window.innerHeight && imagesLoaded[i] == false) {
             imagesLoaded[i] = true;
-            //console.log(changeImage.parentNode.parentNode.classList, changeImage.parentNode.parentNode.classList.contains("container--jumbo"));
+            if(!changeImage.classList.contains("appeared")){
+                changeImage.classList.add("appeared");
+            }
             var changeImageContainerClass = changeImage.parentNode.parentNode.classList;
             var changeImageMaxWidth;
             if(changeImageContainerClass.contains("container--full")||changeImageContainerClass.contains("container--jumbo")){
@@ -183,6 +183,12 @@ function lazyLoad() {
                 changeImageMaxWidth = 1280;
             }else if(changeImageContainerClass.contains("container--aside")){
                 changeImageMaxWidth = 350;
+            }else if(changeImageContainerClass.contains("container--aside--big")){
+                if(window.innerWidth > 796){
+                    changeImageMaxWidth = (document.documentElement.clientWidth - 640) / 2 + 280;
+                }else{
+                    changeImageMaxWidth = 350;
+                }
             }else{
                 changeImageMaxWidth = 640;
             }
