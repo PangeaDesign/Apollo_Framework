@@ -23,7 +23,7 @@ body {
     background-image: url("https://docs.rferl.org/Infographics/PREVIEWS/Apollo_Framework_2/images/preloader.gif");
 
     &.preloader--loading {
-        opacity: 0;
+        opacity: 0.9;
     }
 
     &.preloader--loaded {

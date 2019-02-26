@@ -30,3 +30,34 @@ hr.divider--dotted {
 hr.divider--dashed {
     border-bottom: 1px dashed $color-gray;
 }
+
+.divider--solid {
+    position: relative;
+    margin: 0px auto;
+    box-sizing: border-box;
+    height: 1px;
+    border-bottom: 1px solid $color-gray;
+}
+.divider--dotted {
+    position: relative;
+    margin: 0px auto;
+    box-sizing: border-box;
+    height: 1px;
+    border-bottom: 1px dotted $color-gray;
+}
+.divider--dashed {
+    position: relative;
+    margin: 0px auto;
+    box-sizing: border-box;
+    height: 1px;
+    border-bottom: 1px dashed $color-gray;
+}
+.divider--short {
+    width: 40%;
+}
+.container-inner .divider {
+    margin: 50px auto;
+}
+.container-inner .divider--short {
+    margin: 50px auto;
+}

@@ -36,6 +36,11 @@ body {
     width: 100%;
     max-width: $breakpoint-s;
 }
+@media (max-width: $breakpoint-xs){
+    .container-inner {
+        padding: 50px 0 20px 0;
+    }
+}
 
 .container--big .container-inner {
     max-width: $breakpoint-l;
@@ -76,7 +81,10 @@ footer#footer {
 }
 
 .scroll--container.scroll-aside {
-    padding: 0 20px !important;
+    padding: 50px 20px 20px 20px !important;
+}
+.scroll--container.scroll-aside {
+    padding: 50px 20px 20px 20px !important;
 }
 
 /*.scroll-background {
@@ -205,6 +213,11 @@ footer#footer {
 
 .scroll-aside-fixed figure {
     right: -70px;
+}
+
+.scroll-image.scroll-opacity-anim {
+    opacity: 0;
+    transition: opacity 0.2s;
 }
 
 .scroll-aside .scroll-opacity-anim {

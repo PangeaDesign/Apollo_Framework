@@ -71,7 +71,7 @@ if (setupWizard.haltStatus !== true) {
     /*   fixed   */
     if(apolloConfig.heroStyle == "fixed"){
         var heroContainerFake = document.createElement("div");
-        heroContainerFake.classList += ("hero__container--fake");
+        heroContainerFake.classList.add("hero__container--fake");
         heroNode.parentNode.insertBefore(heroContainerFake, heroNode);
     }
     if(apolloConfig.timeline == true){
@@ -133,7 +133,9 @@ if (setupWizard.haltStatus !== true) {
         var title;
         if(allContainers[i].hasAttribute("navigation-title")){
             title = allContainers[i].getAttribute("navigation-title");
-            }
+        }else{
+            title = null;
+        }
         if (title != null) {
             chaptersTitles[chaptersCount] = title;
             chaptersCount++;
@@ -204,8 +206,8 @@ if (setupWizard.haltStatus !== true) {
         sharingIconsContainer.setAttribute("id", "sharing-icons");
         document.getElementsByClassName("header__right-container")[0].appendChild(sharingIconsContainer);
         var currentURL = window.location.href;
-        Object.keys(sharingIcons).forEach(function(key) {
-            if (sharingIcons[key]) {
+        for(key in sharingIcons){
+            if(sharingIcons[key]){
                 var newShareIcon = document.createElement("a");
                 if (key == "linkedin" || key == "email") {
                     newShareIcon.setAttribute("href", configPaths.shareMedia[key][0] + currentURL + configPaths.shareMedia[key][1] + apolloConfig.projectTitle);
@@ -216,7 +218,8 @@ if (setupWizard.haltStatus !== true) {
                 newShareIcon.setAttribute("target", "_blank");
                 sharingIconsContainer.appendChild(newShareIcon);
             };
-        });
+        };
+
         var shareClose = document.createElement('a');
         shareClose.setAttribute("id", "share__close");
         shareClose.innerHTML = icons.close;

@@ -1,5 +1,4 @@
 
-document.getElementById("myConsole").innerHTML += ", start initContainers";
 var allContainers = document.getElementsByClassName("container");
 var allContainersBig = document.getElementsByClassName("container--big");
 var allContainersJumbo = document.getElementsByClassName("container--jumbo");
@@ -61,4 +60,3 @@ var allLinks = document.getElementById("main").querySelectorAll("a");
 for(var i = 0; i < allLinks.length; i++) {
     allLinks[i].setAttribute("target", "_blank");
 }
-document.getElementById("myConsole").innerHTML += ", end initContainers";

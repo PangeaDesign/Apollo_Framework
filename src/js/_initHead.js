@@ -50,16 +50,17 @@ if (setupWizard.haltStatus === false) {
     newDOMNode.setAttribute("href", configPaths.css.root + "apollo-framework-" + apolloVersion + "-" + apolloCulture + "-" + apolloTheme + ".min.css?nocache=1");
     pageHeadNode.appendChild(newDOMNode);
     newDOMNode.onload = function(){
-      document.getElementById("myConsole").innerHTML += " cssLoaded ";
+      document.getElementById("myConsole").innerHTML += "cssLodeded";
       window.onload = function() {
-          document.getElementById("myConsole").innerHTML += " windowLoaded ";
+          document.getElementById("myConsole").innerHTML += "windowLodeded";
           var preloaderDOM = document.getElementById("preloader");
           preloaderDOM.className += "preloader--loading";
           startVideoEmbedded();
           setTimeout(function() {
-              document.getElementById("myConsole").innerHTML += " startTimer ";
               preloaderDOM.className = "preloader--loaded";
+              document.getElementById("myConsole").innerHTML += document.getElementsByTagName("body")[0];
               document.getElementsByTagName("body")[0].style.overflow = "visible";
+              document.body.style.owerflow = "visible";
           }, 1500);
       }
     }

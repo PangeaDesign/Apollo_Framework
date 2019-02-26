@@ -53,6 +53,7 @@ function onScroll() {
     lazyLoad();
     progressBar();
     headerBackground();
+    scrollingHeroFixed();
 }
 
 function progressBar() {
@@ -76,6 +77,21 @@ function headerBackground() {
         document.getElementById("page__header").classList.add("page__header--onpage");
     }
 }
+//fixed scroll hero page
+function scrollingHeroFixed (){
+    if (apolloConfig.heroStyle=="fixed"){
+        if (window.innerHeight < window.pageYOffset){
+            if (!document.getElementById("hero").classList.contains("scroll-opacity")){
+                document.getElementById("hero").classList.add("scroll-opacity");
+            }
+        }else{
+            if (document.getElementById("hero").classList.contains("scroll-opacity")){
+                document.getElementById("hero").classList.remove("scroll-opacity");
+            }
+        }
+    }
+}
+
 // Remove config part from the page
 if (setupWizard.haltStatus === false) {
     var configDOM = document.getElementById('apollo-config');

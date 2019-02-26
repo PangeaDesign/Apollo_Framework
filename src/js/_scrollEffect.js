@@ -66,7 +66,7 @@ function startScrollEffect() {
             };
 
             //images[i].children[0].children[0].innerHTML = '<div class="parallax-aside-image">' + images[i].children[0].children[0].innerHTML + '</div><div class="parallax-image-fake"></div>';
-        } else if (images[i].classList.contains("container--aside")){
+        } else if (images[i].classList.contains("container--aside--big")){
             /*images[i].classList.add("scroll-aside-big");
             images[i].classList.add("scroll-aside-big");
             var content = images[i].children[0].children;
@@ -113,7 +113,7 @@ function resizingScrollEffect() {
 
         if (images[i].classList.contains("container--aside")) {
             //changing fixed position
-            if (imagesTops[i] < window.pageYOffset && imagesTops[i] > window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight+20) {
+            if (imagesTops[i] < window.pageYOffset - 50 && imagesTops[i] > window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight+40) {
                 if(!images[i].children[0].children[0].classList.contains("scroll-aside-fixed")){
                     images[i].children[0].children[0].classList.add("scroll-aside-fixed");
                 }
@@ -123,8 +123,8 @@ function resizingScrollEffect() {
                 }
             }
             //to dissapear when is end of container
-            if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight+20) {
-                images[i].children[0].children[0].style.top = (images[i].clientHeight - images[i].children[0].children[0].children[0].clientHeight-20) + "px";
+            if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight+40) {
+                images[i].children[0].children[0].style.top = (images[i].clientHeight - images[i].children[0].children[0].children[0].clientHeight-90) + "px";
             } else {
                 images[i].children[0].children[0].removeAttribute("style");
             }
@@ -171,6 +171,16 @@ function resizingScrollEffect() {
                     images[i].children[0].children[0].children[0].children[0].style.transform = "translateY(" + Math.round((imagesTops[i] - window.pageYOffset) / 2) + "px)";
                 }
             }
+            //add opacity class, when on background
+            if(imagesTops[i]< window.pageYOffset-images[i].clientHeight){
+                if(!images[i].children[0].children[0].children[0].children[0].classList.contains("scroll-opacity-anim")){
+                    images[i].children[0].children[0].children[0].children[0].classList.add("scroll-opacity-anim");
+                }
+            }else{
+                if(images[i].children[0].children[0].children[0].children[0].classList.contains("scroll-opacity-anim")){
+                    images[i].children[0].children[0].children[0].children[0].classList.remove("scroll-opacity-anim");
+                }
+            }
         }
         imagesTops[i] = images[i].getBoundingClientRect().top - bodyTop - 65;
     }
@@ -179,50 +189,9 @@ function resizingScrollEffect() {
 function scrollingScrollEffect() {
     for (var i = 0; i < imagesCount; i++) {
         if (images[i].classList.contains("container--aside")) {//for containers "containers--aside"
-            /*if (imagesTops[i] < window.pageYOffset) {
-                if(!images[i].children[0].children[0].classList.contains("scroll-aside-fixed")){
-                    images[i].children[0].children[0].classList.add("scroll-aside-fixed");
-                }
-            } else {
-                if(images[i].children[0].children[0].classList.contains("scroll-aside-fixed")){
-                    images[i].children[0].children[0].classList.remove("scroll-aside-fixed");
-                }
-            }*/
-            //to dissapear when is end of container
-            /*if (imagesTops[i] < window.pageYOffset - images[i].clientHeight + images[i].children[0].children[0].children[0].clientHeight) {
-                images[i].children[0].children[0].classList.add("scroll-opacity-anim");
-            } else {
-                images[i].children[0].children[0].classList.remove("scroll-opacity-anim");
-            }*/
 
-            /*if (imagesAside[i].length > 1) {
-                imagesAside[i][0].classList.add("scroll-opacity-anim");
-                if(imagesTops[i] > window.pageYOffset-(images[i].clientHeight-imagesAside[i][0].clientHeight)/imagesAside[i].length){
-                    imagesAside[i][0].classList.remove("scroll-opacity-anim");
-                }
-                for (var j = 1; j < imagesAside[i].length; j++) {
-                    imagesAside[i][j].classList.add("scroll-opacity-anim");
-                    if (imagesTops[i] < window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / imagesAside[i].length * j && imagesTops[i] > window.pageYOffset - (images[i].clientHeight-imagesAside[i][0].clientHeight) / imagesAside[i].length * (j + 1)) {
-                        imagesAside[i][j].classList.remove("scroll-opacity-anim");
-                    }
-                }
-            }*/
         } else {//for all containers without "container--aside"
-            /*if (imagesTops[i] < window.pageYOffset) {
-                images[i].children[0].children[0].children[0].children[0].classList.add("scroll-image-fixed");
-                imagesFake[i].classList.add("scroll-image-fake-fixed");
-                //images[i].classList.add("scroll-background");
-                if (scrollEffectConfig.scrollEffectDynamic) {
-                    images[i].children[0].children[0].children[0].children[0].style.transform = "translateY(" + (imagesTops[i] - window.pageYOffset) / 2 + ")";
-                }
-            } else {
-                images[i].children[0].children[0].children[0].children[0].classList.remove("scroll-image-fixed");
-                imagesFake[i].classList.remove("scroll-image-fake-fixed");
-                //images[i].classList.remove("scroll-background");
-                if (scrollEffectConfig.scrollEffectDynamic) {
-                    images[i].children[0].children[0].children[0].children[0].style.transform = "translateY(0px)";
-                }
-            }*/
+
         }
     } //end for
 }

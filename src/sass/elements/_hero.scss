@@ -137,9 +137,13 @@
             width: 100%;
             max-width: 100%;
 
-            h1,
+            h1 {
+                font-size: 2.2rem;
+                text-align: left;
+            }
             h2 {
                 text-align: left;
+                font-size: 1.2rem;
             }
         }
 
@@ -192,11 +196,11 @@
 
 @media(max-width: $breakpoint-s) {
     .hero__content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero__content h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
 

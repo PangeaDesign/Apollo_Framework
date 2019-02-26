@@ -11,29 +11,52 @@
     position: fixed;
     top: 0;
     z-index: 997;
-    display: flex;
+    /*display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;*/
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    #page__header {
+        background-color: $color-text;
+    }
+}
+@supports (-ms-ime-align:auto) {
+    #page__header {
+        background-color: $color-text;
+    }
 }
 
 // Service Logo
 
-a.page__header-logo {
+/*a.page__header-logo {
     width: auto;
     height: 40px;
     display: inline-block;
-
     svg {
         width: auto;
         height: 40px;
         fill: $color-white;
     }
+}*/
+a.page__header-logo {
+    position: absolute;
+    width: auto;
+    top: 12px;
+    height: 40px;
+    display: inline-block;
+    svg {
+          width: auto;
+          height: 40px;
+          fill: $color-white;
+    }
 }
 
 .header__right-container {
-    display: flex;
-    align-items: center;
+    /*display: flex;
+    align-items: center;*/
+    float: right;
+    padding-top: 12px;
 }
 // Share Button
 
@@ -85,7 +108,7 @@ a.page__header-logo {
 .header__right-container .sharing-icons {
     display: block;
     width: auto;
-    padding: 5px 4px 2px;
+    padding: 6px 4px 0px;
     background: #fff;
     position: absolute;
     border-top-left-radius: 21px;
@@ -195,7 +218,7 @@ a.page__header-nav {
     }
 }
 
-.page__header--onpage {
+#page__header.page__header--onpage {
     background-color: $color-background;
     // border-bottom: 2px solid $color-secondary;
     box-shadow: 0 2px 5px $color-header-shadow;
@@ -296,6 +319,7 @@ a.page__header-nav {
     li {
         padding: 0;
         margin: 0;
+        list-style: none;
 
         a {
             display: block;

@@ -64,6 +64,26 @@ h6 {
     font-family: $font-secondary, $font-fallback-secondary;
     text-align: center;
 }
+@media (max-width: $breakpoint-s){
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    h5 {
+        font-size: 1.1rem;
+    }
+    h6 {
+        font-size: 1.1rem;
+    }
+}
 /* Paragraphs */
 p {
     box-sizing: border-box;
