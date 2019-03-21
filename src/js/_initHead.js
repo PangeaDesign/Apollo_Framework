@@ -47,18 +47,18 @@ if (setupWizard.haltStatus === false) {
     var apolloVersion = configPaths.version;
     var newDOMNode = document.createElement('link');
     newDOMNode.setAttribute("rel", "stylesheet");
-    newDOMNode.setAttribute("href", configPaths.css.root + "apollo-framework-" + apolloVersion + "-" + apolloCulture + "-" + apolloTheme + ".min.css?nocache=1");
+    newDOMNode.setAttribute("href", configPaths.css.root + "apollo-framework-" + apolloVersion + "-" + apolloCulture + "-" + apolloTheme + ".min.css");
     pageHeadNode.appendChild(newDOMNode);
     newDOMNode.onload = function(){
-      document.getElementById("myConsole").innerHTML += "cssLodeded";
+      /*document.getElementById("myConsole").innerHTML += "cssLodeded";*/
       window.onload = function() {
-          document.getElementById("myConsole").innerHTML += "windowLodeded";
+          /*document.getElementById("myConsole").innerHTML += "windowLodeded";*/
           var preloaderDOM = document.getElementById("preloader");
           preloaderDOM.className += "preloader--loading";
           startVideoEmbedded();
           setTimeout(function() {
               preloaderDOM.className = "preloader--loaded";
-              document.getElementById("myConsole").innerHTML += document.getElementsByTagName("body")[0];
+              /*document.getElementById("myConsole").innerHTML += document.getElementsByTagName("body")[0];*/
               document.getElementsByTagName("body")[0].style.overflow = "visible";
               document.body.style.owerflow = "visible";
           }, 1500);

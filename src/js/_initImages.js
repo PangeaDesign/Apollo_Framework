@@ -126,7 +126,7 @@ document.body.innerHTML += pswpHTML;
         imageElement.appendChild(imageSourceElementB);
         imageElement.appendChild(imageSourceElementC);
         imageElement.appendChild(imageImgElement);
-        if (imageGallery == "false"/* || imageGallery == null*/) {
+        if (imageGallery == "false" || imageGallery == null) {
             //imageLinkElement.setAttribute("href", "");
         } else {
             imageContainers[i].classList.add("gallery");
