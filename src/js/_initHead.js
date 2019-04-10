@@ -18,12 +18,6 @@ var thisPageURL = window.location.href;
 //////////////////////////
 // R E N D E R  H E A D //
 //////////////////////////
-// Get the language and direction and add it to the <html> and <body>
-if (setupWizard.haltStatus === false) {
-    pageHtmlNode.setAttribute("lang", siteConfig[apolloConfig.projectSite].siteLangISO);
-    pageHtmlNode.setAttribute("dir", siteConfig[apolloConfig.projectSite].siteDir);
-    pageBodyNode.setAttribute("dir", siteConfig[apolloConfig.projectSite].siteDir);
-}
 
 // Get the culture and add proper CSS to the <head>
 if (setupWizard.haltStatus === false) {
@@ -71,7 +65,7 @@ var numberOfMeta = pageHeadNode.getElementsByTagName("meta").length;
 
 
 // Send info to the setupWizard
-if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
+/*if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
     if (setupWizard.configParser.status === "no-go-1") {
         setupWizard.haltStatus = true;
         setupWizard.meta.status = "no-go-1";
@@ -83,7 +77,7 @@ if (numberOfMeta < setupWizard.meta.mandatoryMetaItems) {
 } else {
     setupWizard.meta.metaList = "<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n<title>" + apolloConfig.projectTitle + "</title>\n<meta name=\"description\" content=\"" + apolloConfig.projectDescription + "\">\n<meta property=\"article:publisher\" content=\"https://www.facebook.com/" + siteConfig[apolloConfig.projectSite].siteSocial.facebook + "\">\n<meta property=\"og:title\" content=\"" + apolloConfig.projectTitle + "\">\n<meta property=\"og:description\" content=\"" + apolloConfig.projectDescription + "\">\n<meta property=\"og:image\" content=\"" + apolloConfig.projectImage + "\">\n<meta property=\"og:url\" content=\"" + apolloConfig.projectTitle + "\">\n<meta property=\"og:type\" content=\"article\">\n<meta property=\"og:site_name\" content=\"" + siteConfig[apolloConfig.projectSite].siteNameLocal + "\">\n<meta property=\"fb:app_id\" content=\"" + siteConfig[apolloConfig.projectSite].siteSocialMeta.facebook + "\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:image:alt\" content=\"" + apolloConfig.projectImage + "\">\n<meta name=\"twitter:site\" content=\"" + siteConfig[apolloConfig.projectSite].siteSocialMeta.twitter + "\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"" + configPaths.favicons + siteConfig[apolloConfig.projectSite].siteBrand + "/apple-touch-icon.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"" + configPaths.favicons + siteConfig[apolloConfig.projectSite].siteBrand + "/favicon-32x32.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"" + configPaths.favicons + siteConfig[apolloConfig.projectSite].siteBrand + "/favicon-16x16.png\">\n<link rel=\"manifest\" href=\"" + configPaths.favicons + siteConfig[apolloConfig.projectSite].siteBrand + "/manifest.json\">\n<link rel=\"mask-icon\" href=\"" + configPaths.favicons + siteConfig[apolloConfig.projectSite].siteBrand + "/safari-pinned-tab.svg\" color=\"" + faviconConfig[siteConfig[apolloConfig.projectSite].siteBrand] + "\">\n<meta name=\"theme-color\" content=\"#ffffff\">";
     setupWizard.meta.status = "go";
-}
+}*/
 
 // Check if is this domain part of the analytics config
 if (setupWizard.haltStatus === false) {
@@ -105,13 +99,13 @@ if (setupWizard.haltStatus === false) {
                 // Append Analytics script to the <head>
                 var newDOMNode = document.createElement('script');
                 newDOMNode.type = 'text/javascript';
-                newDOMNode.text = '\nvar utag_data = {\nentity: \'' + analyticsEntity + '\',\nlanguage: \'' + analyticsLang + '\',\nlanguage_service: \'' + analyticsLangService + '\',\nshort_language_service: \'' + analyticsShortLangService + '\',\nproperty_id: \'' + analyticsPropertyID + '\',\nplatform: \'Responsive\',\nplatform_short: \'R\',\nruns_js: \'Yes\',\npage_title: \'' + apolloConfigParsed.projectTitle + '\'\n};\nif(typeof(TealiumTagFrom) === \'function\' && typeof(TealiumTagSearchKeyword) === \'function\') {\nvar utag_from = TealiumTagFrom();\nvar utag_searchKeyword = TealiumTagSearchKeyword();\nif (utag_searchKeyword != null && utag_searchKeyword !== \'\' && utag_data["search_keyword"] == null)\nutag_data["search_keyword"] = utag_searchKeyword;\nif (utag_from != null && utag_from !== \'\')\nutag_data["from"] = TealiumTagFrom();\n}\n(function(a, b, c, d) {\na ="//tags.tiqcdn.com/utag/bbg/rferl-pangea/prod/utag.js";\nb = document;\nc = "script";\nd = b.createElement(c);\nd.src = a;\nd.type = "text/java" + c;\nd.async = true;\na = b.getElementsByTagName(c)[0];\na.parentNode.insertBefore(d, a);\n})();\n';
+                newDOMNode.text = '\nvar utag_data = {\nentity: \'' + analyticsEntity + '\',\nlanguage: \'' + analyticsLang + '\',\nlanguage_service: \'' + analyticsLangService + '\',\nshort_language_service: \'' + analyticsShortLangService + '\',\nproperty_id: \'' + analyticsPropertyID + '\',\nplatform: \'Responsive\',\nplatform_short: \'R\',\nruns_js: \'Yes\',\npage_title: \'' + apolloConfigParsed.projectTitle + '\',\npage_type:\'special projects\',\npage_name:\'' + apolloConfigParsed.projectTitle + '\',\nshort_headline:\'' + apolloConfigParsed.projectTitle + '\',\nlong_headline:\'' + apolloConfigParsed.projectTitle + '\',\nheadline:\'' + apolloConfigParsed.projectTitle + '\',\ncontent_type:\'article\',\nsubcontent_type:\'special projects\',\nenviro_type:\'prod\',\nurl:\'\',\ndomain:\'' + siteAnalytics[i].siteURL + '\',\npub_year:\'\',\npub_month:\'\',\npub_day:\'\',\npub_hour:\'\',\npub_minute:\'\',\npub_weekday:\'\',\ndateline:\'\',\nbyline:\'\',\ncategories:\'\',\ntags:\'\',\nslug:\'\',\nsection:\'\',\narticle_uid:\'\'\n};\nif(typeof(TealiumTagFrom) === \'function\' && typeof(TealiumTagSearchKeyword) === \'function\') {\nvar utag_from = TealiumTagFrom();\nvar utag_searchKeyword = TealiumTagSearchKeyword();\nif (utag_searchKeyword != null && utag_searchKeyword !== \'\' && utag_data["search_keyword"] == null)\nutag_data["search_keyword"] = utag_searchKeyword;\nif (utag_from != null && utag_from !== \'\')\nutag_data["from"] = TealiumTagFrom();\n}\n(function(a, b, c, d) {\na ="//tags.tiqcdn.com/utag/bbg/rferl-pangea/prod/utag.js";\nb = document;\nc = "script";\nd = b.createElement(c);\nd.src = a;\nd.type = "text/java" + c;\nd.async = true;\na = b.getElementsByTagName(c)[0];\na.parentNode.insertBefore(d, a);\n})();\n';
 
                 if (typeof utag_data == 'undefined') {
                     document.head.appendChild(newDOMNode);
-                    setupWizard.template4.status = "go";
-                } else {
                     setupWizard.template4.status = "no-go";
+                } else {
+                    setupWizard.template4.status = "go";
                 }
                 break;
             } else {

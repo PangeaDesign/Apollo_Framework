@@ -74,7 +74,7 @@ var setupWizard = {
     },
     template4: {
         status: "no-go",
-        noGoMessage: "[NO-GO] Check your \"Infographics page layout\" in CMS, this code is prepared for Template 4 (Empty Canvas)"
+        noGoMessage: "[NO-GO] Check your \"Infographics page layout\" in CMS, this code is prepared for Template 1 (Plank page)"
     },
     launchStatus: {
         status: "no-go",
