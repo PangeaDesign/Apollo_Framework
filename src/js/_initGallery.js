@@ -14,7 +14,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             size,
             item;
 
-        /*console.log(thumbElements);*/
+        //console.log(thumbElements);
         for (var i = 0; i < numNodes; i++) {
             figureEl = thumbElements[i]; // <figure> element
             // include only element nodes
@@ -23,7 +23,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             }
             linkEl = figureEl.children[0]; // <a> element
             size = linkEl.parentNode.getAttribute('data-size').split('x');
-            //console.log(linkEl);
             // create slide object
             item = {
                 src: linkEl.getAttribute('href'),

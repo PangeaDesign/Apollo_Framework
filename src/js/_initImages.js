@@ -148,7 +148,17 @@ document.body.innerHTML += pswpHTML;
         }
 
         imageImgElement.onload = function() {
-            this.parentNode.parentNode.parentNode.setAttribute("data-size", window.innerWidth + "x" + Math.round((1 / (this.width / this.height)) * window.innerWidth)); // !!! some max width ???
+            var thisFigure = this.parentNode.parentNode.parentNode;
+            var dataSizeMaxWidth = window.innerWidth<1600?window.innerWidth:1600;
+            var thisDataSize = dataSizeMaxWidth + "x" + Math.round((1 / (this.width / this.height)) * dataSizeMaxWidth);
+            thisFigure.setAttribute("data-size", thisDataSize); //change on lazyLoad??
+            //console.log(thisFigure.parentNode.getElementsByClassName("scroll-aside-image")[0])
+            if(thisFigure.parentNode.getElementsByClassName("scroll-aside-image")[0]!=undefined){
+                for(var i = 0; i < thisFigure.parentNode.getElementsByClassName("scroll-aside-image")[0].getElementsByClassName("gallery").length; i++){
+                    thisFigure.parentNode.getElementsByClassName("scroll-aside-image")[0].getElementsByClassName("gallery")[i].setAttribute("data-size", thisDataSize); //change on lazyLoad??
+                }
+
+            }
         };
         if (imageCaption != null) {
             var imageCaptionElement = document.createElement("figcaption");
@@ -177,6 +187,7 @@ function lazyLoad() {
             }
             var changeImageContainerClass = changeImage.parentNode.parentNode.classList;
             var changeImageMaxWidth;
+            console.log(changeImage.children[0].children[0].children[3].clientWidth);
             if(changeImageContainerClass.contains("container--full")||changeImageContainerClass.contains("container--jumbo")){
                 changeImageMaxWidth = 1600;
             }else if(changeImageContainerClass.contains("container--big")){

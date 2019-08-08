@@ -56,8 +56,10 @@ function startScrollEffect() {
             var imagesAsideLength = imagesAside[i].length;
             var cloneNode = [];
             for (var j = 0; j < imagesAsideLength; j++) {
+                //console.log(imagesAside[i][j*2]);
                 wrapper.appendChild(imagesAside[i][j*2].cloneNode(true));
                 imagesAside[i][j*2+1].classList.add("scroll-aside-origin");
+                /*imagesAside[i][j*2+1].classList.remove("gallery");*/
                 if (j > 0) {
                     if(!imagesAside[i][j].classList.contains("scroll-aside-origin")){
                         imagesAside[i][j].classList.add("scroll-opacity-anim");
