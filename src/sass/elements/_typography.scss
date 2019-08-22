@@ -111,7 +111,7 @@ p {
 
 .p--dropcap::first-letter {
     color: $color-text-secondary;
-    float: left;
+    float: $direction-forwards;
     font-family: Georgia;
     font-size: 85px;
     line-height: 60px;

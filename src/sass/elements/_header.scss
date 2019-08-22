@@ -55,7 +55,7 @@ a.page__header-logo {
 .header__right-container {
     /*display: flex;
     align-items: center;*/
-    float: right;
+    float: $direction-backwards;
     padding-top: 12px;
 }
 // Share Button
@@ -111,11 +111,11 @@ a.page__header-logo {
     padding: 6px 4px 0px;
     background: #fff;
     position: absolute;
-    border-top-left-radius: 21px;
-    border-bottom-left-radius: 21px;
+    border-radius: $sharing-icons-radius;
     top: 13px;
-    right: -100%;
-    transition: right 0.4s ease-out;
+    left: $sharing-icons-left;
+    right: $sharing-icons-right;
+    transition: all 0.4s ease-out;
 
     a {
         width: 30px;
@@ -156,7 +156,8 @@ a.page__header-logo {
 }
 
 .header__right-container .opened {
-    right: 0;
+    left: $sharing-icons-left-opened;
+    right: $sharing-icons-right-opened;
 }
 
 #progress {

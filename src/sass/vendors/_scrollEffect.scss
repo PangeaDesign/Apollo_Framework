@@ -175,6 +175,7 @@ footer#footer {
 
 .scroll-aside figure {
     position: absolute;
+    left: 0;
     width: 350px;
     line-height: 1.2;
     /*right: 0;*/
@@ -212,6 +213,7 @@ footer#footer {
 }
 
 .scroll-aside-fixed figure {
+    left: auto;
     right: -70px;
 }
 
