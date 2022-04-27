@@ -7,7 +7,7 @@
     "devDependencies": {
         "autoprefixer": "^8.5.0",
         "cssnano": "^3.10.0",
-        "grunt": "~1.0.1",
+        "grunt": "~1.5.2",
         "grunt-contrib-cssmin": "^2.2.1",
         "grunt-contrib-sass": "^1.0.0",
         "grunt-contrib-uglify": "~3.0.1",
